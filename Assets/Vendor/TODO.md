@@ -1,0 +1,1 @@
+Delete example folders in Unity Test Tools and JsonDotNet when they are no longer needed
