@@ -33,10 +33,10 @@ dlldata.c
 *_p.c
 *_i.h
 *.ilk
-*.meta
 *.obj
 *.pch
 *.pdb
+*.meta
 *.pgc
 *.pgd
 *.rsp
