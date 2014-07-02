@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Managers;
+using Assets.Scripts.Player;
 using UnityEngine;
 using System.Collections;
 
@@ -7,13 +8,13 @@ namespace WizardBroadcast
     public class LevelPortal : MonoBehaviourBase
     {
 
-        public SceneMap.sceneList sceneToLoad;
+        public SceneMap.scene sceneToLoad;
 
 	    void OnTriggerEnter(Collider other)
 	    {
 	        if (other.GetComponent<InfoPlayer>() != null)
 	        {
-	            Application.LoadLevel(SceneMap.Instance.GetScene(sceneToLoad));
+	            Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
 	        }
 	    }
 	
