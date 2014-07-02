@@ -12,16 +12,18 @@ namespace Assets.Scripts.Managers
             level1,
             level2,
             level3,
-            level4
+            level4,
+            hub
         }
 
-
+        //TODO: Give these scenes descriptive names!
         private static readonly Dictionary<scene, string> SceneDictionary = new Dictionary<scene, string>()
         {
             {scene.level1, "level1"},
             {scene.level2, "level2"},
             {scene.level3, "level3"},
-            {scene.level4, "level4"}
+            {scene.level4, "level4"},
+            {scene.hub, "HubZone"},
         };
 
 

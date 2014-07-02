@@ -5,7 +5,7 @@ using System.Collections;
 public class Singleton<T> : MonoBehaviour where T: MonoBehaviour
 {
     protected static T instance;
-
+   
     /**
        Returns the instance of this singleton.
     */
