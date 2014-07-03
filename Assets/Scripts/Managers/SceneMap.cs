@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Assets.Scripts.Managers
 {
     //Singleton service for mapping enum values to scene names
-    public static class SceneMap 
+    public static class SceneMap
     {
         public enum scene
         {

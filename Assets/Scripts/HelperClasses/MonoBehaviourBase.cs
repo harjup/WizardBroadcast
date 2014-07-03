@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
@@ -26,5 +27,21 @@ public class MonoBehaviourBase : MonoBehaviour
         }
 
         return list;
+    }
+
+    public static bool ObjectOfTypeExistsInScene(Type typeToFind)
+    {
+        MonoBehaviour[] monoBehaviours = FindObjectsOfType<MonoBehaviour>();
+        foreach (MonoBehaviour behaviour in monoBehaviours)
+        {
+            object component = behaviour.GetComponent(typeToFind);
+
+            if (component != null)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

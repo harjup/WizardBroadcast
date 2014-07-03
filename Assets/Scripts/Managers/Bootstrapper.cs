@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Assets.Scripts.Player;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Assets.Scripts.Managers
 {
@@ -18,14 +15,26 @@ namespace Assets.Scripts.Managers
         //Here's a sneaky idea, what if we embedded this logic in every monoBehaviourBase as a singleton method? 
         //It might be terrible or great!!!
 
+
+        //TODO: Determining a decent method of retreiving prefabs source paths. Manually setting them as public gameobject properties sounds awful
+        
+        private Dictionary<Type, string> _prefabsToSpawn = new Dictionary<Type, string>()
+        {
+            {typeof(InfoPlayer), @"Prefabs/PlayerCharacter"},
+            {typeof(ScheduleTracker), @"Prefabs/ScheduleTracker"},
+            {typeof(TimeTracker), @"Prefabs/TimeTracker"}
+        };
+
         void Start()
         {
-            var player = FindObjectsOfInterface<InfoPlayer>();
-            if (player.Count == 0)
+            foreach (var prefabToSpawn in _prefabsToSpawn)
             {
-                //TODO: Determining a decent method of retreiving prefabs source paths. Manually setting them as public gameobject properties sounds awful
-                //TODO: Get a better method of determining the position to drop the player at. Maybe a spawnpoint or somethin.
-                Instantiate(Resources.Load(@"Prefabs/PlayerCharacter", typeof(GameObject)), new Vector3(0f, 2.5f, 0f), new Quaternion());
+                if (!ObjectOfTypeExistsInScene(prefabToSpawn.Key))
+                {
+                    //TODO: Get a better method of determining the position to drop the object at. Maybe a spawnpoint or somethin.
+                    //Only the player should have any kind of position sensitivity I thiiink
+                    Instantiate(Resources.Load(prefabToSpawn.Value, typeof(GameObject)), new Vector3(0f, 2.5f, 0f), new Quaternion());
+                }   
             }
         }
 
