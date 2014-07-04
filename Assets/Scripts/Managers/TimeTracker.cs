@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using Assets.Scripts.Pocos;
+using Newtonsoft.Json;
 using UnityEngine;
+using WizardCentralServer.Model.Dtos;
 
 namespace Assets.Scripts.Managers
 {
@@ -11,18 +13,19 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class TimeTracker : Singleton<TimeTracker>
     {
-        private float _nextMinute = 0f;
+        //TODO: Put this url in a config file.
+        private const string TimeUrl = "http://localhost:52542/api/time";
+
+        private float _nextMinute;
         private static DateTime _startTime;
         static DateTime _currentTime;
-        private const float MinuteInSeconds = 2f;
+        private const float MinuteInSeconds = 60f;
+
 
         private bool initialized = false;
 
         void Start()
         {
-            GetStartTime();
-            _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
-            ScheduledEvent.elapsedMinutes = _currentTime.Minute;
             StartCoroutine(GetStartTime());
         }
 
@@ -35,11 +38,21 @@ namespace Assets.Scripts.Managers
             
         }
 
-        //TODO: Make a trip to a webapi to find out when the session started and what time it is now.
         IEnumerator GetStartTime()
         {
-            _startTime = DateTime.Now;
-            _currentTime = DateTime.Now;
+            _startTime = DateTime.Now.AddMinutes(-5);
+            //_currentTime = DateTime.Now;
+
+            var www = new WWW(TimeUrl);
+            yield return www;
+            var timedate = JsonConvert.DeserializeObject<TimeApiDate>(www.text);
+            Debug.Log("The timeapi time is " + timedate.dateString);
+            _currentTime = DateTime.Parse(timedate.dateString);
+
+            _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
+
+            var minutesSpan = (_currentTime.Subtract(_startTime));
+            ScheduledEvent.elapsedMinutes = (float)minutesSpan.TotalMinutes;
 
             initialized = true;
             yield return null;
