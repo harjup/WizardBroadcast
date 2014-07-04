@@ -31,9 +31,10 @@ namespace Assets.Scripts.Managers
             {
                 _currentTime = x;
 
-                //TODO: Determine how we shoudl be calcualting session starts and ends.
-                //Maybe it should just be based on how far into the current hour or 1/2 hour we are
-                _startTime = _currentTime.AddMinutes(-5);
+                //For now let's just have the startTime be the beginning of the closest half-hour
+                _startTime = new DateTime(_currentTime.Year, _currentTime.Month,
+                            _currentTime.Day, _currentTime.Hour, (_currentTime.Minute / 30) * 30, 0);
+
                 _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
                 var minuteSpan = (_currentTime.Subtract(_startTime));
                 ScheduledEvent.elapsedMinutes = (float) minuteSpan.TotalMinutes;

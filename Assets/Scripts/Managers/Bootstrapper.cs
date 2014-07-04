@@ -31,9 +31,7 @@ namespace Assets.Scripts.Managers
             {
                 if (!ObjectOfTypeExistsInScene(prefabToSpawn.Key))
                 {
-                    //TODO: Get a better method of determining the position to drop the object at. Maybe a spawnpoint or somethin.
-                    //Only the player should have any kind of position sensitivity I thiiink
-                    var createdGameObject = Instantiate(Resources.Load(prefabToSpawn.Value, typeof(GameObject)), new Vector3(0f, 2.5f, 0f), new Quaternion()) as GameObject;
+                    var createdGameObject = Instantiate(Resources.Load(prefabToSpawn.Value, typeof(GameObject)), Vector3.zero, new Quaternion()) as GameObject;
 
                     //Anything created by the bootstrap should persist between scenes
                     if (createdGameObject != null)
