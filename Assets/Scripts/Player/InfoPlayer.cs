@@ -16,7 +16,7 @@ namespace Assets.Scripts.Player
         
         void Start()
         {
-            DontDestroyOnLoad(transform.gameObject);
+            
         }
     }
 }

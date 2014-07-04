@@ -26,7 +26,7 @@ namespace Assets.Scripts.Managers
 
         void Start()
         {
-          
+
         }
 
         void Update()
