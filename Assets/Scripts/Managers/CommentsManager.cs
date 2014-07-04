@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Assets.Common;
+using Assets.Scripts.Repository;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -13,67 +14,33 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class CommentsManager : Singleton<CommentsManager>
     {
-        //TODO: Put this url in a config file.
-        string commentUrl = "http://localhost:52542/api/comments";
+        private ICommentRepository commentRepository;
+        private List<UserComment> userComments; 
 
         void Start()
         {
-            StartCoroutine(GetComments());
+            commentRepository = new CommentRepository();
+            //GetComments();
+            //PostComment();
         }
 
-
-        IEnumerator GetComments()
+        void GetComments()
         {
-            var commentWWW = new WWW(commentUrl);
-            yield return commentWWW;
-
-            var commentList = JsonConvert.DeserializeObject<List<UserComment>>(commentWWW.text);
-            foreach (var userComment in commentList)
-            {
-                Debug.Log(String.Format("{0} says {1}", userComment.Name, userComment.Content));
-                if (userComment.WorldPositon != null)
-                {
-                    Vector3 position = userComment.WorldPositon.ParseToVector3();
-                    Debug.Log(position);
-                }
-
-            }
+            StartCoroutine(commentRepository.GetComments(x => {userComments = x;}));
         }
 
-        IEnumerator PostComment()
+        void PostComment()
         {
-            
-            var commentToSave = new UserComment()
+            var comment = new UserComment
             {
-                Content = "Hello from the Unity3D webplayer!!",
-                Mood = "Aprehensive",
-                Name = "Poopy Pants3D",
-                SessionTime = 5,
+                Name = "Unity Player",
+                Content = "Hello from wonderful unity three d!!",
+                Mood = "Whatever",
                 Location = "Hub",
-                WorldPositon = Vector3.zero.ToString()
+                WorldPositon = Vector3.forward.ToString()
             };
 
-            var jsonString = JsonConvert.SerializeObject(commentToSave);
-
-            var headers = new Dictionary<string, string>();
-            headers.Add("Content-Type", "text/json");
-
-            var encoding = new UTF8Encoding();
-            var request = new WWW(commentUrl, encoding.GetBytes(jsonString), headers);
-
-            yield return request;
-
-            if (request.error != null)
-            {
-                Debug.Log("Error:" + request.error);
-            }
-            else
-            {
-                Debug.Log("Request Successful");
-                Debug.Log(request.text);
-            }
-            
+            StartCoroutine(commentRepository.PostComment(comment, x => Debug.Log(x ? "Comment Posted" : "Comment Not Posted")));
         }
-
     }
 }

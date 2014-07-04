@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Assets.Scripts.Pocos;
+using Assets.Scripts.Repository;
 using Newtonsoft.Json;
 using UnityEngine;
 using WizardCentralServer.Model.Dtos;
@@ -13,8 +14,7 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class TimeTracker : Singleton<TimeTracker>
     {
-        //TODO: Put this url in a config file.
-        private const string TimeUrl = "http://localhost:52542/api/time";
+        private ITimeRepository _timeRepository;
 
         private float _nextMinute;
         private static DateTime _startTime;
@@ -22,41 +22,35 @@ namespace Assets.Scripts.Managers
         private const float MinuteInSeconds = 60f;
 
 
-        private bool initialized = false;
+        private bool _initialized;
 
         void Start()
         {
-            StartCoroutine(GetStartTime());
+            _timeRepository = new MockTimeRepository();
+            StartCoroutine(_timeRepository.GetCurrentTime(x =>
+            {
+                _currentTime = x;
+
+                //TODO: Determine how we shoudl be calcualting session starts and ends.
+                //Maybe it should just be based on how far into the current hour or 1/2 hour we are
+                _startTime = _currentTime.AddMinutes(-5);
+                _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
+                var minuteSpan = (_currentTime.Subtract(_startTime));
+                ScheduledEvent.elapsedMinutes = (float) minuteSpan.TotalMinutes;
+
+                _initialized = true;
+            }));
         }
 
         void Update()
         {
-            if (initialized)
+            if (_initialized)
             {
                 CheckTime();
             }
             
         }
 
-        IEnumerator GetStartTime()
-        {
-            _startTime = DateTime.Now.AddMinutes(-5);
-            //_currentTime = DateTime.Now;
-
-            var www = new WWW(TimeUrl);
-            yield return www;
-            var timedate = JsonConvert.DeserializeObject<TimeApiDate>(www.text);
-            Debug.Log("The timeapi time is " + timedate.dateString);
-            _currentTime = DateTime.Parse(timedate.dateString);
-
-            _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
-
-            var minutesSpan = (_currentTime.Subtract(_startTime));
-            ScheduledEvent.elapsedMinutes = (float)minutesSpan.TotalMinutes;
-
-            initialized = true;
-            yield return null;
-        }
 
         void CheckTime()
         {
