@@ -19,7 +19,7 @@ namespace Assets.Scripts.Managers
         private float _nextMinute;
         private static DateTime _startTime;
         static DateTime _currentTime;
-        private const float MinuteInSeconds = 60f;
+        private const float MinuteInSeconds = 1f;
 
 
         private bool _initialized;
@@ -67,7 +67,15 @@ namespace Assets.Scripts.Managers
             _currentTime = _currentTime.AddMinutes(1);
             var secondsOver = (time - _nextMinute);
             _nextMinute = time + (MinuteInSeconds - secondsOver);
+
             LevelEvent.elapsedMinutes += 1;
+            if (LevelEvent.elapsedMinutes >= 30f)
+            {
+                LevelEvent.elapsedMinutes = 0;
+                ScheduleTracker.Instance.ResetSchedule();
+            }
+
+            
         }
 
         public DateTime GetCurrentTime()

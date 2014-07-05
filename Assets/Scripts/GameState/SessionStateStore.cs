@@ -2,11 +2,11 @@
 
 namespace Assets.Scripts.Managers
 {
-    public enum SceneState
+    public enum State
     {
         Undefined,
-        Closed,
-        Open
+        InActive,
+        Active
     }
 
     /// <summary>
@@ -14,20 +14,20 @@ namespace Assets.Scripts.Managers
     /// </summary>
     public static class SessionStateStore
     {
-        private static readonly Dictionary<Scene, SceneState> SceneStates = new Dictionary<Scene, SceneState>()
+        private static readonly Dictionary<Scene, State> SceneStates = new Dictionary<Scene, State>()
         {
-            {Scene.Level1, SceneState.Closed},
-            {Scene.Level2, SceneState.Closed},
-            {Scene.Level3, SceneState.Closed},
-            {Scene.Level4, SceneState.Closed}
+            {Scene.Level1, State.InActive},
+            {Scene.Level2, State.InActive},
+            {Scene.Level3, State.InActive},
+            {Scene.Level4, State.InActive}
         };
 
-        public static void SetSceneState(Scene scene, SceneState state)
+        public static void SetSceneState(Scene scene, State state)
         {
             SceneStates[scene] = state;
         }
 
-        public static SceneState GetSceneState(Scene scene)
+        public static State GetSceneState(Scene scene)
         {
             return SceneStates[scene];
         }

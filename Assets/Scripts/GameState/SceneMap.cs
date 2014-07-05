@@ -17,8 +17,6 @@ namespace Assets.Scripts.Managers
     //Singleton service for mapping enum values to scene names
     public static class SceneMap
     {
-        
-
         //TODO: Give these scenes descriptive names!
         private static readonly Dictionary<Scene, string> SceneDictionary = new Dictionary<Scene, string>()
         {

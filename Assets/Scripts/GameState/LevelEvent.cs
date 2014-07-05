@@ -12,13 +12,15 @@ namespace Assets.Scripts.Pocos
     /// </summary>
     public class LevelEvent
     {
+
         public static float elapsedMinutes = 0;
 
         //Everything is strings for now but that's subject to change
-        public LevelEvent(float _time, Scene _targetScene)
+        public LevelEvent(float _time, Scene _targetScene, State targetState)
         {
             TargetTime = _time;
             Target = _targetScene;
+            TargetState = targetState;
             Fired = false;
         }
 
@@ -28,9 +30,14 @@ namespace Assets.Scripts.Pocos
         public readonly float TargetTime;
 
         /// <summary>
-        /// String representation of the subscriber type the action will fire on
+        /// The target scene to act on
         /// </summary>
         public readonly Scene Target;
+
+        /// <summary>
+        /// The state that we're telling the scene to switch to
+        /// </summary>
+        public readonly State TargetState;
 
         public bool Fired;
 

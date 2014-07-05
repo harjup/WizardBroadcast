@@ -10,34 +10,34 @@ using WizardBroadcast;
 
 namespace Assets.Scripts.Managers
 {
-    public enum EventTarget
-    {
-        Undefined
-    }
-
     /// <summary>
     /// Holds a list of ScheduledEvents, checks if an event is active, and fires it if it is
     /// </summary>
     class ScheduleTracker : Singleton<ScheduleTracker>
     {
         private Scene activeScene;
-        public delegate void ActivateLevel(Scene targetScene);
+        public delegate void ActivateLevel(Scene targetScene, State targetState);
         public static event ActivateLevel levelActivated;
 
-        private static void OnLevelActivated(Scene targetscene)
+        private static void OnLevelActivated(Scene targetscene, State targetState)
         {
+            SessionStateStore.SetSceneState(targetscene, targetState);
             ActivateLevel handler = levelActivated;
-            if (handler != null) handler(targetscene);
+            if (handler != null) handler(targetscene, targetState);
         }
 
 
         //These ScheduledEvents will probably be stored somewhere else eventually
         public List<LevelEvent> Schedule = new List<LevelEvent>()
         {
-            new LevelEvent(5f, Scene.Level1),
-            new LevelEvent(12f, Scene.Level2),
-            new LevelEvent(19f, Scene.Level3),
-            new LevelEvent(25f, Scene.Level4),
+            new LevelEvent(5f, Scene.Level1, State.Active),
+            new LevelEvent(11f, Scene.Level1, State.InActive),
+            new LevelEvent(12f, Scene.Level2, State.Active),
+            new LevelEvent(17f, Scene.Level2, State.InActive),
+            new LevelEvent(19f, Scene.Level3, State.Active),
+            new LevelEvent(23f, Scene.Level3, State.InActive),
+            new LevelEvent(25f, Scene.Level4, State.Active),
+            new LevelEvent(29f, Scene.Level4, State.InActive)
         };
 
         void Start()
@@ -50,6 +50,13 @@ namespace Assets.Scripts.Managers
            CheckSchedule();
         }
 
+        public void ResetSchedule()
+        {
+            foreach (var scheduledEvent in Schedule)
+            {
+                scheduledEvent.Fired = false;
+            }
+        }
 
         void CheckSchedule()
         {
@@ -57,8 +64,7 @@ namespace Assets.Scripts.Managers
             {
                 if (scheduledEvent.IsActive())
                 {
-                    //Debug.Log(String.Format("At {0}/{1}, {2}:{3}", scheduledEvent.TargetTime, TimeTracker.Instance.GetCurrentTime().Minute, scheduledEvent.Target, scheduledEvent.Action));
-                    OnLevelActivated(scheduledEvent.Target);
+                    OnLevelActivated(scheduledEvent.Target, scheduledEvent.TargetState);
                     scheduledEvent.Fired = true;
                 }
             }
