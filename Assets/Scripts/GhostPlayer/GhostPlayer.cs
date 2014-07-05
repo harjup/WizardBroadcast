@@ -4,11 +4,12 @@ using System.Collections;
 public class GhostPlayer : MonoBehaviourBase
 {
 
-    private string id;
+    public string id;
 
-    void SetPosition(Vector3 positon)
+    void Initialize(string _id, Vector3 position)
     {
-        transform.position = positon;
+        id = _id;
+        transform.position = position;
     }
 
     void UpdatePosition(Vector3 position)

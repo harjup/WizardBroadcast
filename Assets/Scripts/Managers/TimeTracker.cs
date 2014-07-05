@@ -37,7 +37,7 @@ namespace Assets.Scripts.Managers
 
                 _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
                 var minuteSpan = (_currentTime.Subtract(_startTime));
-                ScheduledEvent.elapsedMinutes = (float) minuteSpan.TotalMinutes;
+                LevelEvent.elapsedMinutes = (float) minuteSpan.TotalMinutes;
 
                 _initialized = true;
             }));
@@ -67,7 +67,7 @@ namespace Assets.Scripts.Managers
             _currentTime = _currentTime.AddMinutes(1);
             var secondsOver = (time - _nextMinute);
             _nextMinute = time + (MinuteInSeconds - secondsOver);
-            ScheduledEvent.elapsedMinutes += 1;
+            LevelEvent.elapsedMinutes += 1;
         }
 
         public DateTime GetCurrentTime()

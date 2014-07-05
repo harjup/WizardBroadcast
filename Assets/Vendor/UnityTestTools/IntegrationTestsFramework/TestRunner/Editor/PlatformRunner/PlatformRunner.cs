@@ -29,7 +29,7 @@ namespace UnityTest.IntegrationTests
 			set { EditorPrefs.SetString ("ITR-platformRunnerBuildTarget", value.ToString ()); }
 		}
 
-		[MenuItem ("Unity Test Tools/Platform Runner/Run current scene %#&r")]
+		[MenuItem ("Unity Test Tools/Platform Runner/Run current Scene %#&r")]
 		public static void BuildAndRunCurrentScene ()
 		{
 			Debug.Log ("Building and running current test for " + defaultBuildTarget);

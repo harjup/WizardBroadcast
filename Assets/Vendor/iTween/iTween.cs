@@ -6138,7 +6138,7 @@ public class iTween : MonoBehaviour{
 	}	
 	
 	/// <summary>
-	/// Resume all iTweens in scene.
+	/// Resume all iTweens in Scene.
 	/// </summary>
 	public static void Resume(){
 		for (int i = 0; i < tweens.Count; i++) {
@@ -6149,7 +6149,7 @@ public class iTween : MonoBehaviour{
 	}	
 	
 	/// <summary>
-	/// Resume all iTweens in scene of a particular type.
+	/// Resume all iTweens in Scene of a particular type.
 	/// </summary>
 	/// <param name="type">
 	/// A <see cref="System.String"/> name of the type of iTween you would like to resume.  Can be written as part of a name such as "mov" for all "MoveTo" iTweens.
@@ -6249,7 +6249,7 @@ public class iTween : MonoBehaviour{
 	}	
 	
 	/// <summary>
-	/// Pause all iTweens in scene.
+	/// Pause all iTweens in Scene.
 	/// </summary>
 	public static void Pause(){
 		for (int i = 0; i < tweens.Count; i++) {
@@ -6260,7 +6260,7 @@ public class iTween : MonoBehaviour{
 	}	
 	
 	/// <summary>
-	/// Pause all iTweens in scene of a particular type.
+	/// Pause all iTweens in Scene of a particular type.
 	/// </summary>
 	/// <param name="type">
 	/// A <see cref="System.String"/> name of the type of iTween you would like to pause.  Can be written as part of a name such as "mov" for all "MoveTo" iTweens.
@@ -6284,14 +6284,14 @@ public class iTween : MonoBehaviour{
 	//#################################	
 	
 	/// <summary>
-	/// Count all iTweens in current scene.
+	/// Count all iTweens in current Scene.
 	/// </summary>
 	public static int Count(){
 		return(tweens.Count);
 	}
 	
 	/// <summary>
-	/// Count all iTweens in current scene of a particular type.
+	/// Count all iTweens in current Scene of a particular type.
 	/// </summary>
 	/// <param name="type">
 	/// A <see cref="System.String"/> name of the type of iTween you would like to stop.  Can be written as part of a name such as "mov" for all "MoveTo" iTweens.
@@ -6342,7 +6342,7 @@ public class iTween : MonoBehaviour{
 	//################################	
 	
 	/// <summary>
-	/// Stop and destroy all Tweens in current scene.
+	/// Stop and destroy all Tweens in current Scene.
 	/// </summary>
 	public static void Stop(){
 		for (int i = 0; i < tweens.Count; i++) {
@@ -6354,7 +6354,7 @@ public class iTween : MonoBehaviour{
 	}	
 	
 	/// <summary>
-	/// Stop and destroy all iTweens in current scene of a particular type.
+	/// Stop and destroy all iTweens in current Scene of a particular type.
 	/// </summary>
 	/// <param name="type">
 	/// A <see cref="System.String"/> name of the type of iTween you would like to stop.  Can be written as part of a name such as "mov" for all "MoveTo" iTweens.
@@ -6375,7 +6375,7 @@ public class iTween : MonoBehaviour{
 	
 	/* GFX47 MOD START */
 	/// <summary>
-	/// Stop and destroy all iTweens in current scene of a particular name.
+	/// Stop and destroy all iTweens in current Scene of a particular name.
 	/// </summary>
 	/// <param name="name">
 	/// The <see cref="System.String"/> name of iTween you would like to stop.

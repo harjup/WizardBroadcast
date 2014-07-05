@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.RenderSettings)]
-	[Tooltip("Sets the density of the Fog in the scene.")]
+	[Tooltip("Sets the density of the Fog in the Scene.")]
 	public class SetFogDensity : FsmStateAction
 	{
 		[RequiredField]

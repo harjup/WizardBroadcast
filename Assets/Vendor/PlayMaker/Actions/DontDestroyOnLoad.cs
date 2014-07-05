@@ -6,7 +6,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.Level)]
-	[Tooltip("Makes the Game Object not be destroyed automatically when loading a new scene.")]
+	[Tooltip("Makes the Game Object not be destroyed automatically when loading a new Scene.")]
 	public class DontDestroyOnLoad : FsmStateAction
 	{
 		[RequiredField]

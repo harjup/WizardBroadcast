@@ -8,7 +8,7 @@ namespace HutongGames.PlayMaker.Actions
 {
 	[Obsolete("This action is obsolete; use Send Event with Event Target instead.")]
 	[ActionCategory(ActionCategory.StateMachine)]
-	[Tooltip("Sends an Event to all FSMs in the scene or to all FSMs on a Game Object.\nNOTE: This action won't work on the very first frame of the game...")]
+	[Tooltip("Sends an Event to all FSMs in the Scene or to all FSMs on a Game Object.\nNOTE: This action won't work on the very first frame of the game...")]
 	public class BroadcastEvent : FsmStateAction
 	{
 		[RequiredField]

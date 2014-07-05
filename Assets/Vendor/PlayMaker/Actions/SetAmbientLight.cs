@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.RenderSettings)]
-	[Tooltip("Sets the Ambient Light Color for the scene.")]
+	[Tooltip("Sets the Ambient Light Color for the Scene.")]
 	public class SetAmbientLight : FsmStateAction
 	{
 		[RequiredField]

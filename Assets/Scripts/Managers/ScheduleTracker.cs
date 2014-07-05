@@ -10,21 +10,34 @@ using WizardBroadcast;
 
 namespace Assets.Scripts.Managers
 {
+    public enum EventTarget
+    {
+        Undefined
+    }
+
     /// <summary>
     /// Holds a list of ScheduledEvents, checks if an event is active, and fires it if it is
     /// </summary>
     class ScheduleTracker : Singleton<ScheduleTracker>
     {
-        private SceneMap.scene activeScene;
+        private Scene activeScene;
+        public delegate void ActivateLevel(Scene targetScene);
+        public static event ActivateLevel levelActivated;
+
+        private static void OnLevelActivated(Scene targetscene)
+        {
+            ActivateLevel handler = levelActivated;
+            if (handler != null) handler(targetscene);
+        }
 
 
         //These ScheduledEvents will probably be stored somewhere else eventually
-        public List<ScheduledEvent> Schedule = new List<ScheduledEvent>()
+        public List<LevelEvent> Schedule = new List<LevelEvent>()
         {
-            new ScheduledEvent(2f, "Game", "Start"),
-            new ScheduledEvent(12f, "Wizard", "Fire"),
-            new ScheduledEvent(15f, "Level1", "Open"),
-            new ScheduledEvent(17f, "Level1", "Close")
+            new LevelEvent(5f, Scene.Level1),
+            new LevelEvent(12f, Scene.Level2),
+            new LevelEvent(19f, Scene.Level3),
+            new LevelEvent(25f, Scene.Level4),
         };
 
         void Start()
@@ -44,7 +57,8 @@ namespace Assets.Scripts.Managers
             {
                 if (scheduledEvent.IsActive())
                 {
-                    Debug.Log(String.Format("At {0}/{1}, {2}:{3}", scheduledEvent.TargetTime, TimeTracker.Instance.GetCurrentTime().Minute, scheduledEvent.Target, scheduledEvent.Action));
+                    //Debug.Log(String.Format("At {0}/{1}, {2}:{3}", scheduledEvent.TargetTime, TimeTracker.Instance.GetCurrentTime().Minute, scheduledEvent.Target, scheduledEvent.Action));
+                    OnLevelActivated(scheduledEvent.Target);
                     scheduledEvent.Fired = true;
                 }
             }

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Assets.Scripts.Managers
 {
     /// <summary>
-    /// Ensures all the objects to make the game work ahve been created for a given scene
+    /// Ensures all the objects to make the game work ahve been created for a given Scene
     /// Could use a better name, maybe another word like SceneBootstrapper I dunno
     /// </summary>
     class Bootstrapper : MonoBehaviourBase

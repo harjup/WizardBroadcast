@@ -9,7 +9,7 @@ namespace HutongGames.PlayMaker.Actions
 	public class DrawFullscreenColor : FsmStateAction
 	{
 		[RequiredField]
-        [Tooltip("Color. NOTE: Uses OnGUI so you need a PlayMakerGUI component in the scene.")]
+        [Tooltip("Color. NOTE: Uses OnGUI so you need a PlayMakerGUI component in the Scene.")]
 		public FsmColor color;
 		
 		public override void Reset()

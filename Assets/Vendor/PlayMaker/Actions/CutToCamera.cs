@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.Camera)]
-	[Tooltip("Activates a Camera in the scene.")]
+	[Tooltip("Activates a Camera in the Scene.")]
 	public class CutToCamera : FsmStateAction
 	{
 		[RequiredField]

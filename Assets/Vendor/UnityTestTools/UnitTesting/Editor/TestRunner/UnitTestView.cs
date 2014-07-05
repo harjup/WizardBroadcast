@@ -51,8 +51,8 @@ namespace UnityTest
 		private readonly GUIContent guiHideButton = new GUIContent ("Hide", Icons.gearImg);
 		private readonly GUIContent guiRunOnRecompile = new GUIContent ("Run on recompile", "Run all tests after recompilation");
 		private readonly GUIContent guiShowDetailsBelowTests = new GUIContent ("Show details below tests", "Show run details below test list");
-		private readonly GUIContent guiRunTestsOnNewScene = new GUIContent ("Run tests on a new scene", "Run tests on a new scene");
-		private readonly GUIContent guiAutoSaveSceneBeforeRun = new GUIContent ("Autosave scene", "The runner will automaticall save current scene changes before it starts");
+		private readonly GUIContent guiRunTestsOnNewScene = new GUIContent ("Run tests on a new Scene", "Run tests on a new Scene");
+		private readonly GUIContent guiAutoSaveSceneBeforeRun = new GUIContent ("Autosave Scene", "The runner will automaticall save current Scene changes before it starts");
 		private readonly GUIContent guiShowSucceededTests = new GUIContent ("Succeeded", Icons.successImg, "Show tests that succeeded");
 		private readonly GUIContent guiShowFailedTests = new GUIContent ("Failed", Icons.failImg, "Show tests that failed");
 		private readonly GUIContent guiShowIgnoredTests = new GUIContent ("Ignored", Icons.ignoreImg, "Show tests that are ignored");
