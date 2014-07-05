@@ -31,7 +31,7 @@ namespace Assets.Scripts.Managers
         public List<LevelEvent> Schedule = new List<LevelEvent>()
         {
             new LevelEvent(5f, Scene.Level1, State.Active),
-            new LevelEvent(11f, Scene.Level1, State.InActive),
+            new LevelEvent(8f, Scene.Level1, State.InActive),
             new LevelEvent(12f, Scene.Level2, State.Active),
             new LevelEvent(17f, Scene.Level2, State.InActive),
             new LevelEvent(19f, Scene.Level3, State.Active),
@@ -47,7 +47,12 @@ namespace Assets.Scripts.Managers
 
         void Update()
         {
-           CheckSchedule();
+            //Don't start checking the schedule until the timetracker has gotten the current time
+            if (TimeTracker.Instance.IsInitialized())
+            {
+                CheckSchedule();
+                SessionStateStore.SetScheduleTrackInit();
+            }
         }
 
         public void ResetSchedule()

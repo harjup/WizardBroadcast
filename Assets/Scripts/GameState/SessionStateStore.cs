@@ -14,6 +14,19 @@ namespace Assets.Scripts.Managers
     /// </summary>
     public static class SessionStateStore
     {
+        private static bool _scheduleTrackerInitialized;
+
+        public static bool IsScheduleTrackerInitialized()
+        {
+            return _scheduleTrackerInitialized;
+        }
+
+        public static void SetScheduleTrackInit()
+        {
+            _scheduleTrackerInitialized = true;
+        }
+
+
         private static readonly Dictionary<Scene, State> SceneStates = new Dictionary<Scene, State>()
         {
             {Scene.Level1, State.InActive},
@@ -30,6 +43,24 @@ namespace Assets.Scripts.Managers
         public static State GetSceneState(Scene scene)
         {
             return SceneStates[scene];
+        }
+
+        /// <summary>
+        /// Returns the current scene that's set to active.
+        /// If there are multiple active scenes it return the first
+        /// If there are no active scenes it returns the hub
+        /// </summary>
+        /// <returns></returns>
+        public static Scene GetActiveScene()
+        {
+            foreach (var sceneState in SceneStates)
+            {
+                if (sceneState.Value == State.Active)
+                {
+                    return sceneState.Key;
+                }
+            }
+            return Scene.Hub;
         }
     }
 }

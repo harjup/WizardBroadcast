@@ -12,8 +12,27 @@ namespace Assets.Scripts.Pocos
     /// </summary>
     public class LevelEvent
     {
+        private const float SessionLength = 30f;
 
-        public static float elapsedMinutes = 0;
+        /// <summary>
+        /// Amount of time after the session has started.
+        /// Automatically resets itself if set above the SessionLength
+        /// </summary>
+        public static float ElapsedMinutes
+        {
+            get { return _elapsedMinutes; }
+            set
+            {
+                _elapsedMinutes = value;
+                if (ElapsedMinutes >= SessionLength)
+                {
+                    ElapsedMinutes = 0;
+                    //Might be a good idea to just first an event instead of manually calling reset schedule
+                    ScheduleTracker.Instance.ResetSchedule();
+                }
+            }
+        }
+
 
         //Everything is strings for now but that's subject to change
         public LevelEvent(float _time, Scene _targetScene, State targetState)
@@ -40,10 +59,11 @@ namespace Assets.Scripts.Pocos
         public readonly State TargetState;
 
         public bool Fired;
+        private static float _elapsedMinutes;
 
         public bool IsActive()
         {
-            return (!Fired && TargetTime <= elapsedMinutes);
+            return (!Fired && TargetTime <= ElapsedMinutes);
         }
     }
 }

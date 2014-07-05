@@ -6,11 +6,12 @@ namespace Assets.Scripts.Managers
     public enum Scene
     {
         Undefined,
+        Start,
+        Hub,
         Level1,
         Level2,
         Level3,
         Level4,
-        Hub
     }
 
     //TODO: Figure out what folder to shove this in and what to name it
@@ -20,11 +21,12 @@ namespace Assets.Scripts.Managers
         //TODO: Give these scenes descriptive names!
         private static readonly Dictionary<Scene, string> SceneDictionary = new Dictionary<Scene, string>()
         {
-            {Scene.Level1, "level1"},
-            {Scene.Level2, "level2"},
-            {Scene.Level3, "level3"},
-            {Scene.Level4, "level4"},
-            {Scene.Hub, "HubZone"},
+            {Scene.Start,   "Start"},
+            {Scene.Hub,     "HubZone"},
+            {Scene.Level1,  "level1"},
+            {Scene.Level2,  "level2"},
+            {Scene.Level3,  "level3"},
+            {Scene.Level4,  "level4"}
         };
 
 
@@ -32,8 +34,13 @@ namespace Assets.Scripts.Managers
         {
             if (scene == Scene.Undefined)
             {
-                Debug.LogError("Tried load a Scene using an uninitialized Scene enum");
+                Debug.LogError("Tried get a Scene using an uninitialized Scene enum");
             }
+            if (SceneDictionary[scene] == null)
+            {
+                Debug.LogError("Tried to get a scene not present in the sceneMap");
+            }
+
 
             return SceneDictionary[scene];
         }

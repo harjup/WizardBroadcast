@@ -19,7 +19,7 @@ namespace Assets.Scripts.Managers
         private float _nextMinute;
         private static DateTime _startTime;
         static DateTime _currentTime;
-        private const float MinuteInSeconds = 1f;
+        private const float MinuteInSeconds = 60f;
 
 
         private bool _initialized;
@@ -27,6 +27,7 @@ namespace Assets.Scripts.Managers
         void Start()
         {
             _timeRepository = new MockTimeRepository();
+            //_timeRepository = new TimeRepository();
             StartCoroutine(_timeRepository.GetCurrentTime(x =>
             {
                 _currentTime = x;
@@ -37,7 +38,7 @@ namespace Assets.Scripts.Managers
 
                 _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
                 var minuteSpan = (_currentTime.Subtract(_startTime));
-                LevelEvent.elapsedMinutes = (float) minuteSpan.TotalMinutes;
+                LevelEvent.ElapsedMinutes = (float) minuteSpan.TotalMinutes;
 
                 _initialized = true;
             }));
@@ -52,6 +53,10 @@ namespace Assets.Scripts.Managers
             
         }
 
+        public bool IsInitialized()
+        {
+            return _initialized;
+        }
 
         void CheckTime()
         {
@@ -68,14 +73,7 @@ namespace Assets.Scripts.Managers
             var secondsOver = (time - _nextMinute);
             _nextMinute = time + (MinuteInSeconds - secondsOver);
 
-            LevelEvent.elapsedMinutes += 1;
-            if (LevelEvent.elapsedMinutes >= 30f)
-            {
-                LevelEvent.elapsedMinutes = 0;
-                ScheduleTracker.Instance.ResetSchedule();
-            }
-
-            
+            LevelEvent.ElapsedMinutes += 1;            
         }
 
         public DateTime GetCurrentTime()
