@@ -95,7 +95,7 @@ namespace UnityTest
 
 		private static void PerformUndo (int undoGroup)
 		{
-			EditorUtility.DisplayProgressBar ("Undo", "Reverting changes to the scene", 0);
+			EditorUtility.DisplayProgressBar ("Undo", "Reverting changes to the Scene", 0);
 			var undoStartTime = DateTime.Now;
 #if UNITY_4_0 || UNITY_4_0_1 || UNITY_4_1 || UNITY_4_2
 			Undo.PerformUndo ();
@@ -103,7 +103,7 @@ namespace UnityTest
 			Undo.RevertAllDownToGroup (undoGroup);
 #endif
 			if ((DateTime.Now - undoStartTime).Seconds > 1)
-				Debug.LogWarning ("Undo after unit test run took " + (DateTime.Now - undoStartTime).Seconds + " seconds. Consider running unit tests on a new scene for better performance.");
+				Debug.LogWarning ("Undo after unit test run took " + (DateTime.Now - undoStartTime).Seconds + " seconds. Consider running unit tests on a new Scene for better performance.");
 			EditorUtility.ClearProgressBar ();
 		}
 

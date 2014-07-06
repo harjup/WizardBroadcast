@@ -6,6 +6,7 @@ using System.Text;
 using Assets.Scripts.Pocos;
 using HutongGames.PlayMaker.Actions;
 using UnityEngine;
+using WizardBroadcast;
 
 namespace Assets.Scripts.Managers
 {
@@ -14,26 +15,53 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class ScheduleTracker : Singleton<ScheduleTracker>
     {
-        //TODO: Figure out why events are not firing right now that ScheduleTracker is getting made with bootstrapper
-        //These ScheduledEvents will probably be stored somewhere else eventually
-        public List<ScheduledEvent> Schedule = new List<ScheduledEvent>()
+        private Scene activeScene;
+        public delegate void ActivateLevel(Scene targetScene, State targetState);
+        public static event ActivateLevel levelActivated;
+
+        private static void OnLevelActivated(Scene targetscene, State targetState)
         {
-            new ScheduledEvent(15f, "Game", "Start"),
-            new ScheduledEvent(30f, "Wizard", "Fire"),
-            new ScheduledEvent(45f, "Level1", "Open"),
-            new ScheduledEvent(60f, "Level1", "Close")
+            SessionStateStore.SetSceneState(targetscene, targetState);
+            ActivateLevel handler = levelActivated;
+            if (handler != null) handler(targetscene, targetState);
+        }
+
+
+        //These ScheduledEvents will probably be stored somewhere else eventually
+        public List<LevelEvent> Schedule = new List<LevelEvent>()
+        {
+            new LevelEvent(1f, Scene.Level1, State.Active),
+            new LevelEvent(8f, Scene.Level1, State.InActive),
+            new LevelEvent(8f, Scene.Level2, State.Active),
+            new LevelEvent(17f, Scene.Level2, State.InActive),
+            new LevelEvent(19f, Scene.Level3, State.Active),
+            new LevelEvent(23f, Scene.Level3, State.InActive),
+            new LevelEvent(23f, Scene.Level4, State.Active),
+            new LevelEvent(29f, Scene.Level4, State.InActive)
         };
 
         void Start()
         {
-          
+
         }
 
         void Update()
         {
-           CheckSchedule();
+            //Don't start checking the schedule until the timetracker has gotten the current time
+            if (TimeTracker.Instance.IsInitialized())
+            {
+                CheckSchedule();
+                SessionStateStore.SetScheduleTrackInit();
+            }
         }
 
+        public void ResetSchedule()
+        {
+            foreach (var scheduledEvent in Schedule)
+            {
+                scheduledEvent.Fired = false;
+            }
+        }
 
         void CheckSchedule()
         {
@@ -41,7 +69,7 @@ namespace Assets.Scripts.Managers
             {
                 if (scheduledEvent.IsActive())
                 {
-                    Debug.Log(String.Format("At {0}/{1}, {2}:{3}", scheduledEvent.TargetTime, TimeTracker.Instance.GetCurrentTime().Minute, scheduledEvent.Target, scheduledEvent.Action));
+                    OnLevelActivated(scheduledEvent.Target, scheduledEvent.TargetState);
                     scheduledEvent.Fired = true;
                 }
             }

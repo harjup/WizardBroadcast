@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.RenderSettings)]
-	[Tooltip("Enables/Disables Fog in the scene.")]
+	[Tooltip("Enables/Disables Fog in the Scene.")]
 	public class EnableFog : FsmStateAction
 	{
         [Tooltip("Set to True to enable, False to disable.")]

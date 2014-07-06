@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.GameObject)]
-	[Tooltip("Gets a Random Game Object from the scene.\nOptionally filter by Tag.")]
+	[Tooltip("Gets a Random Game Object from the Scene.\nOptionally filter by Tag.")]
 	public class GetRandomObject : FsmStateAction
 	{
 		[UIHint(UIHint.Tag)]

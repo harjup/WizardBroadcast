@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using Assets.Scripts.Pocos;
+using Assets.Scripts.Repository;
+using Newtonsoft.Json;
 using UnityEngine;
+using WizardCentralServer.Model.Dtos;
 
 namespace Assets.Scripts.Managers
 {
@@ -11,38 +14,51 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class TimeTracker : Singleton<TimeTracker>
     {
-        private float _nextMinute = 0f;
+        private ITimeRepository _timeRepository;
+
+        private float _nextMinute;
         private static DateTime _startTime;
         static DateTime _currentTime;
-        private const float MinuteInSeconds = 2f;
+        private const float MinuteInSeconds = 60f;
 
-        private bool initialized = false;
+
+        private bool _initialized;
 
         void Start()
         {
-            GetStartTime();
-            _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
-            ScheduledEvent.elapsedMinutes = _currentTime.Minute;
-            StartCoroutine(GetStartTime());
+            if (!_initialized)
+            {
+                _timeRepository = new TimeRepository();
+                //_timeRepository = new TimeRepository();
+                StartCoroutine(_timeRepository.GetCurrentTime(x =>
+                {
+                    _currentTime = x;
+
+                    //For now let's just have the startTime be the beginning of the closest half-hour
+                    _startTime = new DateTime(_currentTime.Year, _currentTime.Month,
+                                _currentTime.Day, _currentTime.Hour, (_currentTime.Minute / 30) * 30, 0);
+
+                    _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
+                    var minuteSpan = (_currentTime.Subtract(_startTime));
+                    LevelEvent.ElapsedMinutes = (float)minuteSpan.TotalMinutes;
+
+                    _initialized = true;
+                }));
+            }
         }
 
         void Update()
         {
-            if (initialized)
+            if (_initialized)
             {
                 CheckTime();
             }
             
         }
 
-        //TODO: Make a trip to a webapi to find out when the session started and what time it is now.
-        IEnumerator GetStartTime()
+        public bool IsInitialized()
         {
-            _startTime = DateTime.Now;
-            _currentTime = DateTime.Now;
-
-            initialized = true;
-            yield return null;
+            return _initialized;
         }
 
         void CheckTime()
@@ -59,7 +75,8 @@ namespace Assets.Scripts.Managers
             _currentTime = _currentTime.AddMinutes(1);
             var secondsOver = (time - _nextMinute);
             _nextMinute = time + (MinuteInSeconds - secondsOver);
-            ScheduledEvent.elapsedMinutes += 1;
+
+            LevelEvent.ElapsedMinutes += 1;            
         }
 
         public DateTime GetCurrentTime()

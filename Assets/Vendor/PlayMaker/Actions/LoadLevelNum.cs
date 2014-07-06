@@ -12,7 +12,7 @@ namespace HutongGames.PlayMaker.Actions
         [Tooltip("The level index in File->Build Settings")]
 		public FsmInt levelIndex;
 		
-        [Tooltip("Load the level additively, keeping the current scene.")]
+        [Tooltip("Load the level additively, keeping the current Scene.")]
         public bool additive;
 
         [Tooltip("Event to send after the level is loaded.")]

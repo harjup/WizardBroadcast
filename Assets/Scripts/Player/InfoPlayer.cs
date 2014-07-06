@@ -2,21 +2,52 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.Scripts.Managers;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
     class InfoPlayer : MonoBehaviourBase
     {
-        //TODO: Look for a spawner and set position via that
-        void OnLevelWasLoaded(int level)
-        {
-            transform.position = new Vector3(0f,2.5f,0f);
-        }
-        
+        //TODO: Determine if this is the best spot to put start position logic stuff
         void Start()
         {
-            DontDestroyOnLoad(transform.gameObject);
+            GhostPositionUpdate();
+            MoveToStartPosition();
+        }
+
+        void OnLevelWasLoaded(int level)
+        {
+            GhostPositionUpdate();
+            MoveToStartPosition();
+        }
+
+        void GhostPositionUpdate()
+        {
+            if (Application.loadedLevelName == SceneMap.GetScene(Scene.Hub))
+            {
+                SignalrEndpoint.Instance.StartGhost();
+                InvokeRepeating("SendGhostInfo", 1f, 1f);
+            }
+            else
+            {
+                CancelInvoke("SendGhostInfo");
+            }
+        }
+
+        void MoveToStartPosition()
+        {
+            //TODO: Be move selective on when spawnMarker to user based on application state and whatever
+            var spawnMarker = FindObjectsOfInterface<SpawnMarker>();
+            if (spawnMarker.Count > 0)
+            {
+                transform.position = spawnMarker[0].transform.position;
+            }
+        }
+
+        void SendGhostInfo()
+        {
+            SignalrEndpoint.Instance.SendPositionUpdate(transform.position);
         }
     }
 }

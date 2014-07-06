@@ -20,7 +20,7 @@ public class Singleton<T> : MonoBehaviour where T: MonoBehaviour
                 if (instance == null)
                 {
                     Debug.LogError("An instance of " + typeof(T) +
-                            " is needed in the scene, but there is none.");
+                            " is needed in the Scene, but there is none.");
                 }
             }
 

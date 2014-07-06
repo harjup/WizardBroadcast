@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public static class UsefulExtensions
 {
@@ -15,6 +16,22 @@ public static class UsefulExtensions
     public static Vector3 SetZ(this Vector3 vector3, float z)
     {
         return new Vector3(vector3.x, vector3.y, z);
+    }
+
+    /// <summary>
+    /// Takes a comma separated string of 3 values and attempts to parse it into a vector3
+    /// </summary>
+    public static Vector3 ParseToVector3(this string vectorString)
+    {
+        //Kill any any whitespace or parenthesis
+        vectorString = vectorString.Trim(new[] { '(', ')' });
+        //Split the string on commas
+        var vectorValues = vectorString.Split(',');
+        //Stick the values in a vector3
+        return new Vector3(
+            float.Parse(vectorValues[0]), 
+            float.Parse(vectorValues[1]), 
+            float.Parse(vectorValues[2]));
     }
 }
 
