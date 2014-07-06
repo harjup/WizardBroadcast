@@ -13,6 +13,7 @@ namespace Assets.Scripts.Player
         void Start()
         {
             MoveToStartPosition();
+            InvokeRepeating("SendGhostInfo", 1f, 1f);
         }
 
         void OnLevelWasLoaded(int level)
@@ -27,6 +28,11 @@ namespace Assets.Scripts.Player
             {
                 transform.position = spawnMarker[0].transform.position;
             }
+        }
+
+        void SendGhostInfo()
+        {
+            SignalrEndpoint.Instance.SendPositionUpdate(transform.position);
         }
     }
 }

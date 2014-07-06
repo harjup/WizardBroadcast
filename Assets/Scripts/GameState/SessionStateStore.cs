@@ -14,7 +14,19 @@ namespace Assets.Scripts.Managers
     /// </summary>
     public static class SessionStateStore
     {
+        //Identifier to know which ghost is the player's
+        private static string _playerId;
+
         private static bool _scheduleTrackerInitialized;
+
+        private static readonly Dictionary<Scene, State> SceneStates = new Dictionary<Scene, State>()
+        {
+            {Scene.Level1, State.InActive},
+            {Scene.Level2, State.InActive},
+            {Scene.Level3, State.InActive},
+            {Scene.Level4, State.InActive}
+        };
+
 
         public static bool IsScheduleTrackerInitialized()
         {
@@ -26,14 +38,14 @@ namespace Assets.Scripts.Managers
             _scheduleTrackerInitialized = true;
         }
 
-
-        private static readonly Dictionary<Scene, State> SceneStates = new Dictionary<Scene, State>()
+        public static string PlayerId
         {
-            {Scene.Level1, State.InActive},
-            {Scene.Level2, State.InActive},
-            {Scene.Level3, State.InActive},
-            {Scene.Level4, State.InActive}
-        };
+            get { return _playerId; }
+            set { _playerId = value; }
+        }
+
+
+        
 
         public static void SetSceneState(Scene scene, State state)
         {
