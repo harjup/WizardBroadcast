@@ -34,7 +34,10 @@ namespace Assets.Scripts.Managers
             {typeof(ScheduleTracker), @"Prefabs/ScheduleTracker"},
             {typeof(TimeTracker), @"Prefabs/TimeTracker"},
             {typeof(TweetsManager), @"Prefabs/TweetsManager"},
-            {typeof(CommentsManager), @"Prefabs/CommentsManager"}
+            {typeof(CommentsManager), @"Prefabs/CommentsManager"},
+
+            {typeof(SignalrEndpoint), @"Prefabs/SignalrEndpoint"},
+            {typeof(PeerTracker), @"Prefabs/PeerTracker"}
         };
 
 
@@ -83,18 +86,17 @@ namespace Assets.Scripts.Managers
 
             var root = FindRootByName(rootName);
 
-
             foreach (var prefabToSpawn in prefabSet)
             {
                 if (!ObjectOfTypeExistsInScene(prefabToSpawn.Key))
                 {
                     var createdGameObject = Instantiate(Resources.Load(prefabToSpawn.Value, typeof(GameObject)), Vector3.zero, new Quaternion()) as GameObject;
-
+                    Debug.Log("Creating: " + createdGameObject.name);
                     //Anything created by the bootstrapper should persist between scenes
                     if (createdGameObject != null)
                     {
                         createdGameObject.transform.parent = root.transform;
-                        DontDestroyOnLoad(createdGameObject.transform);
+                        DontDestroyOnLoad(createdGameObject);
                     }
                 }
             }
@@ -104,6 +106,7 @@ namespace Assets.Scripts.Managers
         {
             var managerRoot = GameObject.Find(rootName) ?? new GameObject();
             managerRoot.name = rootName;
+            DontDestroyOnLoad(managerRoot);
             return managerRoot;
         }
     }

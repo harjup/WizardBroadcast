@@ -5,9 +5,26 @@ using System.Collections.Generic;
 
 public class SignalrEndpoint : Singleton<SignalrEndpoint>
 {
+    void Awake()
+    {
+        //Workaround for instantiating a prefrab shoving "(Clone)" at the end
+        //Our webpage needs to find this by name
+        gameObject.name = "SignalrEndpoint";
+    }
+
     void Start()
     {
         GetPlayerId();
+
+    }
+
+    public void StartGhost()
+    {
+        Application.ExternalCall("$.startGhost");
+    }
+    public void StopGhost()
+    {
+        Application.ExternalCall("$.stopGhost");
     }
 
     public void GetPlayerId()
@@ -32,7 +49,7 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
 
-    void OnGUI()
+   /* void OnGUI()
     {
         if (GUI.Button(new Rect(10,10,100,50), "Test 1"))
         {
@@ -43,5 +60,5 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         {
             OnRecieveGhostPositions("[{\"name\":\"d2c782dc-16ed-4146-b577-5f047a6f7cf2\",\"position\":\"(1.0, 3.8, -13.2)\"},{\"name\":\"be53f8d2-bc9e-49ff-995b-39fc86bf9ac8\",\"position\":\"(28.8, 2.0, -6)\"}]");
         }
-    }
+    }*/
 }

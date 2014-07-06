@@ -56,13 +56,13 @@
                 });
                 u.initPlugin(jQuery("#unityPlayer")[0], "Build2.unity3d");
 				
-                $.getPlayerId = function()
+                $.getPlayerId = function getPlayerId()
                 {
-                    u.getUnity().SendMessage("SignalrEndpoint", "GetPlayerId",  $.connection.hub.id);
+                    u.getUnity().SendMessage("SignalrEndpoint", "SetPlayerId",  $.connection.hub.id);
                 }
 
-                $.updatePosition = function(position) {
-                    $.connection.ghostHub.client.setGhostPosition(position);
+                $.updatePosition = function updatePosition(position) {
+                    $.connection.ghostHub.server.setGhostPosition(position);
                 }
 
                 $.unityObject = u;
@@ -83,7 +83,9 @@
                 var chat = $.connection.ghostHub;
                 // Create a function that the hub can call to broadcast messages.
                 chat.client.updatePositions = function (message) {
-                    $.unityObject.getUnity().SendMessage("SignalrEndpoint", "OnRecieveGhostPositions", message);
+                    if ($.unityObject) {
+                        $.unityObject.getUnity().SendMessage("SignalrEndpoint", "OnRecieveGhostPositions", message);
+                    }
                 };
                 // Start the connection.
                 $.connection.hub.start().done(function () {

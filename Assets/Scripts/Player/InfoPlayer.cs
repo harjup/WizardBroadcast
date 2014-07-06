@@ -12,14 +12,29 @@ namespace Assets.Scripts.Player
         //TODO: Determine if this is the best spot to put start position logic stuff
         void Start()
         {
+            GhostPositionUpdate();
             MoveToStartPosition();
-            InvokeRepeating("SendGhostInfo", 1f, 1f);
         }
 
         void OnLevelWasLoaded(int level)
         {
+            GhostPositionUpdate();
             MoveToStartPosition();
         }
+
+        void GhostPositionUpdate()
+        {
+            if (Application.loadedLevelName == SceneMap.GetScene(Scene.Hub))
+            {
+                SignalrEndpoint.Instance.StartGhost();
+                InvokeRepeating("SendGhostInfo", 1f, 1f);
+            }
+            else
+            {
+                CancelInvoke("SendGhostInfo");
+            }
+        }
+
         void MoveToStartPosition()
         {
             //TODO: Be move selective on when spawnMarker to user based on application state and whatever

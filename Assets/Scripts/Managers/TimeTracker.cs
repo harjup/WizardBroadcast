@@ -26,22 +26,25 @@ namespace Assets.Scripts.Managers
 
         void Start()
         {
-            _timeRepository = new MockTimeRepository();
-            //_timeRepository = new TimeRepository();
-            StartCoroutine(_timeRepository.GetCurrentTime(x =>
+            if (!_initialized)
             {
-                _currentTime = x;
+                _timeRepository = new TimeRepository();
+                //_timeRepository = new TimeRepository();
+                StartCoroutine(_timeRepository.GetCurrentTime(x =>
+                {
+                    _currentTime = x;
 
-                //For now let's just have the startTime be the beginning of the closest half-hour
-                _startTime = new DateTime(_currentTime.Year, _currentTime.Month,
-                            _currentTime.Day, _currentTime.Hour, (_currentTime.Minute / 30) * 30, 0);
+                    //For now let's just have the startTime be the beginning of the closest half-hour
+                    _startTime = new DateTime(_currentTime.Year, _currentTime.Month,
+                                _currentTime.Day, _currentTime.Hour, (_currentTime.Minute / 30) * 30, 0);
 
-                _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
-                var minuteSpan = (_currentTime.Subtract(_startTime));
-                LevelEvent.ElapsedMinutes = (float) minuteSpan.TotalMinutes;
+                    _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
+                    var minuteSpan = (_currentTime.Subtract(_startTime));
+                    LevelEvent.ElapsedMinutes = (float)minuteSpan.TotalMinutes;
 
-                _initialized = true;
-            }));
+                    _initialized = true;
+                }));
+            }
         }
 
         void Update()

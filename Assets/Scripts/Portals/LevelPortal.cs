@@ -59,6 +59,9 @@ namespace WizardBroadcast
 	    {
             if (other.GetComponent<InfoPlayer>() != null && isActive)
 	        {
+                //Stop broadcasting ghost stuff when leaving the hub
+                //TODO: Is this the best place for this logic etc etc
+                SignalrEndpoint.Instance.StopGhost();
 	            Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
 	        }
 	    }
