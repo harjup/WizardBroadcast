@@ -1,15 +1,17 @@
-﻿using Assets.Scripts.Player;
-using UnityEngine;
+﻿using System;
 using System.Collections;
 
-public class Signpost : MonoBehaviourBase
+namespace Assets.Scripts.Interactables
 {
-    void OnTriggerEnter(Collider other)
+    public class Signpost : MonoBehaviourBase, IExaminable
     {
-        if (other.GetComponent<InfoPlayer>() != null)
-        {
-            
-        }
+        //TODO: Get this text from *somewhere*
+        //TODO: Be able to chain multiple textboxes together. Maybe make this a list and iterate through each one
+        private const string textToShow = "Hello, I am a basic signpost!";
 
+        public IEnumerable Examine(Action callback)
+        {
+            yield return TextboxDisplay.Instance.DisplayText(textToShow, callback);
+        }
     }
 }
