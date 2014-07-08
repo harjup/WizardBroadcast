@@ -39,6 +39,11 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
 
     public void OnRecieveGhostPositions(string messageString)
     {
+        /*
+            var ghostPositions = GhostPosition.FromString(messageString);
+            PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
+        
+        */
         var ghostPositions = JsonConvert.DeserializeObject<List<GhostPosition>>(messageString);
         PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
     }
@@ -46,6 +51,9 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
     public void SendPositionUpdate(Vector3 position)
     {
         var positionString = position.ToString();
+        /*
+            var positionString = position.ToString().Trim('(').Trim(')');
+        */
         Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
 
