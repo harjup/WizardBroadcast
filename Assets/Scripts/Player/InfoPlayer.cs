@@ -10,6 +10,8 @@ namespace Assets.Scripts.Player
     class InfoPlayer : MonoBehaviourBase
     {
         //TODO: Determine if this is the best spot to put start position logic stuff
+
+        //TODO: Put ghost stuff in own thing
         void Start()
         {
             GhostPositionUpdate();

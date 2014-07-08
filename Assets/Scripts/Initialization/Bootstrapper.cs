@@ -25,7 +25,8 @@ namespace Assets.Scripts.Managers
         private bool playerPrefabsSpawned = false;
         private readonly Dictionary<Type, string> _playerPrefabs = new Dictionary<Type, string>()
         {
-            {typeof(InfoPlayer), @"Prefabs/PlayerCharacter"}
+            //{typeof(InfoPlayer), @"Prefabs/PlayerCharacter"}
+            {typeof(InfoPlayer), @"Prefabs/Player_Alt"}
         };
 
         private bool managerPrefabsSpawned = false;

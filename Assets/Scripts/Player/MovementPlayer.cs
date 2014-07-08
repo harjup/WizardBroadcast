@@ -21,6 +21,7 @@ namespace WizardBroadcast
         // Use this for initialization
         private void Start()
         {
+
             playerMesh = transform.FindChild("Player Mesh");
             interactTrigger = playerMesh.GetComponent<BoxCollider>();
             cameraRig = transform.FindChild("Camera Rig");
