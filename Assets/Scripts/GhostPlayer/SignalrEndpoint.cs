@@ -42,7 +42,6 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         /*
             var ghostPositions = GhostPosition.FromString(messageString);
             PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
-        
         */
         var ghostPositions = JsonConvert.DeserializeObject<List<GhostPosition>>(messageString);
         PeerTracker.Instance.UpdateGhostPositions(ghostPositions);

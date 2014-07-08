@@ -6,7 +6,7 @@ public class GhostPosition
     public string name;
     public string position;
     
-    /*TODO: Ensure this actually compiles and intergrates correctly
+     /*TODO: Ensure this actually compiles, integrate with server side
         public GhostPosition(string _name, string _position)
         {
             name = _name;
@@ -46,7 +46,6 @@ public class GhostPosition
             }
         }
         */
-    
 }
 
 /*
