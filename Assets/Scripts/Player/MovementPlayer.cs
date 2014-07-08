@@ -11,20 +11,21 @@ namespace WizardBroadcast
 
         private Vector3 walkVector;
         private Rigidbody rigidBody;
+        private Transform cameraRig;
+
 
         private Transform playerMesh;
-        private Transform cameraRig;
         private BoxCollider interactTrigger;
-        private int invertCameraHorz = -1;
-        private int invertCameraVert = 1;
+
 
         // Use this for initialization
         private void Start()
         {
+            //This should be ok for now since there aren't multiple cameras flying around
+            cameraRig = Camera.main.transform.parent;
 
             playerMesh = transform.FindChild("Player Mesh");
             interactTrigger = playerMesh.GetComponent<BoxCollider>();
-            cameraRig = transform.FindChild("Camera Rig");
             rigidBody = GetComponent<Rigidbody>();
         }
 
@@ -51,32 +52,6 @@ namespace WizardBroadcast
             rigidBody.velocity = walkVector * MaxSpeed;
 
             #endregion
-
-            #region Camera Movement
-            //Move the camera on the corresponding input axis
-            cameraRig.Rotate(Vector3.up, Input.GetAxis("Camera Horizontal") * invertCameraHorz, Space.World);
-            cameraRig.Rotate(Vector3.right, Input.GetAxis("Camera Vertical") * invertCameraVert, Space.Self);
-
-            //Limit camera movement
-            if (cameraRig.rotation.eulerAngles.x < 5f)
-            {
-                cameraRig.rotation = Quaternion.Euler(5f, cameraRig.rotation.eulerAngles.y, 0f);
-            }
-            else if (cameraRig.rotation.eulerAngles.x > 75f)
-            {
-                cameraRig.rotation = Quaternion.Euler(75f, cameraRig.rotation.eulerAngles.y, 0f);
-            }
-
-            #endregion
-        }
-
-        private void OnGUI()
-        {
-            if (GUI.Button(new Rect(10, Screen.height - 60, 100, 50), "Invert Camera"))
-            {
-                invertCameraHorz *= -1;
-                invertCameraVert *= -1;
-            }
         }
     }
 }

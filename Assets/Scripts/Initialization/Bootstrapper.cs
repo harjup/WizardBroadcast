@@ -29,6 +29,7 @@ namespace Assets.Scripts.Managers
             {typeof(InfoPlayer), @"Prefabs/Player_Alt"}
         };
 
+        //TODO: Make this a dictionary for Singeltons of T and just check if the Instance is null
         private bool managerPrefabsSpawned = false;
         private readonly Dictionary<Type, string> _managerPrefabs = new Dictionary<Type, string>()
         {
@@ -38,7 +39,8 @@ namespace Assets.Scripts.Managers
             {typeof(CommentsManager), @"Prefabs/CommentsManager"},
 
             {typeof(SignalrEndpoint), @"Prefabs/SignalrEndpoint"},
-            {typeof(PeerTracker), @"Prefabs/PeerTracker"}
+            {typeof(PeerTracker), @"Prefabs/PeerTracker"},
+            {typeof(TextboxDisplay), @"Prefabs/TextboxDisplay"}
         };
 
 
