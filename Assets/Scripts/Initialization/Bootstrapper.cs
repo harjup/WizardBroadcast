@@ -36,6 +36,7 @@ namespace Assets.Scripts.Managers
             {typeof(TimeTracker), @"Prefabs/TimeTracker"},
             {typeof(TweetsManager), @"Prefabs/TweetsManager"},
             {typeof(CommentsManager), @"Prefabs/CommentsManager"},
+            {typeof(InputManager), @"Prefabs/InputManager"},
 
             {typeof(SignalrEndpoint), @"Prefabs/SignalrEndpoint"},
             {typeof(PeerTracker), @"Prefabs/PeerTracker"},

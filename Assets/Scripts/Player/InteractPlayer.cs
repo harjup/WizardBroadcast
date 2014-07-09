@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Assets.Scripts.Interactables;
+using Assets.Scripts.Managers;
 using UnityEngine;
 using WizardBroadcast;
 
@@ -23,18 +24,14 @@ namespace Assets.Scripts.Player
         {
             if (_examinableObject != null && !waitingForCallback)
             {
-                //TODO: Input manager so it knows we're holding the key down
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (InputManager.Instance.InteractAction)
                 {
                     waitingForCallback = true;
-
-                    //Gross Gross Gross
-                    //TODO: NO, BAD
-                    GetComponent<MovementPlayer>().disableMovement = true;
+                    InputManager.Instance.PlayerMovementEnabled = false;
                     StartCoroutine(_examinableObject.Examine(() =>
                     {
-                        waitingForCallback = false; 
-                        GetComponent<MovementPlayer>().disableMovement = false;
+                        waitingForCallback = false;
+                        InputManager.Instance.PlayerMovementEnabled = true;
                     }));
                 }
                 

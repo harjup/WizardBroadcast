@@ -19,9 +19,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        #region Camera Movement
         //Move the camera on the corresponding input axis
+        //TODO: Rotate the camera based on the direction the player is facing
+        //TODO: Center the camera behind the player if the press the center camera button
+        //TODO: Remove manual camera axis stuff here
         cameraRig.Rotate(Vector3.up, Input.GetAxis("Camera Horizontal") * invertCameraHorz, Space.World);
         cameraRig.Rotate(Vector3.right, Input.GetAxis("Camera Vertical") * invertCameraVert, Space.Self);
 
@@ -33,17 +34,6 @@ public class CameraController : MonoBehaviour
         else if (cameraRig.rotation.eulerAngles.x > 75f)
         {
             cameraRig.rotation = Quaternion.Euler(75f, cameraRig.rotation.eulerAngles.y, 0f);
-        }
-
-        #endregion
-    }
-
-    private void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, Screen.height - 60, 100, 50), "Invert Camera"))
-        {
-            invertCameraHorz *= -1;
-            invertCameraVert *= -1;
         }
     }
 }

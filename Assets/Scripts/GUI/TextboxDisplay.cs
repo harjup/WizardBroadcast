@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Mime;
 using System.Runtime.InteropServices;
+using Assets.Scripts.Managers;
 using UnityEngine;
 using System.Collections;
 
@@ -25,15 +26,13 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
 
 
     //Gross
-    private bool keyIsDown = false;
+    private bool keyDownFromInit = false;
 
     void Update()
     {
-        //TODO: Input manager so it knows we're holder the key down
-        if (Input.GetKeyDown(KeyCode.Z) && ! keyIsDown)
+        if (InputManager.Instance.InteractAction && !keyDownFromInit)
         {
-            keyIsDown = true;
-            //TODO: Reenable text skipping once we have an input manager
+            //keyDownFromInit = true;
             _displayIndex = _fullDisplayText.Length;
             if (_waitingForDismissal)
             {
@@ -42,13 +41,13 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
         }
         else
         {
-            keyIsDown = false;
+            keyDownFromInit = false;
         }
     }
 
     public IEnumerator DisplayText(string text, Action doneCallback)
     {
-        keyIsDown = true; //TODO: Get this out of here
+        keyDownFromInit = true;
 
         if (isRunning)
         {

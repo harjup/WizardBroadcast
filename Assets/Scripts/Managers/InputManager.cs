@@ -1,4 +1,4 @@
-/*
+
 using System;
 using System.Collections;
 using UnityEngine;
@@ -7,59 +7,103 @@ using UnityEngine;
 namespace Assets.Scripts.Managers
 {
     /// <summary>
-    /// Listens for all inputs and maps them to intents
-    /// Intents can be enabled and disabled
+    /// Abstracts inputs behind a singleton object and 
+    /// allows other scripts to enable or disable different input groups, 
+    /// which cause those inputs to always return as their default value
     /// </summary>
-    class InputManager : Singleton<InputManager>
+    public class InputManager : Singleton<InputManager>
     {
-      //Player forward
-      //Player left/right
-      //Camera adjust  
-        
-    
-        void Update(){
-           //Capture horizontal and vertical axis and map them to userInput
-           //player movement needs to express up, down, left, right, or a combination.
-           
-           //Each button can have custom logic for whether it's being held down or not because Input.getKeyDown sucks
-           
-           
+        private float _horitzontalAxis;
+        private float _verticalAxis;
+        private float _rawVerticalAxis;
+        private float _rawHoritzontalAxis;
+        private bool _cameraAction;
+        private bool _interactAction;
+
+        private bool _playerInputEnabled = true;
+        private bool _playerMovementEnabled = true;
+
+
+        public float HoritzontalAxis
+        {
+            get { return _playerMovementEnabled ? _horitzontalAxis : 0; }
+           private set { _horitzontalAxis = value; }
+        }
+
+        public float VerticalAxis
+        {
+            get
+            {
+                return _playerMovementEnabled ? _verticalAxis : 0;
+            }
+            private set { _verticalAxis = value; }
+        }
+
+        public float RawHoritzontalAxis
+        {
+            get { return _playerMovementEnabled ? _rawHoritzontalAxis : 0; }
+            private set { _rawHoritzontalAxis = value; }
+        }
+
+        public float RawVerticalAxis
+        {
+            get
+            {
+                return _playerMovementEnabled ? _rawVerticalAxis : 0;
+            }
+            private set { _rawVerticalAxis = value; }
+        }
+
+        public bool CameraAction
+        {
+            get
+            {
+                return _cameraAction 
+                    && _playerInputEnabled;
+            }
+            private set { _cameraAction = value; }
+        }
+
+        public bool InteractAction
+        {
+            get
+            {
+                return _interactAction 
+                    && _playerInputEnabled;
+            }
+            private set { _interactAction = value; }
+        }
+
+
+        void Update()
+        {
+            //Get all the inputs for da frame
+            VerticalAxis = Input.GetAxis("Vertical");
+            RawVerticalAxis = Input.GetAxisRaw("Vertical");
+
+            HoritzontalAxis = Input.GetAxis("Horizontal");
+            RawHoritzontalAxis = Input.GetAxisRaw("Horizontal");
+
+            InteractAction = Input.GetKeyDown(KeyCode.Z);
+            CameraAction = Input.GetKeyDown(KeyCode.X);
         }
         
-        void SetPlayerInputEnabled(bool value){
-        
+        public void SetPlayerInputEnabled(bool value)
+        {
+            _playerInputEnabled = value;
+        }
+
+        public bool PlayerMovementEnabled
+        {
+            private get { return _playerMovementEnabled; }
+            set { _playerMovementEnabled = value; }
         }
         
-        void SetPlayerMovementEnabled(bool value){
-        
-        }
-        
-        void SetCameraControlEnabled(bool value){
+        void SetCameraControlEnabled(bool value)
+        {
         
         }
         
     }
-    
-    /*
-    enum buttonState{
-      Undefined,
-      Up,
-      Down,
-      Held
-    }
-    */
-    
-    /* //Maybe something like this?
-    //Then I can jsut check if a thing is true and proceed accordingly
-    struct UserInput {
-        bool forward;
-        bool back;
-        bool left;
-        bool right;
-        bool centerCamera;
-        bool actionA;
-        bool actionB;
-    }
-    */
 }
-*/
+
