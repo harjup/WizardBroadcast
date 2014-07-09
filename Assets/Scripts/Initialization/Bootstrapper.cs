@@ -46,7 +46,7 @@ namespace Assets.Scripts.Managers
 
         // I want init logic to run on the start scene and any scenes loaded after so I need an init
         // method that's called on both Start and OnLevelWasLoaded
-        void Start()
+        void Awake()
         {
             Init();
         }

@@ -21,27 +21,35 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
     void Start()
     {
         dismissalPromptGraphic = Resources.Load<Texture>("Textures/dismissPrompt");
-
-        StartCoroutine(DisplayText("Here is a longer textbox. It might might even be long enough to wrap across multiple lines. WOuldn't that be something? :U", 
-            () => Debug.Log("Textbox is done!!")));
     }
+
+
+    //Gross
+    private bool keyIsDown = false;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z))
+        //TODO: Input manager so it knows we're holder the key down
+        if (Input.GetKeyDown(KeyCode.Z) && ! keyIsDown)
         {
+            keyIsDown = true;
+            //TODO: Reenable text skipping once we have an input manager
             _displayIndex = _fullDisplayText.Length;
+            if (_waitingForDismissal)
+            {
+                _waitingForDismissal = false;
+            }
         }
-
-        //TODO: Shove in a generalized input map thing
-        if (Input.GetKey(KeyCode.Z) && _waitingForDismissal)
+        else
         {
-            _waitingForDismissal = false;
+            keyIsDown = false;
         }
     }
 
     public IEnumerator DisplayText(string text, Action doneCallback)
     {
+        keyIsDown = true; //TODO: Get this out of here
+
         if (isRunning)
         {
             Debug.LogError("Textbox display is already running, rejecting display of " + text);
@@ -58,6 +66,7 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
         //Done, do cleanup
         _fullDisplayText = "";
         _currentDisplayText = "";
+        _displayIndex = 1;
 
         isRunning = false;
         doneCallback();

@@ -7,6 +7,10 @@ namespace WizardBroadcast
 
     public class MovementPlayer : MonoBehaviourBase
     {
+        //This is dirty and I hate it
+        //TODO: Put this logic in an input controller or some shit
+        public bool disableMovement = false;
+
         public const float MaxSpeed = 20;
 
         private Vector3 walkVector;
@@ -32,6 +36,9 @@ namespace WizardBroadcast
         // Update is called once per frame
         private void Update()
         {
+            if (disableMovement)
+                return;
+
             #region General Movement
             //Create the reference axis based on the camera rotation, ignoring y rotation
             var forward = cameraRig.TransformDirection(Vector3.forward).SetY(0).normalized;

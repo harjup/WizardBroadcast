@@ -53,7 +53,7 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         /*
             var positionString = position.ToString().Trim('(').Trim(')');
         */
-        Application.ExternalCall("$.updatePosition", new[] { positionString });
+        //Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
 
    /* void OnGUI()

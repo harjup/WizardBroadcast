@@ -5,6 +5,6 @@ namespace Assets.Scripts.Interactables
 {
     public interface IExaminable
     {
-        IEnumerable Examine(Action callback);
+        IEnumerator Examine(Action callback);
     }
 }
