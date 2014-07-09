@@ -25,14 +25,15 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
     }
 
 
-    //Gross
+    //The Interaction key may be true the first time update is run after initializing text,
+    //Because the button to initialize it is the same one that proceeds text
+    //So we need to assume the button is down when DisplayText starts and disregard inputs until it is not
     private bool keyDownFromInit = false;
 
     void Update()
     {
         if (InputManager.Instance.InteractAction && !keyDownFromInit)
         {
-            //keyDownFromInit = true;
             _displayIndex = _fullDisplayText.Length;
             if (_waitingForDismissal)
             {
