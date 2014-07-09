@@ -39,33 +39,33 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
 
     public void OnRecieveGhostPositions(string messageString)
     {
-        /*
-            var ghostPositions = GhostPosition.FromString(messageString);
-            PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
-        */
+        var ghostPositions = GhostPosition.FromGroupString(messageString);
+        PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
+/*
+
         var ghostPositions = JsonConvert.DeserializeObject<List<GhostPosition>>(messageString);
         PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
+*/
+
     }
 
     public void SendPositionUpdate(Vector3 position)
     {
-        var positionString = position.ToString();
-        /*
-            var positionString = position.ToString().Trim('(').Trim(')');
-        */
-        //Application.ExternalCall("$.updatePosition", new[] { positionString });
+        //var positionString = position.ToString();
+        var positionString = position.ToString().Trim('(').Trim(')');
+        Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
 
-   /* void OnGUI()
+    void OnGUI()
     {
         if (GUI.Button(new Rect(10,10,100,50), "Test 1"))
         {
-            OnRecieveGhostPositions("[{\"name\":\"d2c782dc-16ed-4146-b577-5f047a6f7cf2\",\"position\":\"(1.0, 3.8, -13.2)\"},{\"name\":\"be53f8d2-bc9e-49ff-995b-39fc86bf9ac8\",\"position\":\"(28.8, 2.0, -12.7)\"}]");
+            OnRecieveGhostPositions("a,1,2,3|b,1,2,3|");
         }
 
         if (GUI.Button(new Rect(120, 10, 100, 50), "Test 2"))
         {
-            OnRecieveGhostPositions("[{\"name\":\"d2c782dc-16ed-4146-b577-5f047a6f7cf2\",\"position\":\"(1.0, 3.8, -13.2)\"},{\"name\":\"be53f8d2-bc9e-49ff-995b-39fc86bf9ac8\",\"position\":\"(28.8, 2.0, -6)\"}]");
+            OnRecieveGhostPositions("a,10,2,3|b,1,20,3|");
         }
-    }*/
+    }
 }

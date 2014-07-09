@@ -20,7 +20,7 @@ public class PeerTracker : Singleton<PeerTracker>
     {
         yield return new WaitForSeconds(1f);
 
-        UpdateGhostPositions(new List<GhostPosition>()
+        /*UpdateGhostPositions(new List<GhostPosition>()
         {
             new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
             new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"}
@@ -69,7 +69,7 @@ public class PeerTracker : Singleton<PeerTracker>
             new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
             new GhostPosition(){name = "Fredo", position = "(-6.1,3,-6.13)"},
             new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"}
-        });
+        });*/
     }
 
 
