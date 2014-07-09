@@ -19,7 +19,6 @@ namespace WizardBroadcast
 
 
         private Transform playerMesh;
-        private BoxCollider interactTrigger;
 
 
         // Use this for initialization
@@ -28,8 +27,7 @@ namespace WizardBroadcast
             //This should be ok for now since there aren't multiple cameras flying around
             cameraRig = Camera.main.transform.parent;
 
-            playerMesh = transform.FindChild("Player Mesh");
-            interactTrigger = playerMesh.GetComponent<BoxCollider>();
+            playerMesh = transform.FindChild("Character");
             rigidBody = GetComponent<Rigidbody>();
         }
 

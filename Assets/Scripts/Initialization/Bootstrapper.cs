@@ -25,8 +25,7 @@ namespace Assets.Scripts.Managers
         private bool playerPrefabsSpawned = false;
         private readonly Dictionary<Type, string> _playerPrefabs = new Dictionary<Type, string>()
         {
-            //{typeof(InfoPlayer), @"Prefabs/PlayerCharacter"}
-            {typeof(InfoPlayer), @"Prefabs/Player_Alt"}
+            {typeof(InfoPlayer), @"Prefabs/PlayerCharacter"}
         };
 
         //TODO: Make this a dictionary for Singeltons of T and just check if the Instance is null

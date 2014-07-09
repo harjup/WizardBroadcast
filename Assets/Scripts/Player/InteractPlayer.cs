@@ -34,7 +34,6 @@ namespace Assets.Scripts.Player
                     StartCoroutine(_examinableObject.Examine(() =>
                     {
                         waitingForCallback = false; 
-                        Debug.Log("Done texting");
                         GetComponent<MovementPlayer>().disableMovement = false;
                     }));
                 }
