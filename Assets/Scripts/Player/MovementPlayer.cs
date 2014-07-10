@@ -98,7 +98,7 @@ namespace WizardBroadcast
                     cameraRig.rotation.eulerAngles.SetY(playerMesh.rotation.eulerAngles.y),
                     1f);
             }
-            else if ((rotationDifference < 150 || rotationDifference > 220)
+            /*else if ((rotationDifference < 150 || rotationDifference > 220)
                 && (cameraRig.gameObject.GetComponent<iTween>() == null 
                     || !cameraRig.gameObject.GetComponent<iTween>().isRunning))
             {
@@ -106,7 +106,7 @@ namespace WizardBroadcast
                 var rotationMagnitude = 400f / (Mathf.Abs(rotationDifference - 180) + 40);
                 iTween.RotateUpdate(cameraRig.gameObject,
                     cameraRig.rotation.eulerAngles.SetY(playerMesh.rotation.eulerAngles.y), rotationMagnitude);
-            }
+            }*/
         }
 
         void OnGUI()
