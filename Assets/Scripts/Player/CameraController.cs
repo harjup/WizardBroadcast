@@ -1,13 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Managers;
+using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour
+public class CameraController : MonoBehaviourBase
 {
 
     private Transform cameraRig;
-    private int invertCameraHorz = -1;
-    private int invertCameraVert = 1;
-    
+
 
     // Use this for initialization
     void Start()
@@ -23,17 +22,23 @@ public class CameraController : MonoBehaviour
         //TODO: Rotate the camera based on the direction the player is facing
         //TODO: Center the camera behind the player if the press the center camera button
         //TODO: Remove manual camera axis stuff here
-        cameraRig.Rotate(Vector3.up, Input.GetAxis("Camera Horizontal") * invertCameraHorz, Space.World);
-        cameraRig.Rotate(Vector3.right, Input.GetAxis("Camera Vertical") * invertCameraVert, Space.Self);
+
+        /*if (InputManager.Instance.CameraAction)
+        {
+            iTween.RotateTo(cameraRig.gameObject, cameraRig.parent.FindChild("Character").rotation.eulerAngles, 1f);
+        }*/
+
+        //cameraRig.Rotate(Vector3.up, Input.GetAxis("Camera Horizontal") * invertCameraHorz, Space.World);
+        //cameraRig.Rotate(Vector3.right, Input.GetAxis("Camera Vertical") * invertCameraVert, Space.Self);
 
         //Limit camera movement
-        if (cameraRig.rotation.eulerAngles.x < 5f)
+        /*if (cameraRig.rotation.eulerAngles.x < 5f)
         {
             cameraRig.rotation = Quaternion.Euler(5f, cameraRig.rotation.eulerAngles.y, 0f);
         }
         else if (cameraRig.rotation.eulerAngles.x > 75f)
         {
             cameraRig.rotation = Quaternion.Euler(75f, cameraRig.rotation.eulerAngles.y, 0f);
-        }
+        }*/
     }
 }
