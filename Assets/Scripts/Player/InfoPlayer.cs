@@ -1,16 +1,24 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using UnityEngine;
+using WizardBroadcast;
 
 namespace Assets.Scripts.Player
 {
+    /// <summary>
+    /// Currently using this class to identify that a given object is the player.
+    /// It can be the entrypoint for any messages from outside components
+    /// There shouldn't be any logic in here other than passing things off to the components that handle them
+    /// </summary>
     class InfoPlayer : MonoBehaviourBase
     {
-        //TODO: Determine if this is the best spot to put start position logic stuff
 
+        //TODO: Put initial level position stuff in its own thing
         //TODO: Put ghost stuff in own thing
         void Start()
         {
@@ -51,5 +59,21 @@ namespace Assets.Scripts.Player
         {
             SignalrEndpoint.Instance.SendPositionUpdate(transform.position);
         }
+
+        public void OnTreasureCollected(Collectable.TreasureType type)
+        {
+            StartCoroutine(DoCollectedThingDance());
+        }
+
+        //TODO: Give this guy a better home
+        public IEnumerator DoCollectedThingDance()
+        {
+            InputManager.Instance.PlayerInputEnabled = false;
+            iTween.MoveTo(gameObject, transform.position.SetY(transform.position.y + 1), .5f);
+            yield return new WaitForSeconds(1f);
+            iTween.MoveTo(gameObject, transform.position.SetY(transform.position.y - 1), .5f);
+            yield return new WaitForSeconds(.5f);
+            InputManager.Instance.PlayerInputEnabled = true;
+        }  
     }
 }

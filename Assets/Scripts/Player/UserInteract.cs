@@ -7,7 +7,7 @@ using WizardBroadcast;
 
 namespace Assets.Scripts.Player
 {
-    public class InteractPlayer : MonoBehaviourBase
+    public class UserInteract : MonoBehaviourBase
     {
         private IExaminable _examinableObject;
         private Texture _dismissalPromptGraphic;
@@ -28,10 +28,12 @@ namespace Assets.Scripts.Player
                 {
                     waitingForCallback = true;
                     InputManager.Instance.PlayerMovementEnabled = false;
+                    InputManager.Instance.CameraControlEnabled = false;
                     StartCoroutine(_examinableObject.Examine(() =>
                     {
                         waitingForCallback = false;
                         InputManager.Instance.PlayerMovementEnabled = true;
+                        InputManager.Instance.CameraControlEnabled = true;
                     }));
                 }
                 

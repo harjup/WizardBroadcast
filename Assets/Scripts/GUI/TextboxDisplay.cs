@@ -32,6 +32,9 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
 
     void Update()
     {
+        if (!isRunning)
+            return;
+
         if (InputManager.Instance.InteractAction && !keyDownFromInit)
         {
             _displayIndex = _fullDisplayText.Length;

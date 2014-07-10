@@ -7,9 +7,9 @@ namespace WizardBroadcast
 {
     using System;
 
-    public class MovementPlayer : MonoBehaviourBase
+    public class UserMovement : MonoBehaviourBase
     {
-        public const float MaxSpeed = 20;
+        public const float MaxSpeed = 15;
 
         private Vector3 walkVector;
         private Rigidbody rigidBody;
@@ -24,9 +24,10 @@ namespace WizardBroadcast
         {
             //This should be ok for now since there aren't multiple cameras flying around
             cameraRig = Camera.main.transform.parent;
-            //Let's have it be free from the palyer or sommin
+            //Let's have it be free from the player or sommin
             cameraRig.parent = null;
-
+            DontDestroyOnLoad(cameraRig);
+            
             playerMesh = transform.FindChild("Character");
             rigidBody = GetComponent<Rigidbody>();
         }
@@ -35,7 +36,6 @@ namespace WizardBroadcast
         private void Update()
         {
             MovePlayer();
-           
         }
 
         private void FixedUpdate()
@@ -71,14 +71,15 @@ namespace WizardBroadcast
 
         void MoveCamera()
         {
-            //TODO: Rotate the camera based on the direction the player is facing
-            //TODO: Center the camera behind the player if the press the center camera button
-            //TODO: Remove manual camera axis stuff here
-
-
+            //TODO: Have the camera contextually recenter or some shit
             var positionDifference = playerMesh.position - cameraRig.position;
             float xSpeed  = Mathf.Abs(positionDifference.x) * 5f;
             float zSpeed = Mathf.Abs(positionDifference.z) * 5f;
+
+            //Cap the camera's speed so it doesn't go fucking nuts and start overshooting the player
+            if (xSpeed > 40 ) { xSpeed = 40; }
+            if (zSpeed > 40 ) { zSpeed = 40; }
+
             if (Mathf.Abs(positionDifference.x) >= .5f)
             {
                 cameraRig.position = cameraRig.position.SetX(iTween.FloatUpdate(cameraRig.position.x, playerMesh.position.x, xSpeed));

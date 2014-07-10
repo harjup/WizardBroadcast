@@ -21,12 +21,13 @@ namespace Assets.Scripts.Managers
         private bool _interactAction;
 
         private bool _playerInputEnabled = true;
+        private bool _cameraInputEnabled = true;
         private bool _playerMovementEnabled = true;
 
 
         public float HoritzontalAxis
         {
-            get { return _playerMovementEnabled ? _horitzontalAxis : 0; }
+            get { return _playerMovementEnabled && _playerInputEnabled ? _horitzontalAxis : 0; }
            private set { _horitzontalAxis = value; }
         }
 
@@ -34,14 +35,14 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _playerMovementEnabled ? _verticalAxis : 0;
+                return _playerMovementEnabled && _playerInputEnabled ? _verticalAxis : 0;
             }
             private set { _verticalAxis = value; }
         }
 
         public float RawHoritzontalAxis
         {
-            get { return _playerMovementEnabled ? _rawHoritzontalAxis : 0; }
+            get { return _playerMovementEnabled && _playerInputEnabled ? _rawHoritzontalAxis : 0; }
             private set { _rawHoritzontalAxis = value; }
         }
 
@@ -49,7 +50,7 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _playerMovementEnabled ? _rawVerticalAxis : 0;
+                return _playerMovementEnabled && _playerInputEnabled ? _rawVerticalAxis : 0;
             }
             private set { _rawVerticalAxis = value; }
         }
@@ -58,8 +59,9 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _cameraAction 
-                    && _playerInputEnabled;
+                return _cameraAction
+                    && _playerInputEnabled 
+                    && _cameraInputEnabled;
             }
             private set { _cameraAction = value; }
         }
@@ -83,14 +85,15 @@ namespace Assets.Scripts.Managers
 
             HoritzontalAxis = Input.GetAxis("Horizontal");
             RawHoritzontalAxis = Input.GetAxisRaw("Horizontal");
-
+            
             InteractAction = Input.GetKeyDown(KeyCode.Z);
             CameraAction = Input.GetKeyDown(KeyCode.X);
         }
         
-        public void SetPlayerInputEnabled(bool value)
+        public bool PlayerInputEnabled
         {
-            _playerInputEnabled = value;
+            private get { return _playerInputEnabled; }
+            set{ _playerInputEnabled = value;}
         }
 
         public bool PlayerMovementEnabled
@@ -98,12 +101,12 @@ namespace Assets.Scripts.Managers
             private get { return _playerMovementEnabled; }
             set { _playerMovementEnabled = value; }
         }
-        
-        void SetCameraControlEnabled(bool value)
+
+        public bool CameraControlEnabled
         {
-        
+            private get { return _cameraInputEnabled; }
+            set { _cameraInputEnabled = value; }
         }
-        
     }
 }
 
