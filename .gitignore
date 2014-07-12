@@ -180,6 +180,10 @@ Temp/
 Obj/
 UnityGenerated/
 Library/
+
+# Where I stick my webplayer builds
+builds/
+
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
