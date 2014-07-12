@@ -43,6 +43,11 @@ namespace WizardBroadcast
             MoveCamera();
         }
 
+        public void LookAt(Vector3 vector3)
+        {
+            playerMesh.LookAt(vector3.SetY(playerMesh.position.y));
+        }
+
         void MovePlayer()
         {
             //Create the reference axis based on the camera rotation, ignoring y rotation

@@ -37,10 +37,15 @@ namespace Assets.Scripts.Managers
             {typeof(TweetsManager), @"Prefabs/TweetsManager"},
             {typeof(CommentsManager), @"Prefabs/CommentsManager"},
             {typeof(InputManager), @"Prefabs/InputManager"},
+            {typeof(GuiManager), @"Prefabs/GuiManager"},
+            {typeof(TextboxDisplay), @"Prefabs/TextboxDisplay"},
+
+            {typeof(UserProgressStore), @"Prefabs/UserProgressStore"},
+            
 
             {typeof(SignalrEndpoint), @"Prefabs/SignalrEndpoint"},
-            {typeof(PeerTracker), @"Prefabs/PeerTracker"},
-            {typeof(TextboxDisplay), @"Prefabs/TextboxDisplay"}
+            {typeof(PeerTracker), @"Prefabs/PeerTracker"}
+            
         };
 
 

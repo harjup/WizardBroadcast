@@ -1,0 +1,9 @@
+{
+    "scriptId":  "CoolSign",
+    "content": [
+        {
+            "id":  "01",
+            "text" : "I''m a cool cool sign"
+        }
+    ]
+}

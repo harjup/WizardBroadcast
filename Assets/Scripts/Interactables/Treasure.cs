@@ -5,17 +5,18 @@ using UnityEngine;
 
 namespace Assets.Scripts.Interactables
 {
-    public class Collectable : MonoBehaviour
+    public enum TreasureType
+    {
+        Undefined,
+        Little,
+        Medium,
+        Large
+    }
+
+    public class Treasure : MonoBehaviourBase
     {
         public TreasureType Type;
-        public enum TreasureType
-        {
-            Undefined,
-            Little, 
-            Medium, 
-            Large
-        }
-
+        
         private int _pointCount;
         private Color _myColor;
 
@@ -42,6 +43,9 @@ namespace Assets.Scripts.Interactables
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            //Add a little rotation animation
+            iTween.RotateAdd(gameObject, iTween.Hash("y", 360, "looptype" ,iTween.LoopType.pingPong, "easetype", iTween.EaseType.spring, "speed", 200f));
 
             renderer.material.color = _myColor;
         }

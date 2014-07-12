@@ -1,14 +1,30 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Assets.Scripts.Repository;
 
 namespace Assets.Scripts.Interactables
 {
-    public class Signpost : MonoBehaviourBase, IExaminable
+    public class Signpost : ExaminableBase
     {
-        //TODO: Get this text from *somewhere*
-        //TODO: Be able to chain multiple textboxes together. Maybe make this a list and iterate through each one
-        private const string textToShow = "Hello, I am a basic signpost!";
+        public string scriptId = "";
+        private List<TextBag> textBags;
+        void Start()
+        {
+            textBags = GetComponentsInChildren<TextBag>().ToList();
+            for (int i = 0; i < textBags.Count; i++)
+            {
+                var id = textBags[i].id;
+                //If the id is not explicitly specified, set it to a default value
+                if (String.IsNullOrEmpty(id))
+                {
+                    id = (i + 1).ToString("D2"); //Its place in the list with a padded zero. EX: "06", "15"
+                    textBags[i].id = id;
+                }
+                textBags[i].text = DialogRepository.Instance.GetScript(scriptId, id);
+            }
+        }
 
         private List<string> textbitsToShow = new List<string>()
         {
@@ -17,7 +33,7 @@ namespace Assets.Scripts.Interactables
             "I'll put a third one in for good measure."
         };
 
-        public IEnumerator Examine(Action callback)
+        public override IEnumerator Examine(Action callback)
         {
             foreach (var textbit in textbitsToShow)
             {

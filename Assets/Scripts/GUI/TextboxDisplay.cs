@@ -96,14 +96,10 @@ public class TextboxDisplay : Singleton<TextboxDisplay>
 
     void OnGUI()
     {
-        textBoxStyle.fontSize = Mathf.RoundToInt(Screen.width / 40);
-        textBoxStyle.wordWrap = true;
-        
-        GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.2f, Screen.width / 1.2f, Screen.height / 7.5f), _currentDisplayText, textBoxStyle);
-
+        GuiManager.Instance.DrawTextBox(_currentDisplayText);
         if (_waitingForDismissal && textureBlink)
         {
-            GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - 64, 32, 32), dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+            GuiManager.Instance.DrawTextProceedPrompt();
         }
     }
 

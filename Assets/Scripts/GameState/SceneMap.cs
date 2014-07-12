@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 using System.Collections.Generic;
 
 namespace Assets.Scripts.Managers
@@ -40,9 +41,21 @@ namespace Assets.Scripts.Managers
             {
                 Debug.LogError("Tried to get a scene not present in the sceneMap");
             }
-
-
             return SceneDictionary[scene];
+        }
+
+        public static Scene GetSceneFromStringName(string sceneName)
+        {
+            foreach (var keyValuePair in SceneDictionary)
+            {
+                if (keyValuePair.Value == sceneName)
+                {
+                    return keyValuePair.Key;
+                }
+                
+            }
+            Debug.LogError("Tried to get a scene not present in the sceneMap");
+            return Scene.Undefined;
         }
     }
 }

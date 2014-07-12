@@ -1,0 +1,17 @@
+{
+    "scriptId":  "TestSign",
+    "content": [
+        {
+            "id":  "01",
+            "text" : "Hello, I am a test sign read in from a json file! Please enjoy reading me as it took a lot of coordination to get this content here."
+        },
+        {
+            "id":  "02",
+            "text" : "This is dialog piece number two for good ole test sign."
+        },
+        {
+            "id":  "03",
+            "text" : "Just want to make sure I can get a list of these bad boys in without too much trouble :V"
+        }
+    ]
+}
