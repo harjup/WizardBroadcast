@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Assets.Scripts.GameState;
 using UnityEngine;
 
 namespace Assets.Scripts.Managers

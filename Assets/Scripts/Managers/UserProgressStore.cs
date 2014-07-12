@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization.Formatters;
+using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using UnityEngine;
 

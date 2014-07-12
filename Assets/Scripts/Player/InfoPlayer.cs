@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Portals;

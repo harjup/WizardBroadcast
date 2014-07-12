@@ -1,20 +1,20 @@
-﻿using UnityEditorInternal;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
 
-namespace Assets.Scripts.Managers
+
+public enum Scene
 {
-    public enum Scene
-    {
-        Undefined,
-        Start,
-        Hub,
-        Level1,
-        Level2,
-        Level3,
-        Level4,
-    }
+    Undefined,
+    Start,
+    Hub,
+    Level1,
+    Level2,
+    Level3,
+    Level4,
+}
 
+namespace Assets.Scripts.GameState
+{
     //TODO: Figure out what folder to shove this in and what to name it
     //Singleton service for mapping enum values to scene names
     public static class SceneMap
