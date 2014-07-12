@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.GUI;
 using Assets.Scripts.Repository;
 
 namespace Assets.Scripts.Interactables

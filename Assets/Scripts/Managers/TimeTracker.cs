@@ -8,6 +8,7 @@ using WizardCentralServer.Model.Dtos;
 
 namespace Assets.Scripts.Managers
 {
+    using UnityEngine;
     /// <summary>
     /// Keeps track of how many minutes have passed since the start of the game.
     /// Gets the session start some the webapi, probably

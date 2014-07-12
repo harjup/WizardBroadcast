@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {
+    using UnityEngine;
     //Remembe to leave calls to this in OnGUI so stuff gets drawn right
     class GuiManager : Singleton<GuiManager>
     {
