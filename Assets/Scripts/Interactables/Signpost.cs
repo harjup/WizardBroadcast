@@ -35,7 +35,13 @@ namespace Assets.Scripts.Interactables
                     id = (i + 1).ToString("D2"); //Its place in the list with a padded zero. EX: "06", "15"
                     _textBags[i].id = id;
                 }
-                _textBags[i].text = DialogRepository.Instance.GetScript(scriptId, id);
+
+                var dialog = DialogRepository.Instance.GetDialogBit(scriptId, id);
+
+                _textBags[i].text = dialog.Text;
+
+                //Overwrite the given textbag's flag with the flag from the stored version if it exists
+                if (dialog.Flag != null){ _textBags[i].flag = dialog.Flag;}
             }
 
             _currentTextBag = _textBags.First();
@@ -70,7 +76,6 @@ namespace Assets.Scripts.Interactables
             _currentTextBag.ExecuteAction();
             callback();
         }
-
 
         private TextBag GetCurrentTextBag()
         {

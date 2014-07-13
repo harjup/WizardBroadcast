@@ -1,17 +1,28 @@
-{
-    "id":  "TestSign",
-    "content": [
-        {
-            "id":  "01",
-            "text" : "Hello, I am a test sign read in from a json file! Please enjoy reading me as it took a lot of coordination to get this content here. It might even have paging due to its length??"
-        },
-        {
-            "id":  "02",
-            "text" : "This is dialog piece number two for good ole test sign."
-        },
-        {
-            "id":  "03",
-            "text" : "Just want to make sure I can get a list of these bad boys in without too much trouble :V"
-        }
-    ]
-}
+[
+	{
+		"id":  "TestSign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Hello, I am a test sign read in from a json file! Please enjoy reading me as it took a lot of coordination to get this content here. It might even have paging due to its length??"
+			},
+			{
+				"id":  "02",
+				"text" : "This is dialog piece number two for good ole test sign."
+			},
+			{
+				"id":  "03",
+				"text" : "Just want to make sure I can get a list of these bad boys in without too much trouble :V"
+			}
+		]
+	},
+	{
+		"id":  "Anothersign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Hello, I am a second sign that's just kinda hanging out, having a good time"
+			}
+		]
+	},
+]

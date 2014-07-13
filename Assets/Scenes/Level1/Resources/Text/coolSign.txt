@@ -1,4 +1,4 @@
-{
+[{
     "id":  "CoolTree",
     "content": [
         {
@@ -7,11 +7,13 @@
         },
 		{
             "id":  "02",
+			"flag": "CoolTree02",
             "text" : "There appears to be a treasure lodged in the trunk of this wonderful beautiful tree."
         },
 		{
             "id":  "03",
+			"flag": "CoolTree03",
             "text" : "It's difficult to stop admiring this tree, I know."
         }
     ]
-}
+}]

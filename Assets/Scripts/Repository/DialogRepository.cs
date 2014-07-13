@@ -42,11 +42,10 @@ namespace Assets.Scripts.Repository
                 }
                 Debug.Log("Loaded Script...");
                 Debug.Log(script.text);
-                var scriptBag = JsonConvert.DeserializeObject<DialogBag>(script.text);
-                if (scriptBag != null)
+                var scriptBag = JsonConvert.DeserializeObject<List<DialogBag>>(script.text);
+                if (scriptBag != null && scriptBag.Count != 0)
                 {
-                    Debug.Log(scriptBag.Id + scriptBag.Content[0].Id);
-                    _scripts.Add(scriptBag);
+                    _scripts.AddRange(scriptBag);
                 }
                 else
                 {
@@ -56,7 +55,7 @@ namespace Assets.Scripts.Repository
         }
 
         //TODO: Use a map to back this so it's not dumb and stupid
-        public string GetScript(string scriptId, string textId)
+        public Dialog GetDialogBit(string scriptId, string textId)
         {
             foreach (var dialogBag in _scripts)
             {
@@ -65,7 +64,7 @@ namespace Assets.Scripts.Repository
                 {                    
                     if (dialog.Id == textId)
                     {
-                        return dialog.Text;
+                        return dialog;
                     }
                 }
             }

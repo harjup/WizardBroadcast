@@ -1,4 +1,4 @@
-{
+[{
     "id":  "TreeLover",
     "content": [
         {
@@ -10,4 +10,4 @@
             "text" : "A can assure you that tree is one of the world's finest"
         }
     ]
-}
+}]

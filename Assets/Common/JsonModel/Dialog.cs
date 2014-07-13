@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 
 namespace Assets.Common.JsonModel
 {
+    //Our dialog object model for loading in from JSON
     public class DialogBag
     {
         [JsonProperty("id")]
@@ -31,6 +32,10 @@ namespace Assets.Common.JsonModel
 
         [JsonProperty("text")]
         public string Text;
+
+        //Flag used to set a dialog as active
+        [JsonProperty("flag")]
+        public string Flag;
     }
 
 
