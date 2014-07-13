@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Assets.Scripts.Player;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 
 namespace Assets.Scripts.Portals
 {
-    class GrottoEntrance : MonoBehaviourBase
+    public class GrottoEntrance : MonoBehaviourBase, IActivatable
     {
         public Transform targetEndpoint;
 
@@ -19,6 +20,12 @@ namespace Assets.Scripts.Portals
         }
 
         public EnterMethod Enter;
+
+        public void Activate()
+        {
+            //TODO: Wire this part up better
+            transform.FindChild("Mesh").gameObject.SetActive(true);
+        }
 
         void OnTriggerEnter(Collider other)
         {

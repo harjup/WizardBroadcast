@@ -34,19 +34,19 @@ namespace Assets.Scripts.Managers
         private bool managerPrefabsSpawned = false;
         private readonly Dictionary<Type, string> _managerPrefabs = new Dictionary<Type, string>()
         {
-            {typeof(ScheduleTracker), @"Prefabs/ScheduleTracker"},
-            {typeof(TimeTracker), @"Prefabs/TimeTracker"},
-            {typeof(TweetsManager), @"Prefabs/TweetsManager"},
-            {typeof(CommentsManager), @"Prefabs/CommentsManager"},
-            {typeof(InputManager), @"Prefabs/InputManager"},
-            {typeof(GuiManager), @"Prefabs/GuiManager"},
-            {typeof(TextboxDisplay), @"Prefabs/TextboxDisplay"},
+            {typeof(ScheduleTracker), @"Prefabs/Managers/ScheduleTracker"},
+            {typeof(TimeTracker), @"Prefabs/Managers/TimeTracker"},
+            {typeof(TweetsManager), @"Prefabs/Managers/TweetsManager"},
+            {typeof(CommentsManager), @"Prefabs/Managers/CommentsManager"},
+            {typeof(InputManager), @"Prefabs/Managers/InputManager"},
+            {typeof(GuiManager), @"Prefabs/Managers/GuiManager"},
+            {typeof(TextboxDisplay), @"Prefabs/Managers/TextboxDisplay"},
 
-            {typeof(UserProgressStore), @"Prefabs/UserProgressStore"},
+            {typeof(UserProgressStore), @"Prefabs/Managers/UserProgressStore"},
             
 
-            {typeof(SignalrEndpoint), @"Prefabs/SignalrEndpoint"},
-            {typeof(PeerTracker), @"Prefabs/PeerTracker"}
+            {typeof(SignalrEndpoint), @"Prefabs/Managers/SignalrEndpoint"},
+            {typeof(PeerTracker), @"Prefabs/Managers/PeerTracker"}
             
         };
 

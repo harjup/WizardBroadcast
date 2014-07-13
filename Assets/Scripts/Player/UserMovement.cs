@@ -70,8 +70,12 @@ namespace WizardBroadcast
                 || Math.Abs(InputManager.Instance.RawVerticalAxis) >= 1)
                 playerMesh.rotation = Quaternion.LookRotation(this.walkVector.SetY(0), Vector3.up);
 
+            var velocity = walkVector * MaxSpeed;
+
             //Set direction and speed
-            rigidBody.velocity = walkVector * MaxSpeed;
+            rigidBody.velocity = rigidBody.velocity
+                                        .SetX(velocity.x)
+                                        .SetZ(velocity.z);
         }
 
         void MoveCamera()

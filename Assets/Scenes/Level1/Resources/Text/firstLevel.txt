@@ -25,4 +25,18 @@
 			}
 		]
 	},
+	{
+		"id":  "GrottoGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "See that pile of leaves over there, I bet if you jumped on it really hard you might fall into a magical cave."
+			},
+			{
+				"id":  "02",
+				"flag" : "GrottoGuy02",
+				"text" : "I WARNED you about leaves!"
+			}
+		]
+	}
 ]

@@ -19,6 +19,7 @@ namespace Assets.Scripts.Interactables
         private TextBag _currentTextBag;
         void Start()
         {
+            //TODO: Automatically create textbins if one doesn't exist for a given piece of dialog
             _textBags = GetComponentsInChildren<TextBag>().ToList();
 
             if (_textBags == null)

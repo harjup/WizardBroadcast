@@ -19,11 +19,19 @@ namespace Assets.Scripts.Player
     /// </summary>
     class InfoPlayer : MonoBehaviourBase
     {
-
+        private PlayerAnimate _animator;
         //TODO: Put initial level position stuff in its own thing
         //TODO: Put ghost stuff in own thing
+        
+
         void Start()
         {
+            _animator = GetComponent<PlayerAnimate>();
+            if (_animator == null)
+            {
+                Debug.LogError("Expected PlayerAnimate component on player, was not found");
+            }
+
             GhostPositionUpdate();
             MoveToStartPosition();
         }
@@ -64,8 +72,7 @@ namespace Assets.Scripts.Player
 
         public void OnTreasureCollected(TreasureType type)
         {
-            StartCoroutine(DoCollectedThingDance(type));
-            
+            StartCoroutine(_animator.DoCollectedThingDance(type));
         }
 
 
@@ -81,7 +88,9 @@ namespace Assets.Scripts.Player
         {
             InputManager.Instance.PlayerInputEnabled = false;
             gameObject.collider.enabled = false;
-             yield return StartCoroutine(VerticalHoleTransition(targetEndpoint, enterMethod));
+            rigidbody.useGravity = false;
+            yield return StartCoroutine(_animator.VerticalHoleTransition(targetEndpoint, enterMethod));
+            rigidbody.useGravity = true;
             InputManager.Instance.PlayerInputEnabled = true;
             gameObject.collider.enabled = true;
             //Move player to initial position
@@ -90,60 +99,5 @@ namespace Assets.Scripts.Player
             //CameraFadeOut
             //Move player to target position
         }
-
-        public void OnLevelTransitionOut()
-        {
-            //Disable player input
-            //Move player to initial position
-            //Start iTweening toward target
-            //Togggle correct player animation
-            //CameraFadeOut
-            //Move player to target position
-        }
-
-        public void OnLevelTransitionIn()
-        {
-            //Move player to initial position
-            //Togggle correct player animation
-            //Disable player input
-            //CameraFadeIn
-            //Start iTweening toward target
-            //Move player to target position
-            //Enable input
-        }
-
-
-        public IEnumerator VerticalHoleTransition(Vector3 targetEndpoint, GrottoEntrance.EnterMethod enterMethod)
-        {
-            if (enterMethod == GrottoEntrance.EnterMethod.Fall)
-            {
-                iTween.MoveTo(gameObject, iTween.Hash("position", transform.position.SetY(transform.position.y - 5f), "time", .5f, "easetype", iTween.EaseType.easeInBack));
-            }
-            else if (enterMethod == GrottoEntrance.EnterMethod.Spring)
-            {
-                iTween.MoveTo(gameObject, iTween.Hash("position", transform.position.SetY(transform.position.y + 10f), "time", .5f, "easetype", iTween.EaseType.easeInOutSine));
-            }
-            yield return new WaitForSeconds(.5f);
-            //TODO: Fade out camera
-            yield return new WaitForSeconds(.5f);
-            //TODO: Fade in camera
-            yield return new WaitForSeconds(.5f);
-            transform.position = targetEndpoint.SetY(targetEndpoint.y + 3f);
-            Camera.main.transform.parent.position = targetEndpoint;
-            iTween.MoveTo(gameObject, iTween.Hash("position", targetEndpoint, "time", 1f, "easetype", iTween.EaseType.easeOutCirc));
-            yield return new WaitForSeconds(1f);
-        }
-
-        //TODO: Give this guy a better home
-        public IEnumerator DoCollectedThingDance(TreasureType type)
-        {
-            InputManager.Instance.PlayerInputEnabled = false;
-            iTween.MoveTo(gameObject, transform.position.SetY(transform.position.y + 1), .5f);
-            yield return new WaitForSeconds(1f);
-            iTween.MoveTo(gameObject, transform.position.SetY(transform.position.y - 1), .5f);
-            yield return new WaitForSeconds(.5f);
-            InputManager.Instance.PlayerInputEnabled = true;
-            UserProgressStore.Instance.AddTreasure(type);
-        }  
     }
 }
