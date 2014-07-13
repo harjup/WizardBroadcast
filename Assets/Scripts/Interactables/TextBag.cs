@@ -6,12 +6,16 @@ namespace Assets.Scripts.Interactables
     public class TextBag : MonoBehaviourBase
     {
         public string id;
+        public string flag;
         public string text;
 
-        public TextAction GetAction()
+        public void ExecuteAction()
         {
-            //TODO: Maybe return an empty action or something if it doesn't exist
-            return GetComponent<TextAction>();
+            foreach (var textAction in GetComponents<TextAction>())
+            {
+                textAction.Execute();
+            }
+
         }
     }
 }

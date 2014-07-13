@@ -17,16 +17,6 @@ namespace Assets.Scripts.GUI
         private int _displayIndex = 1;
         private bool _waitingForDismissal = false;
         bool textureBlink = false;
-        private Texture dismissalPromptGraphic;
-
-
-        void Start()
-        {
-            dismissalPromptGraphic = Resources.Load<Texture>("Textures/dismissPrompt");
-
-            StartCoroutine(DisplayText("qwertyuiopas dfghjklzxcvbnm qwertyuiopas dfghjklzxcvbnm qwertyuiopasd fghjklzxcvbnm qwertyuiopasd fghjklzxcvbnm qwertyuiopas dfghjklzxcvbnm qwertyuiopasd fghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm", () => { }));
-        }
-
 
         //The Interaction key may be true the first time update is run after initializing text,
         //Because the button to initialize it is the same one that proceeds text

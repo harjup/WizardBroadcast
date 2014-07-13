@@ -17,13 +17,14 @@ namespace Assets.Scripts.Repository
         private List<string> _scriptsToLoad =new List<string>()
         {
             {"firstLevel"},
-            {"coolSign"}
+            {"coolSign"},
+            {"treeLover"}
         };
 
 
-        List<DialogScriptBag> _scripts = new List<DialogScriptBag>(); 
+        List<DialogBag> _scripts = new List<DialogBag>(); 
 
-        void Start()
+        void Awake()
         {
             LoadLevelScripts();
         }
@@ -41,10 +42,15 @@ namespace Assets.Scripts.Repository
                 }
                 Debug.Log("Loaded Script...");
                 Debug.Log(script.text);
-                var scriptBag = JsonConvert.DeserializeObject<DialogScriptBag>(script.text);
+                var scriptBag = JsonConvert.DeserializeObject<DialogBag>(script.text);
                 if (scriptBag != null)
                 {
+                    Debug.Log(scriptBag.Id + scriptBag.Content[0].Id);
                     _scripts.Add(scriptBag);
+                }
+                else
+                {
+                    Debug.LogError(fileName + " was not loaded correctly");
                 }
             }
         }
@@ -52,16 +58,14 @@ namespace Assets.Scripts.Repository
         //TODO: Use a map to back this so it's not dumb and stupid
         public string GetScript(string scriptId, string textId)
         {
-            foreach (var dialogScriptBag in _scripts)
+            foreach (var dialogBag in _scripts)
             {
-                if (dialogScriptBag.ScriptId == scriptId)
-                {
-                    foreach (var dialogScript in dialogScriptBag.Content)
+                if (dialogBag.Id != scriptId) continue;
+                foreach (var dialog in dialogBag.Content)
+                {                    
+                    if (dialog.Id == textId)
                     {
-                        if (dialogScript.Id == textId)
-                        {
-                            return dialogScript.Text;
-                        }
+                        return dialog.Text;
                     }
                 }
             }

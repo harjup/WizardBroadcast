@@ -1,5 +1,5 @@
 {
-    "scriptId":  "TestSign",
+    "id":  "TestSign",
     "content": [
         {
             "id":  "01",

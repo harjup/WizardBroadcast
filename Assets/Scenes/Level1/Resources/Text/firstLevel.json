@@ -1,0 +1,40 @@
+{
+    "sign":  "TestSign",
+    "content": [
+        {
+			"group" : "default",
+			"content": [
+				{
+					"id":  "01",
+					"text" : "Hello, I am a test sign read in from a json file! Please enjoy reading me as it took a lot of coordination to get this content here. It might even have paging due to its length??"
+				},
+				{	
+					"id":  "02",
+					"text" : "This is dialog piece number two for good ole test sign."
+				},
+				{
+					"id":  "03",
+					"text" : "Just want to make sure I can get a list of these bad boys in without too much trouble :V"
+				}
+			]
+        },
+		{
+			"group" : "special",
+			"content": [
+				{
+					"id":  "01",
+					"text" : "This text is special snowflake special text"
+				}
+			]
+        },
+		{
+			"group" : "post-special",
+			"content": [
+				{
+					"id":  "01",
+					"text" : "This text happens after that special text from before"
+				}
+			]
+        }
+    ]
+}

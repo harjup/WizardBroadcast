@@ -6,16 +6,25 @@ using Newtonsoft.Json;
 
 namespace Assets.Common.JsonModel
 {
-    public class DialogScriptBag
+    public class DialogBag
     {
-        [JsonProperty("scriptId")]
-        public string ScriptId;
+        [JsonProperty("id")]
+        public string Id;
 
         [JsonProperty("content")]
-        public List<DialogScript> Content;
+        public List<Dialog> Content;
     }
 
-    public class DialogScript
+    /*public class DialogGroup
+    {
+        [JsonProperty("name")]
+        public string Id;
+
+        [JsonProperty("content")]
+        public List<Dialog> Content;
+    }*/
+
+    public class Dialog
     {
         [JsonProperty("id")]
         public string Id;

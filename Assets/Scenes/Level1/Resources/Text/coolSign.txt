@@ -1,9 +1,17 @@
 {
-    "scriptId":  "CoolSign",
+    "id":  "CoolTree",
     "content": [
         {
             "id":  "01",
-            "text" : "I''m a cool cool sign"
+            "text" : "Wow, what a wonderful, beautiful tree. I want to just stare at it for hours and hours."
+        },
+		{
+            "id":  "02",
+            "text" : "There appears to be a treasure lodged in the trunk of this wonderful beautiful tree."
+        },
+		{
+            "id":  "03",
+            "text" : "It's difficult to stop admiring this tree, I know."
         }
     ]
 }
