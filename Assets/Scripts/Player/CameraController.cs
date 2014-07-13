@@ -2,11 +2,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviourBase
+//This should probably exist separate from the player and get spawned in by bootstrapped
+public class CameraController : Singleton<CameraController>
 {
 
     private Transform cameraRig;
-
 
     // Use this for initialization
     void Start()

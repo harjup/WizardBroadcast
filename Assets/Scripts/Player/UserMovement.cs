@@ -13,7 +13,7 @@ namespace WizardBroadcast
 
         private Vector3 walkVector;
         private Rigidbody rigidBody;
-        private Transform cameraRig;
+        public Transform cameraRig;
 
 
         private Transform playerMesh;
@@ -23,6 +23,7 @@ namespace WizardBroadcast
         private void Start()
         {
             //This should be ok for now since there aren't multiple cameras flying around
+            //TODO: There are multiple cameras flying around make sure this is alright
             cameraRig = Camera.main.transform.parent;
             //Let's have it be free from the player or sommin
             cameraRig.parent = null;

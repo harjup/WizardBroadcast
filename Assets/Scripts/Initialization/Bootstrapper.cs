@@ -43,11 +43,11 @@ namespace Assets.Scripts.Managers
             {typeof(TextboxDisplay), @"Prefabs/Managers/TextboxDisplay"},
 
             {typeof(UserProgressStore), @"Prefabs/Managers/UserProgressStore"},
-            
 
             {typeof(SignalrEndpoint), @"Prefabs/Managers/SignalrEndpoint"},
-            {typeof(PeerTracker), @"Prefabs/Managers/PeerTracker"}
+            {typeof(PeerTracker), @"Prefabs/Managers/PeerTracker"},
             
+            {typeof(CameraManager), @"Prefabs/Managers/CameraManager"}
         };
 
 
