@@ -40,7 +40,13 @@ namespace WizardBroadcast
         // Update is called once per frame
         private void Update()
         {
+            
+            //If in walking state then do a moveplayer
             MovePlayer();
+            
+            //If in a pushing state do a pushthing
+            //If The logic is similar enough in pushing and walking we can combine them but whatev
+            //PushMovement();
         }
 
         private void FixedUpdate()
@@ -86,6 +92,38 @@ namespace WizardBroadcast
                                         .SetX(velocity.x)
                                         .SetZ(velocity.z);
         }
+
+        void PushMovement()
+        {
+            //If we're not currently doing a push... 
+                //if forward/backward button is being pressed...
+                    //Do a PushAction in that direction
+                //if interact button has been pushed
+                    //Disengage from block
+        }
+/*
+        IEnumerator PushAction(Action callback)
+        {
+            //ITween from the current position in the given direction until we hit the next x/y coordinate increment (half a block or sommin)
+            //So if we have blocks of width 2 and we're facing +x, move to x+1
+            //Execute callback when done so we know we can do other things
+        }
+        
+        IEnumerator EngageBlock()
+        {
+            //Disable walking movement
+            //Orient player toward block
+            //Move player next to block
+            //child block to player
+            //Get position direction for block (+/-X or +/-Z)
+        }
+        
+        IEnumerator DisengageBlock()
+        {
+            //unchild block from player
+            //Enable walking movement
+        }
+*/
 
         void MoveCamera()
         {
