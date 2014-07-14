@@ -44,6 +44,15 @@
 		]
 	},
 	{
+		"id":  "04NEGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "There is a fake wall in a grotto in the northish direction."
+			}
+		]
+	},
+	{
 		"id":  "05NEGuy",
 		"content": [
 			{

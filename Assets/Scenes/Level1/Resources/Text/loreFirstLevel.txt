@@ -1,0 +1,146 @@
+[
+	{
+		"id":  "01Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I AM A USELESS LORE SIGN I GOTCHA, HAHAAHAH!"
+			}	
+		]
+	},
+	{
+		"id":  "02Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "03Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "04Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "05Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "06Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "07Lore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "01GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I AM A USELESS LORE SIGN I GOTCHA, HAHAAHAH!"
+			}	
+		]
+	},
+	{
+		"id":  "02GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "03GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "04GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "05GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "06GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "07GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "08GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	},
+	{
+		"id":  "09GLore",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have any useful information mister."
+			}
+		]
+	}
+]

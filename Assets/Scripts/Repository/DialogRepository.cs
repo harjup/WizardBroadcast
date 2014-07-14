@@ -18,9 +18,8 @@ namespace Assets.Scripts.Repository
         private List<string> _scriptsToLoad =new List<string>()
         {
             {"firstLevel"},
-            {"secondLevel"},
-            {"coolSign"},
-            {"treeLover"}
+            {"loreFirstLevel"},
+            {"secondLevel"}
         };
 
 
