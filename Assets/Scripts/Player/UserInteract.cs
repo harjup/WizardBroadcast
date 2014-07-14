@@ -54,6 +54,9 @@ namespace Assets.Scripts.Player
             transform.position = _pushableObject.GetPosition().SetY(transform.position.y);
             _pushableObject.GetParent().parent = transform;
 
+            //Set input type to block pushing
+            //Either do this by triggering state on userMovement
+            //Or just tell the input manager to transmit different input signals or some shit
 
             waitingForCallback = false;
         }

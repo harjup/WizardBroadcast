@@ -26,16 +26,106 @@
 		]
 	},
 	{
-		"id":  "GrottoGuy",
+		"id":  "01GrottoGuy",
 		"content": [
 			{
 				"id":  "01",
 				"text" : "See that pile of leaves over there, I bet if you jumped on it really hard you might fall into a magical cave."
+			}
+		]
+	},
+	{
+		"id":  "02MidGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "If you could imagine a 'B' kinda grotto, I am imagining that there is now a special treasure there."
+			}
+		]
+	},
+	{
+		"id":  "05NEGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "That B grotto? There's a fake wall in the westish direction"
+			}
+		]
+	},
+	{
+		"id":  "06SEGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "There's a grotto somewhere,  I forget which one. It has some treasures in a fake wall on the north side!"
+			}
+		]
+	},
+	{
+		"id":  "07NWGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I heard in a grotto nearby, There's ths wall on the south side? Actually a fake wall."
+			}
+		]
+	},
+	{
+		"id":  "08MidSGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "That B grotto? There's a fake wall on the south I swear."
+			}
+		]
+	},
+	{
+		"id":  "09GrottoGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Would you like to get out of here? There is a fake wall taht will let you do jsut that."
+			}
+		]
+	},
+	{
+		"id":  "10GrottoGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "In a grotto near here there is a secret fake wall."
+			}
+		]
+	},
+	{
+		"id":  "11TreeLover",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I think trees are beautiful and so wonderful. That tree over there was plant one hunder years ago and it still stands today also there's a treasure in its leaves."
 			},
 			{
 				"id":  "02",
-				"flag" : "GrottoGuy02",
-				"text" : "I WARNED you about leaves!"
+				"text" : "A can assure you that tree is one of the world's finest"
+			}
+		]
+	},
+	{
+		"id":  "11LovedTree",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow, what a wonderful, beautiful tree. I want to just stare at it for hours and hours."
+			},
+			{
+				"id":  "02",
+				"flag": "CoolTree02",
+				"text" : "There appears to be a treasure lodged in the trunk of this wonderful beautiful tree."
+			},
+			{
+				"id":  "03",
+				"flag": "CoolTree03",
+				"text" : "It's difficult to stop admiring this tree, I know."
 			}
 		]
 	}
