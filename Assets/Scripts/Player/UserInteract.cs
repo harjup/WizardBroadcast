@@ -42,6 +42,9 @@ namespace Assets.Scripts.Player
 
         private void PushObject()
         {
+            //TODO: Just tell userMovement to engage/disengage the block based on state for now I suppose
+            //most of the stuff we need to know is in usermovement so might as well start in there
+            
             waitingForCallback = true;
             //Center camera
             //Switch movement state to pushing or some shit
