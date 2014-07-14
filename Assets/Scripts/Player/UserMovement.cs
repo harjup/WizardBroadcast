@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Repository;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using System.Collections;
 
@@ -24,7 +25,10 @@ namespace WizardBroadcast
         {
             //This should be ok for now since there aren't multiple cameras flying around
             //TODO: There are multiple cameras flying around make sure this is alright
-            cameraRig = Camera.main.transform.parent;
+            var userCamera = GetComponentInChildren<Camera>();
+            CameraManager.Instance.SetMainCamera(userCamera);
+            cameraRig = userCamera.transform.parent;
+
             //Let's have it be free from the player or sommin
             cameraRig.parent = null;
             DontDestroyOnLoad(cameraRig);
@@ -44,6 +48,10 @@ namespace WizardBroadcast
             MoveCamera();
         }
 
+        public void RotateTo(Vector3 rotation)
+        {
+            playerMesh.rotation = Quaternion.Euler(playerMesh.eulerAngles.SetY(rotation.y));
+        }
         public void LookAt(Vector3 vector3)
         {
             playerMesh.LookAt(vector3.SetY(playerMesh.position.y));

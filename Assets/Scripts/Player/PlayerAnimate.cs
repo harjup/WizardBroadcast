@@ -47,13 +47,11 @@ namespace Assets.Scripts.Player
             yield return new WaitForSeconds(.25f);
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);
-            
-            GetComponent<UserMovement>().cameraRig.position = targetEndpoint;//TODO: Get a better method of referencing this
+            CameraManager.Instance.GetCameraRig().position = targetEndpoint;
             transform.position = targetEndpoint.SetY(targetEndpoint.y + 3f);
             iTween.MoveTo(gameObject, iTween.Hash("position", targetEndpoint, "time", 1f, "easetype", iTween.EaseType.easeOutCirc));
             yield return new WaitForSeconds(.25f);
             yield return StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
-            yield return new WaitForSeconds(1f);
         }
 
         public IEnumerator DoCollectedThingDance(TreasureType type)

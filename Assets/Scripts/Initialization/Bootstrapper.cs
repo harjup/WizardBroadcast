@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts.GameState;
 using Assets.Scripts.GUI;
 using Assets.Scripts.Player;
+using Assets.Scripts.Repository;
 using UnityEngine;
 
 namespace Assets.Scripts.Managers
@@ -41,6 +42,7 @@ namespace Assets.Scripts.Managers
             {typeof(InputManager), @"Prefabs/Managers/InputManager"},
             {typeof(GuiManager), @"Prefabs/Managers/GuiManager"},
             {typeof(TextboxDisplay), @"Prefabs/Managers/TextboxDisplay"},
+            {typeof(DialogRepository), @"Prefabs/Managers/DialogRepository"},
 
             {typeof(UserProgressStore), @"Prefabs/Managers/UserProgressStore"},
 

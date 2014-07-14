@@ -14,9 +14,11 @@ namespace Assets.Scripts.Repository
 {
     class DialogRepository : Singleton<DialogRepository>
     {
+        //TODO: Load these with a less terrible method
         private List<string> _scriptsToLoad =new List<string>()
         {
             {"firstLevel"},
+            {"secondLevel"},
             {"coolSign"},
             {"treeLover"}
         };

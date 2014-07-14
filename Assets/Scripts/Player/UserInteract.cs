@@ -10,6 +10,7 @@ namespace Assets.Scripts.Player
     public class UserInteract : MonoBehaviourBase
     {
         private ExaminableBase _examinableObject;
+        private PushableBase _pushableObject;
 
         private bool waitingForCallback = false;
 
@@ -21,28 +22,60 @@ namespace Assets.Scripts.Player
 
         void Update()
         {
-            if (_examinableObject != null && !waitingForCallback)
+            if (waitingForCallback) return;
+
+            if (_examinableObject != null)
             {
                 if (InputManager.Instance.InteractAction)
                 {
-                    waitingForCallback = true;
-                    InputManager.Instance.PlayerMovementEnabled = false;
-                    InputManager.Instance.CameraControlEnabled = false;
-
-                    //TODO: Determine a decent method of accessing usermovement for reorienting the player mesh or whatever
-                    GetComponent<UserMovement>().LookAt(_examinableObject.transform.position);
-
-                    Debug.Log(_examinableObject.gameObject.transform.position.SetY(transform.position.y));
-                    StartCoroutine(_examinableObject.Examine(() =>
-                    {
-                        waitingForCallback = false;
-                        InputManager.Instance.PlayerMovementEnabled = true;
-                        InputManager.Instance.CameraControlEnabled = true;
-                    }));
-                }
-                
+                    ExamineObject();
+                }   
+            }
+            if (_pushableObject != null)
+            {
+                if (InputManager.Instance.InteractAction)
+                {
+                    PushObject();
+                }   
             }
         }
+
+        private void PushObject()
+        {
+            waitingForCallback = true;
+            //Center camera
+            //Switch movement state to pushing or some shit
+
+            //Look at the block
+            GetComponent<UserMovement>().RotateTo(_pushableObject.GetOrientation());
+
+            //Move up to the block's edge so you're touching or whatever.
+            //TODO: Only set position on axis we're pushing in.
+            transform.position = _pushableObject.GetPosition().SetY(transform.position.y);
+            _pushableObject.GetParent().parent = transform;
+
+
+            waitingForCallback = false;
+        }
+
+        void ExamineObject()
+        {
+            waitingForCallback = true;
+            InputManager.Instance.PlayerMovementEnabled = false;
+            InputManager.Instance.CameraControlEnabled = false;
+
+            //TODO: Determine a decent method of accessing usermovement for reorienting the player mesh or whatever
+            GetComponent<UserMovement>().LookAt(_examinableObject.transform.position);
+
+            Debug.Log(_examinableObject.gameObject.transform.position.SetY(transform.position.y));
+            StartCoroutine(_examinableObject.Examine(() =>
+            {
+                waitingForCallback = false;
+                InputManager.Instance.PlayerMovementEnabled = true;
+                InputManager.Instance.CameraControlEnabled = true;
+            }));
+        }
+
 
         void OnTriggerEnter(Collider other)
         {
@@ -51,6 +84,11 @@ namespace Assets.Scripts.Player
             if (component as ExaminableBase != null)
             {
                 _examinableObject = component as ExaminableBase;
+            }
+
+            if (component as PushableBase != null)
+            {
+                _pushableObject = component as PushableBase;
             }
         }
 
@@ -62,11 +100,17 @@ namespace Assets.Scripts.Player
             {
                 _examinableObject = null;
             }
+
+            if (component as PushableBase != null)
+            {
+                _pushableObject = null;
+            }
         }
 
         void OnGUI()
         {
-            if (_examinableObject != null && !waitingForCallback)
+            if ((_examinableObject != null || _pushableObject != null) 
+                && !waitingForCallback)
             {
                 GuiManager.Instance.DrawInteractionPrompt();
             }
