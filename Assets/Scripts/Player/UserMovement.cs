@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Managers;
+﻿using System.Linq;
+using Assets.Scripts.Managers;
 using Assets.Scripts.Repository;
 using HutongGames.PlayMaker.Actions;
 using UnityEngine;
@@ -16,9 +17,10 @@ namespace WizardBroadcast
         private Rigidbody rigidBody;
         public Transform cameraRig;
 
-
         private Transform playerMesh;
 
+        private bool _blockEngaged = false;
+        private Vector3 pushDirection;
 
         // Use this for initialization
         private void Start()
@@ -40,13 +42,17 @@ namespace WizardBroadcast
         // Update is called once per frame
         private void Update()
         {
-            
+            //If in a pushing state do a pushthing
+            //If The logic is similar enough in pushing and walking we can combine them
+            //Or block pusing can be in its own component I dunno
+            if (_blockEngaged)
+            {
+                PushMovement();
+                return;
+            }
+
             //If in walking state then do a moveplayer
             MovePlayer();
-            
-            //If in a pushing state do a pushthing
-            //If The logic is similar enough in pushing and walking we can combine them but whatev
-            //PushMovement();
         }
 
         private void FixedUpdate()
@@ -93,37 +99,73 @@ namespace WizardBroadcast
                                         .SetZ(velocity.z);
         }
 
+        private bool pushing = false;
         void PushMovement()
         {
+            if (pushing) return;
+            if (Math.Abs(InputManager.Instance.RawVerticalAxis) < .001) return;
+
+            pushing = true;
+            StartCoroutine(PushAction(() =>
+            {
+                pushing = false;
+            }));
+
+
             //If we're not currently doing a push... 
-                //if forward/backward button is being pressed...
-                    //Do a PushAction in that direction
-                //if interact button has been pushed
-                    //Disengage from block
+            //if forward/backward button is being pressed...
+            //Do a PushAction in that direction
+            //if interact button has been pushed
+            //Disengage from block
         }
-/*
-        IEnumerator PushAction(Action callback)
+
+
+        public IEnumerator PushAction(Action callback)
         {
             //ITween from the current position in the given direction until we hit the next x/y coordinate increment (half a block or sommin)
-            //So if we have blocks of width 2 and we're facing +x, move to x+1
+            //TODO So if we have blocks of width 2 and we're facing +x, move to x+1
             //Execute callback when done so we know we can do other things
+            var pushAmount = pushDirection * 2f * InputManager.Instance.RawVerticalAxis;
+            Debug.Log(pushAmount);
+            iTween.MoveTo(gameObject, iTween.Hash(
+                "position", (transform.position + pushAmount),
+                "time", .3f,
+                "easetype", iTween.EaseType.linear));
+            yield return new WaitForSeconds(.5f);
+            callback();
         }
         
-        IEnumerator EngageBlock()
+        //TODO: Put in the timing things like walking to the block I dunno
+        public IEnumerator EngageBlock(PushableBase block, Action doneAction)
         {
-            //Disable walking movement
+            //Get push direction for block (+/-X or +/-Z)
+            pushDirection = block.transform.forward;
             //Orient player toward block
+            GetComponent<UserMovement>().RotateTo(block.GetOrientation());
             //Move player next to block
+            transform.position = block.GetPosition().SetY(transform.position.y);
             //child block to player
-            //Get position direction for block (+/-X or +/-Z)
+            block.GetParent().parent = transform;
+            //Set input type to block pushing
+            _blockEngaged = true;
+
+            doneAction();
+            yield return null;
         }
-        
-        IEnumerator DisengageBlock()
+
+        //TODO: Put in the timing things like waiting for an animation I dunno
+        public IEnumerator DisengageBlock(PushableBase block, Action doneAction)
         {
             //unchild block from player
+            block.GetParent().parent = null;
+
+            transform.position -= pushDirection * 1f;
             //Enable walking movement
+            _blockEngaged = false;
+            doneAction();
+
+            yield return null;
         }
-*/
 
         void MoveCamera()
         {

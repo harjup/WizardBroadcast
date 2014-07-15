@@ -13,7 +13,7 @@ namespace Assets.Scripts.Player
         private PushableBase _pushableObject;
 
         private bool waitingForCallback = false;
-
+        private bool _blockEngaged = false;
 
         void Start()
         {
@@ -33,35 +33,28 @@ namespace Assets.Scripts.Player
             }
             if (_pushableObject != null)
             {
-                if (InputManager.Instance.InteractAction)
+                if (!InputManager.Instance.InteractAction) return;
+                if (!_blockEngaged)
                 {
-                    PushObject();
-                }   
+                    waitingForCallback = true;
+                    StartCoroutine(GetComponent<UserMovement>().EngageBlock(_pushableObject, () =>
+                    {
+                        waitingForCallback = false;
+                        _blockEngaged = true;
+                    }));
+                    return;
+                }
+
+                waitingForCallback = true;
+                StartCoroutine(GetComponent<UserMovement>().DisengageBlock(_pushableObject, () =>
+                {
+                    waitingForCallback = false;
+                    _blockEngaged = false;
+                }));
+
+
+
             }
-        }
-
-        private void PushObject()
-        {
-            //TODO: Just tell userMovement to engage/disengage the block based on state for now I suppose
-            //most of the stuff we need to know is in usermovement so might as well start in there
-            
-            waitingForCallback = true;
-            //Center camera
-            //Switch movement state to pushing or some shit
-
-            //Look at the block
-            GetComponent<UserMovement>().RotateTo(_pushableObject.GetOrientation());
-
-            //Move up to the block's edge so you're touching or whatever.
-            //TODO: Only set position on axis we're pushing in.
-            transform.position = _pushableObject.GetPosition().SetY(transform.position.y);
-            _pushableObject.GetParent().parent = transform;
-
-            //Set input type to block pushing
-            //Either do this by triggering state on userMovement
-            //Or just tell the input manager to transmit different input signals or some shit
-
-            waitingForCallback = false;
         }
 
         void ExamineObject()
