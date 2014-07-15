@@ -44,6 +44,39 @@
 		]
 	},
 	{
+		"id":  "04NEGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "There is a cool item you can get if you examine a box in the northish direction."
+			},
+			{
+				"id":  "02",
+				"flag" : "04GrottoItem02",
+				"text" : "Did you find?"
+			}
+		]
+	},
+	{
+		"id":  "04GrottoItem",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Why is there a statue of a frog here I sure hope there isn't some deep and lengthy history to it."
+			},
+			{
+				"id":  "02",
+				"flag" : "04GrottoItem01",
+				"text" : "Touching the tounge made a treasure come out"
+			},
+			{
+				"id":  "03",
+				"flag" : "04GrottoItem02",
+				"text" : "Good ole treasure spitter the froggo"
+			}
+		]
+	},
+	{
 		"id":  "05NEGuy",
 		"content": [
 			{
@@ -57,7 +90,31 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There's a grotto somewhere,  I forget which one. It has some treasures in a fake wall on the north side!"
+				"text" : "There's a grotto somewhere,  I forget which one. There are some treasures in a signpost if you poke it."
+			},
+			{
+				"id":  "02",
+				"flag" : "06GrottoItem02",
+				"text" : "The history of that signpost is rich and varied. I will start from the beginning."
+			}
+		]
+	},
+	{
+		"id":  "06GrottoItem",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow this sign is blank what a ripoff"
+			},
+			{
+				"id":  "02",
+				"flag" : "06GrottoItem01",
+				"text" : "Wow, the top comes right off! And there's a treasure inside!"
+			},
+			{
+				"id":  "03",
+				"flag" : "06GrottoItem02",
+				"text" : "It turns out you can't judge every book by its glover"
 			}
 		]
 	},
@@ -75,13 +132,52 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "That B grotto? There's a fake wall on the south I swear."
+				"text" : "That B grotto? There's a special item in if you root around enough."
+			},
+			{
+				"id":  "02",
+				"flag" : "08GrottoItem02",
+				"text" : "I am an expert when it comes to secrets."
 			}
 		]
 	},
-	
-
-
+	{
+		"id":  "08GrottoItem",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "There's a box on the ground? Should you really open it? It might belong to someone."
+			},
+			{
+				"id":  "02",
+				"flag" : "08GrottoItem01",
+				"text" : "Well that weird guy said it's ok so let's see... wow a treasure!!!!"
+			},
+			{
+				"id":  "03",
+				"flag" : "08GrottoItem02",
+				"text" : "Leave no box unopened, with permission"
+			}
+		]
+	},
+	{
+		"id":  "09GrottoGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Would you like to get out of here? There is a fake wall taht will let you do jsut that."
+			}
+		]
+	},
+	{
+		"id":  "10GrottoGuy",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "In a grotto near here there is a secret fake wall."
+			}
+		]
+	},
 	{
 		"id":  "11TreeLover",
 		"content": [
