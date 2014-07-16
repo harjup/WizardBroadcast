@@ -106,11 +106,13 @@ namespace WizardBroadcast
             if (Math.Abs(InputManager.Instance.RawVerticalAxis) < .001) return;
 
             pushing = true;
-            StartCoroutine(PushAction(() =>
+
+            StartCoroutine(GameObject.Find("BlockMesh").GetComponent<PushBlock>().PushAction(pushDirection, () => { pushing = false; }));
+
+            /*StartCoroutine(PushAction(() =>
             {
                 pushing = false;
-            }));
-
+            }));*/
 
             //If we're not currently doing a push... 
             //if forward/backward button is being pressed...
@@ -127,11 +129,17 @@ namespace WizardBroadcast
             //Execute callback when done so we know we can do other things
             var pushAmount = pushDirection * 2f * InputManager.Instance.RawVerticalAxis;
             Debug.Log(pushAmount);
+            collider.enabled = false;
+            rigidbody.velocity = Vector3.zero;
+            rigidBody.useGravity = false;
             iTween.MoveTo(gameObject, iTween.Hash(
                 "position", (transform.position + pushAmount),
                 "time", .3f,
                 "easetype", iTween.EaseType.linear));
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(1f);
+            collider.enabled = true;
+            rigidbody.velocity = Vector3.zero;
+            rigidBody.useGravity = true;
             callback();
         }
         
@@ -139,11 +147,14 @@ namespace WizardBroadcast
         public IEnumerator EngageBlock(PushableBase block, Action doneAction)
         {
             //Get push direction for block (+/-X or +/-Z)
-            pushDirection = block.transform.forward;
+            //pushDirection = block.transform.forward;
             //Orient player toward block
             GetComponent<UserMovement>().RotateTo(block.GetOrientation());
             //Move player next to block
             transform.position = block.GetPosition().SetY(transform.position.y);
+
+            pushDirection = GetComponent<UserMovement>().playerMesh.forward;
+
             //child block to player
             block.GetParent().parent = transform;
             //Set input type to block pushing

@@ -18,6 +18,24 @@ public static class UsefulExtensions
         return new Vector3(vector3.x, vector3.y, z);
     }
 
+    //Returns the sign of the first non-zero entry
+    //If all entries are zero return zero
+    public static int Sign(this Vector3 vector3)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (vector3[i] > 0)
+            {
+                return 1;
+            }
+            if (vector3[i] < 0)
+            {
+                return -1;
+            }
+        }
+        return 0;
+    }
+
     /// <summary>
     /// Takes a comma separated string of 3 values and attempts to parse it into a vector3
     /// </summary>

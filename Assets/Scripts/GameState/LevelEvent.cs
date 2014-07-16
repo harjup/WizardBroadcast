@@ -34,8 +34,6 @@ namespace Assets.Scripts.Pocos
             }
         }
 
-
-        //Everything is strings for now but that's subject to change
         public LevelEvent(float _time, Scene _targetScene, State targetState)
         {
             TargetTime = _time;
