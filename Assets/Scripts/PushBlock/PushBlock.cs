@@ -8,6 +8,7 @@ public class PushBlock : MonoBehaviour
 {
 
    // private Vector3 _pushDirection = new Vector3(0,0,1);
+    public bool isSlippery = false;
 
     private GameObject _tweenTarget;
 
@@ -16,23 +17,18 @@ public class PushBlock : MonoBehaviour
         _tweenTarget = transform.parent.gameObject;
     }
 
-    string GetAxis(Vector3 pushDirection)
-    {
-        if (Math.Abs(pushDirection.x) > .01) return "x";
-        return "z";
-    }
-
-
     public IEnumerator PushAction(Vector3 pushDirection, Action callback)
     {
+        iTween.EaseType easeType = isSlippery ? iTween.EaseType.easeInOutExpo : iTween.EaseType.linear;
+
         //ITween from the current position in the given direction until we hit the next x/y coordinate increment (half a block or sommin)
         //TODO So if we have blocks of width 2 and we're facing +x, move to x+1
         //Execute callback when done so we know we can do other things
-        var pushDistance = 2f;
+        var pushDistance = 2.5f;
         collider.enabled = false;
 
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, pushDirection, 10);
+        hits = Physics.RaycastAll(transform.position, pushDirection, 100);
         foreach (var raycastHit in hits)
         {
             if (raycastHit.collider.name == "StopPost")
@@ -51,17 +47,12 @@ public class PushBlock : MonoBehaviour
                 if (differenceMagnitude < .01 && InputManager.Instance.RawVerticalAxis > 0)
                 {
                     iTween.Stop(_tweenTarget);
-                    //var positionDifference = raycastHit.transform.position - (transform.localScale / 2f + raycastHit.transform.localScale / 2f);
-                    //Debug.Log(positionDifference);
-                    //Debug.Log(transform.position);
-                    //transform.position = transform.position + Vector3.Scale(positionDifference, pushDirection);
-                    //Debug.Log(transform.position);
                     yield return new WaitForSeconds(0.3f);
                     collider.enabled = true;
                     callback();
                     yield break;
                 }
-                if (differenceMagnitude < pushDistance && InputManager.Instance.RawVerticalAxis > 0)
+                if (differenceMagnitude < pushDistance && InputManager.Instance.RawVerticalAxis > 0 || isSlippery)
                 {
                     pushDistance = differenceMagnitude;
                 }
@@ -72,8 +63,8 @@ public class PushBlock : MonoBehaviour
         var pushAmount = pushDirection * pushDistance * InputManager.Instance.RawVerticalAxis;
         iTween.MoveTo(_tweenTarget, iTween.Hash(
             "position", (transform.position + pushAmount),
-            "time", .3f,
-            "easetype", iTween.EaseType.linear));
+            "time", 1f,
+            "easetype", easeType));
         yield return new WaitForSeconds(0.3f);
         collider.enabled = true;
         callback();
