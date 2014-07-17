@@ -1,8 +1,10 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class PushableBase : MonoBehaviour {
+public class PushableBase : MonoBehaviour
+{
+
+    private bool enabled;
 
     public virtual Vector3 GetOrientation()
     {
@@ -22,6 +24,16 @@ public class PushableBase : MonoBehaviour {
     }
 
     public virtual Transform GetParent()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual PushBlock GetPushBlock()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual bool IsEnabled()
     {
         throw new System.NotImplementedException();
     }

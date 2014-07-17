@@ -46,7 +46,7 @@ namespace Assets.Scripts.Player
                 }
 
                 waitingForCallback = true;
-                StartCoroutine(GetComponent<UserMovement>().DisengageBlock(_pushableObject, () =>
+                StartCoroutine(GetComponent<UserMovement>().DisengageBlock(() =>
                 {
                     waitingForCallback = false;
                     _blockEngaged = false;
@@ -75,7 +75,6 @@ namespace Assets.Scripts.Player
             }));
         }
 
-
         void OnTriggerEnter(Collider other)
         {
             var component = other.GetComponent<MonoBehaviour>();
@@ -85,7 +84,8 @@ namespace Assets.Scripts.Player
                 _examinableObject = component as ExaminableBase;
             }
 
-            if (component as PushableBase != null)
+            if (component as PushableBase != null 
+                && (component as PushableBase).IsEnabled())
             {
                 _pushableObject = component as PushableBase;
             }
@@ -100,7 +100,7 @@ namespace Assets.Scripts.Player
                 _examinableObject = null;
             }
 
-            if (component as PushableBase != null)
+            if (component as PushableBase != null && !GetComponent<UserMovement>().GetBlockEngaged()) //!_blockEngaged)
             {
                 _pushableObject = null;
             }

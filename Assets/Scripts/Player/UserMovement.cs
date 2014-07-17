@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Assets.Scripts.Managers;
+using Assets.Scripts.Player;
 using Assets.Scripts.Repository;
 using HutongGames.PlayMaker.Actions;
 using UnityEngine;
@@ -21,6 +22,8 @@ namespace WizardBroadcast
 
         private bool _blockEngaged = false;
         private Vector3 pushDirection;
+
+        private PushableBase _pushPoint;
 
         // Use this for initialization
         private void Start()
@@ -106,46 +109,18 @@ namespace WizardBroadcast
             if (Math.Abs(InputManager.Instance.RawVerticalAxis) < .001) return;
 
             pushing = true;
-
-            StartCoroutine(GameObject.Find("BlockMesh").GetComponent<PushBlock>().PushAction(pushDirection, () => { pushing = false; }));
-
-            /*StartCoroutine(PushAction(() =>
-            {
-                pushing = false;
-            }));*/
-
-            //If we're not currently doing a push... 
-            //if forward/backward button is being pressed...
-            //Do a PushAction in that direction
-            //if interact button has been pushed
-            //Disengage from block
+            StartCoroutine(_pushPoint.GetPushBlock().PushAction(pushDirection,
+                (disengage) =>
+                {
+                    pushing = false;
+                    if (disengage) { StartCoroutine(DisengageBlock(() => { })); }                        
+                }));
         }
 
-
-        public IEnumerator PushAction(Action callback)
-        {
-            //ITween from the current position in the given direction until we hit the next x/y coordinate increment (half a block or sommin)
-            //TODO So if we have blocks of width 2 and we're facing +x, move to x+1
-            //Execute callback when done so we know we can do other things
-            var pushAmount = pushDirection * 2f * InputManager.Instance.RawVerticalAxis;
-            Debug.Log(pushAmount);
-            collider.enabled = false;
-            rigidbody.velocity = Vector3.zero;
-            rigidBody.useGravity = false;
-            iTween.MoveTo(gameObject, iTween.Hash(
-                "position", (transform.position + pushAmount),
-                "time", .3f,
-                "easetype", iTween.EaseType.linear));
-            yield return new WaitForSeconds(1f);
-            collider.enabled = true;
-            rigidbody.velocity = Vector3.zero;
-            rigidBody.useGravity = true;
-            callback();
-        }
-        
         //TODO: Put in the timing things like walking to the block I dunno
         public IEnumerator EngageBlock(PushableBase block, Action doneAction)
         {
+            _pushPoint = block;
             //Get push direction for block (+/-X or +/-Z)
             //pushDirection = block.transform.forward;
             //Orient player toward block
@@ -156,7 +131,12 @@ namespace WizardBroadcast
             pushDirection = GetComponent<UserMovement>().playerMesh.forward;
 
             //child block to player
-            block.GetParent().parent = transform;
+            if (!block.GetPushBlock().isSlippery)
+            {
+                transform.parent = block.transform.parent;
+            }
+                
+            
             //Set input type to block pushing
             _blockEngaged = true;
 
@@ -165,17 +145,22 @@ namespace WizardBroadcast
         }
 
         //TODO: Put in the timing things like waiting for an animation I dunno
-        public IEnumerator DisengageBlock(PushableBase block, Action doneAction)
+        public IEnumerator DisengageBlock(Action doneAction)
         {
             //unchild block from player
-            block.GetParent().parent = null;
-
+            //block.GetParent().parent = null;
+            transform.parent = null;
             transform.position -= pushDirection * 1f;
             //Enable walking movement
             _blockEngaged = false;
             doneAction();
 
             yield return null;
+        }
+
+        public bool GetBlockEngaged()
+        {
+            return _blockEngaged;
         }
 
         void MoveCamera()
