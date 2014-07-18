@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Assets.Scripts.Managers;
 using HutongGames.PlayMaker.Actions;
 using UnityEngine;
@@ -75,11 +76,23 @@ public class PushBlock : MonoBehaviourBase
 
         yield return StartCoroutine(ApplyGravity((fellDown) => { disengagePlayer = fellDown; }));
 
+        
+        var blockMoved = true;
+        while (blockMoved)
+        {
+            blockMoved = false;
+            var blocks = FindObjectsOfType<PushBlock>();
+            foreach (var pushBlock in blocks)
+            {
+                yield return StartCoroutine(pushBlock.ApplyGravity((b) => {if (b){blockMoved = true;}}));
+            }
+        }
+        
         collider.enabled = true;
         callback(disengagePlayer);
     }
 
-    IEnumerator ApplyGravity(Action<bool> callback)
+    public IEnumerator ApplyGravity(Action<bool> callback)
     {
         RaycastHit[] hits;
         hits = Physics.RaycastAll(transform.position, Vector3.down, 100);
@@ -105,5 +118,10 @@ public class PushBlock : MonoBehaviourBase
             yield break;
         }
         callback(false);
+    }
+
+    public bool TopBlocked()
+    {
+        return transform.parent.GetComponentInChildren<BlockTop>().IsBlocked;
     }
 }

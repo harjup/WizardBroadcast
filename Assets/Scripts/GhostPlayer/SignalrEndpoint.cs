@@ -55,17 +55,4 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         var positionString = position.ToString().Trim('(').Trim(')');
         Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
-
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(10,10,100,50), "Test 1"))
-        {
-            OnRecieveGhostPositions("a,1,2,3|b,1,2,3|");
-        }
-
-        if (GUI.Button(new Rect(120, 10, 100, 50), "Test 2"))
-        {
-            OnRecieveGhostPositions("a,10,2,3|b,1,20,3|");
-        }
-    }
 }

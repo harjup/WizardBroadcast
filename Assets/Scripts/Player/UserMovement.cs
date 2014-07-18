@@ -101,7 +101,7 @@ namespace WizardBroadcast
             //Set direction and speed
             rigidBody.velocity = rigidBody.velocity
                                         .SetX(velocity.x)
-                                        .SetY(inAir ? -10f: 0f)
+                                        .SetY(inAir ? -20f: 0f)
                                         .SetZ(velocity.z);
         }
 
@@ -227,6 +227,12 @@ namespace WizardBroadcast
 
         public IEnumerator ClimbBlock(PushableBase pushableObject, Action action)
         {
+            if (pushableObject.GetPushBlock().TopBlocked())
+            {
+                action();
+                yield break;
+            }
+
             iTween.MoveTo(gameObject,
                 pushableObject.GetPushBlock().transform.position.SetY(pushableObject.GetPushBlock().transform.position.y + 2.5f), 
                 .4f);
