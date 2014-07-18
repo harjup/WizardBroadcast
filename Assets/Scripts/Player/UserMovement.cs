@@ -25,6 +25,8 @@ namespace WizardBroadcast
 
         private PushableBase _pushPoint;
 
+        private bool inAir = false;
+
         // Use this for initialization
         private void Start()
         {
@@ -99,7 +101,13 @@ namespace WizardBroadcast
             //Set direction and speed
             rigidBody.velocity = rigidBody.velocity
                                         .SetX(velocity.x)
+                                        .SetY(inAir ? -10f: 0f)
                                         .SetZ(velocity.z);
+        }
+
+        public void SetAirState(bool isInAir)
+        {
+            inAir = isInAir;
         }
 
         private bool pushing = false;
