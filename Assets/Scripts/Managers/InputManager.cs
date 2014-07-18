@@ -77,6 +77,17 @@ namespace Assets.Scripts.Managers
         }
 
 
+        private bool _climbButton = false;
+        public bool ClimbButton
+        {
+            get
+            {
+                return _climbButton 
+                    && _playerInputEnabled;
+            }
+            private set { _climbButton = value; }
+        }
+
         void Update()
         {
             //Get all the inputs for da frame
@@ -88,6 +99,7 @@ namespace Assets.Scripts.Managers
             
             InteractAction = Input.GetKeyDown(KeyCode.Z);
             CameraAction = Input.GetKeyDown(KeyCode.X);
+            ClimbButton = Input.GetKeyDown(KeyCode.C);
         }
         
         public bool PlayerInputEnabled

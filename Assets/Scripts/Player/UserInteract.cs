@@ -33,6 +33,17 @@ namespace Assets.Scripts.Player
             }
             if (_pushableObject != null)
             {
+                if (InputManager.Instance.ClimbButton)
+                {
+                    waitingForCallback = true;
+                    StartCoroutine(GetComponent<UserMovement>().ClimbBlock(_pushableObject, () =>
+                    {
+                        waitingForCallback = false;
+                    }));
+                    return;
+                }
+
+
                 if (!InputManager.Instance.InteractAction) return;
                 if (!_blockEngaged)
                 {
@@ -78,11 +89,6 @@ namespace Assets.Scripts.Player
         void OnTriggerEnter(Collider other)
         {
             var component = other.GetComponent<MonoBehaviour>();
-            //If we are entering an examinable set the current examinable to it
-            if (component as ExaminableBase != null)
-            {
-                _examinableObject = component as ExaminableBase;
-            }
 
             if (component as PushableBase != null 
                 && (component as PushableBase).IsEnabled())
@@ -94,15 +100,30 @@ namespace Assets.Scripts.Player
         void OnTriggerExit(Collider other)
         {
             var component = other.GetComponent<MonoBehaviour>();
-            //If we are exiting an examinable set the current examinable to null
-            if (component as ExaminableBase != null)
-            {
-                _examinableObject = null;
-            }
 
             if (component as PushableBase != null && !GetComponent<UserMovement>().GetBlockEngaged()) //!_blockEngaged)
             {
                 _pushableObject = null;
+            }
+        }
+
+        public void OnInteractionTriggerEnter(Collider other)
+        {
+            var component = other.GetComponent<MonoBehaviour>();
+            //If we are entering an examinable set the current examinable to it
+            if (component as ExaminableBase != null)
+            {
+                _examinableObject = component as ExaminableBase;
+            }
+        }
+
+        public void OnInteractionTriggerExit(Collider other)
+        {
+            var component = other.GetComponent<MonoBehaviour>();
+            //If we are exiting an examinable set the current examinable to null
+            if (component as ExaminableBase != null)
+            {
+                _examinableObject = null;
             }
         }
 

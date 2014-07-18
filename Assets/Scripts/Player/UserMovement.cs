@@ -217,5 +217,13 @@ namespace WizardBroadcast
             
         }
 
+        public IEnumerator ClimbBlock(PushableBase pushableObject, Action action)
+        {
+            iTween.MoveTo(gameObject,
+                pushableObject.GetPushBlock().transform.position.SetY(pushableObject.GetPushBlock().transform.position.y + 2.5f), 
+                .4f);
+            action();
+            yield break;
+        }
     }
 }

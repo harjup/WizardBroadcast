@@ -30,7 +30,8 @@ public class PushBlock : MonoBehaviourBase
         foreach (var raycastHit in hits)
         {
             //There should probably only be the one wall found
-            if (raycastHit.collider.GetComponent<BlockStopper>() != null)
+            if (raycastHit.collider.GetComponent<BlockStopper>() != null 
+                || raycastHit.collider.GetComponent<PushBlock>() != null)
             {
                 var edgePosition = (transform.position + ((transform.localScale / 2f) * pushDirection.Sign()));
                 var pointDifference =  edgePosition - (raycastHit.point);
