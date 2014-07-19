@@ -92,7 +92,6 @@ public class PushBlock : MonoBehaviourBase
 
         yield return StartCoroutine(ApplyGravity((fellDown) => { disengagePlayer = fellDown; }));
 
-
         StartCoroutine(SettleBlocks());
         collider.enabled = true;
         callback(disengagePlayer);

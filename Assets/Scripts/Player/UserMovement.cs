@@ -27,6 +27,7 @@ namespace WizardBroadcast
 
         private bool inAir = false;
 
+
         // Use this for initialization
         private void Start()
         {
@@ -73,6 +74,11 @@ namespace WizardBroadcast
         {
             playerMesh.LookAt(vector3.SetY(playerMesh.position.y));
         }
+        public Vector3 Forward
+        {
+            get { return playerMesh.forward; }
+        }
+
 
         void MovePlayer()
         {
@@ -173,6 +179,8 @@ namespace WizardBroadcast
 
         void MoveCamera()
         {
+            cameraRig.position = cameraRig.position.SetY(iTween.FloatUpdate(cameraRig.position.y, playerMesh.position.y, 5f));
+
             //TODO: Have the camera contextually recenter or some shit
             var positionDifference = playerMesh.position - cameraRig.position;
             float xSpeed  = Mathf.Abs(positionDifference.x) * 5f;
@@ -237,7 +245,24 @@ namespace WizardBroadcast
                 pushableObject.GetPushBlock().transform.position.SetY(pushableObject.GetPushBlock().transform.position.y + 2.5f), 
                 .4f);
             action();
+
             yield break;
         }
+
+        public IEnumerator ClimbGeometry(Vector3 target, Action action)
+        {
+            collider.enabled = false;
+
+            iTween.MoveTo(gameObject,
+                target.SetY(target.y + 2.5f),
+                .4f);
+            action();
+            yield return new WaitForSeconds(.4f);
+            collider.enabled = true;
+            yield break;
+        }
+
+
+        
     }
 }

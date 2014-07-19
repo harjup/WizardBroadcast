@@ -12,61 +12,76 @@ namespace Assets.Scripts.Player
         private ExaminableBase _examinableObject;
         private PushableBase _pushableObject;
 
+
+        private float playerHeight = 2.5f;
+        private Vector3 _climbTarget;
+
         private bool waitingForCallback = false;
         private bool _blockEngaged = false;
 
-        void Start()
+        private UserMovement _userMovement;
+        void Awake()
         {
-            
+            _userMovement = GetComponent<UserMovement>();
         }
 
         void Update()
         {
-            if (waitingForCallback) return;
+            InputManager.Instance.PlayerInputEnabled = !waitingForCallback; 
 
-            if (_examinableObject != null)
+            ExamineInput();
+            PushBlockInput();
+            ClimbInput();
+            
+            CheckForClimbableSurfaces();
+        }
+
+        void ExamineInput()
+        {
+            if (_examinableObject == null) return;
+
+            if (InputManager.Instance.InteractAction)
             {
-                if (InputManager.Instance.InteractAction)
-                {
-                    ExamineObject();
-                }   
-            }
-            if (_pushableObject != null)
-            {
-                if (InputManager.Instance.ClimbButton)
-                {
-                    waitingForCallback = true;
-                    StartCoroutine(GetComponent<UserMovement>().ClimbBlock(_pushableObject, () =>
-                    {
-                        waitingForCallback = false;
-                    }));
-                    return;
-                }
-
-
-                if (!InputManager.Instance.InteractAction) return;
-                if (!_blockEngaged)
-                {
-                    waitingForCallback = true;
-                    StartCoroutine(GetComponent<UserMovement>().EngageBlock(_pushableObject, () =>
-                    {
-                        waitingForCallback = false;
-                        _blockEngaged = true;
-                    }));
-                    return;
-                }
-
-                waitingForCallback = true;
-                StartCoroutine(GetComponent<UserMovement>().DisengageBlock(() =>
-                {
-                    waitingForCallback = false;
-                    _blockEngaged = false;
-                }));
-
-
-
+                ExamineObject();
             }
         }
+
+        void PushBlockInput()
+        {
+            if (waitingForCallback) return;
+            if (_pushableObject == null) return;
+            if (!InputManager.Instance.InteractAction) return;
+            if (!_blockEngaged)
+            {
+                waitingForCallback = true;
+                StartCoroutine(_userMovement.EngageBlock(_pushableObject, () =>
+                {
+                    waitingForCallback = false;
+                    _blockEngaged = true;
+                }));
+                return;
+            }
+
+            waitingForCallback = true;
+            StartCoroutine(_userMovement.DisengageBlock(() =>
+            {
+                waitingForCallback = false;
+                _blockEngaged = false;
+            }));
+        }
+        void ClimbInput()
+        {
+            if (waitingForCallback) return;
+            if (_climbTarget == Vector3.zero) return;
+            if (!InputManager.Instance.ClimbButton) return;
+
+            waitingForCallback = true;
+            StartCoroutine(_userMovement.ClimbGeometry(_climbTarget, () =>
+            {
+                waitingForCallback = false;
+            }));
+        }
+
 
         void ExamineObject()
         {
@@ -106,7 +121,7 @@ namespace Assets.Scripts.Player
         {
             var component = other.GetComponent<MonoBehaviour>();
 
-            if (component as PushableBase != null && !GetComponent<UserMovement>().GetBlockEngaged()) //!_blockEngaged)
+            if (component as PushableBase != null && !_userMovement.GetBlockEngaged()) //!_blockEngaged)
             {
                 _pushableObject = null;
             }
@@ -130,6 +145,29 @@ namespace Assets.Scripts.Player
             {
                 _examinableObject = null;
             }
+        }
+
+        private void CheckForClimbableSurfaces()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, _userMovement.Forward, out hit))
+            {
+                if (hit.distance < 2.5f)
+                {
+                    float maxHeight = 0f;
+                    var playerTop = transform.position.y + playerHeight / 2f;
+                    RaycastHit[] hits;
+                    hits = Physics.RaycastAll(hit.transform.position.SetY(hit.transform.position.y + 10f), Vector3.down, 100);
+                    foreach (var raycastHit in hits)
+                    {
+                        var distance = Mathf.Abs(raycastHit.point.y - playerTop);
+                        if (!(distance < .5f)) continue;
+                        _climbTarget = raycastHit.point;
+                        return;
+                    }
+                }
+            }
+            _climbTarget = Vector3.zero;
         }
 
         void OnGUI()

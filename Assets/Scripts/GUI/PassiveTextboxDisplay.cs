@@ -16,9 +16,9 @@ public class PassiveTextboxDisplay : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(
+        /*StartCoroutine(
             DisplayText("I AM A PASSIVE TEXTBOX< I WILL BE HERE WITH OR WITHOUT YOUR APPROVAL!!!! GO EAT AN APPLE.", "Appleboy",
-                () => { }));
+                () => { }));*/
     }
 
     public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
