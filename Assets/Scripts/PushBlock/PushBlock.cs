@@ -113,7 +113,7 @@ public class PushBlock : MonoBehaviourBase
             "y", (transform.position.y - leastDistance),
             "time", .5f,
             "easetype", iTween.EaseType.easeInBack));
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.6f);
             callback(true);
             yield break;
         }

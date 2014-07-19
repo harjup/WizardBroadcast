@@ -95,6 +95,11 @@ namespace Assets.Scripts.Player
             {
                 _pushableObject = component as PushableBase;
             }
+
+            if (component as DeathVolume != null)
+            {
+                StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
+            }
         }
 
         void OnTriggerExit(Collider other)

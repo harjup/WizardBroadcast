@@ -31,7 +31,6 @@ namespace Assets.Scripts.Managers
 
             if (currentScene == Scene.Undefined)
             {
-                //bail
                 return;
             }
             if (!_treasureTotals.ContainsKey(currentScene))
@@ -56,5 +55,7 @@ namespace Assets.Scripts.Managers
             }
             return _treasureTotals[scene];
         }
+
+
     }
 }

@@ -70,7 +70,7 @@ namespace Assets.Scripts.GUI
 
                 //Done, do cleanup
                 _fullDisplayText = "";
-                _currentDisplayText = "";
+                _currentDisplayText = null;
                 _displayIndex = 1;
             }
 

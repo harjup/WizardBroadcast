@@ -7,6 +7,7 @@ using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Portals;
+using TreeEditor;
 using UnityEngine;
 using WizardBroadcast;
 
@@ -58,11 +59,7 @@ namespace Assets.Scripts.Player
         void MoveToStartPosition()
         {
             //TODO: Be move selective on when spawnMarker to user based on application state and whatever
-            var spawnMarker = FindObjectsOfInterface<SpawnMarker>();
-            if (spawnMarker.Count > 0)
-            {
-                transform.position = spawnMarker[0].transform.position;
-            }
+            transform.position = CheckpointStore.Instance.ActiveSpawnMarker.transform.position;
         }
 
         void SendGhostInfo()

@@ -4,6 +4,7 @@ using System.Globalization;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Portals;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using WizardBroadcast;
 
@@ -79,6 +80,25 @@ namespace Assets.Scripts.Player
         {
             //Just show it above their head I guess
             yield return new WaitForSeconds(.05f);
+        }
+
+
+        private bool _isMessedUpRunning = false;
+        public IEnumerator GetMessedUp()
+        {
+            if (_isMessedUpRunning) yield break;
+            _isMessedUpRunning = true;
+
+            InputManager.Instance.PlayerInputEnabled = false;
+            iTween.RotateTo(gameObject, iTween.Hash("rotation", new Vector3(90f, 0f, 0f), "time", 1f, "easetype", iTween.EaseType.easeOutBounce));
+            yield return new WaitForSeconds(.5f);
+            yield return StartCoroutine(CameraManager.Instance.DoWipeOut(1f));
+            yield return new WaitForSeconds(.5f);
+            transform.position = CheckpointStore.Instance.ActiveSpawnMarker.transform.position;
+            transform.rotation = Quaternion.identity;
+            yield return StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
+            InputManager.Instance.PlayerInputEnabled = true;
+            _isMessedUpRunning = false;
         }
     }
 }

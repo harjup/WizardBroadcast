@@ -12,13 +12,22 @@ namespace Assets.Scripts.Managers
     class GuiManager : Singleton<GuiManager>
     {
         private Texture _dismissalPromptGraphic;
-        private GUIStyle textBoxStyle = new GUIStyle();
+        public GUIStyle textBoxStyle;
 
         private bool _showInteractionPrompt = false;
         public void DrawInteractionPrompt()
         {
             _showInteractionPrompt = true;
         }
+
+        private string _passiveTextBoxContents;
+        private string _passiveTextSpeaker;
+        public void DrawPassiveTextBox(string text, string speaker)
+        {
+            _passiveTextBoxContents = text;
+            _passiveTextSpeaker = speaker;
+        }
+
 
         private string _textBoxContents;
         public void DrawTextBox(string text)
@@ -66,6 +75,11 @@ namespace Assets.Scripts.Managers
             {
                 GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.2f, Screen.width / 1.2f, Screen.height / 7.5f), _textBoxContents, textBoxStyle);
             }
+            if (_passiveTextBoxContents != null)
+            {
+                GUI.Box(new Rect(Screen.width / 15f, Screen.height / 1.6f, Screen.width / 1.2f, Screen.height / 16f), _passiveTextSpeaker, textBoxStyle);
+                GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.5f, Screen.width / 1.2f, Screen.height / 7.5f), _passiveTextBoxContents, textBoxStyle);
+            }
             if (_drawGeneralInfo)
             {
                 var treasureTotals =
@@ -88,7 +102,12 @@ namespace Assets.Scripts.Managers
             yield return new WaitForEndOfFrame();
             _drawGeneralInfo = false;
             _showTextProceedPrompt = false;
+            
             _textBoxContents = null;
+
+            _passiveTextBoxContents = null;
+            _passiveTextSpeaker = null;
+
             _showInteractionPrompt = false;
         }
     }
