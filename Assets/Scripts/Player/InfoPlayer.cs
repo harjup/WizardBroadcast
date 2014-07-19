@@ -96,5 +96,16 @@ namespace Assets.Scripts.Player
             //CameraFadeOut
             //Move player to target position
         }
+
+        public IEnumerator OnEnterDoorway(Vector3 targetDirection, Transform destination)
+        {
+            InputManager.Instance.PlayerInputEnabled = false;
+            gameObject.collider.enabled = false;
+            rigidbody.useGravity = false;
+            yield return StartCoroutine(_animator.WalkForwardTransition(targetDirection, destination));
+            rigidbody.useGravity = true;
+            InputManager.Instance.PlayerInputEnabled = true;
+            gameObject.collider.enabled = true;
+        }
     }
 }

@@ -15,6 +15,12 @@ public class PuzzleRoomManager : MonoBehaviourBase {
     private int enemyCount;
     private int squishCount = 0;
 
+    private EntranceDoorway _entrance;
+    private ExitDoorway _exit;
+    private RoomWorkflow _workflow;
+
+    public int RoomIndex;
+
     void Awake()
     {
         _blockPrefab = Resources.Load("Prefabs/PushBlock", typeof (GameObject)) as GameObject;
@@ -22,6 +28,10 @@ public class PuzzleRoomManager : MonoBehaviourBase {
 
         _spawners = GetComponentsInChildren<BlockSpawner>();
         _enemySpawners = GetComponentsInChildren<EnemySpawner>();
+
+        _workflow = GetComponentInParent<RoomWorkflow>();
+        _entrance = GetComponentInChildren<EntranceDoorway>();
+        _exit = GetComponentInChildren<ExitDoorway>();
     }
 
     void Start()
@@ -37,10 +47,31 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         }
     }
 
+
     IEnumerator RoomInit()
     {
         yield return StartCoroutine(SpawnBlocks());
         yield return StartCoroutine(SpawnEnemies());
+    }
+
+    public void OnRoomEnter()
+    {
+
+    }
+
+    public Transform GetEntrance()
+    {
+        return _entrance.transform;
+    }
+
+    public void ActivateExit()
+    {
+        _exit.Activate();
+    }
+
+    public PuzzleRoomManager OnRoomExit()
+    {
+        return _workflow.NextRoom(RoomIndex);
     }
 
     public void UpdateRoomCompletion()
@@ -56,6 +87,7 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         if (roomComplete)
         {
             //Activate door
+            ActivateExit();
             Debug.Log("Room Complete!!!");
             return;
         }

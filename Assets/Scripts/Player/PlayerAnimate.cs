@@ -100,5 +100,20 @@ namespace Assets.Scripts.Player
             InputManager.Instance.PlayerInputEnabled = true;
             _isMessedUpRunning = false;
         }
+
+        public IEnumerator WalkForwardTransition(Vector3 targetDirection, Transform destination)
+        {
+            var targetEndpoint = destination.position;
+
+            iTween.MoveTo(gameObject, iTween.Hash("position", transform.position + (targetDirection * 5f), "time", .5f, "easetype", iTween.EaseType.linear));
+            yield return new WaitForSeconds(.25f);
+            yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
+            yield return new WaitForSeconds(.5f);
+            CameraManager.Instance.GetCameraRig().position = targetEndpoint;
+            transform.position = targetEndpoint;
+            iTween.MoveTo(gameObject, iTween.Hash("position", destination.position + destination.forward *1f, "time", 1f, "easetype", iTween.EaseType.linear));
+            yield return new WaitForSeconds(.75f);
+            yield return StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
+        }
     }
 }

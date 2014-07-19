@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Assets.Scripts.Managers;
+using Assets.Scripts.Player;
 using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using System.Collections;
@@ -120,6 +121,8 @@ public class PushBlock : MonoBehaviourBase
         float leastDistance = 100;
         foreach (var raycastHit in hits)
         {
+            if (raycastHit.transform.GetComponent<InfoPlayer>() != null) continue;
+
             var edgePosition = (transform.position.y - ((transform.localScale.y / 2f)));
             var pointDifference = edgePosition - (raycastHit.point.y);
             if (pointDifference < leastDistance)
