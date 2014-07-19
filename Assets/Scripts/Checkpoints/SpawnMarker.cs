@@ -6,7 +6,7 @@ public class SpawnMarker : MonoBehaviour
 {
     public bool firstSpawnMarker;
 
-    void Start()
+    void Awake()
     {
         if (!firstSpawnMarker) return;
         CheckpointStore.Instance.ActiveSpawnMarker = this;

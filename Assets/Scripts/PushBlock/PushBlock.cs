@@ -12,10 +12,26 @@ public class PushBlock : MonoBehaviourBase
 
     private GameObject _tweenTarget;
 
-    void Start()
+    private bool _cleaningUp = false;
+    public bool CleaningUp
+    {
+        get { return _cleaningUp; }
+        private set { _cleaningUp = value; }
+    }
+
+    private static bool settleBlocksStarted = false;
+
+    void Awake()
     {
         _tweenTarget = transform.parent.gameObject;
-        StartCoroutine(ApplyGravity((b) => { }));
+    }
+
+    void Start()
+    {
+        //Shittly singleton implementation to ensure this is only called once
+        if (settleBlocksStarted) return;
+        settleBlocksStarted = true;
+        StartCoroutine(SettleBlocks());
     }
 
     public IEnumerator PushAction(Vector3 pushDirection, Action<bool> callback)
@@ -76,20 +92,26 @@ public class PushBlock : MonoBehaviourBase
 
         yield return StartCoroutine(ApplyGravity((fellDown) => { disengagePlayer = fellDown; }));
 
-        
+
+        StartCoroutine(SettleBlocks());
+        collider.enabled = true;
+        callback(disengagePlayer);
+    }
+
+
+    public IEnumerator SettleBlocks()
+    {
         var blockMoved = true;
         while (blockMoved)
         {
             blockMoved = false;
-            var blocks = FindObjectsOfType<PushBlock>();
+            var blocks = FindObjectsOfType<PushBlock>().Where((b) => !b._cleaningUp);
             foreach (var pushBlock in blocks)
             {
-                yield return StartCoroutine(pushBlock.ApplyGravity((b) => {if (b){blockMoved = true;}}));
+                if (pushBlock == null) continue;
+                yield return StartCoroutine(pushBlock.ApplyGravity((b) => { if (b) { blockMoved = true; } }));
             }
         }
-        
-        collider.enabled = true;
-        callback(disengagePlayer);
     }
 
     public IEnumerator ApplyGravity(Action<bool> callback)
@@ -108,7 +130,6 @@ public class PushBlock : MonoBehaviourBase
         }
         if (leastDistance > .01f && leastDistance <= 100)
         {
-            Debug.Log("Tweening");
             iTween.MoveTo(_tweenTarget, iTween.Hash(
             "y", (transform.position.y - leastDistance),
             "time", .5f,
@@ -123,5 +144,14 @@ public class PushBlock : MonoBehaviourBase
     public bool TopBlocked()
     {
         return transform.parent.GetComponentInChildren<BlockTop>().IsBlocked;
+    }
+
+    public IEnumerator Die()
+    {
+        _cleaningUp = true;
+        iTween.ScaleTo(_tweenTarget, Vector3.zero, .5f);
+        yield return new WaitForSeconds(.5f);
+        iTween.Stop(_tweenTarget);
+        Destroy(_tweenTarget, 1f);
     }
 }
