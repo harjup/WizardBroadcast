@@ -27,17 +27,17 @@ namespace Assets.Scripts.Player
 
         void Update()
         {
-            InputManager.Instance.PlayerInputEnabled = !waitingForCallback; 
-
             ExamineInput();
             PushBlockInput();
             ClimbInput();
-            
+
+            if (_userMovement.GetBlockEngaged()) return;
             CheckForClimbableSurfaces();
         }
 
         void ExamineInput()
         {
+            if (waitingForCallback) return;
             if (_examinableObject == null) return;
 
             if (InputManager.Instance.InteractAction)
@@ -73,6 +73,7 @@ namespace Assets.Scripts.Player
         {
             if (waitingForCallback) return;
             if (_climbTarget == Vector3.zero) return;
+            if (_userMovement.GetBlockEngaged()) return;
             if (!InputManager.Instance.ClimbButton) return;
 
             waitingForCallback = true;
@@ -113,7 +114,14 @@ namespace Assets.Scripts.Player
 
             if (component as DeathVolume != null)
             {
-                StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
+                waitingForCallback = true;
+                StartCoroutine(_userMovement.DisengageBlock(() =>
+                {
+                    waitingForCallback = false;
+                    _blockEngaged = false;
+                    _pushableObject = null;
+                    StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
+                }));
             }
         }
 
@@ -121,9 +129,21 @@ namespace Assets.Scripts.Player
         {
             var component = other.GetComponent<MonoBehaviour>();
 
-            if (component as PushableBase != null && !_userMovement.GetBlockEngaged()) //!_blockEngaged)
+            if (component as PushableBase != null)
             {
-                _pushableObject = null;
+                if (!_userMovement.GetBlockEngaged())
+                {
+                    _pushableObject = null;
+                }
+                else if (_userMovement.AirState)
+                {
+                    StartCoroutine(_userMovement.DisengageBlock(() =>
+                    {
+                        waitingForCallback = false;
+                        _blockEngaged = false;
+                        _pushableObject = null;
+                    }));
+                }
             }
         }
 

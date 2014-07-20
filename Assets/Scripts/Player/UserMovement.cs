@@ -111,9 +111,10 @@ namespace WizardBroadcast
                                         .SetZ(velocity.z);
         }
 
-        public void SetAirState(bool isInAir)
+        public bool AirState
         {
-            inAir = isInAir;
+          get { return inAir; }
+          set {inAir = value;}
         }
 
         private bool pushing = false;
@@ -149,7 +150,6 @@ namespace WizardBroadcast
             {
                 transform.parent = block.transform.parent;
             }
-                
             
             //Set input type to block pushing
             _blockEngaged = true;

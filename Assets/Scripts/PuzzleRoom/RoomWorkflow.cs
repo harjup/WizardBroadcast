@@ -8,6 +8,7 @@ using UnityEngine;
 public class RoomWorkflow : MonoBehaviourBase
 {
     public PuzzleRoomManager[] RoomManagers;
+    public PuzzleRoomManager FinalRoom;
 
     [SerializeField]
     private int currentRoomIndex = 0;
@@ -25,10 +26,11 @@ public class RoomWorkflow : MonoBehaviourBase
 
     public PuzzleRoomManager NextRoom(int index)
     {
-        if (index < RoomManagers.Length - 1)
+        if (index >= RoomManagers.Length - 1)
         {
-            currentRoomIndex = index + 1;
+            return FinalRoom;
         }
+        currentRoomIndex = index + 1;
         return CurrentRoom;
     }
 

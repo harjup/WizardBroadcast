@@ -8,5 +8,14 @@
 				'I really do thank you, yes sir.'"
 			}
 		]
+	},
+	{
+		"id":  "EndWizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "You found the end of the level! Wow, how amazing! You sure showed those BIG BULLIES who really is smart, you!"
+			}
+		]
 	}
 ]

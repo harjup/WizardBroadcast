@@ -12,6 +12,7 @@ public class PuzzleRoomManager : MonoBehaviourBase {
 
     private GameObject _blockPrefab;
     private GameObject _enemyPrefab;
+    private GameObject _iceEnemyPrefab;
     private int enemyCount;
     private int squishCount = 0;
 
@@ -25,6 +26,7 @@ public class PuzzleRoomManager : MonoBehaviourBase {
     {
         _blockPrefab = Resources.Load("Prefabs/PushBlock", typeof (GameObject)) as GameObject;
         _enemyPrefab = Resources.Load("Prefabs/FireEnemy", typeof (GameObject)) as GameObject;
+        _iceEnemyPrefab = Resources.Load("Prefabs/IceEnemy", typeof(GameObject)) as GameObject;
 
         _spawners = GetComponentsInChildren<BlockSpawner>();
         _enemySpawners = GetComponentsInChildren<EnemySpawner>();
@@ -66,6 +68,7 @@ public class PuzzleRoomManager : MonoBehaviourBase {
 
     public void ActivateExit()
     {
+        if (_exit == null) return;
         _exit.Activate();
     }
 
@@ -111,13 +114,17 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         enemyCount = 0; 
         foreach (var enemySpawner in _enemySpawners)
         {
-            var newEnemy = Instantiate(_enemyPrefab, enemySpawner.transform.position, Quaternion.identity) as GameObject;
+            var prefab = enemySpawner.isIce ? _iceEnemyPrefab : _enemyPrefab;
+
+            var newEnemy = Instantiate(prefab, enemySpawner.transform.position, Quaternion.identity) as GameObject;
             if (newEnemy == null) continue;
 
             _spawnedEnemies.Add(newEnemy.GetComponentInChildren<SquishEnemy>());
             newEnemy.transform.parent = transform;
             enemyCount++;
         }
+
+        UpdateRoomCompletion();
     }
 
     IEnumerator SpawnBlocks()
@@ -139,7 +146,9 @@ public class PuzzleRoomManager : MonoBehaviourBase {
             var newBlock = Instantiate(_blockPrefab, blockSpawner.transform.position, Quaternion.identity) as GameObject;
             if (newBlock == null) continue;
 
-            _spawnedBlocks.Add(newBlock.GetComponentInChildren<PushBlock>());
+            var newPushBlock = newBlock.GetComponentInChildren<PushBlock>();
+            newPushBlock.isSlippery = blockSpawner.IsSlippery;
+            _spawnedBlocks.Add(newPushBlock);
             newBlock.transform.parent = transform;
         }
 

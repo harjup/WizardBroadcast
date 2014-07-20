@@ -30,6 +30,6 @@ public class FootCollider : MonoBehaviour
 
     void UpdateFloorState()
     {
-        GetComponentInParent<UserMovement>().SetAirState(OtherGameObjects.Count == 0);
+        GetComponentInParent<UserMovement>().AirState = OtherGameObjects.Count == 0;
     }
 }
