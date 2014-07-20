@@ -1,0 +1,11 @@
+[
+	{
+		"id":  "HubSign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "WELCOME TO CHANNEL BETA PLEASE ALERT US TO ANY PROBLEM."
+			}
+		]
+	}
+]

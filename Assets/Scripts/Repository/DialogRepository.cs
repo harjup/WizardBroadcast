@@ -19,7 +19,8 @@ namespace Assets.Scripts.Repository
         {
             {"firstLevel"},
             {"loreFirstLevel"},
-            {"secondLevel"}
+            {"secondLevel"},
+            {"hubzone"}
         };
 
 

@@ -72,9 +72,11 @@ namespace Assets.Scripts.Player
         void ClimbInput()
         {
             if (waitingForCallback) return;
-            if (_climbTarget == Vector3.zero) return;
-            if (_userMovement.GetBlockEngaged()) return;
-            if (!InputManager.Instance.ClimbButton) return;
+            if (!InputManager.Instance.ClimbButton) return; //Don't climb if we're not pushing the button
+            if (_climbTarget == Vector3.zero) return;       //Don't climb if we don't get a valid target
+            if (_userMovement.GetBlockEngaged()) return;    //Don't climb if you're pushing a block
+            if (_userMovement.AirState) return;             //Don't climb if you're in the air
+            
 
             waitingForCallback = true;
             StartCoroutine(_userMovement.ClimbGeometry(_climbTarget, () =>
@@ -135,7 +137,7 @@ namespace Assets.Scripts.Player
                 {
                     _pushableObject = null;
                 }
-                else if (_userMovement.AirState)
+                else if (_userMovement.AirState || _pushableObject.GetPushBlock().isSlippery)
                 {
                     StartCoroutine(_userMovement.DisengageBlock(() =>
                     {
