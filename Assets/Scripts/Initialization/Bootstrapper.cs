@@ -46,12 +46,13 @@ namespace Assets.Scripts.Managers
             {typeof(DialogRepository), @"Prefabs/Managers/DialogRepository"},
 
             {typeof(UserProgressStore), @"Prefabs/Managers/UserProgressStore"},
-            {typeof(CheckpointStore), @"Prefabs/CheckpointStore"},
 
             {typeof(SignalrEndpoint), @"Prefabs/Managers/SignalrEndpoint"},
             {typeof(PeerTracker), @"Prefabs/Managers/PeerTracker"},
             
-            {typeof(CameraManager), @"Prefabs/Managers/CameraManager"}
+            {typeof(CameraManager), @"Prefabs/Managers/CameraManager"},
+
+            {typeof(FogMachine), @"Prefabs/Managers/FogMachine"}
         };
 
 

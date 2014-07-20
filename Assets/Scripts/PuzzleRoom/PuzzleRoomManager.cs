@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PuzzleRoomManager : MonoBehaviourBase {
+public class PuzzleRoomManager : RoomManager {
 
     BlockSpawner[] _spawners;
     EnemySpawner[] _enemySpawners;
@@ -16,14 +16,15 @@ public class PuzzleRoomManager : MonoBehaviourBase {
     private int enemyCount;
     private int squishCount = 0;
 
-    private EntranceDoorway _entrance;
+    //private EntranceDoorway _entrance;
     private ExitDoorway _exit;
-    private RoomWorkflow _workflow;
+    //private RoomWorkflow _workflow;
 
-    public int RoomIndex;
+    //public int RoomIndex;
 
-    void Awake()
+    new void Awake()
     {
+        base.Awake();
         _blockPrefab = Resources.Load("Prefabs/PushBlock", typeof (GameObject)) as GameObject;
         _enemyPrefab = Resources.Load("Prefabs/FireEnemy", typeof (GameObject)) as GameObject;
         _iceEnemyPrefab = Resources.Load("Prefabs/IceEnemy", typeof(GameObject)) as GameObject;
@@ -31,8 +32,8 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         _spawners = GetComponentsInChildren<BlockSpawner>();
         _enemySpawners = GetComponentsInChildren<EnemySpawner>();
 
-        _workflow = GetComponentInParent<RoomWorkflow>();
-        _entrance = GetComponentInChildren<EntranceDoorway>();
+        //_workflow = GetComponentInParent<RoomWorkflow>();
+        //_entrance = GetComponentInChildren<EntranceDoorway>();
         _exit = GetComponentInChildren<ExitDoorway>();
     }
 
@@ -56,15 +57,20 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         yield return StartCoroutine(SpawnEnemies());
     }
 
-    public void OnRoomEnter()
+    public override void OnRoomEnter()
     {
 
     }
 
-    public Transform GetEntrance()
+    public override void OnRoomExit()
+    {
+
+    }
+
+    /*public Transform GetEntrance()
     {
         return _entrance.transform;
-    }
+    }*/
 
     public void ActivateExit()
     {
@@ -72,10 +78,10 @@ public class PuzzleRoomManager : MonoBehaviourBase {
         _exit.Activate();
     }
 
-    public PuzzleRoomManager OnRoomExit()
+    /*public RoomManager GetNextRoom()
     {
         return _workflow.NextRoom(RoomIndex);
-    }
+    }*/
 
     public void UpdateRoomCompletion()
     {

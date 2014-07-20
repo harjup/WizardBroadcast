@@ -82,8 +82,14 @@ namespace WizardBroadcast
 
         void MovePlayer()
         {
+            var forward = Vector3.forward;
             //Create the reference axis based on the camera rotation, ignoring y rotation
-            var forward = cameraRig.TransformDirection(Vector3.forward).SetY(0).normalized;
+            //We're getting the main camera, which should be the one that's enabled. It's null if disabled so don't do anything if so
+            if (Camera.main != null)
+            {    
+                forward = Camera.main.transform.TransformDirection(Vector3.forward).SetY(0).normalized;
+            }
+            
             var right = new Vector3(forward.z, 0.0f, -forward.x);
 
             //Set the player's walk direction

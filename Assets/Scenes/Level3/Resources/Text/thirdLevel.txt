@@ -1,0 +1,83 @@
+﻿[
+	{
+		"id":  "Room01",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go right"
+			}
+		]
+	},
+	{
+		"id":  "Room02",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go left"
+			}
+		]
+	},
+	{
+		"id":  "Room03",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go up"
+			}
+		]
+	},
+	{
+		"id":  "Room04",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go down"
+			}
+		]
+	},
+	{
+		"id":  "Room05",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go right"
+			}
+		]
+	},
+	{
+		"id":  "Room06",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go left"
+			}
+		]
+	},
+	{
+		"id":  "Room07",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go down"
+			}
+		]
+	},
+	{
+		"id":  "Room08",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go right"
+			}
+		]
+	},
+	{
+		"id":  "WizardEnd01",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Go back the other way, that way you can experience it twice!"
+			}
+		]
+	}
+]
