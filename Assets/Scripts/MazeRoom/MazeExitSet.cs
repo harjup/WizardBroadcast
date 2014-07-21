@@ -45,7 +45,11 @@ public class MazeExitSet : MonoBehaviourBase
 
     public void InitExitSet()
     {
-        var myDirection = RoomDirections[_roomManager.RoomIndex];
+        var myDirection = Direction.Undefined;
+        if (_roomManager.RoomIndex != -1)
+        {
+            myDirection = RoomDirections[_roomManager.RoomIndex];
+        }
 
         var beginningIndex = 0;
         if (_workflow != null && _workflow.ReverseRooms)

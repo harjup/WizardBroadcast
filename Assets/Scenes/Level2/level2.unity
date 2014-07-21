@@ -978,6 +978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!23 &131698004
 Renderer:
   m_ObjectHideFlags: 0
@@ -3738,6 +3740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!1 &547716082
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,6 +4140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!23 &595286486
 Renderer:
   m_ObjectHideFlags: 0
@@ -5560,6 +5566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!23 &877381631
 Renderer:
   m_ObjectHideFlags: 0
@@ -7760,6 +7768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!1 &1288555934
 GameObject:
   m_ObjectHideFlags: 0
@@ -8907,6 +8917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!1 &1505753107
 GameObject:
   m_ObjectHideFlags: 0
@@ -10570,6 +10582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!1 &1719082406
 GameObject:
   m_ObjectHideFlags: 0
@@ -11271,6 +11285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoomManagers: []
   FinalRoom: {fileID: 1982189411}
+  FirstRoomAlt: {fileID: 0}
+  ReverseRooms: 0
   currentRoomIndex: 0
 --- !u!1 &1811498087
 GameObject:
@@ -11353,6 +11369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c50be814fa47d4409185806adaa0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetRoomIndex: -1
+  StartsActive: 0
 --- !u!1 &1813161719
 GameObject:
   m_ObjectHideFlags: 0

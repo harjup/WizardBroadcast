@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using UnityEngine;
@@ -116,14 +117,31 @@ namespace Assets.Scripts.Player
 
             if (component as DeathVolume != null)
             {
-                waitingForCallback = true;
-                StartCoroutine(_userMovement.DisengageBlock(() =>
+
+                if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level2)
                 {
-                    waitingForCallback = false;
-                    _blockEngaged = false;
-                    _pushableObject = null;
+                    waitingForCallback = true;
+                    StartCoroutine(_userMovement.DisengageBlock(() =>
+                    {
+                        waitingForCallback = false;
+                        _blockEngaged = false;
+                        _pushableObject = null;
+                        StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
+                    }));
+                }
+                //Pretty really bad right here
+                //I want to go back to the hub is a hand gets the player at the last room in lvl3
+                else if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3 
+                    && FindObjectOfType<RoomWorkflow>().CurrentRoom.RoomIndex == 0
+                    && FindObjectOfType<RoomWorkflow>().ReverseRooms)
+                {
+                    Application.LoadLevel(SceneMap.GetScene(Scene.Hub));
+                }
+                else
+                {
                     StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
-                }));
+                }
+
             }
         }
 

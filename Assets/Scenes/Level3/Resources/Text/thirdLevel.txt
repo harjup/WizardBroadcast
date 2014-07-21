@@ -79,5 +79,14 @@
 				"text" : "Go back the other way, that way you can experience it twice!"
 			}
 		]
+	},
+	{
+		"id":  "WizardRealEnd01",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I don't have an ending. WOOOPS!!!!!"
+			}
+		]
 	}
 ]

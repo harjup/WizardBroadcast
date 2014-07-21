@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using Assets.Scripts.Interactables;
 using UnityEngine;
 using System.Collections;
 
@@ -13,10 +14,10 @@ public class MazeRoomManager : RoomManager
     {
         Color.cyan,
         Color.yellow, 
-        new Color(157f,28f,237f), //purple
+        new Color(.61f,.11f,.92f, 1f), //purple
         Color.green, 
         Color.red, 
-        new Color(237f,147f,28f), //orange
+        new Color(.9f,.57f,.1f, 1f), //orange
         Color.blue,
         Color.magenta,
         Color.grey
@@ -30,8 +31,10 @@ public class MazeRoomManager : RoomManager
     }
     public override void OnRoomEnter()
     {
-        FindObjectOfType<Light>().color = _lightColors[RoomIndex];
-
+        FindObjectOfType<Light>().color = RoomIndex <= -1 
+            ? Color.grey 
+            : _lightColors[RoomIndex];
+        
         if (_workflow.FinalRoom == this)
         {
             _workflow.ReverseRooms = true;    

@@ -9,6 +9,7 @@ public class RoomWorkflow : MonoBehaviourBase
 {
     public RoomManager[] RoomManagers;
     public RoomManager FinalRoom;
+    public RoomManager FirstRoomAlt;
 
     public bool ReverseRooms = false;
 
@@ -30,7 +31,11 @@ public class RoomWorkflow : MonoBehaviourBase
         var managers = new List<RoomManager>();
         for (int i = 0; i < RoomManagers.Length; i++)
         {
-            if (RoomManagers[i] == FinalRoom) continue;
+            if (RoomManagers[i] == FinalRoom || RoomManagers[i] == FirstRoomAlt)
+            {
+                RoomManagers[i].RoomIndex = -1;
+                continue;
+            }
             RoomManagers[i].RoomIndex = i;
             managers.Add(RoomManagers[i]);
         }
@@ -67,9 +72,14 @@ public class RoomWorkflow : MonoBehaviourBase
         if (ReverseRooms)
         {
             currentRoomIndex = index - 1;
+
+            if (currentRoomIndex <= 0)
+            {
+                return FirstRoomAlt;
+            }
         }
 
-        if (currentRoomIndex >= RoomManagers.Length - 1)
+        if (currentRoomIndex >= RoomManagers.Length)
         {
             return FinalRoom;
         }
