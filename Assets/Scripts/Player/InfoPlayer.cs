@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections;
 using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Portals;
-using TreeEditor;
 using UnityEngine;
-using WizardBroadcast;
 
 namespace Assets.Scripts.Player
 {
