@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviourBase
 {
-    private EntranceDoorway _entrance;
-    private RoomWorkflow _workflow;
+    protected EntranceDoorway _entrance;
+    protected RoomWorkflow _workflow;
     public int RoomIndex;
     protected void Awake()
     {
@@ -18,8 +18,7 @@ public class RoomManager : MonoBehaviourBase
 
     public RoomManager GetRoom(int index)
     {
-        //TODO This is really dumb
-        return _workflow.NextRoom(index - 1);
+        return _workflow.GetRoom(index);
     }
 
     public RoomManager GetNextRoom()

@@ -31,11 +31,11 @@ public class ExitDoorway : MonoBehaviour
         }
     }
 
-    public void Activate()
+    public void Activate(bool value = true)
     {
-        _isActive = true;
-        collider.isTrigger = true;
-        renderer.material.color = Color.cyan;
+        _isActive = value;
+        collider.isTrigger = value;
+        renderer.material.color = value ? Color.cyan : Color.grey;
     }
 
     void OnTriggerEnter(Collider collider)
@@ -45,7 +45,7 @@ public class ExitDoorway : MonoBehaviour
             RoomManager nextRoom = targetRoomIndex > -1 
                 ? _roomManager.GetRoom(targetRoomIndex) 
                 : _roomManager.GetNextRoom();
-            
+
             var entrance = nextRoom.GetEntrance();
             StartCoroutine(collider.GetComponent<InfoPlayer>().OnEnterDoorway(transform.forward, entrance));
             _roomManager.OnRoomExit();

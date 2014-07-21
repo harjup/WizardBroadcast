@@ -10,19 +10,33 @@ public class RoomWorkflow : MonoBehaviourBase
     public RoomManager[] RoomManagers;
     public RoomManager FinalRoom;
 
+    public bool ReverseRooms = false;
+
     [SerializeField]
     private int currentRoomIndex = 0;
 
     void Awake()
     {
+        InitRooms();
+    }
+
+
+    void InitRooms(bool isReverseOrder = false)
+    {
         RoomManagers = GetComponentsInChildren<RoomManager>();
         currentRoomIndex = 0;
 
+        //I don't want the final room in the room managers list it screws stuff up when going backwards
+        var managers = new List<RoomManager>();
         for (int i = 0; i < RoomManagers.Length; i++)
         {
+            if (RoomManagers[i] == FinalRoom) continue;
             RoomManagers[i].RoomIndex = i;
+            managers.Add(RoomManagers[i]);
         }
+        RoomManagers = managers.ToArray();
     }
+
 
     public RoomManager FirstRoom()
     {
@@ -30,13 +44,36 @@ public class RoomWorkflow : MonoBehaviourBase
         return CurrentRoom;
     }
 
-    public RoomManager NextRoom(int index)
+    public RoomManager PreviousRoom(int index)
     {
-        if (index >= RoomManagers.Length - 1)
+        if (index <= -1)
         {
             return FinalRoom;
         }
+        currentRoomIndex = index - 1;
+        return CurrentRoom;
+    }
+
+    public RoomManager GetRoom(int index)
+    {
+        currentRoomIndex = index;
+        return CurrentRoom;
+    }
+
+    public RoomManager NextRoom(int index)
+    {
         currentRoomIndex = index + 1;
+
+        if (ReverseRooms)
+        {
+            currentRoomIndex = index - 1;
+        }
+
+        if (currentRoomIndex >= RoomManagers.Length - 1)
+        {
+            return FinalRoom;
+        }
+
         return CurrentRoom;
     }
 
