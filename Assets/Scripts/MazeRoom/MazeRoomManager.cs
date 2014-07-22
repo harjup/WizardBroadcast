@@ -39,17 +39,17 @@ public class MazeRoomManager : RoomManager
         {
             _workflow.ReverseRooms = true;    
         }
-        if (RoomIndex == 0 && _workflow.ReverseRooms)
+        //Nevermind do nothing ignore this
+        /*if (RoomIndex == -1 && _workflow.ReverseRooms)
         {
-            //Spawn the wizard and helping hand, disable all exits
-            _exitSet.DisableExits();
-        }
-
-        _exitSet.InitExitSet();
-        _roomCamera.Enabled = true;
+            
+            //_exitSet.DisableExits();
+        }*/
+        if (_exitSet != null) _exitSet.InitExitSet();
+        if (_roomCamera != null) _roomCamera.Enabled = true;
     }
     public override void OnRoomExit()
     {
-        _roomCamera.Enabled = false;
+        if (_roomCamera != null) _roomCamera.Enabled = false;
     }
 }
