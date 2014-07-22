@@ -22,6 +22,8 @@ public class FootCollider : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<UserMovement>()) return;
+        if (other.GetComponent<RoomEnterTrigger>()) return;
+        if (other.GetComponentInParent<SpawnMarker>()) return;
 
         OtherGameObjects.Add(other.gameObject);
         UpdateFloorState();
@@ -29,6 +31,8 @@ public class FootCollider : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<UserMovement>()) return;
+        if (other.GetComponent<RoomEnterTrigger>()) return;
+        if (other.GetComponentInParent<SpawnMarker>()) return;
 
         OtherGameObjects.Remove(other.gameObject);
         UpdateFloorState();
