@@ -66,22 +66,34 @@ namespace Assets.Scripts.Managers
             }
         }
         private bool _postCommentButtonClicked = false;
-        private bool _drawCommentGui = false;
+        public bool DrawCommentGui = false; //Ugh everything is terrible
         public bool PostComment()
         {
-            _drawCommentGui = true;
+            DrawCommentGui = true;
             if (!_postCommentButtonClicked) return _postCommentButtonClicked;
             _postCommentButtonClicked = false;
+            StartCoroutine(KillButtonFlags());
             return true;
         }
 
         private bool _cancelCommentButtonClicked = false;
         public bool CancelPressed()
         {
+            DrawCommentGui = true;
             if (!_cancelCommentButtonClicked) return _cancelCommentButtonClicked;
             _cancelCommentButtonClicked = false;
+            StartCoroutine(KillButtonFlags());
             return true;
         }
+
+        //I hate everything
+        IEnumerator KillButtonFlags()
+        {
+            yield return new WaitForEndOfFrame();
+            _postCommentButtonClicked = false;
+            _cancelCommentButtonClicked = false;
+        }
+
 
         public bool CommentButtonPressed;
 
@@ -110,18 +122,31 @@ namespace Assets.Scripts.Managers
             }
 
             //Comment Input
-            if (_drawCommentGui)
+            if (DrawCommentGui)
             {
-                GUI.Box(new Rect(Screen.width / 15f, Screen.height / 1.5f, Screen.width / 2f, Screen.height / 16f), "Enter your thoughts and dreams:", textBoxStyle);
+                GUI.Box(new Rect(Screen.width/15f, Screen.height/1.5f, Screen.width/2f, Screen.height/16f),
+                    "Enter your thoughts and dreams:", textBoxStyle);
 
-                _playerMessageInput = GUI.TextField(new Rect(Screen.width / 12f, Screen.height / 1.4f, Screen.width / 1.2f, Screen.height / 7.5f), _playerMessageInput, 180, textBoxStyle);
-                _postCommentButtonClicked = GUI.Button(new Rect(Screen.width - (64 + 96), Screen.height - 64, 96, 32), "Submit");
-                _cancelCommentButtonClicked = GUI.Button(new Rect(64, Screen.height - 64, 96, 32), "Cancel");
+                _playerMessageInput =
+                    GUI.TextField(
+                        new Rect(Screen.width/12f, Screen.height/1.4f, Screen.width/1.2f, Screen.height/7.5f),
+                        _playerMessageInput, 180, textBoxStyle);
+
+
+                if (GUI.Button(new Rect(Screen.width - (64 + 96), Screen.height - 64, 96, 32), "Submit")) 
+                    _postCommentButtonClicked = true;
+
+
+                if (GUI.Button(new Rect(64, Screen.height - 64, 96, 32), "Cancel"))
+                    _cancelCommentButtonClicked = true;
+
                 CommentButtonPressed = false;
                 return;
-            }
-
-            CommentButtonPressed = GUI.RepeatButton(new Rect(16, 32+16, 96, 32), "Comment");
+            }    
+            
+            //Shit won't work, putting it directly in comment entry service
+            //CommentButtonPressed = GUI.RepeatButton(new Rect(16, 32 + 16, 96, 32), "Comment");
+            
 
             //Interaction button prompts
             if (_showInteractionPrompt)
@@ -176,7 +201,7 @@ namespace Assets.Scripts.Managers
             _passiveTextSpeaker = null;
 
             _showInteractionPrompt = false;
-            _drawCommentGui = false;
+            DrawCommentGui = false;
         }
     }
 }

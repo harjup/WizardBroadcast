@@ -20,11 +20,13 @@ public class CommentEntryService : Singleton<CommentEntryService>
 
     }
 
-    private bool commentMode = true;
+    private bool commentMode = false;
     void OnGUI()
     {
         if (commentMode)
         {
+            InputManager.Instance.PlayerEnteringComment = true;
+            GuiManager.Instance.DrawCommentGui = true;
             if (GuiManager.Instance.PostComment())
             {
                 ConfirmButtonPressed();
@@ -35,9 +37,14 @@ public class CommentEntryService : Singleton<CommentEntryService>
                 commentMode = false;
             }
         }
-        else if (GuiManager.Instance.CommentButtonPressed)
+        else if (GUI.Button(new Rect(16, 32 + 16, 96, 32), "Comment"))
         {
+            GuiManager.Instance.DrawCommentGui = false;
             commentMode = true;
+        }
+        else
+        {
+            InputManager.Instance.PlayerEnteringComment = false;
         }
     }
 

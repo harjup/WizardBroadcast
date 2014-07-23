@@ -27,7 +27,7 @@ namespace Assets.Scripts.Managers
 
         public float HoritzontalAxis
         {
-            get { return _playerMovementEnabled && _playerInputEnabled ? _horitzontalAxis : 0; }
+            get { return _playerMovementEnabled && PlayerInputEnabled ? _horitzontalAxis : 0; }
            private set { _horitzontalAxis = value; }
         }
 
@@ -35,14 +35,14 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _playerMovementEnabled && _playerInputEnabled ? _verticalAxis : 0;
+                return _playerMovementEnabled && PlayerInputEnabled ? _verticalAxis : 0;
             }
             private set { _verticalAxis = value; }
         }
 
         public float RawHoritzontalAxis
         {
-            get { return _playerMovementEnabled && _playerInputEnabled ? _rawHoritzontalAxis : 0; }
+            get { return _playerMovementEnabled && PlayerInputEnabled ? _rawHoritzontalAxis : 0; }
             private set { _rawHoritzontalAxis = value; }
         }
 
@@ -50,7 +50,7 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _playerMovementEnabled && _playerInputEnabled ? _rawVerticalAxis : 0;
+                return _playerMovementEnabled && PlayerInputEnabled ? _rawVerticalAxis : 0;
             }
             private set { _rawVerticalAxis = value; }
         }
@@ -60,7 +60,7 @@ namespace Assets.Scripts.Managers
             get
             {
                 return _cameraAction
-                    && _playerInputEnabled 
+                    && PlayerInputEnabled 
                     && _cameraInputEnabled;
             }
             private set { _cameraAction = value; }
@@ -70,8 +70,8 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _interactAction 
-                    && _playerInputEnabled;
+                return _interactAction
+                    && PlayerInputEnabled;
             }
             private set { _interactAction = value; }
         }
@@ -82,8 +82,8 @@ namespace Assets.Scripts.Managers
         {
             get
             {
-                return _climbButton 
-                    && _playerInputEnabled;
+                return _climbButton
+                    && PlayerInputEnabled;
             }
             private set { _climbButton = value; }
         }
@@ -101,10 +101,12 @@ namespace Assets.Scripts.Managers
             CameraAction = Input.GetKeyDown(KeyCode.X);
             ClimbButton = Input.GetKeyDown(KeyCode.C);
         }
-        
+
+        public bool PlayerEnteringComment;
+
         public bool PlayerInputEnabled
         {
-            private get { return _playerInputEnabled; }
+            private get { return _playerInputEnabled && !PlayerEnteringComment; }
             set{ _playerInputEnabled = value;}
         }
 
