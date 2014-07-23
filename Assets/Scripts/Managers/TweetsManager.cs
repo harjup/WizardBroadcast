@@ -36,7 +36,7 @@ namespace Assets.Scripts.Managers
         {
             if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Hub)
             {
-                RefreshStatuses();
+                //RefreshStatuses();
             }
         }
 
@@ -64,7 +64,6 @@ namespace Assets.Scripts.Managers
             for (int i = 0; i < TweetCount; i++)
             {
                 var index = Random.Range(0, spawners.Count);
-
                 spawnerSet.Add(spawners[index], statusesToDisplay[index]);
                 spawners[index].gameObject.SetActive(false);
                 spawners.RemoveAt(index);

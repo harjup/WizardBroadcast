@@ -7,6 +7,7 @@ namespace Assets.Scripts.Interactables
     {
         public string id;
         public string flag;
+        public string Name;
         public string text;
 
         public void ExecuteAction()

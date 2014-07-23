@@ -40,7 +40,7 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
     public void OnRecieveGhostPositions(string messageString)
     {
         var ghostPositions = GhostPosition.FromGroupString(messageString);
-        PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
+        //PeerTracker.Instance.UpdateGhostPositions(ghostPositions);
 /*
 
         var ghostPositions = JsonConvert.DeserializeObject<List<GhostPosition>>(messageString);

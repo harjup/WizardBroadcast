@@ -12,18 +12,12 @@ namespace Assets.Common.JsonModel
         [JsonProperty("id")]
         public string Id;
 
+        [JsonProperty("name")]
+        public string Name;
+
         [JsonProperty("content")]
         public List<Dialog> Content;
     }
-
-    /*public class DialogGroup
-    {
-        [JsonProperty("name")]
-        public string Id;
-
-        [JsonProperty("content")]
-        public List<Dialog> Content;
-    }*/
 
     public class Dialog
     {
@@ -36,6 +30,8 @@ namespace Assets.Common.JsonModel
         //Flag used to set a dialog as active
         [JsonProperty("flag")]
         public string Flag;
+
+        public string Name;
     }
 
 

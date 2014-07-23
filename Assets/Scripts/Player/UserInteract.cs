@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine;
 using Assets.Scripts.GameState;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
-using UnityEngine;
+using System.Collections.Generic;
 using WizardBroadcast;
 
 namespace Assets.Scripts.Player
 {
     public class UserInteract : MonoBehaviourBase
     {
+
+        [SerializeField]
         private ExaminableBase _examinableObject;
         private PushableBase _pushableObject;
 
@@ -40,6 +43,17 @@ namespace Assets.Scripts.Player
         {
             if (waitingForCallback) return;
             if (_examinableObject == null) return;
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                var index = interactives.IndexOf(_examinableObject);
+                if (index <= -1 || index >= interactives.Count - 1)
+                {
+                    index = -1;
+                }
+                _examinableObject = interactives[index + 1];
+            }
+
 
             if (InputManager.Instance.InteractAction)
             {
@@ -167,13 +181,19 @@ namespace Assets.Scripts.Player
             }
         }
 
+        [SerializeField]
+        List<ExaminableBase> interactives = new List<ExaminableBase>();
         public void OnInteractionTriggerEnter(Collider other)
         {
             var component = other.GetComponent<MonoBehaviour>();
             //If we are entering an examinable set the current examinable to it
             if (component as ExaminableBase != null)
             {
-                _examinableObject = component as ExaminableBase;
+                if (interactives.Count == 0 && interactives.IndexOf(component as ExaminableBase) == -1)
+                {
+                    _examinableObject = component as ExaminableBase;
+                }
+                interactives.Add(component as ExaminableBase);
             }
         }
 
@@ -181,9 +201,10 @@ namespace Assets.Scripts.Player
         {
             var component = other.GetComponent<MonoBehaviour>();
             //If we are exiting an examinable set the current examinable to null
-            if (component as ExaminableBase != null)
+            if (component as ExaminableBase != null && interactives.IndexOf(component as ExaminableBase) != -1)
             {
-                _examinableObject = null;
+                interactives.Remove(component as ExaminableBase);
+                _examinableObject = interactives.Count == 0 ? null : interactives[0];
             }
         }
 
@@ -215,6 +236,7 @@ namespace Assets.Scripts.Player
             if ((_examinableObject != null || _pushableObject != null) 
                 && !waitingForCallback)
             {
+                if (_examinableObject != null) UnityEngine.GUI.Label(new Rect(64,64,128,64), _examinableObject.name);
                 GuiManager.Instance.DrawInteractionPrompt();
             }
         }

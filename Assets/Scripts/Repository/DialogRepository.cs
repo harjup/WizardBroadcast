@@ -67,6 +67,7 @@ namespace Assets.Scripts.Repository
                 {                    
                     if (dialog.Id == textId)
                     {
+                        dialog.Name = dialogBag.Name;
                         return dialog;
                     }
                 }

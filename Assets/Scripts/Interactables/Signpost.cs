@@ -40,6 +40,7 @@ namespace Assets.Scripts.Interactables
                 var dialog = DialogRepository.Instance.GetDialogBit(scriptId, id);
 
                 _textBags[i].text = dialog.Text;
+                _textBags[i].Name = dialog.Name;
 
                 //Overwrite the given textbag's flag with the flag from the stored version if it exists
                 if (dialog.Flag != null){ _textBags[i].flag = dialog.Flag;}
@@ -73,7 +74,7 @@ namespace Assets.Scripts.Interactables
         public override IEnumerator Examine(Action callback)
         {
             _currentTextBag = GetCurrentTextBag();
-            yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, () => {}));
+            yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, _currentTextBag.Name, () => {}));
             _currentTextBag.ExecuteAction();
             callback();
         }

@@ -228,14 +228,14 @@ namespace WizardBroadcast
 
         void OnGUI()
         {
-            var rotaitonDifference =
+            /*var rotaitonDifference =
                 Mathf.Abs(cameraRig.gameObject.transform.eulerAngles.y - playerMesh.rotation.eulerAngles.y);
             var rotationMagnitude = 40f / (Mathf.Abs(rotaitonDifference - 180) + 40);
 
             GUI.TextField(new Rect(10, 100, 100, 25), rotaitonDifference.ToString());
             
             
-            GUI.TextField(new Rect(10, 125, 100, 25), rotationMagnitude.ToString());
+            GUI.TextField(new Rect(10, 125, 100, 25), rotationMagnitude.ToString());*/
             
         }
 
