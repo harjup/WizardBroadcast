@@ -1,10 +1,18 @@
 [
 	{
 		"id":  "01Lore",
+		"name" : "rock",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I AM A USELESS LORE SIGN I GOTCHA, HAHAAHAH!"
+				"text" : "This is the rock that the King of LecoKro'nin sat upon when he considered what he would do when his Kingdom went to war with the Hark'larian forces from the East.
+				He knew it was a losing battle, but his pride couldn't keep him from pulling his citizens out of the crumbling keep he inherited from his father.
+				Could he widow all of those women, orphan the children, or- in the case of the children- steal away what innocence was left by forcing them to fight in his army?
+				Would their pride allow them to leave their homes? 
+				He was sitting alone with his thoughts when a small mouse approached him.
+				The mouse was fairly thoughtful, or so he thought. 
+				In this case he decided to be an unsolicited advisor...
+				The rock is defaced a bit more, but you can't really read it without really struggling."
 			}	
 		]
 	},
@@ -13,7 +21,16 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "The King blinked at the little mouse's advice then promptly ignored the mouse.
+				'Wait, why are you ignoring me'
+				'That was a silly thing to say and we both know it'
+				'No it wasn't' said the mouse, 'You're just disregarding it because I'm small'
+				'WHAT' yelled the King, 'that doesn't even make any sense, and are you calling me ableist?'
+				'Maybe...'
+				'Listen mouse, and listen well, I am thinking on matters that involve the lives of many men, and I can't be bothered by your silly ideas'
+				'You're just disregarding me because you can't stand the thought of me being right'
+				'I have no more time for you mouse...
+				The rest of it is too smudged up to read, you decide to not really try, and move on"
 			}
 		]
 	},
@@ -22,7 +39,13 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "...the maternal deer decided to saunter up and share her thoughts on the matter.
+				'No, listen, it's not that you're a mouse, short, have a lot of hair, or a tail. It is simply because you need to work-shop the idea, maybe talk it through with some other mice'
+				The maternal deer pretended to not hear them, and instead looked intently at a branch.
+				She inwardly marvelled at the diplomacy the king was displaying to the foolish little mouse, surely he would like her suggestion and give her the reverence she deserved.
+				The mouse ran away quickly, muttering under his breath about how he would show the King what-for.
+				The deer took this as her cue to discuss her idea, and gracefully tip-toed up to the King...
+				The rest is obscured by moss, and you are not motivated to move it away"
 			}
 		]
 	},
@@ -31,34 +54,57 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "... listen all you animals, I am not interested in hearing what any of you have to say' the King said, in the very grove we are now in.
+				'I don't know why you all feel that you have some sort of input to offer on the matter, when you are not informed on what is at hand' the animals rose their voices in protest.
+				'Listen, it is my decision to make, and I will make it on my own' the King left in a huff.
+				No one knows what happened to the kingdom, but ever since then animals have thought better about talking up.
+				There is nothing but a 'IV/IV' at the end, so you assume this chapter is closed and walk away"
 			}
 		]
 	},
 	{
 		"id":  "05Lore",
+		"name" : "Centaur Noble",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "We Centaurs are a proud and noble people that watch over these woods.
+				In fact, in times of old we were the main force stopping just anyone from entering.
+				We soon found that no one wanted to come into these fair woods since they thought we were 'too stuck-up'.
+				At first we were fine with this development, since we are xenophobes, but the monotony of talking to the same people everyday became a bit much.
+				There was a long battle over if we should allow outsiders to come into our lands...
+				What's that?
+				No, it wasn't a battle of the flesh and profane, but one of the mind, one that appealed to our higher functions.
+				Yes, we debated for a while, but found no traction from one side or another, until we came up with the wise and noble solution of flipping a coin."
 			}
 		]
 	},
 	{
 		"id":  "06Lore",
+		"name" : "Centaur Duke",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "Centaur society is highly nuanced. One could often find themselves in fine standing without looking too deeply.
+				However, on closer examination one could see that based on the stance of the listener, their posture, or the flicking of the tail that you could in fact; be quite boring and people are just putting up with you
+				What's that? No, there is nothing like this in other cultures, really, ours is so imperceptible in comparison to your dynamic gestures.
+				It can be as simple as hoof placement, or angle that could mean you are in favour, or in a great peril.
+				Some of this can also come to the ranking of the Centaur and how much they have eaten today, and of what type of food-
+				No, we aren't 'stuck-up' or 'snobby'! Well, it is a possibility that we have been around each other for far too long..."
 			}
 		]
 	},
 	{
 		"id":  "07Lore",
+		"name" : "Centaur Knight",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "Centaurs are noble for many reasons. We often appeal to the highest functions, and are all well versed in logic.
+				There is no need to think that we aren't the smartest of all the races. Those ~trolls~ for instance are only interested in feats of strength.
+				All they do is butt heads, and shout each other down in debate, rather than discussing the issues.
+				Violence? No, nobody in our noble grove is interested in such a thing, we are all interconnected and very aware of it, thank you very much.
+				Even the small creatures of indeterminable folk-lore or fantasy origins are peaceful and non-violent"
 			}
 		]
 	},

@@ -30,9 +30,11 @@ namespace Assets.Scripts.Managers
 
 
         private string _textBoxContents;
-        public void DrawTextBox(string text)
+        private string _textBoxSpeaker;
+        public void DrawTextBox(string text, string speaker)
         {
             _textBoxContents = text;
+            _textBoxSpeaker = speaker;
         }
 
         private bool _showTextProceedPrompt = false;
@@ -74,6 +76,8 @@ namespace Assets.Scripts.Managers
             if (_textBoxContents != null)
             {
                 GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.2f, Screen.width / 1.2f, Screen.height / 7.5f), _textBoxContents, textBoxStyle);
+
+                if (_textBoxSpeaker!= null) GUI.Box(new Rect(Screen.width / 15f, Screen.height / 1.3f, Screen.width / 1.2f, Screen.height / 16f), _textBoxSpeaker, textBoxStyle);
             }
             if (_passiveTextBoxContents != null)
             {

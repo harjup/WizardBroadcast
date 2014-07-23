@@ -10,22 +10,26 @@ using WizardCentralServer.Model.Dtos;
 
 public class TweetMessage : ExaminableBase
 {
-    private TwitterStatus status;
+    private TwitterStatus _status;
     
-    void Start()
+    void Awake()
     {
         renderer.material.color = Color.grey;
+    }
 
-        TweetsManager.Instance.GetFirstStatus(s =>
+    public TwitterStatus Status
+    {
+        get { return _status; }
+        set
         {
-            status = s;
-            renderer.material.color = Color.cyan;
+            _status = value;
+            renderer.material.color = Color.blue;
         }
-    );
     }
 
     public override IEnumerator Examine(Action callback)
     {
-        yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(status.Text, () => { }));
+        yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_status.Text, _status.User.ScreenName, () => { }));
+        callback();
     }
 }

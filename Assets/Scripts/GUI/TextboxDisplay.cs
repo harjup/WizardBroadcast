@@ -11,7 +11,8 @@ namespace Assets.Scripts.GUI
     {
         private static bool isRunning = false;
 
-        private const int MaxPageLength = 150;
+        private const int MaxPageLength = 180;
+        private string _speaker;
         private string _fullDisplayText;
         private string _currentDisplayText;
         private int _displayIndex = 1;
@@ -42,8 +43,17 @@ namespace Assets.Scripts.GUI
             }
         }
 
+
+
         public IEnumerator DisplayText(string text, Action doneCallback)
         {
+            yield return StartCoroutine(DisplayText(text, null, doneCallback));
+        }
+
+        public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
+        {
+            _speaker = speaker;
+
             keyDownFromInit = true;
 
             if (isRunning)
@@ -52,27 +62,35 @@ namespace Assets.Scripts.GUI
                 yield break;
             }
 
-            //If the given string is too long split it into multiple
-            var charCount = 0;
-            var lines = text.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries)
+            var linesByLineBreak = text.Split(new[] {"\r\n", "\n", "\t"}, StringSplitOptions.None);
+
+            foreach (var line in linesByLineBreak)
+            {
+                //If the given string is too long split it into multiple
+                var charCount = 0;
+                var lines = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .GroupBy(w => (charCount += w.Length + 1) / MaxPageLength)
                 .Select(g => string.Join(" ", g.ToArray()));
 
-            isRunning = true;
+                isRunning = true;
 
-            foreach (var line in lines)
-            {
-                //Initialize text values
-                _fullDisplayText = line;
-                _currentDisplayText = "";
+                foreach (var l in lines)
+                {
+                    //Initialize text values
+                    _fullDisplayText = l;
+                    _currentDisplayText = "";
 
-                yield return StartCoroutine(CrawlText());
+                    yield return StartCoroutine(CrawlText());
 
-                //Done, do cleanup
-                _fullDisplayText = "";
-                _currentDisplayText = null;
-                _displayIndex = 1;
+                    //Done, do cleanup
+                    _fullDisplayText = "";
+                    _currentDisplayText = null;
+                    _displayIndex = 1;
+                }
             }
+
+
+            
 
             isRunning = false;
             doneCallback();
@@ -99,7 +117,7 @@ namespace Assets.Scripts.GUI
 
         void OnGUI()
         {
-            GuiManager.Instance.DrawTextBox(_currentDisplayText);
+            GuiManager.Instance.DrawTextBox(_currentDisplayText, _speaker);
             if (_waitingForDismissal && textureBlink)
             {
                 GuiManager.Instance.DrawTextProceedPrompt();
