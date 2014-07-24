@@ -2,6 +2,7 @@
 using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using System.Collections;
 
@@ -21,6 +22,7 @@ public class CommentEntryService : Singleton<CommentEntryService>
     }
 
     private bool commentMode = false;
+    private bool commentingAllowed = true;
     void OnGUI()
     {
         if (commentMode)
@@ -31,13 +33,14 @@ public class CommentEntryService : Singleton<CommentEntryService>
             {
                 ConfirmButtonPressed();
                 commentMode = false;
+                StartCoroutine(CommentCooldown());
             }
             else if (GuiManager.Instance.CancelPressed())
             {
                 commentMode = false;
             }
         }
-        else if (GUI.Button(new Rect(16, 32 + 16, 96, 32), "Comment"))
+        else if (commentingAllowed && GUI.Button(new Rect(16, 32 + 16, 96, 32), "Comment") )
         {
             GuiManager.Instance.DrawCommentGui = false;
             commentMode = true;
@@ -60,5 +63,12 @@ public class CommentEntryService : Singleton<CommentEntryService>
         };
 
         CommentsManager.Instance.PostComment(comment);
+    }
+
+    IEnumerator CommentCooldown()
+    {
+        commentingAllowed = false;
+        yield return new WaitForSeconds(60f);
+        commentingAllowed = true;
     }
 }

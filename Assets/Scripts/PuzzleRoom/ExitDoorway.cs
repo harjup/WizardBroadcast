@@ -17,7 +17,7 @@ public class ExitDoorway : MonoBehaviour
     void Start()
     {
         collider.isTrigger = false;
-        renderer.material.color = Color.grey;
+        if (renderer != null) renderer.material.color = Color.grey;
 
         _roomManager = GetComponentInParent<RoomManager>();
         if (_roomManager == null)
@@ -35,7 +35,7 @@ public class ExitDoorway : MonoBehaviour
     {
         _isActive = value;
         collider.isTrigger = value;
-        renderer.material.color = value ? Color.cyan : Color.grey;
+        if (renderer != null) renderer.material.color = value ? Color.cyan : Color.grey;
     }
 
     void OnTriggerEnter(Collider collider)
