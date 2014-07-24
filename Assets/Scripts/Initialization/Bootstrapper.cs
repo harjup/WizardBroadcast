@@ -43,6 +43,8 @@ namespace Assets.Scripts.Managers
             {typeof(GuiManager), @"Prefabs/Managers/GuiManager"},
             {typeof(TextboxDisplay), @"Prefabs/Managers/TextboxDisplay"},
             {typeof(PassiveTextboxDisplay), @"Prefabs/Managers/PassiveTextDisplay"},
+            {typeof(NotificationTextDisplay), @"Prefabs/Managers/NotificationTextDisplay"},
+            
             {typeof(DialogRepository), @"Prefabs/Managers/DialogRepository"},
 
             {typeof(UserProgressStore), @"Prefabs/Managers/UserProgressStore"},

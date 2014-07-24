@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using Assets.Scripts.Managers;
-using UnityEditor.VersionControl;
+﻿using Assets.Scripts.Managers;
 using UnityEngine;
 using System.Collections.Generic;
 
