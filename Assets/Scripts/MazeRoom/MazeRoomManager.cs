@@ -5,9 +5,9 @@ using System.Collections;
 
 public class MazeRoomManager : RoomManager
 {
-
+    private const float HelpingHandSpawnTime = 30f;
+    private static GameObject _helpingHandPrefab;
     private MazeCamera _roomCamera;
-
     private MazeExitSet _exitSet;
 
     private static Color[] _lightColors =
@@ -26,6 +26,12 @@ public class MazeRoomManager : RoomManager
     new void Awake()
     {
         base.Awake();
+
+        if (_helpingHandPrefab == null)
+        {
+            _helpingHandPrefab = Resources.Load("Prefabs/HelpingHand") as GameObject;
+        }
+
         _roomCamera = GetComponentInChildren<MazeCamera>();
         _exitSet = GetComponentInChildren<MazeExitSet>();
     }
@@ -47,9 +53,25 @@ public class MazeRoomManager : RoomManager
         }*/
         if (_exitSet != null) _exitSet.InitExitSet();
         if (_roomCamera != null) _roomCamera.Enabled = true;
+
+        //Lame, StopCoroutine only works with strings
+        StopCoroutine("SpawnHelpingHand");
+        if (RoomIndex > 0 && RoomIndex < 7 //Spawn a helping hand on indexes 1-6
+            || RoomIndex == 7 && !_workflow.ReverseRooms) //If the index is 7 only spawn one if the rooms are not reversed
+        {
+            StartCoroutine("SpawnHelpingHand");
+        } 
     }
     public override void OnRoomExit()
     {
         if (_roomCamera != null) _roomCamera.Enabled = false;
+        StopCoroutine("SpawnHelpingHand");
+    }
+
+    IEnumerator SpawnHelpingHand()
+    {
+        yield return new WaitForSeconds(HelpingHandSpawnTime);
+        //Say something stupid
+        Instantiate(_helpingHandPrefab, Vector3.zero, Quaternion.identity);
     }
 }
