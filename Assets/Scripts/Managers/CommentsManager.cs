@@ -41,7 +41,7 @@ namespace Assets.Scripts.Managers
         {
             if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) != Scene.Start)
             {
-                GetComments();
+                //GetComments();
             }
         }
 

@@ -35,8 +35,8 @@ namespace Assets.Scripts.Repository
     public class CommentRepository : ICommentRepository
     {
         //TODO: Put this in a config file
-        //private const string CommentUrl = "http://wizardcentralserver.cloudapp.net/api/comments";
-        private const string CommentUrl = "http://localhost:52542/api/comments";
+        private const string CommentUrl = "http://wizardcentralserver.cloudapp.net/api/comments";
+        //private const string CommentUrl = "http://localhost:52542/api/comments";
 
         public IEnumerator GetComments(Action<List<UserComment>> resultAction)
         {
