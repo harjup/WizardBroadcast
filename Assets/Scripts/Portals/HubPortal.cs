@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
-using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 
 namespace Assets.Scripts.Portals

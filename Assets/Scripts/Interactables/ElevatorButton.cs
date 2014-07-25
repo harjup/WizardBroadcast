@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
-using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using System.Collections;
 

@@ -2,7 +2,7 @@
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
 using Assets.Scripts.Repository;
-using HutongGames.PlayMaker.Actions;
+
 using UnityEngine;
 using System.Collections;
 
