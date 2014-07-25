@@ -24,9 +24,9 @@ namespace Assets.Scripts.GameState
             {Scene.Start,   "Start"},
             {Scene.Hub,     "HubZone"},
             {Scene.Level1,  "LoreForest"},
-            {Scene.Level2,  "BlockMountain"},
+            {Scene.Level2,  "BlockyMountain"},
             {Scene.Level3,  "FoggyMaze"},
-            {Scene.Level4,  "BigDesert"}
+            {Scene.Level4,  "DistressDesert"}
         };
 
 
