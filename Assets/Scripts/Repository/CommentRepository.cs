@@ -19,7 +19,9 @@ namespace Assets.Scripts.Repository
         /// </summary>
         /// <param name="resultAction">Callback passing in the found comments</param>
         /// <returns></returns>
-        IEnumerator GetComments(Action<List<UserComment>> resultAction);
+        IEnumerator GetComments(string levelName, Action<List<UserComment>> resultAction);
+
+        IEnumerator GetComments(string levelname, int time, Action<List<UserComment>> resultAction);
 
         /// <summary>
         /// Posts a comment to the web
@@ -33,11 +35,26 @@ namespace Assets.Scripts.Repository
     public class CommentRepository : ICommentRepository
     {
         //TODO: Put this in a config file
-        private const string CommentUrl = "http://wizardcentralserver.cloudapp.net/api/comments";
+        //private const string CommentUrl = "http://wizardcentralserver.cloudapp.net/api/comments";
+        private const string CommentUrl = "http://localhost:52542/api/comments";
 
         public IEnumerator GetComments(Action<List<UserComment>> resultAction)
         {
             var commentWWW = new WWW(CommentUrl);
+            yield return commentWWW;
+            var commentList = JsonConvert.DeserializeObject<List<UserComment>>(commentWWW.text);
+            resultAction(commentList);
+        }
+
+        public IEnumerator GetComments(string levelName, Action<List<UserComment>> resultAction)
+        {
+            yield return GetComments(levelName, -1, resultAction);
+        }
+
+        public IEnumerator GetComments(string levelname, int time, Action<List<UserComment>> resultAction)
+        {
+            var url = String.Format("{0}/{1}/{2}",  CommentUrl, levelname, time);
+            var commentWWW = new WWW(url);
             yield return commentWWW;
             var commentList = JsonConvert.DeserializeObject<List<UserComment>>(commentWWW.text);
             resultAction(commentList);

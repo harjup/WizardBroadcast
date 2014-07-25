@@ -19,15 +19,14 @@ namespace Assets.Scripts.GameState
     //Singleton service for mapping enum values to scene names
     public static class SceneMap
     {
-        //TODO: Give these scenes descriptive names!
         private static readonly Dictionary<Scene, string> SceneDictionary = new Dictionary<Scene, string>()
         {
             {Scene.Start,   "Start"},
             {Scene.Hub,     "HubZone"},
-            {Scene.Level1,  "level1"},
-            {Scene.Level2,  "level2"},
-            {Scene.Level3,  "level3"},
-            {Scene.Level4,  "level4"}
+            {Scene.Level1,  "LoreForest"},
+            {Scene.Level2,  "BlockMountain"},
+            {Scene.Level3,  "FoggyMaze"},
+            {Scene.Level4,  "BigDesert"}
         };
 
 

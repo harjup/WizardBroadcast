@@ -15,6 +15,9 @@ namespace Assets.Scripts.Managers
     /// </summary>
     class TimeTracker : Singleton<TimeTracker>
     {
+        //Make this this is evenly divisible by an hour so it can loop on the hour ok????
+        private const int SessionLength = 30;
+
         private ITimeRepository _timeRepository;
 
         private float _nextMinute;
@@ -88,6 +91,16 @@ namespace Assets.Scripts.Managers
         void OnGUI()
         {
             GUI.Label(new Rect(Screen.width - 100f, 10f, 200f, 50f), String.Format("{0}:{1}", _currentTime.Hour, _currentTime.Minute));
+        }
+
+        public int GetSessionTime()
+        {
+            var minutes = _currentTime.Minute;
+            while (minutes >= SessionLength)
+            {
+                minutes -= SessionLength;
+            }
+            return minutes;
         }
     }
 }

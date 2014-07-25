@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Assets.Common;
 using Assets.Scripts.GameState;
+using Assets.Scripts.Pocos;
 using Assets.Scripts.Repository;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -38,7 +39,7 @@ namespace Assets.Scripts.Managers
 
         void Init()
         {
-            if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Hub)
+            if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) != Scene.Start)
             {
                 GetComments();
             }
@@ -47,7 +48,10 @@ namespace Assets.Scripts.Managers
 
         void GetComments()
         {
-            StartCoroutine(commentRepository.GetComments(x =>
+            StartCoroutine(commentRepository.GetComments(
+                Application.loadedLevelName,
+                TimeTracker.Instance.GetSessionTime(),
+                x =>
             {
                 userComments = x;
                 SpawnMessengers();
@@ -73,7 +77,15 @@ namespace Assets.Scripts.Managers
 
         public void PostComment(UserComment commentToPost)
         {
-            StartCoroutine(commentRepository.PostComment(commentToPost, x => Debug.Log(x ? "Comment Posted" : "Comment Not Posted")));
+            var timetracker = TimeTracker.Instance;
+
+            commentToPost.Location = Application.loadedLevelName;
+            commentToPost.SessionTime = timetracker.GetSessionTime();
+            commentToPost.DateTime = timetracker.GetCurrentTime();
+            StartCoroutine(commentRepository.PostComment(
+                    commentToPost, 
+                    x => Debug.Log(x ? "Comment Posted" : "Comment Not Posted"))
+                );
         }
     }
 }
