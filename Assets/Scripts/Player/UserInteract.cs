@@ -101,7 +101,8 @@ namespace Assets.Scripts.Player
             if (_climbTarget == Vector3.zero) return;       //Don't climb if we don't get a valid target
             if (_userMovement.GetBlockEngaged()) return;    //Don't climb if you're pushing a block
             if (_userMovement.AirState) return;             //Don't climb if you're in the air
-            
+
+            _pushableObject = null;
 
             waitingForCallback = true;
             StartCoroutine(_userMovement.ClimbGeometry(_climbTarget, () =>

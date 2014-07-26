@@ -79,7 +79,7 @@
 				"text" : "ARRRGGG!!!!"
 			},
 			{
-				"id":  "01",
+				"id":  "02",
 				"text" : "I ran out of ones I wanna type!"
 			}
 		]
@@ -92,7 +92,7 @@
 				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
 			},
 			{
-				"id":  "01",
+				"id":  "02",
 				"text" : "I ran out of ones I wanna type!"
 			}
 		]
@@ -105,7 +105,7 @@
 				"text" : "Butts and chutts!"
 			},
 			{
-				"id":  "01",
+				"id":  "02",
 				"text" : "I ran out of ones I wanna type!"
 			}
 		]

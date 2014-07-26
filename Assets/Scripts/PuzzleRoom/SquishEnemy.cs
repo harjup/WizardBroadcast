@@ -27,7 +27,7 @@ public class SquishEnemy : MonoBehaviourBase
 
             //Ugh, really need to add a getinterface in children override
             var anim = GetComponentInChildren<SquishAnim>() as ISquishAnim;
-            if (anim == null) anim = GetComponentInChildren<SquishAnimIce>() as ISquishAnim;
+            if (anim == null) anim = GetComponentInChildren<SquishAnimIce>();
 
             anim.OnSquish(volume.transform.position);
         }
