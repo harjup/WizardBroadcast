@@ -76,7 +76,7 @@ namespace Assets.Scripts.Managers
                     return Scene.Start;
                 }
 
-                if (sceneState.Value == State.Active)
+                if (sceneState.Value == State.Active && sceneState.Key != Scene.Hub)
                 {
                     return sceneState.Key;
                 }

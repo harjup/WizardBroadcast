@@ -16,7 +16,6 @@ namespace Assets.Scripts.Player
         private ExaminableBase _examinableObject;
         private PushableBase _pushableObject;
 
-
         private float playerHeight = 2.5f;
         private Vector3 _climbTarget;
 
@@ -31,6 +30,12 @@ namespace Assets.Scripts.Player
 
         private void OnLevelWasLoaded(int level)
         {
+            StopAllCoroutines();
+            waitingForCallback = false;
+            InputManager.Instance.PlayerMovementEnabled = true;
+            InputManager.Instance.CameraControlEnabled = true;
+            _examinableObject = null;
+            ForceDisengage();
             interactives.Clear();
         }
 

@@ -13,16 +13,36 @@ namespace Assets.Scripts.Managers
 
         //Bluhhhhg
         //Maps each scene to a map of TreasureTypes and amounts
-        private readonly Dictionary<Scene, Dictionary<TreasureType, int>> _treasureTotals =
-            new Dictionary<Scene, Dictionary<TreasureType, int>>()
-            {
-                {Scene.Level1,  new  Dictionary<TreasureType, int>()},
-                {Scene.Level2,  new  Dictionary<TreasureType, int>()},
-                {Scene.Level3,  new  Dictionary<TreasureType, int>()},
-                {Scene.Level4,  new  Dictionary<TreasureType, int>()}
-            };
+        private Dictionary<Scene, Dictionary<TreasureType, int>> _treasureTotals;
 
         //Add a treasure to the treasure stash
+
+        void Start()
+        {
+            Init();
+        }
+        void OnLevelWasLoaded(int level)
+        {
+            Init();
+        }
+
+        void Init()
+        {
+            //reset persisted progress if we're in start
+            if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Start 
+                || _treasureTotals == null)
+            {
+                _treasureTotals =
+                    new Dictionary<Scene, Dictionary<TreasureType, int>>()
+                    {
+                        {Scene.Level1,  new  Dictionary<TreasureType, int>()},
+                        {Scene.Level2,  new  Dictionary<TreasureType, int>()},
+                        {Scene.Level3,  new  Dictionary<TreasureType, int>()},
+                        {Scene.Level4,  new  Dictionary<TreasureType, int>()}
+                    };
+            }
+        }
+
         public void AddTreasure(TreasureType treasure)
         {
             var currentScene = SceneMap.GetSceneFromStringName(Application.loadedLevelName);

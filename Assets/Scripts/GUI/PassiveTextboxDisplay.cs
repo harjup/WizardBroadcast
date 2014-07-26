@@ -25,6 +25,15 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
                 () => { }));*/
     }
 
+    //Cleanup between levels
+    void OnLevelWasLoaded(int level)
+    {
+        //Done, do cleanup
+        StopAllCoroutines();
+        Cleanup();
+    }
+
+
     public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
     {
         //Wait for any old instances to end and clean up before starting the current one

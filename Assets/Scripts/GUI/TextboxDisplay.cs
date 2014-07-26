@@ -24,6 +24,19 @@ namespace Assets.Scripts.GUI
         //So we need to assume the button is down when DisplayText starts and disregard inputs until it is not
         private bool keyDownFromInit = false;
 
+        //Cleanup between levels
+        void OnLevelWasLoaded(int level)
+        {
+            StopAllCoroutines();
+            //Done, do cleanup
+            _fullDisplayText = "";
+            _currentDisplayText = null;
+            _displayIndex = 1;
+            isRunning = false;
+            _waitingForDismissal = false;
+        }
+        
+
         void Update()
         {
             if (!isRunning)
@@ -87,9 +100,6 @@ namespace Assets.Scripts.GUI
                 }
             }
 
-
-            
-
             isRunning = false;
             doneCallback();
         }
@@ -121,9 +131,5 @@ namespace Assets.Scripts.GUI
                 GuiManager.Instance.DrawTextProceedPrompt();
             }
         }
-
-
-
-
     }
 }

@@ -25,7 +25,7 @@ namespace Assets.Scripts.Initialization
             //Wait for the schedule tracker to set itself up before we try to load up the current level
             while (!SessionStateStore.IsScheduleTrackerInitialized())
             {
-                yield return new WaitForEndOfFrame();
+                yield return new WaitForSeconds(1f);
             }
             LoadActiveLevel();
         }
