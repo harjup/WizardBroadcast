@@ -134,7 +134,11 @@ namespace WizardBroadcast
                 (disengage) =>
                 {
                     pushing = false;
-                    if (disengage) { StartCoroutine(DisengageBlock(() => { })); }                        
+                    //This workflow is scrood up whoops.
+                    //Maybe interact can supply delegates instead of callback functions so we can have less bad 2-way communication
+                    if (disengage) { GetComponent<UserInteract>().ForceDisengage(); } 
+
+                    
                 }));
         }
 

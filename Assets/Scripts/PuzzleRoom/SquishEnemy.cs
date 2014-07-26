@@ -21,6 +21,7 @@ public class SquishEnemy : MonoBehaviourBase
         {
             _isSquished = true;
             GetComponentInParent<PuzzleRoomManager>().UpdateRoomCompletion();
+            GetComponentInChildren<SquishAnim>().OnSquish();
         }
     }
 }

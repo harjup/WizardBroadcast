@@ -122,6 +122,7 @@ public class PushBlock : MonoBehaviourBase
         foreach (var raycastHit in hits)
         {
             if (raycastHit.transform.GetComponent<InfoPlayer>() != null) continue;
+            if (raycastHit.transform.GetComponent<SquishAnim>() != null) continue;
 
             var edgePosition = (transform.position.y - ((transform.localScale.y / 2f)));
             var pointDifference = edgePosition - (raycastHit.point.y);
@@ -130,7 +131,7 @@ public class PushBlock : MonoBehaviourBase
                 leastDistance = pointDifference;
             }
         }
-        if (leastDistance > .01f && leastDistance <= 100)
+        if (leastDistance > .01f && leastDistance < 90)
         {
             iTween.MoveTo(_tweenTarget, iTween.Hash(
             "y", (transform.position.y - leastDistance),

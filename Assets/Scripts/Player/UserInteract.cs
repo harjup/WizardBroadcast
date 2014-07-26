@@ -181,6 +181,16 @@ namespace Assets.Scripts.Player
             }
         }
 
+        public void ForceDisengage()
+        {
+            StartCoroutine(_userMovement.DisengageBlock(() =>
+            {
+                waitingForCallback = false;
+                _blockEngaged = false;
+                _pushableObject = null;
+            }));
+        }
+
         [SerializeField]
         List<ExaminableBase> interactives = new List<ExaminableBase>();
         public void OnInteractionTriggerEnter(Collider other)
