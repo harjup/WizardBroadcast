@@ -7,12 +7,16 @@ using System.Collections;
 //TODO: Refactor this with textbox display to only be one script instead of the two I am making or somin
 public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
 {
+    private bool isRunning = false;
+    private bool breakEarly = false;
+
     private const int MaxPageLength = 150;
     private string _fullDisplayText;
     private string _currentDisplayText;
     private string _speaker;
     private int _displayIndex = 1;
-    
+
+    private IEnumerator _currentTextCrawl;
 
     void Start()
     {
@@ -23,7 +27,20 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
 
     public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
     {
-        _speaker = speaker;
+        //Wait for any old instances to end and clean up before starting the current one
+        if (isRunning)
+        {
+            StopCoroutine(_currentTextCrawl);
+            Cleanup();
+        }
+        isRunning = true;
+        breakEarly = false;
+        
+
+        if (!String.IsNullOrEmpty(speaker))
+        {
+            _speaker = speaker;
+        }
         //If the given string is too long split it into multiple
         var charCount = 0;
         var lines = text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
@@ -36,15 +53,22 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
             _fullDisplayText = line;
             _currentDisplayText = "";
 
-            yield return StartCoroutine(CrawlText());
-
+            _currentTextCrawl = CrawlText();
+            yield return StartCoroutine(_currentTextCrawl);
             //Done, do cleanup
-            _fullDisplayText = "";
-            _currentDisplayText = null;
-            _displayIndex = 1;
+            Cleanup();
         }
-
+        isRunning = false;
         doneCallback();
+    }
+
+    void Cleanup()
+    {
+        _fullDisplayText = "";
+        _currentDisplayText = null;
+        _speaker = null;
+
+        _displayIndex = 1;
     }
 
     IEnumerator CrawlText()

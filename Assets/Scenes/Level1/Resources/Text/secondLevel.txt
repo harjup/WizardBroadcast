@@ -20,11 +20,15 @@
 	},
 	{
 		"id":  "Taunt01",
-		"name" : "Pointy Johnson"
+		"name" : "Pointy Johnson",
 		"content": [
 			{
 				"id":  "01",
 				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+			},
+			{
+				"id":  "02",
+				"text" : "Maybe smoking all that wizard weed as a bad idea..."
 			}
 		]
 	},
@@ -34,6 +38,10 @@
 			{
 				"id":  "01",
 				"text" : "Wow, waht a dumb idiot, butt head runm!"
+			},
+			{
+				"id":  "02",
+				"text" : "splat"
 			}
 		]
 	},
@@ -43,6 +51,10 @@
 			{
 				"id":  "01",
 				"text" : "I'm gonna give you ten swirlies!!!!"
+			},
+			{
+				"id":  "02",
+				"text" : "Now the toilet is on the other foot"
 			}
 		]
 	},
@@ -52,6 +64,10 @@
 			{
 				"id":  "01",
 				"text" : "Hellp please crush me I enjpy it!"
+			},
+			{
+				"id":  "01",
+				"text" : "I ran out of ones I wanna type!"
 			}
 		]
 	},
@@ -61,6 +77,10 @@
 			{
 				"id":  "01",
 				"text" : "ARRRGGG!!!!"
+			},
+			{
+				"id":  "01",
+				"text" : "I ran out of ones I wanna type!"
 			}
 		]
 	},
@@ -70,6 +90,10 @@
 			{
 				"id":  "01",
 				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+			},
+			{
+				"id":  "01",
+				"text" : "I ran out of ones I wanna type!"
 			}
 		]
 	},
@@ -79,6 +103,10 @@
 			{
 				"id":  "01",
 				"text" : "Butts and chutts!"
+			},
+			{
+				"id":  "01",
+				"text" : "I ran out of ones I wanna type!"
 			}
 		]
 	}
