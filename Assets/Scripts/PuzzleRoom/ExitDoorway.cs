@@ -47,9 +47,9 @@ public class ExitDoorway : MonoBehaviour
                 : _roomManager.GetNextRoom();
 
             var entrance = nextRoom.GetEntrance();
-            StartCoroutine(collider.GetComponent<InfoPlayer>().OnEnterDoorway(transform.forward, entrance));
+            StartCoroutine(collider.GetComponent<InfoPlayer>().OnEnterDoorway(transform.forward, entrance, nextRoom));
             _roomManager.OnRoomExit();
-            nextRoom.OnRoomEnter();
+            //nextRoom.OnRoomEnter();
         }
     }
 }

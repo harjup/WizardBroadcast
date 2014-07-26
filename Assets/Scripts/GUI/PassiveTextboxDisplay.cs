@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Collections;
 
 //TODO: Refactor this with textbox display to only be one script instead of the two I am making or somin
-public class PassiveTextboxDisplay : MonoBehaviour
+public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
 {
     private const int MaxPageLength = 150;
     private string _fullDisplayText;

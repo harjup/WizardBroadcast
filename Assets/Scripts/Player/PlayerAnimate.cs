@@ -101,7 +101,7 @@ namespace Assets.Scripts.Player
             _isMessedUpRunning = false;
         }
 
-        public IEnumerator WalkForwardTransition(Vector3 targetDirection, Transform destination)
+        public IEnumerator WalkForwardTransition(Vector3 targetDirection, Transform destination, RoomManager room = null)
         {
             var targetEndpoint = destination.position;
 
@@ -113,6 +113,10 @@ namespace Assets.Scripts.Player
             transform.position = targetEndpoint;
             iTween.MoveTo(gameObject, iTween.Hash("position", destination.position + destination.forward *1f, "time", 1f, "easetype", iTween.EaseType.linear));
             yield return new WaitForSeconds(.75f);
+            if (room != null)
+            {
+                room.OnRoomEnter();
+            }
             yield return StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
         }
     }

@@ -17,5 +17,69 @@
 				"text" : "You found the end of the level! Wow, how amazing! You sure showed those BIG BULLIES who really is smart, you!"
 			}
 		]
+	},
+	{
+		"id":  "Taunt01",
+		"name" : "Pointy Johnson"
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt02",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow, waht a dumb idiot, butt head runm!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt03",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I'm gonna give you ten swirlies!!!!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt04",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Hellp please crush me I enjpy it!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt05",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "ARRRGGG!!!!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt06",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt07",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Butts and chutts!"
+			}
+		]
 	}
 ]

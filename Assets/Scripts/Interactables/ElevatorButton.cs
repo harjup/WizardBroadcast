@@ -21,8 +21,8 @@ public class ElevatorButton : ExaminableBase
         {
             var room = _manager.GetRoom(floor);
             var entrance = room.GetEntrance();
-            room.OnRoomEnter();
-            StartCoroutine(FindObjectOfType<InfoPlayer>().OnEnterDoorway(transform.forward, entrance));
+            //room.OnRoomEnter();
+            StartCoroutine(FindObjectOfType<InfoPlayer>().OnEnterDoorway(transform.forward, entrance, room));
             callback();
         }));
     }

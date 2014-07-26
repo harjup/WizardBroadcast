@@ -167,8 +167,8 @@ namespace Assets.Scripts.Managers
             }
             if (_passiveTextBoxContents != null)
             {
-                GUI.Box(new Rect(Screen.width / 15f, Screen.height / 1.6f, Screen.width / 1.2f, Screen.height / 16f), _passiveTextSpeaker, textBoxStyle);
-                GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.5f, Screen.width / 4f, Screen.height / 7.5f), _passiveTextBoxContents, textBoxStyle);
+                GUI.Box(new Rect(Screen.width / 15f, Screen.height / 1.6f, Screen.width / 4f, Screen.height / 16f), _passiveTextSpeaker, textBoxStyle);
+                GUI.Box(new Rect(Screen.width / 12f, Screen.height / 1.5f, Screen.width / 1.2f, Screen.height / 7.5f), _passiveTextBoxContents, textBoxStyle);
             }
 
             //Shit score tracking ~thing~

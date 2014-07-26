@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using Assets.Scripts.Repository;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -57,10 +59,16 @@ public class PuzzleRoomManager : RoomManager {
         yield return StartCoroutine(SpawnEnemies());
     }
 
-    /*public override void OnRoomEnter()
+    public override void OnRoomEnter()
     {
-        
-    }*/
+        var roomText = DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "01");
+        if (roomText != null)
+        {
+            StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
+        }
+        base.OnRoomEnter();
+    }
+
 
     public override void OnRoomExit()
     {
