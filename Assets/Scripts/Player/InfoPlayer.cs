@@ -91,12 +91,12 @@ namespace Assets.Scripts.Player
             //Move player to target position
         }
 
-        public IEnumerator OnEnterDoorway(Vector3 targetDirection, Transform destination, RoomManager room = null)
+        public IEnumerator OnEnterDoorway(Vector3 targetDirection, Transform destination, RoomManager newRoom = null, RoomManager oldRoom = null)
         {
             InputManager.Instance.PlayerInputEnabled = false;
             gameObject.collider.enabled = false;
             rigidbody.useGravity = false;
-            yield return StartCoroutine(_animator.WalkForwardTransition(targetDirection, destination, room));
+            yield return StartCoroutine(_animator.WalkForwardTransition(targetDirection, destination, newRoom, oldRoom));
             rigidbody.useGravity = true;
             InputManager.Instance.PlayerInputEnabled = true;
             gameObject.collider.enabled = true;

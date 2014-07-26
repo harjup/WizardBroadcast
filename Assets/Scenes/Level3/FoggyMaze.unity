@@ -491,7 +491,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 18428349}
   - 65: {fileID: 18428350}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,6 +576,7 @@ MonoBehaviour:
   FinalRoom: {fileID: 890404162}
   FirstRoomAlt: {fileID: 276781462}
   ReverseRooms: 0
+  SongIndex: 0
   currentRoomIndex: 0
 --- !u!1 &41532843
 GameObject:
@@ -877,7 +878,7 @@ GameObject:
   - 23: {fileID: 62004329}
   - 114: {fileID: 62004328}
   - 54: {fileID: 62004327}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1218,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 75796843}
   - 65: {fileID: 75796844}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1555,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 94239912}
   - 65: {fileID: 94239913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1813,7 @@ GameObject:
   - 23: {fileID: 115165881}
   - 114: {fileID: 115165880}
   - 54: {fileID: 115165879}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2083,13 +2084,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1750875397}
-  - {fileID: 773564851}
-  - {fileID: 2006949494}
   - {fileID: 1109440572}
   - {fileID: 1765616939}
   - {fileID: 1086643601}
   - {fileID: 184345875}
+  - {fileID: 1750875397}
+  - {fileID: 773564851}
+  - {fileID: 2006949494}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &134719061
@@ -2129,7 +2130,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 137060005}
   - 65: {fileID: 137060006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2609,7 +2610,7 @@ GameObject:
   - 23: {fileID: 184345878}
   - 114: {fileID: 184345877}
   - 54: {fileID: 184345876}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2628,7 +2629,7 @@ Transform:
   m_Children:
   - {fileID: 18428349}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!54 &184345876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4468,7 +4469,7 @@ GameObject:
   - 23: {fileID: 357310304}
   - 114: {fileID: 357310303}
   - 54: {fileID: 357310302}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,7 +4766,7 @@ GameObject:
   - 23: {fileID: 380573533}
   - 114: {fileID: 380573532}
   - 54: {fileID: 380573531}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MediumCollectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7336,7 +7337,7 @@ GameObject:
   - 23: {fileID: 773564854}
   - 114: {fileID: 773564853}
   - 54: {fileID: 773564852}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7355,7 +7356,7 @@ Transform:
   m_Children:
   - {fileID: 137060005}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!54 &773564852
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7860,7 +7861,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 817625786}
   - 65: {fileID: 817625785}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9687,7 +9688,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1035538069}
   - 65: {fileID: 1035538070}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10281,7 +10282,7 @@ GameObject:
   - 23: {fileID: 1086643598}
   - 114: {fileID: 1086643597}
   - 54: {fileID: 1086643596}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10371,7 +10372,7 @@ Transform:
   m_Children:
   - {fileID: 2076482046}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!1 &1094565549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10616,7 +10617,7 @@ GameObject:
   - 23: {fileID: 1109440575}
   - 114: {fileID: 1109440574}
   - 54: {fileID: 1109440573}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10635,7 +10636,7 @@ Transform:
   m_Children:
   - {fileID: 1483756696}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!54 &1109440573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11042,7 +11043,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1157861270}
   - 65: {fileID: 1157861271}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11561,7 +11562,7 @@ GameObject:
   - 23: {fileID: 1224366221}
   - 114: {fileID: 1224366220}
   - 54: {fileID: 1224366219}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MediumCollectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11709,7 +11710,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1229454161}
   - 65: {fileID: 1229454162}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11782,7 +11783,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1238130223}
   - 65: {fileID: 1238130222}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14775,7 +14776,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1474480633}
   - 65: {fileID: 1474480634}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14816,7 +14817,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1483756696}
   - 65: {fileID: 1483756697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14958,7 +14959,7 @@ GameObject:
   - 23: {fileID: 1494873768}
   - 114: {fileID: 1494873767}
   - 54: {fileID: 1494873766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MediumCollectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15414,7 +15415,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1581261806}
   - 65: {fileID: 1581261807}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15659,7 +15660,7 @@ GameObject:
   - 23: {fileID: 1604827568}
   - 114: {fileID: 1604827567}
   - 54: {fileID: 1604827566}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MediumCollectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16607,7 +16608,7 @@ GameObject:
   - 23: {fileID: 1750875394}
   - 114: {fileID: 1750875393}
   - 54: {fileID: 1750875392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16697,7 +16698,7 @@ Transform:
   m_Children:
   - {fileID: 1474480633}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!1001 &1752681212
 Prefab:
   m_ObjectHideFlags: 0
@@ -16979,7 +16980,7 @@ GameObject:
   - 23: {fileID: 1765616942}
   - 114: {fileID: 1765616941}
   - 54: {fileID: 1765616940}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16998,7 +16999,7 @@ Transform:
   m_Children:
   - {fileID: 75796843}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!54 &1765616940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18447,7 +18448,7 @@ GameObject:
   - 23: {fileID: 1928821506}
   - 114: {fileID: 1928821505}
   - 54: {fileID: 1928821504}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19544,7 +19545,7 @@ GameObject:
   - 23: {fileID: 2006949497}
   - 114: {fileID: 2006949496}
   - 54: {fileID: 2006949495}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19563,7 +19564,7 @@ Transform:
   m_Children:
   - {fileID: 1229454161}
   m_Father: {fileID: 131253819}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!54 &2006949495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19840,7 +19841,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2028026544}
   - 65: {fileID: 2028026545}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20206,7 +20207,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2076482046}
   - 65: {fileID: 2076482047}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20917,7 +20918,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2136762097}
   - 65: {fileID: 2136762096}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

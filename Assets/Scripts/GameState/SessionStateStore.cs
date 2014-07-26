@@ -22,6 +22,7 @@ namespace Assets.Scripts.Managers
 
         private static readonly Dictionary<Scene, State> SceneStates = new Dictionary<Scene, State>()
         {
+            {Scene.Hub, State.InActive},
             {Scene.Level1, State.InActive},
             {Scene.Level2, State.InActive},
             {Scene.Level3, State.InActive},
@@ -68,6 +69,13 @@ namespace Assets.Scripts.Managers
         {
             foreach (var sceneState in SceneStates)
             {
+                //If the hub is inactive we're "off air"
+                if (sceneState.Key == Scene.Hub 
+                    && sceneState.Value == State.InActive)
+                {
+                    return Scene.Start;
+                }
+
                 if (sceneState.Value == State.Active)
                 {
                     return sceneState.Key;

@@ -34,12 +34,8 @@ namespace WizardBroadcast
             //This should be ok for now since there aren't multiple cameras flying around
             //TODO: There are multiple cameras flying around make sure this is alright
             var userCamera = GetComponentInChildren<Camera>();
-            CameraManager.Instance.SetMainCamera(userCamera);
+            userCamera = CameraManager.Instance.GetPlayerCamera();
             cameraRig = userCamera.transform.parent;
-
-            //Let's have it be free from the player or sommin
-            cameraRig.parent = null;
-            DontDestroyOnLoad(cameraRig);
             
             playerMesh = transform.FindChild("Character");
             rigidBody = GetComponent<Rigidbody>();

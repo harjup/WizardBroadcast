@@ -29,6 +29,11 @@ namespace Assets.Scripts.Player
             _userMovement = GetComponent<UserMovement>();
         }
 
+        private void OnLevelWasLoaded(int level)
+        {
+            interactives.Clear();
+        }
+
         void Update()
         {
             ExamineInput();

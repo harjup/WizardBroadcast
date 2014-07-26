@@ -23,6 +23,7 @@ namespace Assets.Scripts.Managers
         private float _nextMinute;
         private static DateTime _startTime;
         static DateTime _currentTime;
+        //private const float MinuteInSeconds = 60f;
         private const float MinuteInSeconds = 60f;
 
 
@@ -43,8 +44,8 @@ namespace Assets.Scripts.Managers
                                 _currentTime.Day, _currentTime.Hour, (_currentTime.Minute / 30) * 30, 0);
 
                     _nextMinute = Time.realtimeSinceStartup + (MinuteInSeconds - _currentTime.Second);
-                    var minuteSpan = (_currentTime.Subtract(_startTime));
-                    LevelEvent.ElapsedMinutes = (float)minuteSpan.TotalMinutes;
+                    //var minuteSpan = (_currentTime.Subtract(_startTime));
+                    //LevelEvent.ElapsedMinutes = (float)minuteSpan.TotalMinutes;
 
                     _initialized = true;
                 }));
@@ -80,7 +81,13 @@ namespace Assets.Scripts.Managers
             var secondsOver = (time - _nextMinute);
             _nextMinute = time + (MinuteInSeconds - secondsOver);
 
-            LevelEvent.ElapsedMinutes += 1;            
+            var sessionTime = GetSessionTime();
+            //Maybe somewhere else
+            if (sessionTime == 0)
+            {
+                ScheduleTracker.Instance.ResetSchedule();
+            }
+
         }
 
         public DateTime GetCurrentTime()
@@ -91,6 +98,10 @@ namespace Assets.Scripts.Managers
         void OnGUI()
         {
             GUI.Label(new Rect(Screen.width - 100f, 10f, 200f, 50f), String.Format("{0}:{1}", _currentTime.Hour, _currentTime.Minute));
+            if (GUI.Button(new Rect(Screen.width - 96f, 160f, 64f, 32f), String.Format("Min++")))
+            {
+                IncrementMinute(0f);
+            }
         }
 
         public int GetSessionTime()

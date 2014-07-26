@@ -9,7 +9,7 @@ namespace Assets.Scripts.GUI
 {
     public class TextboxDisplay : Singleton<TextboxDisplay>
     {
-        private static bool isRunning = false;
+        private bool isRunning = false;
 
         private const int MaxPageLength = 180;
         private string _speaker;
@@ -42,8 +42,6 @@ namespace Assets.Scripts.GUI
                 keyDownFromInit = false;
             }
         }
-
-
 
         public IEnumerator DisplayText(string text, Action doneCallback)
         {

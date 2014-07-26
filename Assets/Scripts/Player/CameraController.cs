@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Managers;
+﻿using Assets.Scripts.GameState;
+using Assets.Scripts.Managers;
 using UnityEngine;
 using System.Collections;
 
@@ -12,7 +13,7 @@ public class CameraController : Singleton<CameraController>
     void Start()
     {
         //This should be ok for now since there aren't multiple cameras flying around
-        cameraRig = Camera.main.transform.parent;
+        cameraRig = transform.parent;
     }
 
     // Update is called once per frame

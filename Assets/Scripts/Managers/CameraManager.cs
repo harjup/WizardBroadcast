@@ -6,31 +6,52 @@ using System.Collections;
 public class CameraManager : Singleton<CameraManager>
 {
     private Camera _mainCamera;
+    private Camera _playerCamera;
     private Camera _transitionCamera;
     private const float RotateAmount = 180.0f;
     public Mesh shapeMesh; //Assigned in the inspector until I can figure out how to get a mesh programatically
     AnimationCurve curve; //No idea what this does or if it's nessesary woo
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         transform.position = new Vector3(0f,0f,-500f);
-        _mainCamera = Camera.main;
-        _transitionCamera = GetComponentInChildren<Camera>();
+        _mainCamera = _playerCamera = GetComponentInChildren<CameraController>().camera;
+        if (_playerCamera == null)
+        {
+            Debug.LogError("Camera maanger couldn't find player camera");
+        }
+        _transitionCamera = transform.FindChild("Camera2").GetComponent<Camera>();
+        if (_transitionCamera == null)
+        {
+            Debug.LogError("Camera maanger couldn't find transition camera");
+        }
+    }
+
+    void Start()
+    {
         StartCoroutine(DoWipeIn(1f));
+        Init();
     }
 
     //TODO: Put this logic in the level itself, the camera manager shouldn't care
-    void OnLevelWasLoaded(int level)
+    private void Init()
     {
-        if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3)
+        if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3
+            || SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Start)
         {
-            _mainCamera.enabled = false;
+            _playerCamera.enabled = false;
         }
         else
         {
-            _mainCamera.enabled = true;
+            _playerCamera.enabled = true;
         }
+    }
+
+    
+    void OnLevelWasLoaded(int level)
+    {
+        Init();
     }
 
     public IEnumerator DoWipeIn(float time)
@@ -43,13 +64,13 @@ public class CameraManager : Singleton<CameraManager>
         yield return StartCoroutine(ScreenWipe.use.ShapeWipe(_mainCamera, _transitionCamera, time, ScreenWipe.ZoomType.Shrink, shapeMesh, RotateAmount, curve));
     }
 
-    public void SetMainCamera(Camera camera)
-    {
-        _mainCamera = camera;
-    }
-
     public Transform GetCameraRig()
     {
-        return _mainCamera.transform.parent;
+        return _playerCamera.transform.parent;
+    }
+
+    public Camera GetPlayerCamera()
+    {
+        return _playerCamera;
     }
 }

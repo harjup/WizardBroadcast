@@ -51,12 +51,12 @@ public class MusicManager : Singleton<MusicManager>
     {
         _musicSource =       gameObject.AddComponent<AudioSource>();
         _secondarySource =   gameObject.AddComponent<AudioSource>();
-       // LoadSongForLevel();
+        LoadSongForLevel();
     }
 
     void OnLevelWasLoaded(int level)
     {
-       // LoadSongForLevel();
+        LoadSongForLevel();
     }
 
     void LoadSongForLevel()

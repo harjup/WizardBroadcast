@@ -101,7 +101,7 @@ namespace Assets.Scripts.Player
             _isMessedUpRunning = false;
         }
 
-        public IEnumerator WalkForwardTransition(Vector3 targetDirection, Transform destination, RoomManager room = null)
+        public IEnumerator WalkForwardTransition(Vector3 targetDirection, Transform destination, RoomManager newRoom = null, RoomManager oldRoom = null)
         {
             var targetEndpoint = destination.position;
 
@@ -113,9 +113,13 @@ namespace Assets.Scripts.Player
             transform.position = targetEndpoint;
             iTween.MoveTo(gameObject, iTween.Hash("position", destination.position + destination.forward *1f, "time", 1f, "easetype", iTween.EaseType.linear));
             yield return new WaitForSeconds(.75f);
-            if (room != null)
+            if (newRoom != null)
             {
-                room.OnRoomEnter();
+                newRoom.OnRoomEnter();
+            }
+            if (oldRoom != null)
+            {
+                oldRoom.OnRoomExit();
             }
             yield return StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
         }

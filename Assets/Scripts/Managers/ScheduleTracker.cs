@@ -25,20 +25,23 @@ namespace Assets.Scripts.Managers
         //These ScheduledEvents will probably be stored somewhere else eventually
         public List<LevelEvent> Schedule = new List<LevelEvent>()
         {
-            new LevelEvent(0f, Scene.Level1, State.Active),
+            /*new LevelEvent(0f, Scene.Level1, State.Active),
             new LevelEvent(0f, Scene.Level2, State.Active),
             new LevelEvent(0f, Scene.Level3, State.Active),
-            new LevelEvent(0f, Scene.Level4, State.Active)
-            /*
+            new LevelEvent(0f, Scene.Level4, State.Active)*/
+            new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),
             new LevelEvent(8f, Scene.Level1, State.InActive),
-            new LevelEvent(8f, Scene.Level2, State.Active),
-            new LevelEvent(17f, Scene.Level2, State.InActive),
-            new LevelEvent(19f, Scene.Level3, State.Active),
-            new LevelEvent(23f, Scene.Level3, State.InActive),
-            new LevelEvent(23f, Scene.Level4, State.Active),
-            new LevelEvent(29f, Scene.Level4, State.InActive)
-             */
+            new LevelEvent(9f, Scene.Level2, State.Active),
+            new LevelEvent(15f, Scene.Level2, State.InActive),
+            new LevelEvent(16f, Scene.Level3, State.Active),
+            new LevelEvent(24f, Scene.Level3, State.InActive),
+            new LevelEvent(25f, Scene.Hub, State.InActive),
+            /*new LevelEvent(23f, Scene.Level4, State.Active),
+            new LevelEvent(29f, Scene.Level4, State.InActive),*/
+            
+            
+            
         };
 
         void Start()
