@@ -18,6 +18,7 @@ public class PuzzleRoomManager : RoomManager {
     private int enemyCount;
     private int squishCount = 0;
 
+
     //private EntranceDoorway _entrance;
     private ExitDoorway _exit;
     //private RoomWorkflow _workflow;
@@ -103,12 +104,15 @@ public class PuzzleRoomManager : RoomManager {
 
         if (roomComplete)
         {
-            var roomText = DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "02");
-            if (roomText != null)
+            if (_spawnedEnemies.Count != 0)
             {
-                StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
+                var roomText =
+                    DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "02");
+                if (roomText != null)
+                {
+                    StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
+                }
             }
-
             //Activate door
             ActivateExit();
             Debug.Log("Room Complete!!!");

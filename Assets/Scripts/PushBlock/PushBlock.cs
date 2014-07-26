@@ -152,9 +152,11 @@ public class PushBlock : MonoBehaviourBase
     public IEnumerator Die()
     {
         _cleaningUp = true;
+        GetComponentInChildren<DeathVolume>().enabled = false;
         iTween.ScaleTo(_tweenTarget, Vector3.zero, .5f);
         yield return new WaitForSeconds(.5f);
         iTween.Stop(_tweenTarget);
-        Destroy(_tweenTarget, 1f);
+        Destroy(_tweenTarget);
+        yield return new WaitForSeconds(.1f);
     }
 }

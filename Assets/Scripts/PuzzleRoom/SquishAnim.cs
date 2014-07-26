@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SquishAnim : MonoBehaviour
+public class SquishAnim : MonoBehaviour, ISquishAnim
 {
     private Vector3 initialPosition;
     private IEnumerator _jumpRoutine;
+    private GameObject _treasurePrefab;
 
     void Start()
     {
         initialPosition = transform.position;
         _jumpRoutine = JumpAnim();
         StartCoroutine(_jumpRoutine);
+        _treasurePrefab = Resources.Load("Prefabs/LittleTreasure") as GameObject;
     }
 
 
@@ -27,11 +29,18 @@ public class SquishAnim : MonoBehaviour
     }
 
 
-    public void OnSquish()
+    public void OnSquish(Vector3 position)
     {
         StopCoroutine(_jumpRoutine);
         iTween.Stop(gameObject);
         transform.position = initialPosition;
         //Play sound effect
+        //Instantiate(_treasurePrefab, position.SetY(2f), Quaternion.identity);
+
     }
+}
+
+public interface ISquishAnim
+{
+    void OnSquish(Vector3 position);
 }

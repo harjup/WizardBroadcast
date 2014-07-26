@@ -17,11 +17,19 @@ public class SquishEnemy : MonoBehaviourBase
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<DeathVolume>() != null)
+        if (IsSquished) return;
+        var volume = other.GetComponent<DeathVolume>();
+        if (volume != null)
         {
+            Debug.Log(other.name);
             _isSquished = true;
             GetComponentInParent<PuzzleRoomManager>().UpdateRoomCompletion();
-            GetComponentInChildren<SquishAnim>().OnSquish();
+
+            //Ugh, really need to add a getinterface in children override
+            var anim = GetComponentInChildren<SquishAnim>() as ISquishAnim;
+            if (anim == null) anim = GetComponentInChildren<SquishAnimIce>() as ISquishAnim;
+
+            anim.OnSquish(volume.transform.position);
         }
     }
 }
