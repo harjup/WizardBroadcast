@@ -56,6 +56,8 @@ public class MusicManager : Singleton<MusicManager>
 
     void OnLevelWasLoaded(int level)
     {
+        _musicSource.volume = .5f;
+        _secondarySource.volume = 0f;
         LoadSongForLevel();
     }
 

@@ -33,8 +33,11 @@ namespace Assets.Scripts.Player
 
         void OnLevelWasLoaded(int level)
         {
-            GhostPositionUpdate();
-            MoveToStartPosition();
+            if (Application.loadedLevelName != SceneMap.GetScene(Scene.Start))
+            {
+                GhostPositionUpdate();
+                MoveToStartPosition();
+            }
         }
 
         void GhostPositionUpdate()
