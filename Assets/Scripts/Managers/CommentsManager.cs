@@ -28,20 +28,20 @@ namespace Assets.Scripts.Managers
         void Awake()
         {
             _messengerPrefab = Resources.Load("Prefabs/UserMessenger") as GameObject;
-            commentRepository = new CommentRepository();
-            Init();
+            //commentRepository = new CommentRepository();
+            //Init();
         }
 
         void OnLevelWasLoaded(int level)
         {
-            Init();
+            //Init();
         }
 
         void Init()
         {
             if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) != Scene.Start)
             {
-                //GetComments();
+                GetComments();
             }
         }
 

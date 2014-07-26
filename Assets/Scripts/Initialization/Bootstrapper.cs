@@ -32,12 +32,13 @@ namespace Assets.Scripts.Managers
         };
 
         //TODO: Make this a dictionary for Singeltons of T and just check if the Instance is null
+        //TODO: Break this into multiple categorized lists becuase it's getting a little big
         private bool managerPrefabsSpawned = false;
         private readonly Dictionary<Type, string> _managerPrefabs = new Dictionary<Type, string>()
         {
             {typeof(ScheduleTracker), @"Prefabs/Managers/ScheduleTracker"},
             {typeof(TimeTracker), @"Prefabs/Managers/TimeTracker"},
-            //{typeof(TweetsManager), @"Prefabs/Managers/TweetsManager"},
+            //{typeof(TweetsManager), @"Prefabs/Managers/TweetsManager"}, //Only exists in hub
             {typeof(CommentsManager), @"Prefabs/Managers/CommentsManager"},
             {typeof(InputManager), @"Prefabs/Managers/InputManager"},
             {typeof(GuiManager), @"Prefabs/Managers/GuiManager"},
@@ -53,6 +54,7 @@ namespace Assets.Scripts.Managers
             {typeof(PeerTracker), @"Prefabs/Managers/PeerTracker"},
             
             {typeof(CameraManager), @"Prefabs/Managers/CameraManager"},
+            {typeof(MusicManager), @"Prefabs/Managers/MusicManager"},
 
             {typeof(FogMachine), @"Prefabs/Managers/FogMachine"}
         };

@@ -19,7 +19,9 @@ public class ElevatorButton : ExaminableBase
         InputManager.Instance.PlayerInputEnabled = false;
         yield return StartCoroutine(GetElevatorFloor((floor) =>
         {
-            var entrance = _manager.GetRoom(floor).GetEntrance();
+            var room = _manager.GetRoom(floor);
+            var entrance = room.GetEntrance();
+            room.OnRoomEnter();
             StartCoroutine(FindObjectOfType<InfoPlayer>().OnEnterDoorway(transform.forward, entrance));
             callback();
         }));

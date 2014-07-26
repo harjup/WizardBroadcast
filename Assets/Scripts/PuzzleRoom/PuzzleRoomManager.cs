@@ -57,10 +57,10 @@ public class PuzzleRoomManager : RoomManager {
         yield return StartCoroutine(SpawnEnemies());
     }
 
-    public override void OnRoomEnter()
+    /*public override void OnRoomEnter()
     {
-
-    }
+        
+    }*/
 
     public override void OnRoomExit()
     {

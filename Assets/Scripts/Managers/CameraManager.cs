@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.GameState;
+using UnityEngine;
 using System.Collections;
 
 //This should probably exist separate from the player and get spawned in by bootstrapped
@@ -17,6 +18,19 @@ public class CameraManager : Singleton<CameraManager>
         _mainCamera = Camera.main;
         _transitionCamera = GetComponentInChildren<Camera>();
         StartCoroutine(DoWipeIn(1f));
+    }
+
+    //TODO: Put this logic in the level itself, the camera manager shouldn't care
+    void OnLevelWasLoaded(int level)
+    {
+        if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3)
+        {
+            _mainCamera.enabled = false;
+        }
+        else
+        {
+            _mainCamera.enabled = true;
+        }
     }
 
     public IEnumerator DoWipeIn(float time)

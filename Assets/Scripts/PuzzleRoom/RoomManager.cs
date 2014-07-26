@@ -29,7 +29,7 @@ public class RoomManager : MonoBehaviourBase
 
     public virtual void OnRoomEnter()
     {
-
+        MusicManager.Instance.TransitionSongs(RoomIndex >= _workflow.SongIndex ? 1 : 0);
     }
 
     public virtual void OnRoomExit()

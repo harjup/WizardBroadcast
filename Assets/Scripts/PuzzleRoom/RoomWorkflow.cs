@@ -13,6 +13,9 @@ public class RoomWorkflow : MonoBehaviourBase
 
     public bool ReverseRooms = false;
 
+    //Only for Mountain town I dunno
+    public int SongIndex;
+
     [SerializeField]
     private int currentRoomIndex = 0;
 
