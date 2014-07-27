@@ -39,7 +39,7 @@ namespace Assets.Scripts.Portals
             if (currentScene == scene
                 && state == State.InActive)
             {
-                StartCoroutine(LeaveLevelTransition());
+                StartCoroutine(LeaveLevelTransition("has left"));
             }
         }
 
@@ -47,13 +47,18 @@ namespace Assets.Scripts.Portals
         {
             if (other.GetComponent<InfoPlayer>() != null && isActive)
             {
-                StartCoroutine(LeaveLevelTransition());
+                StartCoroutine(LeaveLevelTransition("completed"));
             }
         }
 
 
-        IEnumerator LeaveLevelTransition()
+        IEnumerator LeaveLevelTransition(string leaveText)
         {
+            SignalrEndpoint.Instance.Broadcast(GuiManager.Instance.PlayerNameInput 
+                + " " + leaveText + " "  
+                + SceneMap.DescriptiveName(SceneMap.GetSceneFromStringName(Application.loadedLevelName)) 
+                + "!");
+
             InputManager.Instance.PlayerInputEnabled = false;
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);

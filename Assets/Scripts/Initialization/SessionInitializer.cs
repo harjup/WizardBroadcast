@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
+using Assets.Scripts.Player;
 using UnityEngine;
 
 namespace Assets.Scripts.Initialization
@@ -18,6 +19,11 @@ namespace Assets.Scripts.Initialization
         {
             StartCoroutine(WaitForScheduleTrackerToInitialize());
             //CameraManager.Instance.SetMainCamera(_startCamera);
+
+            if (FindObjectOfType<InfoPlayer>() != null)
+            {
+                FindObjectOfType<InfoPlayer>().gameObject.SetActive(false);
+            }
         }
 
         public IEnumerator WaitForScheduleTrackerToInitialize()
@@ -45,8 +51,9 @@ namespace Assets.Scripts.Initialization
                 ScheduleTracker.levelActivated += OnLevelActivate;
                 return;
             }
-            var activeSceneName = SceneMap.GetScene(activeScene);
-            Application.LoadLevel(activeSceneName);
+            //var activeSceneName = SceneMap.GetScene(activeScene);
+            //Application.LoadLevel(activeSceneName);
+            StartCoroutine(StartGameTransition());
         }
 
         void OnLevelActivate(Scene scene, State state)
@@ -59,6 +66,11 @@ namespace Assets.Scripts.Initialization
 
         private IEnumerator StartGameTransition()
         {
+            if (FindObjectOfType<InfoPlayer>() != null)
+            {
+                FindObjectOfType<InfoPlayer>().gameObject.SetActive(false);
+            }
+
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);
             StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
