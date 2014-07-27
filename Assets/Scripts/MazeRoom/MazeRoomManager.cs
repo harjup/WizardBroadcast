@@ -33,6 +33,9 @@ public class MazeRoomManager : RoomManager
         }
 
         _roomCamera = GetComponentInChildren<MazeCamera>();
+
+
+
         _exitSet = GetComponentInChildren<MazeExitSet>();
     }
     public override void OnRoomEnter()
@@ -54,6 +57,11 @@ public class MazeRoomManager : RoomManager
         if (_exitSet != null) _exitSet.InitExitSet();
         if (_roomCamera != null) _roomCamera.Enabled = true;
 
+        if (RoomIndex == 6)
+        {
+            CameraManager.Instance.GetPlayerCamera().enabled = true;
+        }
+
         //Lame, StopCoroutine only works with strings
         StopCoroutine("SpawnHelpingHand");
         if (RoomIndex > 0 && RoomIndex < 7 //Spawn a helping hand on indexes 1-6
@@ -65,6 +73,12 @@ public class MazeRoomManager : RoomManager
     public override void OnRoomExit()
     {
         if (_roomCamera != null) _roomCamera.Enabled = false;
+
+        if (RoomIndex == 6)
+        {
+            CameraManager.Instance.GetPlayerCamera().enabled = false;
+        }
+
         StopCoroutine("SpawnHelpingHand");
     }
 
