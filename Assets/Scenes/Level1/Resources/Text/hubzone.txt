@@ -7,5 +7,37 @@
 				"text" : "WELCOME TO CHANNEL BETA PLEASE ALERT US TO ANY PROBLEM."
 			}
 		]
+	},
+	{
+		"id":  "F1Wiz01",
+		"name" : "Blippy Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I make the beeps and boops."
+			}
+		]
+	},
+	{
+		"id":  "F1Wiz02",
+		"name" : "Tired Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Hello and welcome to the sound zone.
+				 If you experience any problems with noises such I am so very, truely sorry. 
+				 I'm really trying my best."
+			}
+		]
+	},
+	{
+		"id":  "F1Wiz03",
+		"name" : "Quiet Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "..."
+			}
+		]
 	}
 ]

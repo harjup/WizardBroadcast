@@ -12,15 +12,19 @@ public class HubStateManager : MonoBehaviour
 
     void Start()
     {
-        ScheduleTracker.levelActivated += OnLevelActivate;
+        StartCoroutine(Startup());
+    }
 
-        //Check and set the current state for the Level Portal. There will not be transitions for this one because it's when the scene loads up.
-        var state = SessionStateStore.GetSceneState(_scene);
-
-        if (TimeTracker.Instance.IsInitialized())
+    IEnumerator Startup()
+    {
+        yield return new WaitForSeconds(1f);
+        while (!TimeTracker.Instance.IsInitialized())
         {
+            var state = SessionStateStore.GetSceneState(_scene);
             OnLevelActivate(_scene, state);
         }
+
+        ScheduleTracker.levelActivated += OnLevelActivate;
     }
 
     //Runs when the next scene is loaded, game exited, object destroyed, etc

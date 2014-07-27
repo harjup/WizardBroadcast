@@ -21,6 +21,7 @@ public class SquishEnemy : MonoBehaviourBase
         var volume = other.GetComponent<DeathVolume>();
         if (volume != null)
         {
+            
             Debug.Log(other.name);
             _isSquished = true;
             GetComponentInParent<PuzzleRoomManager>().UpdateRoomCompletion();
