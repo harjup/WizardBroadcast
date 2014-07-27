@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.GameState;
 using Assets.Scripts.Pocos;
 using UnityEngine;
 using WizardBroadcast;
@@ -16,6 +17,16 @@ namespace Assets.Scripts.Managers
 
         private static void OnLevelActivated(Scene targetscene, State targetState)
         {
+            if (targetscene != Scene.Hub
+                && targetscene != Scene.Start)
+            {
+                NotificationTextDisplay.Instance.ShowNotification(
+                    "The " + SceneMap.DescriptiveName(targetscene) 
+                    + " is now " 
+                    + SessionStateStore.DescriptiveStateName[targetState] 
+                    );
+            }
+            
             SessionStateStore.SetSceneState(targetscene, targetState);
             ActivateLevel handler = levelActivated;
             if (handler != null) handler(targetscene, targetState);
@@ -25,11 +36,11 @@ namespace Assets.Scripts.Managers
         //These ScheduledEvents will probably be stored somewhere else eventually
         public List<LevelEvent> Schedule = new List<LevelEvent>()
         {
-            new LevelEvent(0f, Scene.Hub, State.Active),
-            new LevelEvent(0f, Scene.Level1, State.Active),
-            new LevelEvent(0f, Scene.Level2, State.Active),
-            new LevelEvent(0f, Scene.Level3, State.Active),
-            new LevelEvent(0f, Scene.Level4, State.Active)
+            //new LevelEvent(0f, Scene.Hub, State.Active),
+            //new LevelEvent(1f, Scene.Level1, State.Active),
+            new LevelEvent(06f, Scene.Level2, State.Active),
+            //new LevelEvent(0f, Scene.Level3, State.Active),
+            //new LevelEvent(0f, Scene.Level4, State.Active)
             /*new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),
             new LevelEvent(8f, Scene.Level1, State.InActive),
@@ -74,6 +85,18 @@ namespace Assets.Scripts.Managers
                 {
                     OnLevelActivated(scheduledEvent.Target, scheduledEvent.TargetState);
                     scheduledEvent.Fired = true;
+                }
+
+                if (scheduledEvent.WillFireSoon())
+                {
+                    NotificationTextDisplay.Instance.ShowNotification(
+                   "The " + SceneMap.DescriptiveName(scheduledEvent.Target)
+                   + " will be "
+                   + SessionStateStore.DescriptiveStateName[scheduledEvent.TargetState]
+                   + " in 1 minute!"
+                   );
+
+                    scheduledEvent.ReminderFired = true;
                 }
             }
         }

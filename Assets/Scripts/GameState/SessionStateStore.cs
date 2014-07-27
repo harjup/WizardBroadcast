@@ -28,7 +28,13 @@ namespace Assets.Scripts.Managers
             {Scene.Level3, State.InActive},
             {Scene.Level4, State.InActive}
         };
-
+        
+        public static readonly  Dictionary<State, string> DescriptiveStateName = new Dictionary<State, string>()
+        {
+            {State.Undefined, "undefined"},
+            {State.InActive, "off the air"},
+            {State.Active, "airing"}
+        }; 
 
         public static bool IsScheduleTrackerInitialized()
         {

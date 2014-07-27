@@ -9,7 +9,7 @@ public class NotificationTextDisplay : Singleton<NotificationTextDisplay>
     {
         var notification = new Notification(message);
         var yPos = Screen.height * (2f/3f);
-        yPos -= (Screen.height * (1f / 3f)) / Random.Range(1, 12);
+        yPos -= (Screen.height * (1f / 3f)) / Random.Range(1f, 12f);
         notification.Position = new Vector2(Screen.width + 16, yPos);
         messages.Add(notification);
     }

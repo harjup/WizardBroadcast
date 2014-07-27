@@ -37,7 +37,19 @@ namespace Assets.Scripts.Pocos
         public readonly State TargetState;
 
         public bool Fired;
+        public bool ReminderFired;
         private static float _elapsedMinutes;
+
+        public float TimeRemaining
+        {
+            get { return TargetTime - TimeTracker.Instance.GetSessionTime(); }
+        }
+
+        public bool WillFireSoon()
+        {
+            return (!ReminderFired && TimeRemaining <= 1f && TimeRemaining > 0f);
+        }
+
 
         public bool IsActive()
         {

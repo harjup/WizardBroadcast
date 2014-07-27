@@ -29,6 +29,22 @@ namespace Assets.Scripts.GameState
             {Scene.Level4,  "DistressDesert"}
         };
 
+        private static readonly Dictionary<Scene, string> DescriptiveNameMap = new Dictionary<Scene, string>()
+        {
+            {Scene.Start,   "Start"},
+            {Scene.Hub,     "HubZone"},
+            {Scene.Level1,  "Sha'debo'rouge For'est"},
+            {Scene.Level2,  "Mountain of Wisdom"},
+            {Scene.Level3,  "Maze of Mystery"},
+            {Scene.Level4,  "Distress Desert"}
+        };
+
+
+        public static string DescriptiveName(Scene scene)
+        {
+            return DescriptiveNameMap[scene];
+        }
+
 
         public static string GetScene(Scene scene)
         {
