@@ -47,14 +47,14 @@ public class PuzzleRoomManager : RoomManager {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        /*if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(RoomInit());
-        }
+        }*/
     }
 
 
-    IEnumerator RoomInit()
+    public IEnumerator RoomInit()
     {
         yield return StartCoroutine(SpawnBlocks());
         yield return StartCoroutine(SpawnEnemies());

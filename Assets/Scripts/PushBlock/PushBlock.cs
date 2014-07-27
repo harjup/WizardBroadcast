@@ -45,15 +45,46 @@ public class PushBlock : MonoBehaviourBase
 
         RaycastHit[] hits;
         hits = Physics.RaycastAll(transform.position, pushDirection, 100);
+        var nearestHit = new RaycastHit();
+        var hitFound = false;
+        float nearestHitDistance = 100f;
         foreach (var raycastHit in hits)
         {
-            //There should probably only be the one wall found
-            if (raycastHit.collider.GetComponent<BlockStopper>() != null 
+            if (raycastHit.collider.GetComponent<BlockStopper>() != null
                 || raycastHit.collider.GetComponent<PushBlock>() != null)
             {
                 var edgePosition = (transform.position + ((transform.localScale / 2f) * pushDirection.Sign()));
-                var pointDifference =  edgePosition - (raycastHit.point);
-                
+                var pointDifference = edgePosition - (raycastHit.point);
+                var hitDistance = Vector3.Scale(pointDifference, pushDirection).magnitude;
+
+                if (nearestHit.collider == null) //I dunno what the default on a fresh raycasthit is but hopefully there are nulls in there
+                {
+                    nearestHit = raycastHit;
+                    nearestHitDistance = hitDistance;
+                    hitFound = true;
+                    continue;
+                }
+
+                if (hitDistance < nearestHitDistance)
+                {
+                    nearestHit = raycastHit;
+                    nearestHitDistance = hitDistance;
+                    hitFound = true;
+                }
+            }
+
+        }
+
+        if (hitFound)
+        {
+            var raycastHit = nearestHit;
+            //There should probably only be the one wall found
+            if (raycastHit.collider.GetComponent<BlockStopper>() != null
+                || raycastHit.collider.GetComponent<PushBlock>() != null)
+            {
+                var edgePosition = (transform.position + ((transform.localScale / 2f) * pushDirection.Sign()));
+                var pointDifference = edgePosition - (raycastHit.point);
+
                 var differenceMagnitude = Vector3.Scale(pointDifference, pushDirection).magnitude;
 
 
@@ -61,7 +92,7 @@ public class PushBlock : MonoBehaviourBase
                     //It is being pushed forward and is very close to a wall
                     (differenceMagnitude < .01 && InputManager.Instance.RawVerticalAxis > 0)
                     //It is being pulled back and the player is too close to the wall behind them
-                    || (differenceMagnitude < (StandardPushDistance*1.5f) && InputManager.Instance.RawVerticalAxis < 0)
+                    || (differenceMagnitude < (StandardPushDistance * 1.5f) && InputManager.Instance.RawVerticalAxis < 0)
                     //The player is trying to pull a slippery block
                     || (InputManager.Instance.RawVerticalAxis < 0 && isSlippery))
                 {
@@ -74,15 +105,17 @@ public class PushBlock : MonoBehaviourBase
 
                 if (//Move the block to touch the wall in front of them if...
                     //They being pushed forward and are less than the current push distance away 
-                    (differenceMagnitude < pushDistance && InputManager.Instance.RawVerticalAxis > 0) 
+                    (differenceMagnitude < pushDistance && InputManager.Instance.RawVerticalAxis > 0)
                     //The block is slippery
                     || isSlippery)
                 {
                     pushDistance = differenceMagnitude;
                 }
             }
-            
         }
+           
+            
+        
 
         var pushAmount = pushDirection * pushDistance;// * InputManager.Instance.RawVerticalAxis;
         iTween.MoveTo(_tweenTarget, iTween.Hash(
