@@ -4356,7 +4356,7 @@ Transform:
   m_Children:
   - {fileID: 6190915}
   m_Father: {fileID: 1087103811}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &647857178
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,7 +5075,7 @@ Transform:
   m_Children:
   - {fileID: 121975793}
   m_Father: {fileID: 1087103811}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!95 &768946127
 Animator:
   serializedVersion: 3
@@ -7125,11 +7125,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1795882299}
   - {fileID: 1520127096}
   - {fileID: 1504488527}
   - {fileID: 642400761}
   - {fileID: 768946126}
-  - {fileID: 1795882299}
   m_Father: {fileID: 2057713485}
   m_RootOrder: 2
 --- !u!1 &1094757912
@@ -7829,10 +7829,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1629844665}
-  - {fileID: 1524972052}
   - {fileID: 1681636461}
   - {fileID: 1286836765}
+  - {fileID: 1629844665}
+  - {fileID: 1524972052}
   m_Father: {fileID: 2057713485}
   m_RootOrder: 0
 --- !u!1 &1243930015
@@ -8167,7 +8167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1243407591}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!23 &1286836766
 Renderer:
   m_ObjectHideFlags: 0
@@ -9687,7 +9687,7 @@ Transform:
   m_Children:
   - {fileID: 1170582051}
   m_Father: {fileID: 1087103811}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!95 &1504488528
 Animator:
   serializedVersion: 3
@@ -9896,7 +9896,7 @@ Transform:
   m_Children:
   - {fileID: 1961872202}
   m_Father: {fileID: 1087103811}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!95 &1520127097
 Animator:
   serializedVersion: 3
@@ -9942,7 +9942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1243407591}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!23 &1524972053
 Renderer:
   m_ObjectHideFlags: 0
@@ -10764,7 +10764,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1243407591}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!23 &1629844666
 Renderer:
   m_ObjectHideFlags: 0
@@ -11478,7 +11478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1243407591}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!23 &1681636462
 Renderer:
   m_ObjectHideFlags: 0
@@ -12117,7 +12117,7 @@ Transform:
   m_Children:
   - {fileID: 1630172111}
   m_Father: {fileID: 1087103811}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!95 &1795882300
 Animator:
   serializedVersion: 3

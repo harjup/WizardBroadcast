@@ -38,6 +38,11 @@ public class PushBlock : MonoBehaviourBase
     public IEnumerator PushAction(Vector3 pushDirection, Action<bool> callback)
     {
         iTween.EaseType easeType = isSlippery ? iTween.EaseType.easeInOutExpo : iTween.EaseType.linear;
+
+        SoundManager.SoundEffect pushSoundEffect = isSlippery
+            ? SoundManager.SoundEffect.BlockMoveIce
+            : SoundManager.SoundEffect.BlockMoveStone1;
+
         bool disengagePlayer = isSlippery;
         pushDirection *= InputManager.Instance.RawVerticalAxis;
         var pushDistance = StandardPushDistance;
@@ -118,11 +123,15 @@ public class PushBlock : MonoBehaviourBase
         
 
         var pushAmount = pushDirection * pushDistance;// * InputManager.Instance.RawVerticalAxis;
+        SoundManager.Instance.Play(pushSoundEffect);
         iTween.MoveTo(_tweenTarget, iTween.Hash(
             "position", (transform.position + pushAmount),
             "time", .5f,
             "easetype", easeType));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
+        SoundManager.Instance.Stop(pushSoundEffect);
+        SoundManager.Instance.Play(SoundManager.SoundEffect.BlockMoveStop);
+        yield return new WaitForSeconds(0.1f);
 
         yield return StartCoroutine(ApplyGravity((fellDown) => { disengagePlayer = fellDown; }));
 
@@ -171,6 +180,7 @@ public class PushBlock : MonoBehaviourBase
             "time", .5f,
             "easetype", iTween.EaseType.easeInBack));
             yield return new WaitForSeconds(0.6f);
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BlockMoveStop);
             callback(true);
             yield break;
         }

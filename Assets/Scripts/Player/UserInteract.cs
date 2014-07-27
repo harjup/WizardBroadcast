@@ -154,7 +154,7 @@ namespace Assets.Scripts.Player
                         StartCoroutine(GetComponent<PlayerAnimate>().GetMessedUp());
                     }));
                 }
-                //Pretty really bad right here
+                //Pretty really bad && specific right here
                 //I want to go back to the hub is a hand gets the player at the last room in lvl3
                 else if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3 
                     && FindObjectOfType<RoomWorkflow>().CurrentRoom.RoomIndex == 0

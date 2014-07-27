@@ -90,6 +90,9 @@ namespace Assets.Scripts.Player
             _isMessedUpRunning = true;
 
             InputManager.Instance.PlayerInputEnabled = false;
+
+            SoundManager.Instance.Play(SoundManager.SoundEffect.HurtNoise);
+
             iTween.RotateTo(gameObject, iTween.Hash("rotation", new Vector3(90f, 0f, 0f), "time", 1f, "easetype", iTween.EaseType.easeOutBounce));
             yield return new WaitForSeconds(.5f);
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(1f));

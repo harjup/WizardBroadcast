@@ -54,10 +54,12 @@ namespace Assets.Scripts.Portals
 
         IEnumerator LeaveLevelTransition()
         {
+            InputManager.Instance.PlayerInputEnabled = false;
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);
             StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
             Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
+            InputManager.Instance.PlayerInputEnabled = true;
         }
 
     }

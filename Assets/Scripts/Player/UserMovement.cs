@@ -111,6 +111,26 @@ namespace WizardBroadcast
                                         .SetX(velocity.x)
                                         .SetY(inAir ? -20f: 0f)
                                         .SetZ(velocity.z);
+
+            UpdateWalkSounds();
+        }
+
+        public void UpdateWalkSounds()
+        {
+            if (rigidBody.velocity.SetY(0f).magnitude > .1f)
+            {
+                if (!SoundManager.Instance.IsPlaying(SoundManager.SoundEffect.Walk))
+                {
+                    SoundManager.Instance.Play(SoundManager.SoundEffect.Walk, true);
+                }
+            }
+            else
+            {
+                if (SoundManager.Instance.IsPlaying(SoundManager.SoundEffect.Walk))
+                {
+                    SoundManager.Instance.Stop(SoundManager.SoundEffect.Walk);
+                }
+            }
         }
 
         public bool AirState
@@ -126,6 +146,7 @@ namespace WizardBroadcast
             if (Math.Abs(InputManager.Instance.RawVerticalAxis) < .001) return;
 
             pushing = true;
+            SoundManager.Instance.Play(SoundManager.SoundEffect.EffortNoise);
             StartCoroutine(_pushPoint.GetPushBlock().PushAction(pushDirection,
                 (disengage) =>
                 {
@@ -142,6 +163,8 @@ namespace WizardBroadcast
         public IEnumerator EngageBlock(PushableBase block, Action doneAction)
         {
             _pushPoint = block;
+
+            SoundManager.Instance.Stop(SoundManager.SoundEffect.Walk);
             //Get push direction for block (+/-X or +/-Z)
             //pushDirection = block.transform.forward;
             //Orient player toward block
@@ -171,6 +194,7 @@ namespace WizardBroadcast
             //block.GetParent().parent = null;
             transform.parent = null;
             transform.position -= pushDirection * 1f;
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BlockDisengage);
             //Enable walking movement
             _blockEngaged = false;
             doneAction();
@@ -259,6 +283,7 @@ namespace WizardBroadcast
         {
             collider.enabled = false;
 
+            SoundManager.Instance.Play(SoundManager.SoundEffect.EffortNoise);
             iTween.MoveTo(gameObject,
                 target.SetY(target.y + 2.5f),
                 .4f);

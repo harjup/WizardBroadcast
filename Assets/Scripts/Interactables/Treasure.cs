@@ -64,6 +64,8 @@ namespace Assets.Scripts.Interactables
         IEnumerator Despawn()
         {
             //Play animation
+            //Need better sound for this
+            //if (Type == TreasureType.Large || Type == TreasureType.Medium) SoundManager.Instance.Play(SoundManager.SoundEffect.FanFare);
             //Make a particle effect
             //When it's done kill the object
             Destroy(this.gameObject);

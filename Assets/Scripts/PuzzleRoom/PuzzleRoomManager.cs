@@ -102,23 +102,21 @@ public class PuzzleRoomManager : RoomManager {
             break;
         }
 
-        if (roomComplete)
+        if (!roomComplete) return;
+
+        if (_spawnedEnemies.Count != 0)
         {
-            if (_spawnedEnemies.Count != 0)
+            var roomText =
+                DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "02");
+            if (roomText != null)
             {
-                var roomText =
-                    DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "02");
-                if (roomText != null)
-                {
-                    StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
-                }
+                StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
             }
-            //Activate door
-            ActivateExit();
+
+            SoundManager.Instance.Play(SoundManager.SoundEffect.FanFare);
             Debug.Log("Room Complete!!!");
-            return;
         }
-        Debug.Log("Room Not Compelte");
+        ActivateExit();
     }
 
     IEnumerator SpawnEnemies()
