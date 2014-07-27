@@ -9,12 +9,72 @@
 		]
 	},
 	{
+		"id":  "ForestWiz",
+		"name": "Fantasy Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I wanted to create a rich and vast world with fantastical creatures and adventures.
+				The budget department said I could only make a rich world, so I took that!
+				I hope you enjoy all the long and detailed backstory in this adventure.
+				There are treasures you can find if you really look, but if anything that's tertiary to the story."
+			}
+		]
+	},
+	{
+		"id":  "MountainWiz",
+		"name": "Intelligent Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "My adventure is about the struggle between intelligence and brawn.
+				I hope some of the content hits home with you and some of your own experiences.
+				If it hits home a little too closely, then I'll have succeeded."
+			}
+		]
+	},
+	{
+		"id":  "MazeWiz",
+		"name" : "Artistic Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I will show the world that adventures can be art too!
+				Some Wizards think that's a load, but I can assure you that I have packed lots of symbolism and thought-provoking messages in this adventure."
+			}
+		]
+	},
+	{
+		"id":  "DesertWiz",
+		"name" : "Nervous Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Uh... my adventure is having some technical problems...			
+				I'm sorry, but it's not currently scheduled for airing at this point.
+				There are so many people over there..."
+			}
+		]
+	},
+	{
+		"id":  "BuilderWiz",
+		"name" : "Construction Wizards",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Sorry, this adventure is having some technical problems.
+				These runes are so messed up, who the heck assembled this??
+				This is going to take a while. Please go enjoy the other adventures."
+			}
+		]
+	},
+	{
 		"id":  "F1Wiz01",
 		"name" : "Blippy Wizard",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I make the beeps and boops."
+				"text" : "I make the blips and bloopss."
 			}
 		]
 	},
@@ -37,6 +97,109 @@
 			{
 				"id":  "01",
 				"text" : "..."
+			}
+		]
+	},
+	{
+		"id":  "F2Wiz01",
+		"name" : "Effect Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "We were going to have the camera be more reacitve to what you do, but the camera wizard keeps falling asleep.
+				Once you poke him he'll orient behind you, but then he just falls alseep again..."
+			}
+		]
+	},
+	{
+		"id":  "F2Wiz02",
+		"name" : "Asset Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Ugh, that fantasy wizard constantly saps our budget.
+				He just couldn't live without centaurs and trolls. Do you know how much they bill?? It's a lot. 
+				They always want weird specific things like gluten-free oats too.
+				I hope having those lean-to placeholders doesn't ruin your <i>immersion</i> too much."
+			}
+		]
+	},
+	{
+		"id":  "F2Wiz03",
+		"name" : "iTween Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "People come to me when they can't find any animator wizards. 
+				I'm always here to help, even if my spells are more simplistic."
+			}
+		]
+	},
+	{
+		"id":  "F3Wiz01",
+		"name" : "Coffee Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I dunno."
+			}
+		]
+	},
+	{
+		"id":  "F3Wiz02",
+		"name" : "Writer Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I dunno."
+			}
+		]
+	},
+	{
+		"id":  "F3Wiz03",
+		"name" : "Donut Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I dunno."
+			}
+		]
+	},
+	{
+		"id":  "F4Wiz01",
+		"name" : "Broadcast Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I help channel the adventures. It takes a lot of energy.
+				So much energy that we need to go off air often for breaks. 
+				So everybody can have a power nap."
+			}
+		]
+	},
+	{
+		"id":  "F4Wiz02",
+		"name" : "Network Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "It takes a lot of magic to send these adventures out of the tower.
+				That's why we need so many wizards around here.
+				These consoles? Well, they uh... they channel our magic into radio signals.
+				I can assure you that this is a magic thing and not a science thing ok?"
+			}
+		]
+	},
+	{
+		"id":  "F4Wiz03",
+		"name" : "SignalR Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Are you enjoying those ghosts that look like you floating around?
+				They're adventurers who are also tuning in!
+				Or maybe you haven't seen any. 
+				We're not particularly popular..."
 			}
 		]
 	}
