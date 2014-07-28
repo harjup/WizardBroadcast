@@ -95,7 +95,7 @@ public class PushBlock : MonoBehaviourBase
 
                 if (//The block should not move if:
                     //It is being pushed forward and is very close to a wall
-                    (differenceMagnitude < .01 && InputManager.Instance.RawVerticalAxis > 0)
+                    (differenceMagnitude < .05 && InputManager.Instance.RawVerticalAxis > 0)
                     //It is being pulled back and the player is too close to the wall behind them
                     || (differenceMagnitude < (StandardPushDistance * 1.5f) && InputManager.Instance.RawVerticalAxis < 0)
                     //The player is trying to pull a slippery block
