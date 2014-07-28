@@ -19,28 +19,29 @@ namespace Assets.Scripts.Managers
 
         void Start()
         {
-            Init();
+            if (_treasureTotals == null)
+            {
+                Init();
+            }
         }
         void OnLevelWasLoaded(int level)
         {
-            Init();
+            if (_treasureTotals == null)
+            {
+                Init();
+            }
         }
 
-        void Init()
+        public void Init()
         {
-            //reset persisted progress if we're in start
-            if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Start 
-                || _treasureTotals == null)
-            {
-                _treasureTotals =
-                    new Dictionary<Scene, Dictionary<TreasureType, int>>()
-                    {
-                        {Scene.Level1,  new  Dictionary<TreasureType, int>()},
-                        {Scene.Level2,  new  Dictionary<TreasureType, int>()},
-                        {Scene.Level3,  new  Dictionary<TreasureType, int>()},
-                        {Scene.Level4,  new  Dictionary<TreasureType, int>()}
-                    };
-            }
+            _treasureTotals =
+                new Dictionary<Scene, Dictionary<TreasureType, int>>()
+                {
+                    {Scene.Level1,  new  Dictionary<TreasureType, int>()},
+                    {Scene.Level2,  new  Dictionary<TreasureType, int>()},
+                    {Scene.Level3,  new  Dictionary<TreasureType, int>()},
+                    {Scene.Level4,  new  Dictionary<TreasureType, int>()}
+                };
         }
 
         public void AddTreasure(TreasureType treasure)
@@ -77,5 +78,36 @@ namespace Assets.Scripts.Managers
         }
 
 
+        public int GetGrandTotal()
+        {
+            if (_treasureTotals == null) return 0;
+
+            int sum = 0;
+            foreach (var levelTotal in _treasureTotals)
+            {
+                int sum1 = 0;
+                foreach (var treasureTotal in levelTotal.Value)
+                {
+                    int multiplier;
+                    switch (treasureTotal.Key)
+                    {
+                        case TreasureType.Little:
+                            multiplier = 1;
+                            break;
+                        case TreasureType.Medium:
+                            multiplier = 2;
+                            break;
+                        case TreasureType.Large:
+                            multiplier = 3;
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                    sum1 += treasureTotal.Value * multiplier;
+                }
+                sum += sum1;
+            }
+            return sum;
+        }
     }
 }

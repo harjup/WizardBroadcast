@@ -71,6 +71,7 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
 
+    /*
     void OnGUI()
     {
         if (GUI.Button(new Rect(16, Screen.height - (16 + 32), 96,32), "Fart"))
@@ -87,4 +88,6 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         }
         GUI.Label(new Rect(16, Screen.height - (16 + 96), 96, 32), "My id is " + SessionStateStore.PlayerId);
     }
+    */
+
 }

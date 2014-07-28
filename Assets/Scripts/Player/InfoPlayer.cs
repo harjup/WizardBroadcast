@@ -4,6 +4,7 @@ using Assets.Scripts.Interactables;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Portals;
 using UnityEngine;
+using WizardBroadcast;
 
 namespace Assets.Scripts.Player
 {
@@ -33,9 +34,9 @@ namespace Assets.Scripts.Player
 
         void OnLevelWasLoaded(int level)
         {
+            GhostPositionUpdate();
             if (Application.loadedLevelName != SceneMap.GetScene(Scene.Start))
             {
-                GhostPositionUpdate();
                 MoveToStartPosition();
             }
         }

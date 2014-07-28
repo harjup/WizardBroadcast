@@ -4,7 +4,11 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "WELCOME TO CHANNEL BETA PLEASE ALERT US TO ANY PROBLEM."
+				"text" : "Hi, and welcome to the beta test run for our Adventure Broadcast System!
+				Please feel free to explore the currently airing adventure. If there isn't one right now, the next one should start shortly.
+				To pass the time you can enter the broadcast tower behind me, or maybe chat with the other magical souls around here.
+				You can also leave comments if you'd like, by clicking the comment button!
+				They will be visible to other adventurers, so please don't use any naughty language, ok?"
 			}
 		]
 	},
