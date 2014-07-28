@@ -156,10 +156,16 @@ namespace Assets.Scripts.Player
                 }
                 //Pretty really bad && specific right here
                 //I want to go back to the hub is a hand gets the player at the last room in lvl3
+                //TODO: Put this somewhere appropriate
                 else if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Level3 
                     && FindObjectOfType<RoomWorkflow>().CurrentRoom.RoomIndex == 0
                     && FindObjectOfType<RoomWorkflow>().ReverseRooms)
                 {
+                    SignalrEndpoint.Instance.Broadcast(GuiManager.Instance.PlayerNameInput
+                    + " was helped out of "
+                    + SceneMap.DescriptiveName(SceneMap.GetSceneFromStringName(Application.loadedLevelName))
+                    + "...");
+
                     Application.LoadLevel(SceneMap.GetScene(Scene.Hub));
                 }
                 else
