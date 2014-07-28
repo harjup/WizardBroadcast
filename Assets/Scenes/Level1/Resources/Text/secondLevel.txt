@@ -82,6 +82,7 @@
 	},
 	{
 		"id":  "Taunt05",
+		"name" : "The Stealos",
 		"content": [
 			{
 				"id":  "01",
@@ -113,11 +114,39 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "we threw all your robes on the roof. Have fun getting them down ya nerd!"
+				"text" : "We threw all your robes on the roof. Have fun getting them down ya nerd!"
 			},
 			{
 				"id":  "02",
 				"text" : "If only we grew up on the right side of the wizard tracks..."
+			}
+		]
+	},
+	{
+		"id":  "Taunt08",
+		"name" : "Slipery Sams",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Try not to die when we push you down the stairs!!"
+			},
+			{
+				"id":  "02",
+				"text": "If only we were cool and smart like you!!!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt09",
+		"name" : "Smokees",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Haha, we're gonna get in a circle and push you around!!"
+			},
+			{
+				"id":  "02",
+				"text": "We should have been pushing books instead of pushing drugs..."
 			}
 		]
 	}
