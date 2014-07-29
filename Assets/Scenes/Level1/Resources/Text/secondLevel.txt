@@ -1,11 +1,15 @@
 [
 	{
-		"id":  "BlockInstruction",
+		"id":  "StartSign",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Please do not break anything thank you.
-				'I really do thank you, yes sir.'"
+				"text" : "Hello, and welcome to the Mountains of Wisdom.
+				Here, you'll have to use wits instead of brawn to defeat your enemeies.
+				If you find any boxxy kinds of objects, approach them and press the 'Interaction Button' to enter 'push mode'.
+				While in 'push mode', you can move forward and backward to push and pull the block in the direction you'd like.
+				When you are done pushing a box in a given direciton, press the 'Interaction button' again to stop pushing it.
+				You can also climb surfaces by pressing the climb button."
 			}
 		]
 	},
@@ -14,7 +18,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "You found the end of the level! Wow, how amazing! You sure showed those BIG BULLIES who really is smart, you!"
+				"text" : "You found the end of the level! Wow, how amazing! 
+				You sure showed those guys who is smart, you!
+				It just goes to show, wits and intellect will win over brute force every time."
 			}
 		]
 	},
@@ -24,7 +30,21 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+				"text" : "Haha, look at this weirdo! I be he couldn't even squish me if he tried!"
+			},
+			{
+				"id":  "02",
+				"text" : "No, my one weakness! Being crushed to death!!!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt02",
+		"name" : "Sharp Shredder",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Hey chucklehead, come over here and give me all your wizcoins!"
 			},
 			{
 				"id":  "02",
@@ -33,80 +53,100 @@
 		]
 	},
 	{
-		"id":  "Taunt02",
-		"content": [
-			{
-				"id":  "01",
-				"text" : "Wow, waht a dumb idiot, butt head runm!"
-			},
-			{
-				"id":  "02",
-				"text" : "splat"
-			}
-		]
-	},
-	{
 		"id":  "Taunt03",
+		"name" : "Bowl Bros",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I'm gonna give you ten swirlies!!!!"
+				"text" : "We're gonna give you ten swirlies in a row!"
 			},
 			{
 				"id":  "02",
-				"text" : "Now the toilet is on the other foot"
+				"text" : "Nooo, you're too smart and successful!!"
 			}
 		]
 	},
 	{
 		"id":  "Taunt04",
+		"name" : "Rogert and Buntface",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Hellp please crush me I enjpy it!"
+				"text" : "You think you can get past us? Not before we break your glasses!"
 			},
 			{
-				"id":  "01",
-				"text" : "I ran out of ones I wanna type!"
+				"id":  "02",
+				"text" : "We should have gone to wizard college..."
 			}
 		]
 	},
 	{
 		"id":  "Taunt05",
+		"name" : "The Stealos",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "ARRRGGG!!!!"
+				"text" : "Nice wand, mind if we take it?"
 			},
 			{
 				"id":  "02",
-				"text" : "I ran out of ones I wanna type!"
+				"text" : "Argh!! We should have been studying instead of stealing!"
 			}
 		]
 	},
 	{
 		"id":  "Taunt06",
+		"name" : "Runt and Munt",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Wow, waht a dumb idiot, I bet he can't even cast a decent spell!"
+				"text" : "We're gonna take all your runes and spit on them!"
 			},
 			{
 				"id":  "02",
-				"text" : "I ran out of ones I wanna type!"
+				"text" : "Ack, brain wins over brawn again..."
 			}
 		]
 	},
 	{
 		"id":  "Taunt07",
+		"name" : "Cloth Killers",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Butts and chutts!"
+				"text" : "We threw all your robes on the roof. Have fun getting them down ya nerd!"
 			},
 			{
 				"id":  "02",
-				"text" : "I ran out of ones I wanna type!"
+				"text" : "If only we grew up on the right side of the wizard tracks..."
+			}
+		]
+	},
+	{
+		"id":  "Taunt08",
+		"name" : "Slipery Sams",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Try not to die when we push you down the stairs!!"
+			},
+			{
+				"id":  "02",
+				"text": "If only we were cool and smart like you!!!"
+			}
+		]
+	},
+	{
+		"id":  "Taunt09",
+		"name" : "Smokees",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Haha, we're gonna get in a circle and push you around!!"
+			},
+			{
+				"id":  "02",
+				"text": "We should have been pushing books instead of pushing drugs..."
 			}
 		]
 	}
