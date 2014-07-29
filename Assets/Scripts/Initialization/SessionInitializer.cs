@@ -24,6 +24,8 @@ namespace Assets.Scripts.Initialization
             {
                 FindObjectOfType<InfoPlayer>().gameObject.SetActive(false);
             }
+
+            EventFlagStore.ClearFlags();
         }
 
         public IEnumerator WaitForScheduleTrackerToInitialize()

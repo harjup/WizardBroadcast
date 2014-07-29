@@ -27,10 +27,36 @@
 	},
 	{
 		"id":  "01GrottoGuy",
+		"name": "Some Centaur",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "See that pile of leaves over there, I bet if you jumped on it really hard you might fall into a magical cave."
+				"text" : "There is a guy in the hole nearby and he has a treasure."
+			},
+			{
+				"id":  "02",
+				"flag": "01Done",
+				"text" : "He sure did have that treasure."
+			}
+		]
+	},
+	{
+		"id":  "01Item",
+		"name": "Duke Troll",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I'm a duke"
+			},
+			{
+				"id":  "02",
+				"flag" : "01Item",
+				"text" : "I am a duke here is an item."
+			},
+			{
+				"id":  "03",
+				"flag" : "01Done",
+				"text" : "I gave you an item already."
 			}
 		]
 	},
@@ -39,7 +65,32 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "If you could imagine a 'B' kinda grotto, I am imagining that there is now a special treasure there."
+				"text" : "If you could imagine a 'B' kinda grotto, I am imagining that there is a troll who will give you a treasure."
+			},
+			{
+				"id":  "02",
+				"flag" :"02Done",
+				"text" : "I see you got the thing I mentioned."
+			}
+		]
+	},
+	{
+		"id":  "02Item",
+		"name": "Troll Lord",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I'm the troll lord"
+			},
+			{
+				"id":  "02",
+				"flag" : "02Item",
+				"text" : "Oh, you know the secret word? Here is an item."
+			},
+			{
+				"id":  "03",
+				"flag" : "02Done",
+				"text" : "I gave you an item."
 			}
 		]
 	},
@@ -52,8 +103,7 @@
 			},
 			{
 				"id":  "02",
-				"flag" : "04GrottoItem02",
-				"text" : "Did you find?"
+				"text" : "That was quite the poke you did to that eyeball."
 			}
 		]
 	},
@@ -82,6 +132,10 @@
 			{
 				"id":  "01",
 				"text" : "That B grotto? There's a fake wall in the westish direction"
+			},
+			{
+				"id":  "02",
+				"text" : "You poked that eyeball super good."
 			}
 		]
 	},
@@ -90,31 +144,11 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There's a grotto somewhere,  I forget which one. There are some treasures in a signpost if you poke it."
+				"text" : "There's a grotto somewhere,  I forget which one. There are treasures if you poke the eye to the north just right."
 			},
 			{
 				"id":  "02",
-				"flag" : "06GrottoItem02",
-				"text" : "The history of that signpost is rich and varied. I will start from the beginning."
-			}
-		]
-	},
-	{
-		"id":  "06GrottoItem",
-		"content": [
-			{
-				"id":  "01",
-				"text" : "Wow this sign is blank what a ripoff"
-			},
-			{
-				"id":  "02",
-				"flag" : "06GrottoItem01",
-				"text" : "Wow, the top comes right off! And there's a treasure inside!"
-			},
-			{
-				"id":  "03",
-				"flag" : "06GrottoItem02",
-				"text" : "It turns out you can't judge every book by its glover"
+				"text" : "You did it, the eye poke."
 			}
 		]
 	},
@@ -124,6 +158,10 @@
 			{
 				"id":  "01",
 				"text" : "I heard in a grotto nearby, There's ths wall on the south side? Actually a fake wall."
+			},
+			{
+				"id":  "02",
+				"text" : "That eyeball is history"
 			}
 		]
 	},
@@ -132,31 +170,11 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "That B grotto? There's a special item in if you root around enough."
+				"text" : "There is an eyeball you can get rid of if you poke it right in the middle."
 			},
 			{
 				"id":  "02",
-				"flag" : "08GrottoItem02",
-				"text" : "I am an expert when it comes to secrets."
-			}
-		]
-	},
-	{
-		"id":  "08GrottoItem",
-		"content": [
-			{
-				"id":  "01",
-				"text" : "There's a box on the ground? Should you really open it? It might belong to someone."
-			},
-			{
-				"id":  "02",
-				"flag" : "08GrottoItem01",
-				"text" : "Well that weird guy said it's ok so let's see... wow a treasure!!!!"
-			},
-			{
-				"id":  "03",
-				"flag" : "08GrottoItem02",
-				"text" : "Leave no box unopened, with permission"
+				"text" : "That was quite the poke you did to that eyeball."
 			}
 		]
 	},
@@ -166,6 +184,10 @@
 			{
 				"id":  "01",
 				"text" : "Would you like to get out of here? There is a fake wall taht will let you do jsut that."
+			},
+			{
+				"id":  "02",
+				"text" : "What are you doing here when you could be outside?"
 			}
 		]
 	},
@@ -175,6 +197,10 @@
 			{
 				"id":  "01",
 				"text" : "In a grotto near here there is a secret fake wall."
+			},
+			{
+				"id":  "02",
+				"text" : "You found the fake wall wow."
 			}
 		]
 	},
@@ -207,6 +233,20 @@
 				"id":  "03",
 				"flag": "CoolTree03",
 				"text" : "It's difficult to stop admiring this tree, I know."
+			}
+		]
+	},
+	{
+		"id": "FalseWall",
+		"name": "Weird Eyeball",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "That eyeball is going crazy."
+			},
+			{
+				"id":  "02",
+				"text" : "You found the special spot and poked it."
 			}
 		]
 	}

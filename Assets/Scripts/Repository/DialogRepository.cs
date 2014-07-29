@@ -43,8 +43,6 @@ namespace Assets.Scripts.Repository
                     Debug.LogError("Expected script to not be null");
                     return;
                 }
-                Debug.Log("Loaded Script...");
-                Debug.Log(script.text);
                 var scriptBag = JsonConvert.DeserializeObject<List<DialogBag>>(script.text);
                 if (scriptBag != null && scriptBag.Count != 0)
                 {

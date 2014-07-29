@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Portals;
+﻿using Assets.Scripts.Interactables;
+using Assets.Scripts.Portals;
 using UnityEngine;
 
 public class ActivateObject : TextAction
@@ -8,13 +9,20 @@ public class ActivateObject : TextAction
 
     public override void Execute()
     {
-        var components = target.GetComponents<MonoBehaviour>();
+        var components = target.GetComponentsInChildren<MonoBehaviour>();
         foreach (var component in components)
         {
             var activatable = component as IActivatable;
             if (activatable == null) continue;
 
-            activatable.Activate();
+            activatable.Activate(() =>
+            {
+                var signpost = GetComponentInParent<Signpost>();
+                if (signpost != null)
+                {
+                    signpost.NextTextbag();
+                }
+            });
         }
     }
 }

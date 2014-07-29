@@ -86,7 +86,7 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
         {
             _currentDisplayText = _fullDisplayText.Substring(0, _displayIndex);
             _displayIndex += 1;
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForSeconds(.025f);
         }
         yield return new WaitForSeconds(3f);
     }

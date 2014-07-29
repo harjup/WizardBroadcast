@@ -34,5 +34,10 @@ namespace Assets.Scripts.Managers
             return _flagStore[scene][flag];
         }
 
+        public static void ClearFlags()
+        {
+            _flagStore = new Dictionary<Scene, Dictionary<string, bool>>();
+        }
+
     }
 }

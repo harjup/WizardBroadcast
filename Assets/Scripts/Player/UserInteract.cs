@@ -212,6 +212,7 @@ namespace Assets.Scripts.Player
         List<ExaminableBase> interactives = new List<ExaminableBase>();
         public void OnInteractionTriggerEnter(Collider other)
         {
+            CleanOutNullInteractives();
             var component = other.GetComponent<MonoBehaviour>();
             //If we are entering an examinable set the current examinable to it
             if (component as ExaminableBase != null)
@@ -226,6 +227,7 @@ namespace Assets.Scripts.Player
 
         public void OnInteractionTriggerExit(Collider other)
         {
+            CleanOutNullInteractives();
             var component = other.GetComponent<MonoBehaviour>();
             //If we are exiting an examinable set the current examinable to null
             if (component as ExaminableBase != null && interactives.IndexOf(component as ExaminableBase) != -1)
@@ -233,6 +235,18 @@ namespace Assets.Scripts.Player
                 interactives.Remove(component as ExaminableBase);
                 _examinableObject = interactives.Count == 0 ? null : interactives[0];
             }
+        }
+
+
+        void CleanOutNullInteractives()
+        {
+            var validInteractives = new List<ExaminableBase>();
+            foreach (var interactive in interactives)
+            {
+                if (interactive == null) continue;
+                validInteractives.Add(interactive);
+            }
+            interactives = validInteractives;
         }
 
         private void CheckForClimbableSurfaces()

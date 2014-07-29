@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Portals
 {
-    public class GrottoEntrance : MonoBehaviourBase, IActivatable
+    public class GrottoEntrance : MonoBehaviourBase
     {
         public Transform targetEndpoint;
 
@@ -20,12 +20,6 @@ namespace Assets.Scripts.Portals
         }
 
         public EnterMethod Enter;
-
-        public void Activate()
-        {
-            //TODO: Wire this part up better
-            transform.FindChild("Mesh").gameObject.SetActive(true);
-        }
 
         void OnTriggerEnter(Collider other)
         {

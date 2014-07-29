@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
+using System.Runtime.InteropServices;
 using Assets.Scripts.GameState;
 using Assets.Scripts.GUI;
 using Assets.Scripts.Managers;
@@ -49,8 +50,10 @@ namespace Assets.Scripts.Interactables
             _currentTextBag = _textBags.First();
         }
 
-        /*public void NextTextbag()
+        private bool _sequentialTextbag = false;
+        public void NextTextbag()
         {
+            _sequentialTextbag = true;
             var index = _textBags.IndexOf(_currentTextBag);
             if (index < _textBags.Count - 1)
             {
@@ -58,6 +61,7 @@ namespace Assets.Scripts.Interactables
             }
         }
 
+        /*
         public void SetTextbag(string id)
         {
             foreach (var textBag in _textBags)
@@ -73,7 +77,10 @@ namespace Assets.Scripts.Interactables
         
         public override IEnumerator Examine(Action callback)
         {
-            _currentTextBag = GetCurrentTextBag();
+            if (!_sequentialTextbag)
+            {
+                _currentTextBag = GetCurrentTextBag();
+            }
             yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, _currentTextBag.Name, () => {}));
             _currentTextBag.ExecuteAction();
             callback();

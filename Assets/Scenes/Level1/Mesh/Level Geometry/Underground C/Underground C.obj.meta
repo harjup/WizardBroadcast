@@ -5,11 +5,16 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: Underground_C
+    100004: RoadKillOut
     400000: //RootNode
     400002: Underground_C
+    400004: RoadKillOut
     2300000: Underground_C
+    2300002: RoadKillOut
     3300000: Underground_C
+    3300002: RoadKillOut
     4300000: Underground_C
+    4300002: RoadKillOut
     9500000: //RootNode
   materials:
     importMaterials: 1

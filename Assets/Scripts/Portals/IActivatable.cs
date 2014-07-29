@@ -1,7 +1,9 @@
-﻿namespace Assets.Scripts.Portals
+﻿using System;
+
+namespace Assets.Scripts.Portals
 {
     public interface IActivatable
     {
-        void Activate();
+        void Activate(Action callback);
     }
 }

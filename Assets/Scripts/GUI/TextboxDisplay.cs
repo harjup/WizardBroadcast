@@ -110,7 +110,7 @@ namespace Assets.Scripts.GUI
             {
                 _currentDisplayText = _fullDisplayText.Substring(0, _displayIndex);
                 _displayIndex += 1;
-                yield return new WaitForSeconds(.05f);
+                yield return new WaitForSeconds(.025f);
             }
 
             _waitingForDismissal = true;
