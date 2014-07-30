@@ -2477,7 +2477,7 @@ Transform:
   - {fileID: 1963555257}
   - {fileID: 789144993}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!54 &279197639
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5059,7 +5059,7 @@ Transform:
   - {fileID: 2062633305}
   - {fileID: 1662911158}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &664390163
 GameObject:
   m_ObjectHideFlags: 0
