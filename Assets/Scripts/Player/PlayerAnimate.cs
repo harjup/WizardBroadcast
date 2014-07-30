@@ -45,6 +45,7 @@ namespace Assets.Scripts.Player
             {
                 iTween.MoveTo(gameObject, iTween.Hash("position", transform.position.SetY(transform.position.y + 10f), "time", .5f, "easetype", iTween.EaseType.easeInOutSine));
             }
+
             yield return new WaitForSeconds(.25f);
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);

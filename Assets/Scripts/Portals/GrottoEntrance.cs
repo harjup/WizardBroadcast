@@ -16,7 +16,8 @@ namespace Assets.Scripts.Portals
         {
             Undefined,
             Fall,
-            Spring
+            Spring,
+            WalkForward
         }
 
         public EnterMethod Enter;
@@ -32,6 +33,12 @@ namespace Assets.Scripts.Portals
             var playerInfo = other.GetComponent<InfoPlayer>();
             if (other.GetComponent<InfoPlayer>() != null)
             {
+                if (Enter == EnterMethod.WalkForward)
+                {
+                    StartCoroutine(playerInfo.OnEnterDoorway(Vector3.forward, targetEndpoint));
+                    return;
+                }
+
                 StartCoroutine(playerInfo.OnFellDownHole(targetEndpoint.position, Enter));
             }
         }
