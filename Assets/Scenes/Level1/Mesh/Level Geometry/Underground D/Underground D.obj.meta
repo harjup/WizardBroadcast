@@ -6,15 +6,20 @@ ModelImporter:
     100000: //RootNode
     100002: Underground_D
     100004: RoadKillOut
+    100006: RoadKillOut001
     400000: //RootNode
     400002: Underground_D
     400004: RoadKillOut
+    400006: RoadKillOut001
     2300000: Underground_D
     2300002: RoadKillOut
+    2300004: RoadKillOut001
     3300000: Underground_D
     3300002: RoadKillOut
+    3300004: RoadKillOut001
     4300000: Underground_D
     4300002: RoadKillOut
+    4300004: RoadKillOut001
     9500000: //RootNode
   materials:
     importMaterials: 1

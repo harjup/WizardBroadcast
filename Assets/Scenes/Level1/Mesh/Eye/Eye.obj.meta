@@ -14,6 +14,7 @@ ModelImporter:
     100016: Troll_Duke
     100018: Troll_Peasant
     100020: Underground_A
+    100022: Eye001
     400000: //RootNode
     400002: RoadKillOut
     400004: Briar
@@ -25,6 +26,7 @@ ModelImporter:
     400016: Troll_Duke
     400018: Troll_Peasant
     400020: Underground_A
+    400022: Eye001
     2300000: RoadKillOut
     2300002: Briar
     2300004: Briars
@@ -35,6 +37,7 @@ ModelImporter:
     2300014: Troll_Duke
     2300016: Troll_Peasant
     2300018: Underground_A
+    2300020: Eye001
     3300000: RoadKillOut
     3300002: Briar
     3300004: Briars
@@ -45,6 +48,7 @@ ModelImporter:
     3300014: Troll_Duke
     3300016: Troll_Peasant
     3300018: Underground_A
+    3300020: Eye001
     4300000: RoadKillOut
     4300002: Briar
     4300004: Briars
@@ -55,6 +59,7 @@ ModelImporter:
     4300014: Troll_Duke
     4300016: Troll_Peasant
     4300018: Underground_A
+    4300020: Eye001
     9500000: //RootNode
   materials:
     importMaterials: 1
