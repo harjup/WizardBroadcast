@@ -9,12 +9,21 @@ namespace WizardBroadcast
 {
     public class LevelPortal : MonoBehaviourBase
     {
+        private Texture2D _defaultTexture;
+        private Texture2D _activeTexture;
+        private GameObject mesh;
 
         public Scene sceneToLoad;
         private bool isActive = false;
 
         void Start()
         {
+            _defaultTexture = Resources.Load("HubTeleporter/Hub Teleporter Texture") as Texture2D;
+            _activeTexture = Resources.Load("HubTeleporter/Hub Teleporter Texture Active") as Texture2D;
+
+            //TODO: Wooo, specific heirarchy traversal this is shit!!!!
+            mesh = transform.GetChild(0).GetChild(0).gameObject;
+
             ScheduleTracker.levelActivated += OnLevelActivate;
 
             //Check and set the current state for the Level Portal. There will not be transitions for this one because it's when the scene loads up.
@@ -42,12 +51,13 @@ namespace WizardBroadcast
                     case State.Undefined:
                         break;
                     case State.InActive:
+                        mesh.renderer.material.mainTexture = _defaultTexture;
                         //gameObject.renderer.material.color = Color.red;
                         iTween.Stop(gameObject);
                         isActive = false;
                         break;
                     case State.Active:
-                        //gameObject.renderer.material.color = Color.green;
+                        mesh.renderer.material.mainTexture = _activeTexture;
                         iTween.ShakePosition(gameObject, iTween.Hash("amount", Vector3.forward/4f, "time", .5f, "looptype", iTween.LoopType.loop));
                         iTween.ShakeRotation(gameObject, iTween.Hash("z", 5f, "time", .5f, "looptype", iTween.LoopType.loop));
                         isActive = true;
