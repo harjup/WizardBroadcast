@@ -34,8 +34,7 @@ public class SquishAnimIce : MonoBehaviour, ISquishAnim
         iTween.Stop(gameObject);
         transform.eulerAngles = initialRotation;
         iTween.RotateTo(gameObject, iTween.Hash("x", -90f, "time", .1f, "looptype", iTween.LoopType.none, "easetype", iTween.EaseType.easeInOutExpo));
-        
-        //Play sound effect
+        SoundManager.Instance.Play(SoundManager.SoundEffect.Squish2);
         //Instantiate(_treasurePrefab, position.SetY(2f), Quaternion.identity);
     }
 }

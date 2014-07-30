@@ -67,7 +67,7 @@ public class PuzzleRoomManager : RoomManager {
         var roomText = DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "01");
         if (roomText != null)
         {
-            StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
+            StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }, roomText.Mumble));
         }
         base.OnRoomEnter();
     }
@@ -113,7 +113,7 @@ public class PuzzleRoomManager : RoomManager {
                 DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "02");
             if (roomText != null)
             {
-                StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }));
+                StartCoroutine(PassiveTextboxDisplay.Instance.DisplayText(roomText.Text, roomText.Name, () => { }, roomText.Mumble));
             }
 
             SoundManager.Instance.Play(SoundManager.SoundEffect.FanFare);

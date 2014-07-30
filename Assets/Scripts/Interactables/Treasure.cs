@@ -68,6 +68,7 @@ namespace Assets.Scripts.Interactables
             //if (Type == TreasureType.Large || Type == TreasureType.Medium) SoundManager.Instance.Play(SoundManager.SoundEffect.FanFare);
             //Make a particle effect
             //When it's done kill the object
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BeepMaybe);
             Destroy(this.gameObject);
             yield return null;
         }

@@ -34,7 +34,7 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
     }
 
 
-    public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
+    public IEnumerator DisplayText(string text, string speaker, Action doneCallback, MumbleType mumbleType = MumbleType.Undefined)
     {
         //Wait for any old instances to end and clean up before starting the current one
         if (isRunning)
@@ -62,7 +62,7 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
             _fullDisplayText = line;
             _currentDisplayText = "";
 
-            _currentTextCrawl = CrawlText();
+            _currentTextCrawl = CrawlText(mumbleType);
             yield return StartCoroutine(_currentTextCrawl);
             //Done, do cleanup
             Cleanup();
@@ -80,14 +80,19 @@ public class PassiveTextboxDisplay : Singleton<PassiveTextboxDisplay>
         _displayIndex = 1;
     }
 
-    IEnumerator CrawlText()
+    IEnumerator CrawlText(MumbleType mumbleType = MumbleType.Undefined)
     {
+        if (mumbleType != MumbleType.Undefined) MumblePlayer.Instance.PlayMumble(mumbleType);
+
         while (_displayIndex <= _fullDisplayText.Length)
         {
             _currentDisplayText = _fullDisplayText.Substring(0, _displayIndex);
             _displayIndex += 1;
             yield return new WaitForSeconds(.025f);
         }
+        if (mumbleType != MumbleType.Undefined) MumblePlayer.Instance.StopMumble();
+
+
         yield return new WaitForSeconds(3f);
     }
 

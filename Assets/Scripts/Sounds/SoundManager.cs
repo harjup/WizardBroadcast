@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-//May or may not actually use this
 public class SoundManager : Singleton<SoundManager>
 {
+
+    //Ugh. I'm sorry.
+    //These enums shoudl be split into different categories so they're more managable with different dictionaries as well.
+    //But.... effort...
     public enum SoundEffect
     {
         None,
@@ -12,31 +15,62 @@ public class SoundManager : Singleton<SoundManager>
         BlockMoveStone1,
         BlockMoveStone2,
         BlockMoveStop,
+
+        Squish1,
+        Squish2,
+
+
         EffortNoise,
+        HurtNoise,
+        MainLand,
+
         FanFare,
         FanFare2,
-        HurtNoise,
         Teleport,
         TeleportAlt,
-        Walk
+        Walk,
+
+        BeepShort,
+        BeepYes,
+        BeepNo,
+        BeepMaybe
     }
 
     
     public Dictionary<SoundEffect, Sound> SoundMap = new Dictionary<SoundEffect, Sound>()
     {
+        //Blocksss
         {SoundEffect.BlockDisengage, new Sound("blockdisengage")},
         {SoundEffect.BlockMoveIce, new Sound("blockmove_ice")},
-        {SoundEffect.BlockMoveStone1, new Sound("blockmove_stone1", .7f)},
-        {SoundEffect.BlockMoveStone2, new Sound("blockmove_stone2")},
-        {SoundEffect.BlockMoveStop, new Sound("blockmove_stop")},
-        {SoundEffect.EffortNoise, new Sound("effortnoise", .25f, .2f)},
+        {SoundEffect.BlockMoveStone1, new Sound("blockmove_stone1-2", .7f)},
+        {SoundEffect.BlockMoveStone2, new Sound("blockmove_stone2-2")},
+        {SoundEffect.BlockMoveStop, new Sound("blockmove_stop(new)")},
+        
+        //Squish Enemey
+        {SoundEffect.Squish1, new Sound("squish1")},
+        {SoundEffect.Squish2, new Sound("squish2")},
+
+        //Fanfare
         {SoundEffect.FanFare, new Sound("Fanfare")},
         {SoundEffect.FanFare2, new Sound("Fanfare_2")},
-        {SoundEffect.HurtNoise, new Sound("hurtnoise", .25f)},
+        
+        //Teleport
         {SoundEffect.Teleport, new Sound("teleport")},
         {SoundEffect.TeleportAlt, new Sound("teleport_alt")},
 
-        {SoundEffect.Walk, new Sound("teleport", .2f, 1f)},
+        //Walking will need to be its own thing
+        {SoundEffect.Walk, new Sound("step_grass1")},
+
+        //Player sfx
+        {SoundEffect.EffortNoise, new Sound("effortnoise", .25f, .2f)},
+        {SoundEffect.HurtNoise, new Sound("hurtnoise", .25f)},
+
+
+        //UI blips and bloops
+        {SoundEffect.BeepShort, new Sound("beepbeep", .25f, .2f)},
+        {SoundEffect.BeepYes, new Sound("beepyes", .25f)},
+        {SoundEffect.BeepNo, new Sound("beepno", .25f)},
+        {SoundEffect.BeepMaybe, new Sound("beepmaybe", .25f)},
     };
 
     private List<AudioSource> _sources = new List<AudioSource>();

@@ -141,7 +141,7 @@ public class PushBlock : MonoBehaviourBase
             "easetype", easeType));
         yield return new WaitForSeconds(0.4f);
         SoundManager.Instance.Stop(pushSoundEffect);
-        SoundManager.Instance.Play(SoundManager.SoundEffect.BlockMoveStop);
+        //SoundManager.Instance.Play(SoundManager.SoundEffect.BlockMoveStop);
         yield return new WaitForSeconds(0.1f);
 
         yield return StartCoroutine(ApplyGravity((fellDown) => { disengagePlayer = fellDown; }));

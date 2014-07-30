@@ -1,6 +1,7 @@
 [
 	{
 		"id":  "StartSign",
+		"mumble":  "Sign",
 		"content": [
 			{
 				"id":  "01",
@@ -15,6 +16,7 @@
 	},
 	{
 		"id":  "EndWizard",
+		"mumble":  "Wizard",
 		"content": [
 			{
 				"id":  "01",
@@ -26,6 +28,7 @@
 	},
 	{
 		"id":  "Taunt01",
+		"mumble":  "Jeer",
 		"name" : "Pointy Johnson",
 		"content": [
 			{
@@ -41,6 +44,7 @@
 	{
 		"id":  "Taunt02",
 		"name" : "Sharp Shredder",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -55,6 +59,7 @@
 	{
 		"id":  "Taunt03",
 		"name" : "Bowl Bros",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -69,6 +74,7 @@
 	{
 		"id":  "Taunt04",
 		"name" : "Rogert and Buntface",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -83,6 +89,7 @@
 	{
 		"id":  "Taunt05",
 		"name" : "The Stealos",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -97,6 +104,7 @@
 	{
 		"id":  "Taunt06",
 		"name" : "Runt and Munt",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -111,6 +119,7 @@
 	{
 		"id":  "Taunt07",
 		"name" : "Cloth Killers",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -125,6 +134,7 @@
 	{
 		"id":  "Taunt08",
 		"name" : "Slipery Sams",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -139,6 +149,7 @@
 	{
 		"id":  "Taunt09",
 		"name" : "Smokees",
+		"mumble":  "Jeer",
 		"content": [
 			{
 				"id":  "01",

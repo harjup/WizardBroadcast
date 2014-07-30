@@ -33,6 +33,7 @@ public class SquishAnim : MonoBehaviour, ISquishAnim
     {
         StopCoroutine(_jumpRoutine);
         iTween.Stop(gameObject);
+        SoundManager.Instance.Play(SoundManager.SoundEffect.Squish1);
         transform.position = initialPosition;
         //Play sound effect
         //Instantiate(_treasurePrefab, position.SetY(2f), Quaternion.identity);

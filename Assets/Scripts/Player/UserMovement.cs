@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
 using Assets.Scripts.Repository;
@@ -27,6 +28,16 @@ namespace WizardBroadcast
 
         private bool inAir = false;
 
+        private MumblePlayer.WalkType currentWalkType = MumblePlayer.WalkType.Grass;
+
+        void OnLevelWasLoaded(int level)
+        {
+            currentWalkType = MumblePlayer.WalkType.Grass;
+            var scene = SceneMap.GetSceneFromStringName(Application.loadedLevelName);
+            if (scene == Scene.Hub) currentWalkType = MumblePlayer.WalkType.Stone;
+            if (scene == Scene.Level2) currentWalkType = MumblePlayer.WalkType.Stone;
+            if (scene == Scene.Level4) currentWalkType = MumblePlayer.WalkType.Sand;
+        }
 
         // Use this for initialization
         private void Start()
@@ -119,17 +130,11 @@ namespace WizardBroadcast
         {
             if (rigidBody.velocity.SetY(0f).magnitude > .1f)
             {
-                if (!SoundManager.Instance.IsPlaying(SoundManager.SoundEffect.Walk))
-                {
-                    SoundManager.Instance.Play(SoundManager.SoundEffect.Walk, true);
-                }
+                MumblePlayer.Instance.PlayFootsteps(currentWalkType);
             }
             else
             {
-                if (SoundManager.Instance.IsPlaying(SoundManager.SoundEffect.Walk))
-                {
-                    SoundManager.Instance.Stop(SoundManager.SoundEffect.Walk);
-                }
+                MumblePlayer.Instance.StopFootsteps();
             }
         }
 
@@ -194,7 +199,7 @@ namespace WizardBroadcast
             //block.GetParent().parent = null;
             transform.parent = null;
             transform.position -= pushDirection * 1f;
-            SoundManager.Instance.Play(SoundManager.SoundEffect.BlockDisengage);
+            //SoundManager.Instance.Play(SoundManager.SoundEffect.BlockDisengage);
             //Enable walking movement
             _blockEngaged = false;
             doneAction();
