@@ -31,7 +31,7 @@ public class FogMachine : Singleton<FogMachine>
     {
         RenderSettings.fogColor = Color.gray;
         RenderSettings.fogMode = FogMode.ExponentialSquared;
-        RenderSettings.fogDensity = .05f;
+        RenderSettings.fogDensity = .04f;
         RenderSettings.fog = true;
         
     }

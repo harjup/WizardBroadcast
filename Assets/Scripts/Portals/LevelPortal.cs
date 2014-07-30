@@ -3,7 +3,7 @@ using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace WizardBroadcast
 {
@@ -42,11 +42,14 @@ namespace WizardBroadcast
                     case State.Undefined:
                         break;
                     case State.InActive:
-                        gameObject.renderer.material.color = Color.red;
+                        //gameObject.renderer.material.color = Color.red;
+                        iTween.Stop(gameObject);
                         isActive = false;
                         break;
                     case State.Active:
-                        gameObject.renderer.material.color = Color.green;
+                        //gameObject.renderer.material.color = Color.green;
+                        iTween.ShakePosition(gameObject, iTween.Hash("amount", Vector3.forward/4f, "time", .5f, "looptype", iTween.LoopType.loop));
+                        iTween.ShakeRotation(gameObject, iTween.Hash("z", 5f, "time", .5f, "looptype", iTween.LoopType.loop));
                         isActive = true;
                         break;
                     default:
