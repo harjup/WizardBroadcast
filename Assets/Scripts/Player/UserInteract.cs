@@ -41,8 +41,8 @@ namespace Assets.Scripts.Player
 
         void Update()
         {
+            PushBlockInput(); //We want pushblocks to get checked first so examining comments won't get in the way
             ExamineInput();
-            PushBlockInput();
             ClimbInput();
 
             if (_userMovement.GetBlockEngaged()) return;

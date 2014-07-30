@@ -8,22 +8,13 @@ using System.Collections;
 public class CommentEntryService : Singleton<CommentEntryService>
 {
     private string playerName;
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private bool commentMode = false;
     private bool commentingAllowed = true;
+
     void OnGUI()
     {
+        if (Application.loadedLevelName == SceneMap.GetScene(Scene.Start)) return;
+
         if (commentMode)
         {
             InputManager.Instance.PlayerEnteringComment = true;

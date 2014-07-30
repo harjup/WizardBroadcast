@@ -16,8 +16,57 @@ public class FootCollider : MonoBehaviour
     void OnLevelWasLoaded(int level)
     {
         OtherGameObjects.Clear();
-        UpdateFloorState();
+        //UpdateFloorState();
+        //StartCoroutine(UpdateFloorTouch());
     }
+
+    public bool inAir = true;
+    void Update()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, transform.lossyScale.x);
+        inAir = true;
+
+        foreach (var other in colliders)
+        {
+            if (other.isTrigger) continue;
+            if (other.GetComponent<UserMovement>()) continue;
+            if (other.GetComponent<RoomEnterTrigger>()) continue;
+            if (other.GetComponentInParent<SpawnMarker>()) continue;
+            if (other.GetComponentInParent<FogTrigger>()) continue;
+            if (other.GetComponentInParent<PushPoint>()) continue;
+            inAir = false;
+        }
+
+        GetComponentInParent<UserMovement>().AirState = inAir;
+
+    }
+
+/*
+    
+    IEnumerator UpdateFloorTouch()
+    {
+        while (true)
+        {
+            yield return new WaitForEndOfFrame();
+            GetComponentInParent<UserMovement>().AirState = inAir;
+            inAir = true;    
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<UserMovement>()) return;
+        if (other.GetComponent<RoomEnterTrigger>()) return;
+        if (other.GetComponentInParent<SpawnMarker>()) return;
+        if (other.GetComponentInParent<FogTrigger>()) return;
+        if (other.GetComponentInParent<PushPoint>()) return;
+
+        inAir = false;
+        //UpdateFloorState();
+    }
+*/
+
+/*
 
     void OnTriggerEnter(Collider other)
     {
@@ -41,6 +90,10 @@ public class FootCollider : MonoBehaviour
         OtherGameObjects.Remove(other.gameObject);
         UpdateFloorState();
     }
+*/
+
+
+
 
     void UpdateFloorState()
     {

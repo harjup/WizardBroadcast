@@ -40,6 +40,7 @@ namespace Assets.Scripts.Managers
             {typeof(TimeTracker), @"Prefabs/Managers/TimeTracker"},
             //{typeof(TweetsManager), @"Prefabs/Managers/TweetsManager"}, //Only exists in hub
             {typeof(CommentsManager), @"Prefabs/Managers/CommentsManager"},
+            {typeof(CommentEntryService), @"Prefabs/Managers/CommentEntryService"},
             {typeof(InputManager), @"Prefabs/Managers/InputManager"},
             {typeof(GuiManager), @"Prefabs/Managers/GuiManager"},
             {typeof(TextboxDisplay), @"Prefabs/Managers/TextboxDisplay"},
