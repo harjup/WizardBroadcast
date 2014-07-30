@@ -1,6 +1,7 @@
 [
 	{
 		"id":  "HubSign",
+		"mumble":  "Wizard",
 		"content": [
 			{
 				"id":  "01",
@@ -14,6 +15,7 @@
 	},
 	{
 		"id":  "ForestWiz",
+		"mumble":  "Wizard",
 		"name": "Fantasy Wizard",
 		"content": [
 			{
@@ -27,6 +29,7 @@
 	},
 	{
 		"id":  "MountainWiz",
+		"mumble":  "Wizard",
 		"name": "Intelligent Wizard",
 		"content": [
 			{
@@ -39,6 +42,7 @@
 	},
 	{
 		"id":  "MazeWiz",
+		"mumble":  "Wizard",
 		"name" : "Artistic Wizard",
 		"content": [
 			{
@@ -50,6 +54,7 @@
 	},
 	{
 		"id":  "DesertWiz",
+		"mumble":  "Wizard",
 		"name" : "Nervous Wizard",
 		"content": [
 			{
@@ -62,6 +67,7 @@
 	},
 	{
 		"id":  "BuilderWiz",
+		"mumble":  "Wizard",
 		"name" : "Construction Wizards",
 		"content": [
 			{
@@ -74,6 +80,7 @@
 	},
 	{
 		"id":  "F1Wiz01",
+		"mumble":  "Wizard",
 		"name" : "Blippy Wizard",
 		"content": [
 			{
@@ -84,6 +91,7 @@
 	},
 	{
 		"id":  "F1Wiz02",
+		"mumble":  "Wizard",
 		"name" : "Tired Wizard",
 		"content": [
 			{
@@ -96,6 +104,7 @@
 	},
 	{
 		"id":  "F1Wiz03",
+		"mumble":  "Wizard",
 		"name" : "Quiet Wizard",
 		"content": [
 			{
@@ -106,6 +115,7 @@
 	},
 	{
 		"id":  "F2Wiz01",
+		"mumble":  "Wizard",
 		"name" : "Effect Wizard",
 		"content": [
 			{
@@ -117,6 +127,7 @@
 	},
 	{
 		"id":  "F2Wiz02",
+		"mumble":  "Wizard",
 		"name" : "Asset Wizard",
 		"content": [
 			{
@@ -130,6 +141,7 @@
 	},
 	{
 		"id":  "F2Wiz03",
+		"mumble":  "Wizard",
 		"name" : "iTween Wizard",
 		"content": [
 			{
@@ -141,6 +153,8 @@
 	},
 	{
 		"id":  "F3Wiz01",
+		"mumble":  "Wizard",
+		"mumble":  "Wizard",
 		"name" : "Coffee Wizard",
 		"content": [
 			{
@@ -151,6 +165,7 @@
 	},
 	{
 		"id":  "F3Wiz02",
+		"mumble":  "Wizard",
 		"name" : "Writer Wizard",
 		"content": [
 			{
@@ -161,6 +176,7 @@
 	},
 	{
 		"id":  "F3Wiz03",
+		"mumble":  "Wizard",
 		"name" : "Donut Wizard",
 		"content": [
 			{
@@ -171,6 +187,7 @@
 	},
 	{
 		"id":  "F4Wiz01",
+		"mumble":  "Wizard",
 		"name" : "Broadcast Wizard",
 		"content": [
 			{
@@ -183,6 +200,7 @@
 	},
 	{
 		"id":  "F4Wiz02",
+		"mumble":  "Wizard",
 		"name" : "Network Wizard",
 		"content": [
 			{
@@ -196,6 +214,7 @@
 	},
 	{
 		"id":  "F4Wiz03",
+		"mumble":  "Wizard",
 		"name" : "SignalR Wizard",
 		"content": [
 			{

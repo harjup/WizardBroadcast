@@ -56,12 +56,12 @@ namespace Assets.Scripts.GUI
             }
         }
 
-        public IEnumerator DisplayText(string text, Action doneCallback)
+        public IEnumerator DisplayText(string text, Action doneCallback, MumbleType mumbleType = MumbleType.Undefined)
         {
-            yield return StartCoroutine(DisplayText(text, null, doneCallback));
+            yield return StartCoroutine(DisplayText(text, null, doneCallback, mumbleType));
         }
 
-        public IEnumerator DisplayText(string text, string speaker, Action doneCallback)
+        public IEnumerator DisplayText(string text, string speaker, Action doneCallback, MumbleType mumbleType = MumbleType.Undefined)
         {
             _speaker = speaker;
 
@@ -91,7 +91,7 @@ namespace Assets.Scripts.GUI
                     _fullDisplayText = l;
                     _currentDisplayText = "";
 
-                    yield return StartCoroutine(CrawlText());
+                    yield return StartCoroutine(CrawlText(mumbleType));
 
                     //Done, do cleanup
                     _fullDisplayText = "";
@@ -104,8 +104,12 @@ namespace Assets.Scripts.GUI
             doneCallback();
         }
 
-        IEnumerator CrawlText()
+        const MumbleType Undefined = MumbleType.Undefined;
+
+        IEnumerator CrawlText(MumbleType mumbleType)
         {
+            if (mumbleType != Undefined) MumblePlayer.Instance.PlayMumble(mumbleType);
+
             while (_displayIndex <= _fullDisplayText.Length)
             {
                 _currentDisplayText = _fullDisplayText.Substring(0, _displayIndex);
@@ -114,6 +118,8 @@ namespace Assets.Scripts.GUI
             }
 
             _waitingForDismissal = true;
+
+            if (mumbleType != Undefined) MumblePlayer.Instance.StopMumble();
 
             //Blink the dismiss texture while waiting for dismissal
             while (_waitingForDismissal)

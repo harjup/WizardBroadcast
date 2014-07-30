@@ -42,6 +42,8 @@ namespace Assets.Scripts.Interactables
 
                 _textBags[i].text = dialog.Text;
                 _textBags[i].Name = dialog.Name;
+                _textBags[i].Mumble = dialog.Mumble;
+                
 
                 //Overwrite the given textbag's flag with the flag from the stored version if it exists
                 if (dialog.Flag != null){ _textBags[i].flag = dialog.Flag;}
@@ -81,7 +83,7 @@ namespace Assets.Scripts.Interactables
             {
                 _currentTextBag = GetCurrentTextBag();
             }
-            yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, _currentTextBag.Name, () => {}));
+            yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, _currentTextBag.Name, () => {}, _currentTextBag.Mumble));
             _currentTextBag.ExecuteAction();
             callback();
         }

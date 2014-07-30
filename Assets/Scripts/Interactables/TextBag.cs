@@ -8,6 +8,7 @@ namespace Assets.Scripts.Interactables
         public string id;
         public string flag;
         public string Name;
+        public MumbleType Mumble;
         public string text;
 
         public void ExecuteAction()

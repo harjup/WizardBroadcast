@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Assets.Common.JsonModel
 {
@@ -14,6 +15,10 @@ namespace Assets.Common.JsonModel
 
         [JsonProperty("name")]
         public string Name;
+
+        [JsonProperty("mumble")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public MumbleType Mumble;
 
         [JsonProperty("content")]
         public List<Dialog> Content;
@@ -31,7 +36,11 @@ namespace Assets.Common.JsonModel
         [JsonProperty("flag")]
         public string Flag;
 
+        //For some reason you can only access dialog by the inividial pieces, not the bag
+        //So we have to shove shared properies from the bag onto the individual pieces when we access them
+        //Not great!!! 
         public string Name;
+        public MumbleType Mumble;
     }
 
 

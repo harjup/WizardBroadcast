@@ -56,6 +56,7 @@ namespace Assets.Scripts.Managers
             {typeof(CameraManager), @"Prefabs/Managers/CameraManager"},
             {typeof(MusicManager), @"Prefabs/Managers/MusicManager"},
             {typeof(SoundManager), @"Prefabs/Managers/SoundManager"},
+            {typeof(MumblePlayer), @"Prefabs/Managers/MumblePlayer"},
 
             {typeof(FogMachine), @"Prefabs/Managers/FogMachine"}
         };
