@@ -10,7 +10,8 @@ public class AnimatedMaterial : MonoBehaviour
     public enum AnimTexture
     {
         Undefined, 
-        Teleporter
+        Teleporter,
+        Eye
     }
 
     public AnimTexture textureSet;
@@ -36,10 +37,16 @@ public class AnimatedMaterial : MonoBehaviour
                     textures[i] = Resources.Load(String.Format("Teleporter/Teleporter Texture Frame {0}", i+1)) as Texture2D;
                 }
                 break;
+            case AnimTexture.Eye:
+               textures = new Texture2D[9];
+                for (int i = 0; i < 9; i++)
+                {
+                    textures[i] = Resources.Load(String.Format("Eye/Eye Texture Frame {0}", i+1)) as Texture2D;
+                }
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
 
         _material = renderer.material;
         StartCoroutine(AnimateTexture());

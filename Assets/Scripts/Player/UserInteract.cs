@@ -186,7 +186,7 @@ namespace Assets.Scripts.Player
                 {
                     _pushableObject = null;
                 }
-                else if (_userMovement.AirState || _pushableObject.GetPushBlock().isSlippery)
+                else if (_userMovement.AirState || _pushableObject.GetPushBlock().IsSlippery)
                 {
                     StartCoroutine(_userMovement.DisengageBlock(() =>
                     {

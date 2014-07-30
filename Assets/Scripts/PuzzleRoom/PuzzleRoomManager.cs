@@ -62,6 +62,8 @@ public class PuzzleRoomManager : RoomManager {
 
     public override void OnRoomEnter()
     {
+        spawningBlocks = false;
+        spawningEnemies = false;
         var roomText = DialogRepository.Instance.GetDialogBit(String.Format("Taunt{0}", RoomIndex.ToString("D2")), "01");
         if (roomText != null)
         {
@@ -73,7 +75,8 @@ public class PuzzleRoomManager : RoomManager {
 
     public override void OnRoomExit()
     {
-
+        spawningBlocks = false;
+        spawningEnemies = false;
     }
 
     /*public Transform GetEntrance()
@@ -119,8 +122,12 @@ public class PuzzleRoomManager : RoomManager {
         ActivateExit();
     }
 
+    private bool spawningEnemies;
     IEnumerator SpawnEnemies()
     {
+        if (spawningEnemies) yield break;
+        spawningEnemies = true;
+
         Coroutine despawnRoutine = null;
         foreach (var spawnedEnemy in _spawnedEnemies)
         {
@@ -147,10 +154,15 @@ public class PuzzleRoomManager : RoomManager {
         }
 
         UpdateRoomCompletion();
+        spawningEnemies = false;
     }
 
+    private bool spawningBlocks;
     IEnumerator SpawnBlocks()
     {
+        if (spawningBlocks) yield break;
+        spawningBlocks = true;
+
         Coroutine despawnRoutine = null;
         foreach (var spawnedBlock in _spawnedBlocks)
         {
@@ -169,12 +181,13 @@ public class PuzzleRoomManager : RoomManager {
             if (newBlock == null) continue;
 
             var newPushBlock = newBlock.GetComponentInChildren<PushBlock>();
-            newPushBlock.isSlippery = blockSpawner.IsSlippery;
+            newPushBlock.IsSlippery = blockSpawner.IsSlippery;
             _spawnedBlocks.Add(newPushBlock);
             newBlock.transform.parent = transform;
         }
 
         if (_spawnedBlocks.Count == 0) yield break;
         yield return StartCoroutine(_spawnedBlocks[0].SettleBlocks());
+        spawningBlocks = false;
     }
 }

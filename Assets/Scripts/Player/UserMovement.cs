@@ -175,7 +175,7 @@ namespace WizardBroadcast
             pushDirection = GetComponent<UserMovement>().playerMesh.forward;
 
             //child block to player
-            if (!block.GetPushBlock().isSlippery)
+            if (!block.GetPushBlock().IsSlippery)
             {
                 transform.parent = block.transform.parent;
             }

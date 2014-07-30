@@ -47,7 +47,7 @@ namespace Assets.Scripts.Interactables
             //Add a little rotation animation
             iTween.RotateAdd(gameObject, iTween.Hash("y", 360, "looptype" ,iTween.LoopType.pingPong, "easetype", iTween.EaseType.spring, "speed", 200f));
 
-            renderer.material.color = _myColor;
+            //renderer.material.color = _myColor;
         }
 
         void OnTriggerEnter(Collider other)

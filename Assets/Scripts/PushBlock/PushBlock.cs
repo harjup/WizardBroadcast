@@ -8,7 +8,17 @@ using System.Collections;
 
 public class PushBlock : MonoBehaviourBase
 {
-    public bool isSlippery = false;
+    private bool _isSlippery = false;
+    public bool IsSlippery
+    {
+        set
+        {
+            _isSlippery = value;
+            //Wheeee, traversing the specific prefab hierarchy whatever~~
+            if (_isSlippery) transform.FindChild("Block").FindChild("Mesh").renderer.material.mainTexture = Resources.Load("Textures/Ice Block Texture") as Texture2D;
+        }
+        get { return _isSlippery; }
+    }
     public const float StandardPushDistance = 2.5f;
 
     private GameObject _tweenTarget;
@@ -33,17 +43,18 @@ public class PushBlock : MonoBehaviourBase
         if (settleBlocksStarted) return;
         settleBlocksStarted = true;
         StartCoroutine(SettleBlocks());
+
     }
 
     public IEnumerator PushAction(Vector3 pushDirection, Action<bool> callback)
     {
-        iTween.EaseType easeType = isSlippery ? iTween.EaseType.easeInOutExpo : iTween.EaseType.linear;
+        iTween.EaseType easeType = IsSlippery ? iTween.EaseType.easeInOutExpo : iTween.EaseType.linear;
 
-        SoundManager.SoundEffect pushSoundEffect = isSlippery
+        SoundManager.SoundEffect pushSoundEffect = IsSlippery
             ? SoundManager.SoundEffect.BlockMoveIce
             : SoundManager.SoundEffect.BlockMoveStone1;
 
-        bool disengagePlayer = isSlippery;
+        bool disengagePlayer = IsSlippery;
         pushDirection *= InputManager.Instance.RawVerticalAxis;
         var pushDistance = StandardPushDistance;
         collider.enabled = false;
@@ -99,7 +110,7 @@ public class PushBlock : MonoBehaviourBase
                     //It is being pulled back and the player is too close to the wall behind them
                     || (differenceMagnitude < (StandardPushDistance * 1.5f) && InputManager.Instance.RawVerticalAxis < 0)
                     //The player is trying to pull a slippery block
-                    || (InputManager.Instance.RawVerticalAxis < 0 && isSlippery))
+                    || (InputManager.Instance.RawVerticalAxis < 0 && IsSlippery))
                 {
                     iTween.Stop(_tweenTarget);
                     yield return new WaitForSeconds(0.3f);
@@ -112,7 +123,7 @@ public class PushBlock : MonoBehaviourBase
                     //They being pushed forward and are less than the current push distance away 
                     (differenceMagnitude < pushDistance && InputManager.Instance.RawVerticalAxis > 0)
                     //The block is slippery
-                    || isSlippery)
+                    || IsSlippery)
                 {
                     pushDistance = differenceMagnitude;
                 }

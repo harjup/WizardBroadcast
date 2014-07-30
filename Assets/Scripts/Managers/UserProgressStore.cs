@@ -89,16 +89,17 @@ namespace Assets.Scripts.Managers
                 foreach (var treasureTotal in levelTotal.Value)
                 {
                     int multiplier;
+                    //TODO: WHOOOPS!!!!! The point values are duplicated in Treasure.cs!!!
                     switch (treasureTotal.Key)
                     {
                         case TreasureType.Little:
                             multiplier = 1;
                             break;
                         case TreasureType.Medium:
-                            multiplier = 2;
+                            multiplier = 5;
                             break;
                         case TreasureType.Large:
-                            multiplier = 3;
+                            multiplier = 10;
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
