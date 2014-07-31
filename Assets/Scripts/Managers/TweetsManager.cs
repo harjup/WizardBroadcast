@@ -36,7 +36,7 @@ namespace Assets.Scripts.Managers
         {
             if (SceneMap.GetSceneFromStringName(Application.loadedLevelName) == Scene.Hub)
             {
-                //RefreshStatuses();
+                RefreshStatuses();
             }
         }
 

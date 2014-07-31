@@ -73,6 +73,7 @@ namespace Assets.Scripts.Initialization
                 FindObjectOfType<InfoPlayer>().gameObject.SetActive(false);
             }
 
+            UserProgressStore.Instance.Init();
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
             yield return new WaitForSeconds(.5f);
             StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));

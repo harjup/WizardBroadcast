@@ -15,8 +15,6 @@ namespace Assets.Scripts.Managers
         //Maps each scene to a map of TreasureTypes and amounts
         private Dictionary<Scene, Dictionary<TreasureType, int>> _treasureTotals;
 
-        //Add a treasure to the treasure stash
-
         void Start()
         {
             if (_treasureTotals == null)

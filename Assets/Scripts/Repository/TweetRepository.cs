@@ -28,12 +28,11 @@ namespace Assets.Scripts.Repository
 
             var tweets = JsonConvert.DeserializeObject<List<TwitterStatus>>(tweetWWW.text);
 
-            for (int i = 0; i < tweets.Count || i < 5; i++)
+            /*for (int i = 0; i < tweets.Count || i < 5; i++)
             {
                 var twitterStatus = tweets[i];
                 Debug.Log(String.Format("{0} says {1}", twitterStatus.User.ScreenName, twitterStatus.Text));
-
-            }
+            }*/
 
             resultAction(tweets);
         }

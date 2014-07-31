@@ -9,70 +9,6 @@ public class PeerTracker : Singleton<PeerTracker>
     {
     };
 
-    void Start()
-    {
-        //UpdateGhostPositions(new );
-
-        //StartCoroutine(MockGhostUpdates());
-    }
-
-    IEnumerator MockGhostUpdates()
-    {
-        yield return new WaitForSeconds(1f);
-
-        /*UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
-            new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"}
-        });
-
-        yield return new WaitForSeconds(1f);
-
-        UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(3,4,-6.13)"},
-            new GhostPosition(){name = "Fredo", position = "(-8,3,-6.13)"}
-        });
-
-        yield return new WaitForSeconds(1f);
-
-        UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
-            new GhostPosition(){name = "Fredo", position = "(-6.1,3.5,-6.13)"},
-            new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"},
-            new GhostPosition(){name = "Chimley", position = "(-8,10,-6.13)"}
-        });
-
-        yield return new WaitForSeconds(1f);
-
-        UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
-            new GhostPosition(){name = "Fredo", position = "(-8,8,-6.13)"},
-            new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"},
-            new GhostPosition(){name = "Chimley", position = "(8,10,-6.13)"}
-        });
-
-        yield return new WaitForSeconds(1f);
-
-        UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(3,4,-6.13)"},
-            new GhostPosition(){name = "Fredo", position = "(-5,3,-6.13)"}
-        });
-
-        yield return new WaitForSeconds(1f);
-
-        UpdateGhostPositions(new List<GhostPosition>()
-        {
-            new GhostPosition(){name = "Paulo", position = "(1.7,3.5,-6.13)"},
-            new GhostPosition(){name = "Fredo", position = "(-6.1,3,-6.13)"},
-            new GhostPosition(){name = "Breado", position = "(-5.1,3.5,-6.13)"}
-        });*/
-    }
-
-
 
     public void UpdateGhostPositions(IEnumerable<GhostPosition> ghosts)
     {
@@ -106,7 +42,12 @@ public class PeerTracker : Singleton<PeerTracker>
             //If they do, update them
             else
             {
-                ghostPlayers[ghost.name].UpdatePosition(ghost.position.ParseToVector3());
+                //I was getting a null reference around here maybe this will help
+                if (ghostPlayers[ghost.name] != null && ghost.position != null)
+                {
+                    ghostPlayers[ghost.name].UpdatePosition(ghost.position.ParseToVector3());
+                }
+
                 ghostsToUpdate.Remove(ghost.name);
             }
         }

@@ -14,6 +14,8 @@ public class GhostPlayer : MonoBehaviourBase
 
     public void UpdatePosition(Vector3 position)
     {
+        if (gameObject == null) return;
+
         iTween.Stop(gameObject);
         iTween.MoveTo(gameObject, iTween.Hash("position", position, "orienttopath", true, "axis", "y", "time", 1f, "easeType", iTween.EaseType.linear));
     }

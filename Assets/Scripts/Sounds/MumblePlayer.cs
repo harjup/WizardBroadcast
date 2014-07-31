@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.GameState;
 using UnityEngine;
 
 //Initally was just for dialog mumble, since the logic is similar I'm going to put walk cycle noises in here as well.
@@ -68,6 +69,17 @@ public class MumblePlayer : Singleton<MumblePlayer>
 
     }
 
+    void OnLevelWasLoaded(int level)
+    {
+        if (Application.loadedLevelName == SceneMap.GetScene(Scene.Start))
+        {
+            StopMumble();
+            StopFootsteps();
+        }
+    }
+
+
+
     private IEnumerator _mumbleRoutine;
     public void PlayMumble(MumbleType type)
     {
@@ -98,6 +110,7 @@ public class MumblePlayer : Singleton<MumblePlayer>
 
     public void StopMumble()
     {
+        if (_mumbleRoutine == null) return;
         StopCoroutine(_mumbleRoutine);
         _source.Stop();
     }
@@ -123,13 +136,13 @@ public class MumblePlayer : Singleton<MumblePlayer>
             var delayAmount = 0f;
             if (type == WalkType.Grass)
             {
-                cutOffMultiplier = .8f;
+                cutOffMultiplier = .5f;
                 
             }
             else if (type == WalkType.Stone)
             {
                 delayAmount = .1f;
-                _walkSource.volume = .5f;
+                _walkSource.volume = .3f;
             }
 
             foreach (var clip in clips)

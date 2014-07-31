@@ -20,7 +20,7 @@ namespace Assets.Scripts.Repository
             {"firstLevel"},
             {"loreFirstLevel"},
             {"secondLevel"},
-            {"thirdLevel"},
+            {"foggyMazeSigns"},
             {"hubzone"}
         };
 

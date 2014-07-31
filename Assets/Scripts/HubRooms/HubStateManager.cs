@@ -51,7 +51,7 @@ public class HubStateManager : MonoBehaviour
         yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
         yield return new WaitForSeconds(.5f);
         StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
-        Destroy(GameObject.Find("Player"));
+        SignalrEndpoint.Instance.StopGhost();
         Application.LoadLevel(SceneMap.GetScene(Scene.Start));
     }
 }
