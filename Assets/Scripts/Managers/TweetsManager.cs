@@ -72,7 +72,7 @@ namespace Assets.Scripts.Managers
 
             foreach (var keyValuePair in spawnerSet)
             {
-                var spawnedMessage = Instantiate(_tweetMessagePrefab, keyValuePair.Key.transform.position, Quaternion.identity) as GameObject;
+                var spawnedMessage = Instantiate(_tweetMessagePrefab, keyValuePair.Key.transform.position, keyValuePair.Key.transform.rotation) as GameObject;
                 if (spawnedMessage != null) spawnedMessage.GetComponent<TweetMessage>().Status = keyValuePair.Value;
             }
 
