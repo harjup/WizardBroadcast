@@ -14,7 +14,7 @@ public class TweetMessage : ExaminableBase
     
     void Awake()
     {
-        renderer.material.color = Color.grey;
+        //renderer.material.color = Color.grey;
     }
 
     public TwitterStatus Status
@@ -23,7 +23,10 @@ public class TweetMessage : ExaminableBase
         set
         {
             _status = value;
-            renderer.material.color = Color.blue;
+            //renderer.material.color = Color.blue;
+            iTween.MoveTo(gameObject, iTween.Hash("y", transform.position.y + .2f, "looptype", iTween.LoopType.pingPong, "time", 1f, "easetype", iTween.EaseType.easeInOutQuad));
+            transform.eulerAngles = transform.eulerAngles.SetZ(-5f);
+            iTween.RotateTo(gameObject, iTween.Hash("z", 5f, "looptype", iTween.LoopType.pingPong, "time", 2f, "easetype", iTween.EaseType.easeInOutQuad));
         }
     }
 

@@ -14,6 +14,18 @@
 		]
 	},
 	{
+		"id":  "CameraWiz",
+		"mumble":  "Wizard",
+		"name" : "Film Wizard",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "We were going to have the camera be more reacitve to what you do, but the camera wizard keeps falling asleep.
+				Once you poke him with the Q button he'll orient behind you, but then he just falls alseep again..."
+			}
+		]
+	},
+	{
 		"id":  "ForestWiz",
 		"mumble":  "Wizard",
 		"name": "Fantasy Wizard",
@@ -116,12 +128,13 @@
 	{
 		"id":  "F2Wiz01",
 		"mumble":  "Wizard",
-		"name" : "Effect Wizard",
+		"name" : "Model Wizard",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "We were going to have the camera be more reacitve to what you do, but the camera wizard keeps falling asleep.
-				Once you poke him he'll orient behind you, but then he just falls alseep again..."
+				"text" : "I hope you don't mind how blocky most things are.
+				Objects with lots of sides take lots of magic to conjure.
+				Our magic budget isn't the best right now..."
 			}
 		]
 	},

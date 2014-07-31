@@ -15,7 +15,8 @@ namespace Assets.Scripts.Portals
         void Start()
         {
             ScheduleTracker.levelActivated += OnLevelActivate;
-
+            iTween.ShakePosition(gameObject, iTween.Hash("amount", Vector3.forward / 4f, "time", .5f, "looptype", iTween.LoopType.loop));
+            iTween.ShakeRotation(gameObject, iTween.Hash("z", 5f, "time", .5f, "looptype", iTween.LoopType.loop));
             
             //Check and set the current state for the Level.
             currentScene = SceneMap.GetSceneFromStringName(Application.loadedLevelName);
