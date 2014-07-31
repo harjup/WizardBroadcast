@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: 1db741970dbbfc0499bb786fe7ca686c
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HANDTEXTURE240_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_3
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_5
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_6
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 786
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_9
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_10
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_11
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_12
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_13
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 655
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_16
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_17
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_18
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_19
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_20
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 524
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_22
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_23
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_24
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_25
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_26
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_27
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 393
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_29
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_30
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_31
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_32
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_33
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_34
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 262
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_36
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 131
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_37
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 131
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HANDTEXTURE240_38
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 131
+        width: 239
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
