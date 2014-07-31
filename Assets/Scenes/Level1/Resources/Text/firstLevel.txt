@@ -1,10 +1,11 @@
 [
 	{
 		"id":  "TestSign",
+		"name" : "It is a sign",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Hello, I am a test sign read in from a json file! Please enjoy reading me as it took a lot of coordination to get this content here. It might even have paging due to its length??"
+				"text" : "fart toot. butt. so eloquent"
 			},
 			{
 				"id":  "02",
@@ -27,16 +28,20 @@
 	},
 	{
 		"id":  "01GrottoGuy",
-		"name": "Some Centaur",
+		"name": "Peasant Centaur",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There is a guy in the hole nearby and he has a treasure."
+				"text" : "There is a leaf pile North West of here that has some trolls in it.
+				One of them was talking about finding a \"really neato\" gem.
+				I heard it through the leaf pile since I have such good ears from living the life of a peasant."
 			},
 			{
 				"id":  "02",
 				"flag": "01Done",
-				"text" : "He sure did have that treasure."
+				"text" : "Did you talk to the Troll?
+				I haven't heard him talking about his vast stores of treasures in a while.
+				Must be that he doesn't have as much of a gap between the lower classes and himself any more."
 			}
 		]
 	},
@@ -46,31 +51,84 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I'm a duke"
+				"text" : "I'm a duke of the trolls. 
+				What do you mean about shouting?
+				No, I think that. 
+				We have been misrepresented by the masses because they are jealous of our wealth"
 			},
 			{
 				"id":  "02",
 				"flag" : "01Item",
-				"text" : "I am a duke here is an item."
+				"text" : "Why yes I did find some treasure.
+				I have so much wealth that I don't mind parting with a pittance such as this.
+				I don't think it has any value in Troll society anyway."
 			},
 			{
 				"id":  "03",
 				"flag" : "01Done",
-				"text" : "I gave you an item already."
+				"text" : "See, trolls aren't so bad.
+				It has nothing to do with the fact that I gave you money, right?"
 			}
 		]
 	},
 	{
 		"id":  "02MidGuy",
+		"name" : "Craftsman Centaur",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "If you could imagine a 'B' kinda grotto, I am imagining that there is a troll who will give you a treasure."
+				"text" : "Money isn't really what is important when you are working in your dream job.
+				When you get money on your mind you are like the troll in the hole South West of here.
+				I can hear him when I am working on my landscape drawing over there."
 			},
 			{
 				"id":  "02",
 				"flag" :"02Done",
-				"text" : "I see you got the thing I mentioned."
+				"text" : "Do you feel better now that you have gotten more wealth?
+				You shouldn't you know, that just means that you bought into a system that you can't return.
+				Even with the receipt.
+				I am taking a creative writing course, how could you guess?"
+			}
+		]
+	},
+	{
+		"id":  "03Guy",
+		"name" : "stump",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "See that tree over to the west? I was once that beautiful.
+				It's so beautiful, I'm sure there are treasures nestled in its leaves."
+			},
+			{
+				"id":  "02",
+				"flag" :"03Done",
+				"text" : "I was once like that tree.
+				Now I'm just a stump."
+			}
+		]
+	},
+	{
+		"id":  "03Item",
+		"name" : "Tree",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "Wow, what a beautiful tree."
+			},
+			{
+				"id":  "02",
+				"flag" :"03Item",
+				"text" : "There appears to be a treasure in this tree's leaves.
+				Oh!
+				It fell out."
+			},
+			{
+				"id":  "03",
+				"flag" :"03Done",
+				"text" : "Now it's not quite as beautiful."
 			}
 		]
 	},
@@ -80,71 +138,91 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I'm the troll lord"
+				"text" : "There is some particularly offensive literature in the area above those leaves.
+				Very anti-troll.
+				'Ask them to take it down?'
+				I couldn't do that, without allowing free-speech I would be no better than a tyrant.
+				Though if enough people complain, I guess we could remove it from the public eye.
+				Maybe put it in a place that people would know of its existence before viewing such a thing..."
 			},
 			{
 				"id":  "02",
 				"flag" : "02Item",
-				"text" : "Oh, you know the secret word? Here is an item."
+				"text" : "Oh, you are also a patron of the arts?
+				I can tell since I heard you talking to the craftsman who draws such lovely works.
+				Here, it is no good for Trolls, but maybe you could make something good of this."
 			},
 			{
 				"id":  "03",
 				"flag" : "02Done",
-				"text" : "I gave you an item."
+				"text" : "Well, I suppose that I could ask them to remove that piece if I got enough signatures.
+				The only problem is that Trolls are very separated now-a-days because of the gap in wealth.
+				If only we didn't have to help people that aren't born so fabulously wealthy."
 			}
 		]
 	},
 	{
 		"id":  "04NEGuy",
+		"name" : "Merchant Centaur",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There is a cool item you can get if you examine a box in the northish direction."
+				"text" : "If you head north you can find a hole along the wall.
+				In that hole there is a BrEyer that you need to poke right in the special spot.
+				Trust me, you'll know it when you see it."
 			},
 			{
 				"id":  "02",
-				"text" : "That was quite the poke you did to that eyeball."
+				"text" : "That was quite the poke you did to that eyeball.
+				I can tell since you seem more encumbered from that journey."
 			}
 		]
 	},
 	{
 		"id":  "04GrottoItem",
+		"name" : "BrEyer",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Why is there a statue of a frog here I sure hope there isn't some deep and lengthy history to it."
+				"text" : "Wow. This eye is really giving you the stare-down. 
+				Or whatever it's called when you freak people out with creepy eye-movements."
 			},
 			{
 				"id":  "02",
 				"flag" : "04GrottoItem01",
-				"text" : "Touching the tounge made a treasure come out"
+				"text" : "Touching the special spot it now falls before you"
 			},
 			{
 				"id":  "03",
 				"flag" : "04GrottoItem02",
-				"text" : "Good ole treasure spitter the froggo"
+				"text" : "it's gone, was it worth snuffing out a life?"
 			}
 		]
 	},
 	{
 		"id":  "05NEGuy",
+		"name" : "Helpful Stump",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "That B grotto? There's a fake wall in the westish direction"
+				"text" : "I hear there is a hole on the other side of the map. In a South-West direction from where you are currently.
+				It's under a leaf pile I hear. There is a BrEyer on the South-West wall that you have to touch in just the right place.
+				At least that's what I hear at least..."
 			},
 			{
 				"id":  "02",
-				"text" : "You poked that eyeball super good."
+				"text" : "I heard you touched it. At least, I think I heard it..."
 			}
 		]
 	},
 	{
 		"id":  "06SEGuy",
+		"name" : "Cool Rock",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There's a grotto somewhere,  I forget which one. There are treasures if you poke the eye to the north just right."
+				"text" : "There's a grotto somewhere, I know it's on the west side. If you find it there are treasures. 
+				If you poke the eye to the north juuuuuuuuust right."
 			},
 			{
 				"id":  "02",
@@ -154,85 +232,65 @@
 	},
 	{
 		"id":  "07NWGuy",
+		"name" : "Nice Tree",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I heard in a grotto nearby, There's ths wall on the south side? Actually a fake wall."
+				"text" : "I heard in a grotto nearby, there's this wall on the south side? 
+				Actually just gotta touch the BrEyer right. Then it goes away, right?"
 			},
 			{
 				"id":  "02",
-				"text" : "That eyeball is history"
+				"text" : "Is that eyeball history?
+				Yeah. It feels like it."
 			}
 		]
 	},
 	{
 		"id":  "08MidSGuy",
+		"name" : "Cool Stump",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "There is an eyeball you can get rid of if you poke it right in the middle."
+				"text" : "There is an eyeball you can get rid of if you poke it right in the perfect spot.
+				It's on the South side. In the grotto.
+				On the South-West side."
 			},
 			{
 				"id":  "02",
-				"text" : "That was quite the poke you did to that eyeball."
+				"text" : "That was quite the poke you did.
+				To that eyeball.
+				In the grotto"
 			}
 		]
 	},
 	{
 		"id":  "09GrottoGuy",
+		"name" : "Troll Knight",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Would you like to get out of here? There is a fake wall taht will let you do jsut that."
+				"text" : "Would you like to get out of here? There is a BrEyer wall that will let you do just that.
+				You know how to get rid of it? You just gotta poke it in the special place"
 			},
 			{
 				"id":  "02",
-				"text" : "What are you doing here when you could be outside?"
+				"text" : "What are you doing here when you could be outside? Playing in the sun."
 			}
 		]
 	},
 	{
 		"id":  "10GrottoGuy",
+		"name" : "Secretive Stump",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "In a grotto near here there is a secret fake wall."
+				"text" : "In a grotto near here there is a BrEyer wall. Not this grotto.
+				You gotta poke it just right."
 			},
 			{
 				"id":  "02",
-				"text" : "You found the fake wall wow."
-			}
-		]
-	},
-	{
-		"id":  "11TreeLover",
-		"content": [
-			{
-				"id":  "01",
-				"text" : "I think trees are beautiful and so wonderful. That tree over there was plant one hunder years ago and it still stands today also there's a treasure in its leaves."
-			},
-			{
-				"id":  "02",
-				"text" : "A can assure you that tree is one of the world's finest"
-			}
-		]
-	},
-	{
-		"id":  "11LovedTree",
-		"content": [
-			{
-				"id":  "01",
-				"text" : "Wow, what a wonderful, beautiful tree. I want to just stare at it for hours and hours."
-			},
-			{
-				"id":  "02",
-				"flag": "CoolTree02",
-				"text" : "There appears to be a treasure lodged in the trunk of this wonderful beautiful tree."
-			},
-			{
-				"id":  "03",
-				"flag": "CoolTree03",
-				"text" : "It's difficult to stop admiring this tree, I know."
+				"text" : "You found the fake wall, wow."
 			}
 		]
 	},
