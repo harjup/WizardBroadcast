@@ -230,6 +230,7 @@
 	{
 		"id":  "01GLore",
 		"name" : "Botanist Vuori Vert",
+		"mumble": "Jeer",
 		"content": [
 			{
 				"id":  "01",
@@ -247,6 +248,7 @@
 	{
 		"id":  "02GLore",
 		"name" : "Zoologist Vuori Vert",
+		"mumble": "Jeer",
 		"content": [
 			{
 				"id":  "01",

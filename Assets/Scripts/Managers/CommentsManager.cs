@@ -72,6 +72,7 @@ namespace Assets.Scripts.Managers
                 var messenger = Instantiate(_messengerPrefab, Vector3.zero, Quaternion.identity) as GameObject;
                 messenger.GetComponent<UserMessenger>().SetComment(userComment);
                 messenger.transform.parent = container.transform;
+                messenger.name = userComment.Name + userComment.ID;
             }
         }
 

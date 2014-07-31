@@ -66,6 +66,14 @@ namespace WizardBroadcast
 
             //If in walking state then do a moveplayer
             MovePlayer();
+
+            if (InputManager.Instance.CameraAction)
+            {
+                iTween.Stop(cameraRig.gameObject);
+                iTween.RotateTo(cameraRig.gameObject,
+                    cameraRig.rotation.eulerAngles.SetY(playerMesh.rotation.eulerAngles.y),
+                    1f);
+            }
         }
 
         private void FixedUpdate()
@@ -131,10 +139,12 @@ namespace WizardBroadcast
             if (rigidBody.velocity.SetY(0f).magnitude > .1f)
             {
                 MumblePlayer.Instance.PlayFootsteps(currentWalkType);
+                //Do walking animation
             }
             else
             {
                 MumblePlayer.Instance.StopFootsteps();
+                //Do idle animation
             }
         }
 
@@ -237,13 +247,7 @@ namespace WizardBroadcast
             var rotationDifference = Mathf.Abs(cameraRig.gameObject.transform.eulerAngles.y
                                           - playerMesh.rotation.eulerAngles.y);
 
-            if (InputManager.Instance.CameraAction)
-            {
-                iTween.Stop(cameraRig.gameObject);
-                iTween.RotateTo(cameraRig.gameObject,
-                    cameraRig.rotation.eulerAngles.SetY(playerMesh.rotation.eulerAngles.y),
-                    1f);
-            }
+            
             /*else if ((rotationDifference < 150 || rotationDifference > 220)
                 && (cameraRig.gameObject.GetComponent<iTween>() == null 
                     || !cameraRig.gameObject.GetComponent<iTween>().isRunning))

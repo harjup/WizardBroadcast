@@ -54,7 +54,8 @@ namespace Assets.Scripts.Player
             if (waitingForCallback) return;
             if (_examinableObject == null) return;
 
-            if (Input.GetKeyDown(KeyCode.O))
+            if (interactives.Count > 1) GuiManager.Instance.DrawCycleInput();
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 var index = interactives.IndexOf(_examinableObject);
                 if (index <= -1 || index >= interactives.Count - 1)
@@ -63,8 +64,7 @@ namespace Assets.Scripts.Player
                 }
                 _examinableObject = interactives[index + 1];
             }
-
-
+            
             if (InputManager.Instance.InteractAction)
             {
                 ExamineObject();
@@ -97,10 +97,13 @@ namespace Assets.Scripts.Player
         void ClimbInput()
         {
             if (waitingForCallback) return;
-            if (!InputManager.Instance.ClimbButton) return; //Don't climb if we're not pushing the button
             if (_climbTarget == Vector3.zero) return;       //Don't climb if we don't get a valid target
             if (_userMovement.GetBlockEngaged()) return;    //Don't climb if you're pushing a block
             if (_userMovement.AirState) return;             //Don't climb if you're in the air
+
+            //Draw climb button if we get this far
+            GuiManager.Instance.DrawClimbPrompt();
+            if (!InputManager.Instance.ClimbButton) return; //Don't climb if we're not pushing the button
 
             _pushableObject = null;
 
@@ -161,6 +164,8 @@ namespace Assets.Scripts.Player
                     && FindObjectOfType<RoomWorkflow>().CurrentRoom.RoomIndex == 0
                     && FindObjectOfType<RoomWorkflow>().ReverseRooms)
                 {
+                    SoundManager.Instance.Play(SoundManager.SoundEffect.HurtNoise);
+
                     SignalrEndpoint.Instance.Broadcast(GuiManager.Instance.PlayerNameInput
                     + " was helped out of "
                     + SceneMap.DescriptiveName(SceneMap.GetSceneFromStringName(Application.loadedLevelName))
@@ -277,7 +282,7 @@ namespace Assets.Scripts.Player
             if ((_examinableObject != null || _pushableObject != null) 
                 && !waitingForCallback)
             {
-                if (_examinableObject != null) UnityEngine.GUI.Label(new Rect(64,64,128,64), _examinableObject.name);
+                if (interactives.Count > 1) UnityEngine.GUI.Label(new Rect(Screen.width - 128, Screen.height - (64 + 64 + 16), 128, 32), _examinableObject.name);
                 GuiManager.Instance.DrawInteractionPrompt();
             }
         }

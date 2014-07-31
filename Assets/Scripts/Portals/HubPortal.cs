@@ -55,6 +55,8 @@ namespace Assets.Scripts.Portals
 
         IEnumerator LeaveLevelTransition(string leaveText)
         {
+            SoundManager.Instance.Play(SoundManager.SoundEffect.TeleportAlt);
+
             SignalrEndpoint.Instance.Broadcast(GuiManager.Instance.PlayerNameInput 
                 + " " + leaveText + " "  
                 + SceneMap.DescriptiveName(SceneMap.GetSceneFromStringName(Application.loadedLevelName)) 
@@ -62,7 +64,7 @@ namespace Assets.Scripts.Portals
 
             InputManager.Instance.PlayerInputEnabled = false;
             yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(3f);
             StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
             Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
             InputManager.Instance.PlayerInputEnabled = true;

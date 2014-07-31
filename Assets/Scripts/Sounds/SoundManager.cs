@@ -56,7 +56,7 @@ public class SoundManager : Singleton<SoundManager>
         
         //Teleport
         {SoundEffect.Teleport, new Sound("teleport")},
-        {SoundEffect.TeleportAlt, new Sound("teleport_alt")},
+        {SoundEffect.TeleportAlt, new Sound("teleport_alt", .75f, 3.2f)},
 
         //Walking will need to be its own thing
         {SoundEffect.Walk, new Sound("step_grass1")},
@@ -64,7 +64,7 @@ public class SoundManager : Singleton<SoundManager>
         //Player sfx
         {SoundEffect.EffortNoise, new Sound("effortnoise", .25f, .2f)},
         {SoundEffect.HurtNoise, new Sound("hurtnoise", .25f)},
-
+        {SoundEffect.MainLand, new Sound("landsafe", .5f)},
 
         //UI blips and bloops
         {SoundEffect.BeepShort, new Sound("beepbeep")},

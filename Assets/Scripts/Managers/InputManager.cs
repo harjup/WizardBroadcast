@@ -97,16 +97,16 @@ namespace Assets.Scripts.Managers
             HoritzontalAxis = Input.GetAxis("Horizontal");
             RawHoritzontalAxis = Input.GetAxisRaw("Horizontal");
             
-            InteractAction = Input.GetKeyDown(KeyCode.Z);
-            CameraAction = Input.GetKeyDown(KeyCode.X);
-            ClimbButton = Input.GetKeyDown(KeyCode.C);
+            InteractAction = Input.GetKeyDown(KeyCode.E);
+            CameraAction = Input.GetKeyDown(KeyCode.Q);
+            ClimbButton = Input.GetKeyDown(KeyCode.Space);
         }
 
         public bool PlayerEnteringComment;
 
         public bool PlayerInputEnabled
         {
-            private get { return _playerInputEnabled && !PlayerEnteringComment; }
+            get { return _playerInputEnabled && !PlayerEnteringComment; }
             set{ _playerInputEnabled = value;}
         }
 

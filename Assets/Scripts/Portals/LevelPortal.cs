@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Assets.Scripts.GameState;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
@@ -73,6 +74,8 @@ namespace WizardBroadcast
 	    {
             if (other.GetComponent<InfoPlayer>() != null && isActive)
 	        {
+                SoundManager.Instance.Play(SoundManager.SoundEffect.TeleportAlt);
+
                 SignalrEndpoint.Instance.Broadcast(GuiManager.Instance.PlayerNameInput
                 + " has entered "
                 + SceneMap.DescriptiveName(sceneToLoad)
@@ -81,9 +84,21 @@ namespace WizardBroadcast
                 //Stop broadcasting ghost stuff when leaving the hub
                 //TODO: Is this the best place for this logic etc etc
                 SignalrEndpoint.Instance.StopGhost();
-	            Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
+                StartCoroutine(EnterLevelTransition());
 	        }
 	    }
+
+
+        IEnumerator EnterLevelTransition()
+        {
+            SoundManager.Instance.Play(SoundManager.SoundEffect.TeleportAlt);
+            InputManager.Instance.PlayerInputEnabled = false;
+            yield return StartCoroutine(CameraManager.Instance.DoWipeOut(.5f));
+            yield return new WaitForSeconds(2.5f);
+            StartCoroutine(CameraManager.Instance.DoWipeIn(.5f));
+            Application.LoadLevel(SceneMap.GetScene(sceneToLoad));
+            InputManager.Instance.PlayerInputEnabled = true;
+        }
 
     }
 }

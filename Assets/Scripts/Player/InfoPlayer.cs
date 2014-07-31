@@ -81,6 +81,8 @@ namespace Assets.Scripts.Player
         //Let's start specific and get generic as we go ok
         public IEnumerator OnFellDownHole(Vector3 targetEndpoint, GrottoEntrance.EnterMethod enterMethod)
         {
+            if (enterMethod == GrottoEntrance.EnterMethod.Spring) SoundManager.Instance.Play(SoundManager.SoundEffect.Teleport);
+
             InputManager.Instance.PlayerInputEnabled = false;
             gameObject.collider.enabled = false;
             rigidbody.useGravity = false;
@@ -88,6 +90,9 @@ namespace Assets.Scripts.Player
             rigidbody.useGravity = true;
             InputManager.Instance.PlayerInputEnabled = true;
             gameObject.collider.enabled = true;
+
+            if (enterMethod == GrottoEntrance.EnterMethod.Fall) SoundManager.Instance.Play(SoundManager.SoundEffect.MainLand);
+
             //Move player to initial position
             //Start iTweening toward target
             //Togggle correct player animation

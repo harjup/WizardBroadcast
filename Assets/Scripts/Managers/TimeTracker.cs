@@ -97,11 +97,11 @@ namespace Assets.Scripts.Managers
 
         void OnGUI()
         {
-            GUI.Label(new Rect(Screen.width - 100f, 10f, 200f, 50f), String.Format("{0}:{1}", _currentTime.Hour, _currentTime.Minute));
-            if (GUI.Button(new Rect(Screen.width - 96f, 160f, 64f, 32f), String.Format("Min++")))
+            GUI.Label(new Rect(Screen.width - 64f, 16f, 200f, 50f), String.Format("{0}:{1}", _currentTime.Hour.ToString("D2"), _currentTime.Minute.ToString("D2")));
+            /*if (GUI.Button(new Rect(Screen.width - 96f, 160f, 64f, 32f), String.Format("Min++")))
             {
                 IncrementMinute(0f);
-            }
+            }*/
         }
 
         public int GetSessionTime()

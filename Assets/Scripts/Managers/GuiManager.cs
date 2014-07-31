@@ -21,6 +21,19 @@ namespace Assets.Scripts.Managers
             _showInteractionPrompt = true;
         }
 
+        private bool _showClimbPrompt = false;
+        public void DrawClimbPrompt()
+        {
+            _showClimbPrompt = true;
+        }
+
+        private bool _showCyclePrompt = false;
+        public void DrawCycleInput()
+        {
+            _showCyclePrompt = true;
+        }
+
+
         private string _passiveTextBoxContents;
         private string _passiveTextSpeaker;
         public void DrawPassiveTextBox(string text, string speaker)
@@ -149,13 +162,21 @@ namespace Assets.Scripts.Managers
             
 
             //Interaction button prompts
-            if (_showInteractionPrompt)
+            if (_showInteractionPrompt || _showTextProceedPrompt)
             {
                 GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
-            if (_showTextProceedPrompt)
+            if (InputManager.Instance.PlayerInputEnabled && CameraManager.Instance.GetPlayerCamera().enabled)
             {
-                GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+                GUI.DrawTexture(new Rect(Screen.width - 64, 128, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+            }
+            if (_showClimbPrompt)
+            {
+                GUI.DrawTexture(new Rect(Screen.width - 64, 128 + 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+            }
+            if (_showCyclePrompt)
+            {
+                GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - (64 + 64), 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
 
             //Text boxes
@@ -194,14 +215,18 @@ namespace Assets.Scripts.Managers
             yield return new WaitForEndOfFrame();
             _drawGeneralInfo = false;
             _showTextProceedPrompt = false;
-            
+            _showCyclePrompt = false;
+
             _textBoxContents = null;
 
             _passiveTextBoxContents = null;
             _passiveTextSpeaker = null;
 
             _showInteractionPrompt = false;
+            _showClimbPrompt = false;
             DrawCommentGui = false;
         }
+
+        
     }
 }

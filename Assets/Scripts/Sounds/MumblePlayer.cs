@@ -142,7 +142,7 @@ public class MumblePlayer : Singleton<MumblePlayer>
             else if (type == WalkType.Stone)
             {
                 delayAmount = .1f;
-                _walkSource.volume = .3f;
+                _walkSource.volume = .15f;
             }
 
             foreach (var clip in clips)

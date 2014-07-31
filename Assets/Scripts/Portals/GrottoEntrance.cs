@@ -38,7 +38,7 @@ namespace Assets.Scripts.Portals
                     StartCoroutine(playerInfo.OnEnterDoorway(Vector3.forward, targetEndpoint));
                     return;
                 }
-
+                
                 StartCoroutine(playerInfo.OnFellDownHole(targetEndpoint.position, Enter));
             }
         }
