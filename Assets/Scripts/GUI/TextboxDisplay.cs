@@ -63,6 +63,7 @@ namespace Assets.Scripts.GUI
 
         public IEnumerator DisplayText(string text, string speaker, Action doneCallback, MumbleType mumbleType = MumbleType.Undefined)
         {
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BeepYes);
             _speaker = speaker;
 
             keyDownFromInit = true;
@@ -87,6 +88,7 @@ namespace Assets.Scripts.GUI
 
                 foreach (var l in lines)
                 {
+                    SoundManager.Instance.Play(SoundManager.SoundEffect.BeepShort);
                     //Initialize text values
                     _fullDisplayText = l;
                     _currentDisplayText = "";
@@ -102,6 +104,7 @@ namespace Assets.Scripts.GUI
 
             isRunning = false;
             doneCallback();
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BeepNo);
         }
 
         const MumbleType Undefined = MumbleType.Undefined;

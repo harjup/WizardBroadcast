@@ -18,6 +18,7 @@
 	},
 	{
 		"id":  "02Lore",
+		"name" : "stump",
 		"content": [
 			{
 				"id":  "01",
@@ -36,6 +37,7 @@
 	},
 	{
 		"id":  "03Lore",
+		"name" : "tree",
 		"content": [
 			{
 				"id":  "01",
@@ -51,6 +53,7 @@
 	},
 	{
 		"id":  "04Lore",
+		"lore" : "stump",
 		"content": [
 			{
 				"id":  "01",
@@ -76,6 +79,11 @@
 				What's that?
 				No, it wasn't a battle of the flesh and profane, but one of the mind, one that appealed to our higher functions.
 				Yes, we debated for a while, but found no traction from one side or another, until we came up with the wise and noble solution of flipping a coin."
+				
+			},
+			{
+				"id":  "02",
+				"text" : "It was heads..."
 			}
 		]
 	},
@@ -109,83 +117,267 @@
 		]
 	},
 	{
-		"id":  "01GLore",
+		"id":  "08Lore",
+		"name" : "stump",
+		"mumble": "Sign",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I AM A USELESS LORE SIGN I GOTCHA, HAHAAHAH!"
+				"text" : "The bold knight approached the first trial of three, the sun reflecting off his gray armor. 
+				The clanking of metal came to a halt in front of a path covered in a roaring fire. 
+				A small sign nearby boldly proclaimed \"FORWARD IS THE TRIAL OF COURAGE, ONLY THE BRAVE MAY PASS\". 
+				After a cursory examination he stepped forward, through the blazing inferno as the flames whipped all around him. 
+				He emerged from the other side unscathed.
+				\"Amazing!\" chirped a nightingale as it flew in for a landing on a nearby branch. 
+				\"However did you, brave knight, know that the fire would not harm you?\"
+				The man's gauntlet let out a clank as he lifted the visor from his face. 
+				\"It was called the Trial of Courage,\" he stated bluntly. 
+				He punctuated it with an incredulous look on his face...
+				1/7 rests at the bottom of the engraving"
+			}
+		]
+	},
+	{
+		"id":  "09Lore",
+		"name" : "tree",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "The knight's journey still had two remaining trials, and he entered a small open clearing. 
+				As he did, laughter built to a crescendo over the clearing. 
+				At the center a table and two chairs were placed before an explosion went off behind him. 
+				A man wearing a wizard robe and hat began bouncing up and down clapping. 
+				\"AHO! Another fool enters my domain, clearly forgetting his own brain! To defeat my trial of wisdom is no easy feat, many have come before and they are all beat!\" The small man laughed and pranced around the stoic knight. 
+				\"I have many riddles and quizzes in store, I-UGH!\" The wizard collapsed in a heap, a large bump forming from the knight's gauntlet. 
+				To no one he uttered, \"I'll hear no more from you\"
+				2/7 can be made out under this part of the story"
+			}
+		]
+	},
+	{
+		"id":  "10Lore",
+		"name" : "tree",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "The nightingale flew buzzed around the knight's head, singing praises and chirps as he swatted it away. 
+				Suddenly it became frightened and flew off as the ground shook as what appeared next was a massive green troll. 
+				It bellowed out a warning, \"DIS BE DA TRIAL OF POWAH. I MM DA STRONGEST!\" The troll, sensing the need to prove it, whacked a tree with his large club, causing it to uproot from the ground and come crashing down, adding a big toothy grin. 
+				\"My large green friend,\" the knight began, \"it's clear to all that can see who the strongest here is. 
+				I only ask that you let me pass so I may spread the legacy of strength to those willing to hear\". 
+				The troll gave this as much thought as such a creature was able, before motioning with his hand to progress.
+				3/7 is the last thing you see in this inscription.\""
+			}
+		]
+	},
+	{
+		"id":  "D1Lore",
+		"name" : "Rock",
+		"mumble" : "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "This rock is so great and lumpy. This is the best rock you have seen in a while, and you have seen quite a few."
+			}
+		]
+	},
+	{
+		"id":  "D2Lore",
+		"name" : "stump",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "This stump is rotten in the literal sense. You have no idea about its moral character"
+			}
+		]
+	},
+	{
+		"id":  "D3Lore",
+		"name" : "rock",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "This is not the best rock, but it's not the worst."
+			}
+		]
+	},
+	{
+		"id":  "D4Lore",
+		"name" : "stump",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "This stump has the swirliest rings. Is this stump trying to hide its age?"
+			}
+		]
+	},
+	{
+		"id":  "D5Lore",
+		"name" : "Rock",
+		"mumble": "Sign",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "This moss is so great, it is soft and springy like all moss should be. The rock beneath it is lack-lustre at best."
+			}
+		]
+	},
+	{
+		"id":  "01GLore",
+		"name" : "Botanist Vuori Vert",
+		"content": [
+			{
+				"id":  "01",
+				"text" : "I have no intention of attacking you. 
+				You see, even though my brethren may; everyone in the forest is very learned, and therefore non-violent.
+				What do you mean 'violence isn't necessarily tied to education'? 
+				I'm sure there are studies about it somewhere.
+				Not in my notes of course, you caught me off-guard with this line of questioning.
+				Currently I am studying the flora of the forest and the interesting results that happen using basic ingredients derived from these very woods.
+				It is very interesting, I can assure you!
+				Maybe if you come back after my sabbatical next year I will have something more conclusive."
 			}	
 		]
 	},
 	{
 		"id":  "02GLore",
+		"name" : "Zoologist Vuori Vert",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "I have no intention of attacking you.
+				I would only capture you for a bit and release you where I found you initially.
+				As a zoologist, I will often come to the forest on days off and try to identify new animals by scooping them up to draw them up close.
+				I take Jean-Henri Fabre version of study; often not disturbing subjects to draw and see them in their natural habitat.
+				Hmm?
+				I suppose I should just leave the animals there, but I'm trying to get some Life-Drawing done at the same time.
+				You see, I bring the animal in a plastic container back to my camp where I have my model in repose and draw both at the same time.
+				Efficiency is the key when you want to get the most out of your off-time."
 			}
 		]
 	},
 	{
 		"id":  "03GLore",
+		"name" : "Peasant Troll",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "Those centaurs think they are so civilized.
+				In reality, they are blinded by system of centaur xenophobia so much that they can't even see how messed up their government is.
+				If they were really that progressive they would be trying to over-throw their plutocratic government.
+				That is what all lower class Trolls are striving to do as we speak.
+				What do you mean by 'I don't see any violent uprising'?
+				We're still civilized enough to see that we would only be playing into the hands of our oppressors if we were to be violent.
+				Non-violence is the key to every good movement.
+				Listen, violence only be-gets more violence, and that is why we don't try to win with violent shouting matches
+				Physical violence?
+				How brutish!"
 			}
 		]
 	},
 	{
 		"id":  "04GLore",
+		"name" : "Merchant Troll",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "If only the upper class wasn't so set in its ways.
+				Then we could have a real amount of commerce, and grow to a stronger economic status as a group.
+				That's why I hope the rebellion will over-throw those violent barbarians.
+				What, you want me to take up arms?
+				No no no no no no, I am a merchant for a reason, I get arm strain from a hard day at work, not back strain.
+				Besides, the upper crust is violent.
+				Hit people?
+				You've been listening to too many centaurs, we discuss things like civilized beings.
+				Though the rich do get a bit too loud for most being's taste"
 			}
 		]
 	},
 	{
 		"id":  "05GLore",
+		"name" : "Craftsman Troll",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "There is no good market for my wares considering all the foot-traffic we get down here.
+				What do you mean, 'why aren't you creating goods'?
+				Listen, I can't create wares if there is no market for it.
+				You have to be able to make profit from what you do.
+				Salesmanship is almost as important as the goods themselves.
+				It's true that you should let the product speak for itself, but if you have no one to let it talk to; who will appreciate its words?
+				If only the nobles wouldn't stay in the way of progress!
+				It makes me so mad!
+				'Do something about it'?
+				Clearly you haven't had to deal with those violent war-mongers.
+				They'll shout at a very loud volume if you try to discuss ~anything~."
 			}
 		]
 	},
 	{
 		"id":  "06GLore",
+		"name" : "stump",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "The knight stopped before the mouth of a large cave as the nightingale landed on a nearby branch, singing a song about the knight's combined courage, might, and wisdom. 
+				Entering the cave, a robed figure obscuring his face appears before him in a puff of smoke with his arms raised high. 
+				\"Would be hero, you have done well to make it this far for the Magical Macguffin. 
+				But now, you must pass the most harrowing test of all, to defeat the foulest beast I can muster with my magical powers. 
+				You may be rendered speechless at his form, but know that-\"
+				\"OH!\" the knight exclaimed rather rudely, cutting off the powerful enchanter. 
+				\"Let me guess, it wouldn't happen to be a shadowy looking version of myself, would it?\"
+				The wizards hands come down immediately. \"Oh...uhhh...well...\"
+				this seems to be the last of the story since it ends with 4/7 thought there are markings that you can't quite make out underneath."
 			}
 		]
 	},
 	{
 		"id":  "07GLore",
+		"name" : "stump",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "\"That would be really lame. 
+				Like, not only a cliché but it would tarnish your name as a powerful mage. 
+				Especially if I had to defeat it using a technique I was close to mastering but hadn't yet, or if I were to befriend it.\"
+				The wizards glowing eyes dart around the room helplessly as he scratches his head. 
+				\"Wow, uh...yeah. That would be really bad, huh?\"
+				\"Also it's a bit mean spirited to have it guarded by three trials then have a hidden one on top of it.\"
+				Though this one seems short it is punctuated by a 5/7"
 			}
 		]
 	},
 	{
 		"id":  "08GLore",
+		"name" : "rock",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "As the knight walked triumphantly from the cave the nightingale flew over his head. 
+				\"Proud knight, I have seen many succumb to the dangers of this forest, I pray thee, tell me your name so I may sing it for all time.\"
+				The man lowered his visor, admiring his bauble and turned to the nightingale. 
+				\"I never said I was a knight yet, but I shall be when I return with this.\" As he walked away he said, \"My name will be 'Sir John...Sir John RaSavi\"
+				6/7 is what comes next, though it seems like the end..."
 			}
 		]
 	},
 	{
 		"id":  "09GLore",
+		"name" : "rock",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have any useful information mister."
+				"text" : "There were many great deeds sang of about the knight as he went throughout the land.
+				So great, in fact, that I'm sure you've heard them all by now.
+				He is fairly ubiquitous in our lexicon of folklore.
+				It is much like the idea of the hero with a thousand faces, except this knight was successful on the whole.
+				Not that I need to let you know, since I am sure that you've read it all so much that you could be a professor on the subject.
+				7/7... I wasn't expecting that..."
 			}
 		]
 	}

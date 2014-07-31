@@ -27,11 +27,13 @@ public class CommentEntryService : Singleton<CommentEntryService>
             }
             else if (GuiManager.Instance.CancelPressed())
             {
+                SoundManager.Instance.Play(SoundManager.SoundEffect.BeepNo);
                 commentMode = false;
             }
         }
         else if (commentingAllowed && GUI.Button(new Rect(16, 32 + 16, 96, 32), "Comment") )
         {
+            SoundManager.Instance.Play(SoundManager.SoundEffect.BeepShort);
             GuiManager.Instance.DrawCommentGui = false;
             commentMode = true;
         }
@@ -43,6 +45,8 @@ public class CommentEntryService : Singleton<CommentEntryService>
 
     void ConfirmButtonPressed()
     {
+        SoundManager.Instance.Play(SoundManager.SoundEffect.BeepYes);
+
         var comment = new UserComment
         {
             Name = GuiManager.Instance.PlayerNameInput,

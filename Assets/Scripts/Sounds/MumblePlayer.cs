@@ -137,7 +137,7 @@ public class MumblePlayer : Singleton<MumblePlayer>
             if (type == WalkType.Grass)
             {
                 cutOffMultiplier = .5f;
-                
+                _walkSource.volume = .50f;
             }
             else if (type == WalkType.Stone)
             {

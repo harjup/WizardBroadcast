@@ -5457,7 +5457,7 @@ Transform:
   - {fileID: 1524955131}
   - {fileID: 401074462}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 8
+  m_RootOrder: 18
 --- !u!114 &361643677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7604,7 +7604,7 @@ Transform:
   - {fileID: 1006999414}
   - {fileID: 609834587}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 4
+  m_RootOrder: 14
 --- !u!114 &485221413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9642,7 +9642,7 @@ Transform:
   - {fileID: 660927362}
   - {fileID: 164686826}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 12
+  m_RootOrder: 3
 --- !u!114 &618792775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10420,7 +10420,7 @@ Transform:
   - {fileID: 919071758}
   - {fileID: 1429759404}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 10
+  m_RootOrder: 1
 --- !u!114 &668043954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11620,7 +11620,7 @@ Transform:
   - {fileID: 1277991056}
   - {fileID: 1233812458}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 2
+  m_RootOrder: 12
 --- !u!114 &723429968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12456,7 +12456,7 @@ Transform:
   - {fileID: 1865589884}
   - {fileID: 1656604978}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 6
+  m_RootOrder: 16
 --- !u!114 &799317354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14209,7 +14209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebc63d8f0d56674d9d260884fee3c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptId: 02Lore
+  scriptId: 09Lore
 --- !u!65 &921042330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15574,7 +15574,7 @@ Transform:
   - {fileID: 2020295316}
   - {fileID: 1917077780}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 16
+  m_RootOrder: 7
 --- !u!54 &1043155956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16131,6 +16131,10 @@ Prefab:
     - target: {fileID: 400002, guid: f96cebe1b26c7a443bd8c7e9cdef8c72, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.47000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f96cebe1b26c7a443bd8c7e9cdef8c72, type: 2}
+      propertyPath: scriptId
+      value: 09Lore
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3300000, guid: f96cebe1b26c7a443bd8c7e9cdef8c72, type: 2}
@@ -17468,7 +17472,7 @@ Transform:
   - {fileID: 1867168489}
   - {fileID: 1236404760}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 1
+  m_RootOrder: 11
 --- !u!114 &1134767696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18284,7 +18288,7 @@ Transform:
   - {fileID: 1980494173}
   - {fileID: 828456227}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 9
+  m_RootOrder: 0
 --- !u!114 &1191824559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18683,7 +18687,7 @@ Transform:
   - {fileID: 1028598549}
   - {fileID: 1274729600}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 5
+  m_RootOrder: 15
 --- !u!114 &1223140497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19018,7 +19022,7 @@ Transform:
   - {fileID: 1419446301}
   - {fileID: 36189112}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 14
+  m_RootOrder: 5
 --- !u!114 &1236915304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19513,7 +19517,7 @@ Transform:
   - {fileID: 1013212450}
   - {fileID: 684934732}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 17
+  m_RootOrder: 8
 --- !u!54 &1251966236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19744,7 +19748,7 @@ Transform:
   - {fileID: 490788990}
   - {fileID: 1810943938}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 3
+  m_RootOrder: 13
 --- !u!114 &1262098548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20891,7 +20895,7 @@ Transform:
   - {fileID: 187534565}
   - {fileID: 1181642365}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 0
+  m_RootOrder: 10
 --- !u!114 &1365668663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22465,7 +22469,7 @@ Transform:
   - {fileID: 724813076}
   - {fileID: 2045214951}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 13
+  m_RootOrder: 4
 --- !u!114 &1480672446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23627,7 +23631,7 @@ Transform:
   - {fileID: 927622696}
   - {fileID: 1866705024}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 15
+  m_RootOrder: 6
 --- !u!114 &1547473340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27847,7 +27851,7 @@ Transform:
   - {fileID: 1868584033}
   - {fileID: 672488676}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 7
+  m_RootOrder: 17
 --- !u!114 &1823321669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28082,15 +28086,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1365668662}
-  - {fileID: 1134767695}
-  - {fileID: 723429967}
-  - {fileID: 1262098547}
-  - {fileID: 485221412}
-  - {fileID: 1223140496}
-  - {fileID: 799317353}
-  - {fileID: 1823321668}
-  - {fileID: 361643676}
   - {fileID: 1191824558}
   - {fileID: 668043953}
   - {fileID: 2006127752}
@@ -28101,6 +28096,15 @@ Transform:
   - {fileID: 1043155955}
   - {fileID: 1251966235}
   - {fileID: 2092386043}
+  - {fileID: 1365668662}
+  - {fileID: 1134767695}
+  - {fileID: 723429967}
+  - {fileID: 1262098547}
+  - {fileID: 485221412}
+  - {fileID: 1223140496}
+  - {fileID: 799317353}
+  - {fileID: 1823321668}
+  - {fileID: 361643676}
   m_Father: {fileID: 1065033602}
   m_RootOrder: 0
 --- !u!1 &1840971057
@@ -28749,6 +28753,10 @@ Prefab:
     - target: {fileID: 400000, guid: 34aa39e8831dc1e4d8cc21e4b8ecd22c, type: 2}
       propertyPath: m_LocalScale.z
       value: 2.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 34aa39e8831dc1e4d8cc21e4b8ecd22c, type: 2}
+      propertyPath: scriptId
+      value: 08Lore
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3300000, guid: 34aa39e8831dc1e4d8cc21e4b8ecd22c, type: 2}
@@ -30054,7 +30062,7 @@ Transform:
   - {fileID: 1374293150}
   - {fileID: 2020315105}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 11
+  m_RootOrder: 2
 --- !u!114 &2006127753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31272,7 +31280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebc63d8f0d56674d9d260884fee3c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptId: 05Lore
+  scriptId: 08Lore
 --- !u!65 &2080241122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31421,7 +31429,7 @@ Transform:
   - {fileID: 1094524873}
   - {fileID: 332042444}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 18
+  m_RootOrder: 9
 --- !u!54 &2092386044
 Rigidbody:
   m_ObjectHideFlags: 0

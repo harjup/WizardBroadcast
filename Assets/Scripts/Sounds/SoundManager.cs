@@ -67,10 +67,10 @@ public class SoundManager : Singleton<SoundManager>
 
 
         //UI blips and bloops
-        {SoundEffect.BeepShort, new Sound("beepbeep", .25f, .2f)},
-        {SoundEffect.BeepYes, new Sound("beepyes", .25f)},
-        {SoundEffect.BeepNo, new Sound("beepno", .25f)},
-        {SoundEffect.BeepMaybe, new Sound("beepmaybe", .25f)},
+        {SoundEffect.BeepShort, new Sound("beepbeep")},
+        {SoundEffect.BeepYes, new Sound("beepyes")},
+        {SoundEffect.BeepNo, new Sound("beepno")},
+        {SoundEffect.BeepMaybe, new Sound("beepmaybe")},
     };
 
     private List<AudioSource> _sources = new List<AudioSource>();

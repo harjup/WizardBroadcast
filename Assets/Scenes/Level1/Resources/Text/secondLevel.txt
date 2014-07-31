@@ -10,7 +10,8 @@
 				If you find any boxxy kinds of objects, approach them and press the 'Interaction Button' to enter 'push mode'.
 				While in 'push mode', you can move forward and backward to push and pull the block in the direction you'd like.
 				When you are done pushing a box in a given direciton, press the 'Interaction button' again to stop pushing it.
-				You can also climb surfaces by pressing the climb button."
+				You can also climb onto surfaces and blocks by pressing the climb button.
+				Maybe even this sign."
 			}
 		]
 	},
