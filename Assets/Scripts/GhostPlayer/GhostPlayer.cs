@@ -10,6 +10,8 @@ public class GhostPlayer : MonoBehaviourBase
     {
         id = _id;
         transform.position = position;
+        transform.GetChild(0).GetChild(0).renderer.material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), .6f);
+
     }
 
     public void UpdatePosition(Vector3 position)
