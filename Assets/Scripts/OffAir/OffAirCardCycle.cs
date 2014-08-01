@@ -32,7 +32,7 @@ public class OffAirCardCycle : MonoBehaviour
                     titleCard.gameObject.SetActive(false);
                 }
                 currentCard.gameObject.SetActive(true);
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(10f);
             }
             yield return new WaitForEndOfFrame();
         }
