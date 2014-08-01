@@ -12,7 +12,13 @@ namespace Assets.Scripts.Managers
     //This class is a fukin mess I am sorry
     class GuiManager : Singleton<GuiManager>
     {
+        private Texture _interactionPromptGraphic;
         private Texture _dismissalPromptGraphic;
+        private Texture _cameraButtonGraphic;
+        private Texture _climbButtonGraphic;
+        private Texture _swapButtonGraphic;
+
+
         public GUIStyle textBoxStyle;
 
         private bool _showInteractionPrompt = false;
@@ -112,7 +118,11 @@ namespace Assets.Scripts.Managers
 
         void Start()
         {
-            _dismissalPromptGraphic = Resources.Load<Texture>("Textures/dismissPrompt");
+            _interactionPromptGraphic = Resources.Load<Texture>("Textures/Keys/E key text");
+            _dismissalPromptGraphic = Resources.Load<Texture>("Textures/Keys/E key");
+            _cameraButtonGraphic = Resources.Load<Texture>("Textures/Keys/Q key text");
+            _climbButtonGraphic = Resources.Load<Texture>("Textures/Keys/Space key text");
+            _swapButtonGraphic = Resources.Load<Texture>("Textures/Keys/R key text");
         }
 
         void Update()
@@ -162,21 +172,25 @@ namespace Assets.Scripts.Managers
             
 
             //Interaction button prompts
-            if (_showInteractionPrompt || _showTextProceedPrompt)
+            if (_showInteractionPrompt)
             {
-                GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+                GUI.DrawTexture(new Rect(Screen.width - (128 + 16), Screen.height - 64, 128, 32), _interactionPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+            }
+            if (_showTextProceedPrompt)
+            {
+                GUI.DrawTexture(new Rect(Screen.width - (64), Screen.height - 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
             if (InputManager.Instance.PlayerInputEnabled && CameraManager.Instance.GetPlayerCamera().enabled)
             {
-                GUI.DrawTexture(new Rect(Screen.width - 64, 128, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+                GUI.DrawTexture(new Rect(Screen.width - (128 + 16), 128, 128, 32), _cameraButtonGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
             if (_showClimbPrompt)
             {
-                GUI.DrawTexture(new Rect(Screen.width - 64, 128 + 64, 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+                GUI.DrawTexture(new Rect(Screen.width - (128 + 16), 128 + 64, 128, 32), _climbButtonGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
             if (_showCyclePrompt)
             {
-                GUI.DrawTexture(new Rect(Screen.width - 64, Screen.height - (64 + 64), 32, 32), _dismissalPromptGraphic, ScaleMode.StretchToFill, true, 1.0F);
+                GUI.DrawTexture(new Rect(Screen.width - (128 + 16), Screen.height - (64 + 64), 128, 32), _swapButtonGraphic, ScaleMode.StretchToFill, true, 1.0F);
             }
 
             //Text boxes

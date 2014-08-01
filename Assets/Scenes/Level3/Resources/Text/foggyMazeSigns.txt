@@ -4,7 +4,10 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go right"
+				"text" : " Edmund in King Lear Act 1 Scene 2 said 'My father compounded with my mother under the dragon's tail; 
+				and my nativity was under Ursa major;
+				so that it follows, I am rough and lecherous'
+				If you follow Draco counter-widdershins to Ursa Major you would go..."
 			}
 		]
 	},
@@ -13,7 +16,8 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go left"
+				"text" : " In 2001: A Space Odyssey, there are instructions on how to use a toilet in zero gravity.
+				Imagine the face of a clock now, and go in the direction that equals the number of steps for using the space toilet."
 			}
 		]
 	},
@@ -22,7 +26,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go up"
+				"text" : "In Citizen Cane you watch the life of a man through the eyes of his friends told to a reporter post-mortem.
+				You watch as he gains power and is cut-throat in all of his business, he is distant with everyone, everything is planned to make him seem better than he is.
+				After he leaves home he moves ______ in society"
 			}
 		]
 	},
@@ -31,7 +37,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go down"
+				"text" : "MacBeth is a look at a man rising to power and the balance of fate and the place of humans in the supernatural.
+				This is in the same vein as Greek Tragedies that came before it, and was considered one of the first horror plays.
+				MacBeth goes ______ after his rise to the crown."
 			}
 		]
 	},
@@ -40,7 +48,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go right"
+				"text" : "In Shadow of the Colossus you play as a boy trying to resurrect a woman.
+				You go to a mysterious temple with ambiguous purpose and follow a strange voice's command.
+				If only this game had a clear sense of ..."
 			}
 		]
 	},
@@ -49,7 +59,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go left"
+				"text" : "In the series The Legend of Zelda there have been many incarnations of a hero saving a princess and his adventures surrounding the lands.
+				There is no true continuity, but it is a lose collection of stories about people fighting evil and saving their land.
+				In almost all incarnations the hero has his sword in his ..."
 			}
 		]
 	},
@@ -58,7 +70,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go down"
+				"text" : "In Norse Mythology you would find things to be very different from the popular culture's interpretation of said legends.
+				In all Mythology you find variations on the stories depending on region and translation of course, 
+				but in almost all of them to go from Valhalla to Midgard you must go _____ across the rainbow bridge"
 			}
 		]
 	},
@@ -67,7 +81,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go right"
+				"text" : "In most Greek Mythology stories the gods do not have clear set morals that they always follow. 
+				They will enforce them often though, by killing those that kill their fathers.
+				If only they knew that wasn't..."
 			}
 		]
 	},
@@ -76,7 +92,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "Go back the other way, that way you can experience it twice!"
+				"text" : "Oh man, I didn't think that people could even finish this game- I mean, good job adventurer, since we have to consider gameplay you have to... uh... replay the level backwards.
+				Yeah! that way it's a new experience, but different. Go back the other way, and follow the signs by doing the opposite of what they say.
+				That way you can experience it twice!"
 			}
 		]
 	},
@@ -85,7 +103,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I don't have an ending. WOOOPS!!!!!"
+				"text" : "I don't have an ending... Uh, I mean, and there isn't an ending to life! 
+				Since the helping hand would sometimes bring you to the beginning of the level to give you time to think through a solution, 
+				they can just take you out of the level so you can experience life elsewhere and think about what you experienced in your adventure!"
 			}
 		]
 	}
