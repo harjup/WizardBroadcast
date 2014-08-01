@@ -1,0 +1,746 @@
+fileFormatVersion: 2
+guid: 90484105243e12545b499bb89c7f7825
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: mc_game_mdl:Biped_Shadow:Biped_Shadow
+    100004: mc_game_mdl:Biped_Shadow:Chest
+    100006: mc_game_mdl:Biped_Shadow:ChestEffector
+    100008: mc_game_mdl:Biped_Shadow:ChestRoot
+    100010: mc_game_mdl:Biped_Shadow:eff
+    100012: mc_game_mdl:Biped_Shadow:eff1
+    100014: mc_game_mdl:Biped_Shadow:eff10
+    100016: mc_game_mdl:Biped_Shadow:eff11
+    100018: mc_game_mdl:Biped_Shadow:eff12
+    100020: mc_game_mdl:Biped_Shadow:eff13
+    100022: mc_game_mdl:Biped_Shadow:eff14
+    100024: mc_game_mdl:Biped_Shadow:eff15
+    100026: mc_game_mdl:Biped_Shadow:eff16
+    100028: mc_game_mdl:Biped_Shadow:eff17
+    100030: mc_game_mdl:Biped_Shadow:eff18
+    100032: mc_game_mdl:Biped_Shadow:eff19
+    100034: mc_game_mdl:Biped_Shadow:eff2
+    100036: mc_game_mdl:Biped_Shadow:eff20
+    100038: mc_game_mdl:Biped_Shadow:eff21
+    100040: mc_game_mdl:Biped_Shadow:eff3
+    100042: mc_game_mdl:Biped_Shadow:eff4
+    100044: mc_game_mdl:Biped_Shadow:eff5
+    100046: mc_game_mdl:Biped_Shadow:eff6
+    100048: mc_game_mdl:Biped_Shadow:eff7
+    100050: mc_game_mdl:Biped_Shadow:eff8
+    100052: mc_game_mdl:Biped_Shadow:eff9
+    100054: mc_game_mdl:Biped_Shadow:GlobalSRT
+    100056: mc_game_mdl:Biped_Shadow:Head
+    100058: mc_game_mdl:Biped_Shadow:HeadRoot
+    100060: mc_game_mdl:Biped_Shadow:LBicep
+    100062: mc_game_mdl:Biped_Shadow:LFootBone1
+    100064: mc_game_mdl:Biped_Shadow:LFootBone2
+    100066: mc_game_mdl:Biped_Shadow:LFootBone3
+    100068: mc_game_mdl:Biped_Shadow:LFootRoot
+    100070: mc_game_mdl:Biped_Shadow:LForearm
+    100072: mc_game_mdl:Biped_Shadow:LHand
+    100074: mc_game_mdl:Biped_Shadow:LHandRoot
+    100076: mc_game_mdl:Biped_Shadow:LIndex1
+    100078: mc_game_mdl:Biped_Shadow:LIndex2
+    100080: mc_game_mdl:Biped_Shadow:LIndex3
+    100082: mc_game_mdl:Biped_Shadow:LIndexRoot
+    100084: mc_game_mdl:Biped_Shadow:LMiddle1
+    100086: mc_game_mdl:Biped_Shadow:LMiddle2
+    100088: mc_game_mdl:Biped_Shadow:LMiddle3
+    100090: mc_game_mdl:Biped_Shadow:LMiddleRoot
+    100092: mc_game_mdl:Biped_Shadow:LPinky1
+    100094: mc_game_mdl:Biped_Shadow:LPinky2
+    100096: mc_game_mdl:Biped_Shadow:LPinky3
+    100098: mc_game_mdl:Biped_Shadow:LPinkyRoot
+    100100: mc_game_mdl:Biped_Shadow:LRing1
+    100102: mc_game_mdl:Biped_Shadow:LRing2
+    100104: mc_game_mdl:Biped_Shadow:LRing3
+    100106: mc_game_mdl:Biped_Shadow:LRingRoot
+    100108: mc_game_mdl:Biped_Shadow:LRoot
+    100110: mc_game_mdl:Biped_Shadow:LRoot1
+    100112: mc_game_mdl:Biped_Shadow:LShin
+    100114: mc_game_mdl:Biped_Shadow:LShoulder
+    100116: mc_game_mdl:Biped_Shadow:LShoulderRoot
+    100118: mc_game_mdl:Biped_Shadow:LThigh
+    100120: mc_game_mdl:Biped_Shadow:LThumb1
+    100122: mc_game_mdl:Biped_Shadow:LThumb2
+    100124: mc_game_mdl:Biped_Shadow:LThumb3
+    100126: mc_game_mdl:Biped_Shadow:LThumbRoot
+    100128: mc_game_mdl:Biped_Shadow:Neck
+    100130: mc_game_mdl:Biped_Shadow:RBicep
+    100132: mc_game_mdl:Biped_Shadow:RFootBone1
+    100134: mc_game_mdl:Biped_Shadow:RFootBone2
+    100136: mc_game_mdl:Biped_Shadow:RFootBone3
+    100138: mc_game_mdl:Biped_Shadow:RFootRoot
+    100140: mc_game_mdl:Biped_Shadow:RForearm
+    100142: mc_game_mdl:Biped_Shadow:RHand
+    100144: mc_game_mdl:Biped_Shadow:RHandRoot
+    100146: mc_game_mdl:Biped_Shadow:RIndex1
+    100148: mc_game_mdl:Biped_Shadow:RIndex2
+    100150: mc_game_mdl:Biped_Shadow:RIndex3
+    100152: mc_game_mdl:Biped_Shadow:RIndexRoot
+    100154: mc_game_mdl:Biped_Shadow:RMiddle1
+    100156: mc_game_mdl:Biped_Shadow:RMiddle2
+    100158: mc_game_mdl:Biped_Shadow:RMiddle3
+    100160: mc_game_mdl:Biped_Shadow:RMiddleRoot
+    100162: mc_game_mdl:Biped_Shadow:RPinky1
+    100164: mc_game_mdl:Biped_Shadow:RPinky2
+    100166: mc_game_mdl:Biped_Shadow:RPinky3
+    100168: mc_game_mdl:Biped_Shadow:RPinkyRoot
+    100170: mc_game_mdl:Biped_Shadow:RRing1
+    100172: mc_game_mdl:Biped_Shadow:RRing2
+    100174: mc_game_mdl:Biped_Shadow:RRing3
+    100176: mc_game_mdl:Biped_Shadow:RRingRoot
+    100178: mc_game_mdl:Biped_Shadow:RRoot
+    100180: mc_game_mdl:Biped_Shadow:RRoot1
+    100182: mc_game_mdl:Biped_Shadow:RShin
+    100184: mc_game_mdl:Biped_Shadow:RShoulder
+    100186: mc_game_mdl:Biped_Shadow:RShoulderRoot
+    100188: mc_game_mdl:Biped_Shadow:RThigh
+    100190: mc_game_mdl:Biped_Shadow:RThumb1
+    100192: mc_game_mdl:Biped_Shadow:RThumb2
+    100194: mc_game_mdl:Biped_Shadow:RThumb3
+    100196: mc_game_mdl:Biped_Shadow:RThumbRoot
+    100198: mc_game_mdl:Biped_Shadow:Spine1
+    100200: mc_game_mdl:Biped_Shadow:Spine2
+    100202: mc_game_mdl:Biped_Shadow:Spine3
+    100204: mc_game_mdl:Biped_Shadow:SpineRoot
+    100206: mc_game_mdl:Biped_Shadow:UpperBody
+    100208: mc_game_mdl:mc_game
+    400000: //RootNode
+    400002: mc_game_mdl:Biped_Shadow:Biped_Shadow
+    400004: mc_game_mdl:Biped_Shadow:Chest
+    400006: mc_game_mdl:Biped_Shadow:ChestEffector
+    400008: mc_game_mdl:Biped_Shadow:ChestRoot
+    400010: mc_game_mdl:Biped_Shadow:eff
+    400012: mc_game_mdl:Biped_Shadow:eff1
+    400014: mc_game_mdl:Biped_Shadow:eff10
+    400016: mc_game_mdl:Biped_Shadow:eff11
+    400018: mc_game_mdl:Biped_Shadow:eff12
+    400020: mc_game_mdl:Biped_Shadow:eff13
+    400022: mc_game_mdl:Biped_Shadow:eff14
+    400024: mc_game_mdl:Biped_Shadow:eff15
+    400026: mc_game_mdl:Biped_Shadow:eff16
+    400028: mc_game_mdl:Biped_Shadow:eff17
+    400030: mc_game_mdl:Biped_Shadow:eff18
+    400032: mc_game_mdl:Biped_Shadow:eff19
+    400034: mc_game_mdl:Biped_Shadow:eff2
+    400036: mc_game_mdl:Biped_Shadow:eff20
+    400038: mc_game_mdl:Biped_Shadow:eff21
+    400040: mc_game_mdl:Biped_Shadow:eff3
+    400042: mc_game_mdl:Biped_Shadow:eff4
+    400044: mc_game_mdl:Biped_Shadow:eff5
+    400046: mc_game_mdl:Biped_Shadow:eff6
+    400048: mc_game_mdl:Biped_Shadow:eff7
+    400050: mc_game_mdl:Biped_Shadow:eff8
+    400052: mc_game_mdl:Biped_Shadow:eff9
+    400054: mc_game_mdl:Biped_Shadow:GlobalSRT
+    400056: mc_game_mdl:Biped_Shadow:Head
+    400058: mc_game_mdl:Biped_Shadow:HeadRoot
+    400060: mc_game_mdl:Biped_Shadow:LBicep
+    400062: mc_game_mdl:Biped_Shadow:LFootBone1
+    400064: mc_game_mdl:Biped_Shadow:LFootBone2
+    400066: mc_game_mdl:Biped_Shadow:LFootBone3
+    400068: mc_game_mdl:Biped_Shadow:LFootRoot
+    400070: mc_game_mdl:Biped_Shadow:LForearm
+    400072: mc_game_mdl:Biped_Shadow:LHand
+    400074: mc_game_mdl:Biped_Shadow:LHandRoot
+    400076: mc_game_mdl:Biped_Shadow:LIndex1
+    400078: mc_game_mdl:Biped_Shadow:LIndex2
+    400080: mc_game_mdl:Biped_Shadow:LIndex3
+    400082: mc_game_mdl:Biped_Shadow:LIndexRoot
+    400084: mc_game_mdl:Biped_Shadow:LMiddle1
+    400086: mc_game_mdl:Biped_Shadow:LMiddle2
+    400088: mc_game_mdl:Biped_Shadow:LMiddle3
+    400090: mc_game_mdl:Biped_Shadow:LMiddleRoot
+    400092: mc_game_mdl:Biped_Shadow:LPinky1
+    400094: mc_game_mdl:Biped_Shadow:LPinky2
+    400096: mc_game_mdl:Biped_Shadow:LPinky3
+    400098: mc_game_mdl:Biped_Shadow:LPinkyRoot
+    400100: mc_game_mdl:Biped_Shadow:LRing1
+    400102: mc_game_mdl:Biped_Shadow:LRing2
+    400104: mc_game_mdl:Biped_Shadow:LRing3
+    400106: mc_game_mdl:Biped_Shadow:LRingRoot
+    400108: mc_game_mdl:Biped_Shadow:LRoot
+    400110: mc_game_mdl:Biped_Shadow:LRoot1
+    400112: mc_game_mdl:Biped_Shadow:LShin
+    400114: mc_game_mdl:Biped_Shadow:LShoulder
+    400116: mc_game_mdl:Biped_Shadow:LShoulderRoot
+    400118: mc_game_mdl:Biped_Shadow:LThigh
+    400120: mc_game_mdl:Biped_Shadow:LThumb1
+    400122: mc_game_mdl:Biped_Shadow:LThumb2
+    400124: mc_game_mdl:Biped_Shadow:LThumb3
+    400126: mc_game_mdl:Biped_Shadow:LThumbRoot
+    400128: mc_game_mdl:Biped_Shadow:Neck
+    400130: mc_game_mdl:Biped_Shadow:RBicep
+    400132: mc_game_mdl:Biped_Shadow:RFootBone1
+    400134: mc_game_mdl:Biped_Shadow:RFootBone2
+    400136: mc_game_mdl:Biped_Shadow:RFootBone3
+    400138: mc_game_mdl:Biped_Shadow:RFootRoot
+    400140: mc_game_mdl:Biped_Shadow:RForearm
+    400142: mc_game_mdl:Biped_Shadow:RHand
+    400144: mc_game_mdl:Biped_Shadow:RHandRoot
+    400146: mc_game_mdl:Biped_Shadow:RIndex1
+    400148: mc_game_mdl:Biped_Shadow:RIndex2
+    400150: mc_game_mdl:Biped_Shadow:RIndex3
+    400152: mc_game_mdl:Biped_Shadow:RIndexRoot
+    400154: mc_game_mdl:Biped_Shadow:RMiddle1
+    400156: mc_game_mdl:Biped_Shadow:RMiddle2
+    400158: mc_game_mdl:Biped_Shadow:RMiddle3
+    400160: mc_game_mdl:Biped_Shadow:RMiddleRoot
+    400162: mc_game_mdl:Biped_Shadow:RPinky1
+    400164: mc_game_mdl:Biped_Shadow:RPinky2
+    400166: mc_game_mdl:Biped_Shadow:RPinky3
+    400168: mc_game_mdl:Biped_Shadow:RPinkyRoot
+    400170: mc_game_mdl:Biped_Shadow:RRing1
+    400172: mc_game_mdl:Biped_Shadow:RRing2
+    400174: mc_game_mdl:Biped_Shadow:RRing3
+    400176: mc_game_mdl:Biped_Shadow:RRingRoot
+    400178: mc_game_mdl:Biped_Shadow:RRoot
+    400180: mc_game_mdl:Biped_Shadow:RRoot1
+    400182: mc_game_mdl:Biped_Shadow:RShin
+    400184: mc_game_mdl:Biped_Shadow:RShoulder
+    400186: mc_game_mdl:Biped_Shadow:RShoulderRoot
+    400188: mc_game_mdl:Biped_Shadow:RThigh
+    400190: mc_game_mdl:Biped_Shadow:RThumb1
+    400192: mc_game_mdl:Biped_Shadow:RThumb2
+    400194: mc_game_mdl:Biped_Shadow:RThumb3
+    400196: mc_game_mdl:Biped_Shadow:RThumbRoot
+    400198: mc_game_mdl:Biped_Shadow:Spine1
+    400200: mc_game_mdl:Biped_Shadow:Spine2
+    400202: mc_game_mdl:Biped_Shadow:Spine3
+    400204: mc_game_mdl:Biped_Shadow:SpineRoot
+    400206: mc_game_mdl:Biped_Shadow:UpperBody
+    400208: mc_game_mdl:mc_game
+    4300000: mc_game_mdl:mc_game
+    7400000: Take 001
+    7400002: Take 0010
+    9500000: //RootNode
+    13700000: mc_game_mdl:mc_game
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 3
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2/mc_game_mdl:Biped_Shadow:LFootBone3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2/mc_game_mdl:Biped_Shadow:LFootBone3/mc_game_mdl:Biped_Shadow:eff20
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2/mc_game_mdl:Biped_Shadow:RFootBone3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2/mc_game_mdl:Biped_Shadow:RFootBone3/mc_game_mdl:Biped_Shadow:eff21
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:Chest
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck/mc_game_mdl:Biped_Shadow:Head
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck/mc_game_mdl:Biped_Shadow:Head/mc_game_mdl:Biped_Shadow:eff3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2/mc_game_mdl:Biped_Shadow:LIndex3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2/mc_game_mdl:Biped_Shadow:LIndex3/mc_game_mdl:Biped_Shadow:eff8
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2/mc_game_mdl:Biped_Shadow:LMiddle3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2/mc_game_mdl:Biped_Shadow:LMiddle3/mc_game_mdl:Biped_Shadow:eff7
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2/mc_game_mdl:Biped_Shadow:LPinky3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2/mc_game_mdl:Biped_Shadow:LPinky3/mc_game_mdl:Biped_Shadow:eff5
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2/mc_game_mdl:Biped_Shadow:LRing3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2/mc_game_mdl:Biped_Shadow:LRing3/mc_game_mdl:Biped_Shadow:eff6
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2/mc_game_mdl:Biped_Shadow:LThumb3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2/mc_game_mdl:Biped_Shadow:LThumb3/mc_game_mdl:Biped_Shadow:eff9
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2/mc_game_mdl:Biped_Shadow:RIndex3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2/mc_game_mdl:Biped_Shadow:RIndex3/mc_game_mdl:Biped_Shadow:eff14
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2/mc_game_mdl:Biped_Shadow:RMiddle3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2/mc_game_mdl:Biped_Shadow:RMiddle3/mc_game_mdl:Biped_Shadow:eff13
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2/mc_game_mdl:Biped_Shadow:RPinky3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2/mc_game_mdl:Biped_Shadow:RPinky3/mc_game_mdl:Biped_Shadow:eff11
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2/mc_game_mdl:Biped_Shadow:RRing3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2/mc_game_mdl:Biped_Shadow:RRing3/mc_game_mdl:Biped_Shadow:eff12
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2/mc_game_mdl:Biped_Shadow:RThumb3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2/mc_game_mdl:Biped_Shadow:RThumb3/mc_game_mdl:Biped_Shadow:eff15
+        weight: 1
+      - path: mc_game_mdl:mc_game
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Take 0010
+      takeName: Take 001
+      firstFrame: 68
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2/mc_game_mdl:Biped_Shadow:LFootBone3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:LRoot1/mc_game_mdl:Biped_Shadow:LThigh/mc_game_mdl:Biped_Shadow:LShin/mc_game_mdl:Biped_Shadow:eff18/mc_game_mdl:Biped_Shadow:LFootRoot/mc_game_mdl:Biped_Shadow:LFootBone1/mc_game_mdl:Biped_Shadow:LFootBone2/mc_game_mdl:Biped_Shadow:LFootBone3/mc_game_mdl:Biped_Shadow:eff20
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2/mc_game_mdl:Biped_Shadow:RFootBone3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:RRoot1/mc_game_mdl:Biped_Shadow:RThigh/mc_game_mdl:Biped_Shadow:RShin/mc_game_mdl:Biped_Shadow:eff19/mc_game_mdl:Biped_Shadow:RFootRoot/mc_game_mdl:Biped_Shadow:RFootBone1/mc_game_mdl:Biped_Shadow:RFootBone2/mc_game_mdl:Biped_Shadow:RFootBone3/mc_game_mdl:Biped_Shadow:eff21
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:Chest
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck/mc_game_mdl:Biped_Shadow:Head
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:HeadRoot/mc_game_mdl:Biped_Shadow:Neck/mc_game_mdl:Biped_Shadow:Head/mc_game_mdl:Biped_Shadow:eff3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2/mc_game_mdl:Biped_Shadow:LIndex3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LIndexRoot/mc_game_mdl:Biped_Shadow:LIndex1/mc_game_mdl:Biped_Shadow:LIndex2/mc_game_mdl:Biped_Shadow:LIndex3/mc_game_mdl:Biped_Shadow:eff8
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2/mc_game_mdl:Biped_Shadow:LMiddle3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LMiddleRoot/mc_game_mdl:Biped_Shadow:LMiddle1/mc_game_mdl:Biped_Shadow:LMiddle2/mc_game_mdl:Biped_Shadow:LMiddle3/mc_game_mdl:Biped_Shadow:eff7
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2/mc_game_mdl:Biped_Shadow:LPinky3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LPinkyRoot/mc_game_mdl:Biped_Shadow:LPinky1/mc_game_mdl:Biped_Shadow:LPinky2/mc_game_mdl:Biped_Shadow:LPinky3/mc_game_mdl:Biped_Shadow:eff5
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2/mc_game_mdl:Biped_Shadow:LRing3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LRingRoot/mc_game_mdl:Biped_Shadow:LRing1/mc_game_mdl:Biped_Shadow:LRing2/mc_game_mdl:Biped_Shadow:LRing3/mc_game_mdl:Biped_Shadow:eff6
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2/mc_game_mdl:Biped_Shadow:LThumb3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:LShoulderRoot/mc_game_mdl:Biped_Shadow:LShoulder/mc_game_mdl:Biped_Shadow:eff2/mc_game_mdl:Biped_Shadow:LRoot/mc_game_mdl:Biped_Shadow:LBicep/mc_game_mdl:Biped_Shadow:LForearm/mc_game_mdl:Biped_Shadow:eff17/mc_game_mdl:Biped_Shadow:LHandRoot/mc_game_mdl:Biped_Shadow:LHand/mc_game_mdl:Biped_Shadow:eff4/mc_game_mdl:Biped_Shadow:LThumbRoot/mc_game_mdl:Biped_Shadow:LThumb1/mc_game_mdl:Biped_Shadow:LThumb2/mc_game_mdl:Biped_Shadow:LThumb3/mc_game_mdl:Biped_Shadow:eff9
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2/mc_game_mdl:Biped_Shadow:RIndex3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RIndexRoot/mc_game_mdl:Biped_Shadow:RIndex1/mc_game_mdl:Biped_Shadow:RIndex2/mc_game_mdl:Biped_Shadow:RIndex3/mc_game_mdl:Biped_Shadow:eff14
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2/mc_game_mdl:Biped_Shadow:RMiddle3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RMiddleRoot/mc_game_mdl:Biped_Shadow:RMiddle1/mc_game_mdl:Biped_Shadow:RMiddle2/mc_game_mdl:Biped_Shadow:RMiddle3/mc_game_mdl:Biped_Shadow:eff13
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2/mc_game_mdl:Biped_Shadow:RPinky3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RPinkyRoot/mc_game_mdl:Biped_Shadow:RPinky1/mc_game_mdl:Biped_Shadow:RPinky2/mc_game_mdl:Biped_Shadow:RPinky3/mc_game_mdl:Biped_Shadow:eff11
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2/mc_game_mdl:Biped_Shadow:RRing3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RRingRoot/mc_game_mdl:Biped_Shadow:RRing1/mc_game_mdl:Biped_Shadow:RRing2/mc_game_mdl:Biped_Shadow:RRing3/mc_game_mdl:Biped_Shadow:eff12
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2/mc_game_mdl:Biped_Shadow:RThumb3
+        weight: 1
+      - path: mc_game_mdl:Biped_Shadow:Biped_Shadow/mc_game_mdl:Biped_Shadow:GlobalSRT/mc_game_mdl:Biped_Shadow:UpperBody/mc_game_mdl:Biped_Shadow:SpineRoot/mc_game_mdl:Biped_Shadow:Spine1/mc_game_mdl:Biped_Shadow:Spine2/mc_game_mdl:Biped_Shadow:Spine3/mc_game_mdl:Biped_Shadow:eff/mc_game_mdl:Biped_Shadow:ChestRoot/mc_game_mdl:Biped_Shadow:ChestEffector/mc_game_mdl:Biped_Shadow:RShoulderRoot/mc_game_mdl:Biped_Shadow:RShoulder/mc_game_mdl:Biped_Shadow:eff1/mc_game_mdl:Biped_Shadow:RRoot/mc_game_mdl:Biped_Shadow:RBicep/mc_game_mdl:Biped_Shadow:RForearm/mc_game_mdl:Biped_Shadow:eff16/mc_game_mdl:Biped_Shadow:RHandRoot/mc_game_mdl:Biped_Shadow:RHand/mc_game_mdl:Biped_Shadow:eff10/mc_game_mdl:Biped_Shadow:RThumbRoot/mc_game_mdl:Biped_Shadow:RThumb1/mc_game_mdl:Biped_Shadow:RThumb2/mc_game_mdl:Biped_Shadow:RThumb3/mc_game_mdl:Biped_Shadow:eff15
+        weight: 1
+      - path: mc_game_mdl:mc_game
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

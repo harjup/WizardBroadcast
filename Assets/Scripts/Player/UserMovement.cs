@@ -20,6 +20,7 @@ namespace WizardBroadcast
         public Transform cameraRig;
 
         private Transform playerMesh;
+        private Animator playerAnimator;
 
         private bool _blockEngaged = false;
         private Vector3 pushDirection;
@@ -49,6 +50,8 @@ namespace WizardBroadcast
             cameraRig = userCamera.transform.parent;
             
             playerMesh = transform.FindChild("Character");
+            playerAnimator = playerMesh.GetComponentInChildren<Animator>();
+            
             rigidBody = GetComponent<Rigidbody>();
         }
 
@@ -140,11 +143,13 @@ namespace WizardBroadcast
             {
                 MumblePlayer.Instance.PlayFootsteps(currentWalkType);
                 //Do walking animation
+                playerAnimator.Play("Walk");
             }
             else
             {
                 MumblePlayer.Instance.StopFootsteps();
                 //Do idle animation
+                playerAnimator.Play("Idle");
             }
         }
 

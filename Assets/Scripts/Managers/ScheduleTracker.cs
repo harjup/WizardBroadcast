@@ -40,7 +40,7 @@ namespace Assets.Scripts.Managers
             new LevelEvent(0f, Scene.Level1, State.Active),
             new LevelEvent(0f, Scene.Level2, State.Active),
             new LevelEvent(0f, Scene.Level3, State.Active),
-            new LevelEvent(0f, Scene.Level4, State.Active)*/
+            new LevelEvent(0f, Scene.Level4, State.Active),*/
 
             new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),

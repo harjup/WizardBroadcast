@@ -172,7 +172,9 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I dunno."
+				"text" : "Most of our budget was spent on the tables, it turns out.
+				Don't let anyone know, but we've spilling coffee on them, regularly.
+				We cover them up with scripts that are supposed to be done by now."
 			}
 		]
 	},
@@ -183,7 +185,8 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I dunno."
+				"text" : "We can never get anything done in the office because these guys won't stop drinking coffee and eating donuts.
+				Our deparment wastes a lot of the budget..."
 			}
 		]
 	},
@@ -194,7 +197,8 @@
 		"content": [
 			{
 				"id":  "01",
-				"text" : "I dunno."
+				"text" : "Wiznuts are the tastiest donuts. Just look at them, so delicious.
+				Wiznuts are also the best because they cover up some coffee stains."
 			}
 		]
 	},
