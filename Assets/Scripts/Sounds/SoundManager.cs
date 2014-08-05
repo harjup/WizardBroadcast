@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class SoundManager : Singleton<SoundManager>
@@ -86,8 +87,6 @@ public class SoundManager : Singleton<SoundManager>
 
     public void Play(SoundEffect effect, bool isLooping = false)
     {
-        Debug.Log("Player sound " + effect);
-
         //First check if there are any sources that are not playing
         //If there is, throw the clip in that slot
         foreach (var audioSource in _sources)
@@ -104,7 +103,6 @@ public class SoundManager : Singleton<SoundManager>
             {
                 audioSource.clip = SoundMap[effect].Clip;
                 PlayClip(audioSource, sound, isLooping);
-                audioSource.Play();
                 return;
             }
         }

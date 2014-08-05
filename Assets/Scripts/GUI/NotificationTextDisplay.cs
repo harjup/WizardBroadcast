@@ -1,12 +1,32 @@
-﻿using Assets.Scripts.Managers;
+﻿using System.Linq;
+using System.Text.RegularExpressions;
+using Assets.Scripts.Managers;
 using UnityEngine;
 using System.Collections.Generic;
 
 public class NotificationTextDisplay : Singleton<NotificationTextDisplay>
 {
     private List<Notification> messages = new List<Notification>();
+    private Regex _sfxText = new Regex(@"^\w\|");
+
+    private AudioClip[] _fartClips;
+    private AudioSource _fartSource;
+    void Start()
+    {
+        _fartClips = Resources.LoadAll("Sounds/Fart").Cast<AudioClip>().ToArray();
+        _fartSource = gameObject.AddComponent<AudioSource>();
+    }
+    
+
     public void ShowNotification(string message)
     {
+        if (_sfxText.IsMatch(message))
+        {
+            PlaySound(message.Substring(0, 1));
+            message = message.Substring(2);
+
+        }
+
         var notification = new Notification(message);
         var yPos = Screen.height * (2f/3f);
         yPos -= (Screen.height * (1f / 3f)) / Random.Range(1f, 12f);
@@ -27,6 +47,14 @@ public class NotificationTextDisplay : Singleton<NotificationTextDisplay>
             {
                 messages.Remove(notification);
             }
+        }
+    }
+
+    void PlaySound(string soundString)
+    {
+        if (soundString == "f")
+        {
+            _fartSource.PlayOneShot(_fartClips[Random.Range(0, _fartClips.Length)]);
         }
     }
 

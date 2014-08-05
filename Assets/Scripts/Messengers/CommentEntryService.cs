@@ -11,6 +11,7 @@ public class CommentEntryService : Singleton<CommentEntryService>
     private bool commentMode = false;
     private bool commentingAllowed = true;
 
+
     void OnGUI()
     {
         if (Application.loadedLevelName == SceneMap.GetScene(Scene.Start)) return;
@@ -22,12 +23,14 @@ public class CommentEntryService : Singleton<CommentEntryService>
             if (GuiManager.Instance.PostComment())
             {
                 ConfirmButtonPressed();
+                GuiManager.Instance.PlayerMessageInput = "";
                 commentMode = false;
                 StartCoroutine(CommentCooldown());
             }
             else if (GuiManager.Instance.CancelPressed())
             {
                 SoundManager.Instance.Play(SoundManager.SoundEffect.BeepNo);
+                GuiManager.Instance.PlayerMessageInput = "";
                 commentMode = false;
             }
         }
@@ -41,6 +44,7 @@ public class CommentEntryService : Singleton<CommentEntryService>
         {
             InputManager.Instance.PlayerEnteringComment = false;
         }
+
     }
 
     void ConfirmButtonPressed()
@@ -55,7 +59,6 @@ public class CommentEntryService : Singleton<CommentEntryService>
             Location = Application.loadedLevelName,
             WorldPositon = FindObjectOfType<InfoPlayer>().transform.position.ToString()
         };
-
         CommentsManager.Instance.PostComment(comment);
     }
 
@@ -65,4 +68,6 @@ public class CommentEntryService : Singleton<CommentEntryService>
         yield return new WaitForSeconds(60f);
         commentingAllowed = true;
     }
+
+
 }
