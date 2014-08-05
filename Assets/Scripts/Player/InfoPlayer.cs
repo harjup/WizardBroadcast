@@ -36,14 +36,21 @@ namespace Assets.Scripts.Player
         {
             if (Application.loadedLevelName != SceneMap.GetScene(Scene.Start))
             {
-                GhostPositionUpdate();
+                //GhostPositionUpdate();
                 MoveToStartPosition();
+            }
+            else
+            {
+                CancelInvoke("SendGhostInfo");
             }
         }
 
         void GhostPositionUpdate()
         {
-            if (Application.loadedLevelName == SceneMap.GetScene(Scene.Hub))
+            SignalrEndpoint.Instance.StartGhost();
+            InvokeRepeating("SendGhostInfo", 1f, .25f);
+
+            /*if (Application.loadedLevelName == SceneMap.GetScene(Scene.Hub))
             {
                 SignalrEndpoint.Instance.StartGhost();
                 InvokeRepeating("SendGhostInfo", 1f, .25f);
@@ -51,7 +58,7 @@ namespace Assets.Scripts.Player
             else
             {
                 CancelInvoke("SendGhostInfo");
-            }
+            }*/
         }
 
         void MoveToStartPosition()

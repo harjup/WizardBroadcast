@@ -83,7 +83,7 @@ namespace WizardBroadcast
 
                 //Stop broadcasting ghost stuff when leaving the hub
                 //TODO: Is this the best place for this logic etc etc
-                SignalrEndpoint.Instance.StopGhost();
+                //SignalrEndpoint.Instance.StopGhost();
                 StartCoroutine(EnterLevelTransition());
 	        }
 	    }

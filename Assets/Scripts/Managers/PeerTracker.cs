@@ -59,6 +59,4 @@ public class PeerTracker : Singleton<PeerTracker>
         }
 
     }
-
-    
 }

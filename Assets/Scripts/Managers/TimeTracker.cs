@@ -33,8 +33,8 @@ namespace Assets.Scripts.Managers
         {
             if (!_initialized)
             {
-                //_timeRepository = new MockTimeRepository();
-                _timeRepository = new TimeRepository();
+                _timeRepository = new MockTimeRepository();
+                //_timeRepository = new TimeRepository();
                 StartCoroutine(_timeRepository.GetCurrentTime(x =>
                 {
                     _currentTime = x;
