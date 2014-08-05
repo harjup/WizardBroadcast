@@ -59,6 +59,8 @@ namespace Assets.Scripts.Managers
             {typeof(SoundManager), @"Prefabs/Managers/SoundManager"},
             {typeof(MumblePlayer), @"Prefabs/Managers/MumblePlayer"},
 
+            {typeof(FartMessenger), @"Prefabs/Managers/FartMessenger"},
+
             {typeof(FogMachine), @"Prefabs/Managers/FogMachine"}
         };
 
