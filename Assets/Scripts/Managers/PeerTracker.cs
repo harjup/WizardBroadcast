@@ -59,4 +59,13 @@ public class PeerTracker : Singleton<PeerTracker>
         }
 
     }
+
+    public void AnimateGhost(GhostPlayer.GhostAnim anim, string id)
+    {
+        if (!ghostPlayers.ContainsKey(id)) return;
+        StartCoroutine(ghostPlayers[id].DoAnimation(anim));
+    }
+
+
 }
+

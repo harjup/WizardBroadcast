@@ -144,6 +144,11 @@ namespace Assets.Scripts.Managers
                 _playerNameInput = _playerNameInput.Substring(0, _playerNameInput.Length <= 16 ? _playerNameInput.Length : 20);
             }
 
+            if (GUI.Button(new Rect(Screen.width - (16 + 16 + 32 + 8), 16 + (32), 16 + 32 + 8, 16 + 8), MusicManager.Instance.SoundEnabled ? "Mute" : "Unmute"))
+            {
+                MusicManager.Instance.SoundEnabled = !MusicManager.Instance.SoundEnabled;
+            }
+             
             //Comment Input
             if (DrawCommentGui)
             {

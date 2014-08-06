@@ -7,7 +7,8 @@ using System.Collections.Generic;
 public class NotificationTextDisplay : Singleton<NotificationTextDisplay>
 {
     private List<Notification> messages = new List<Notification>();
-    private Regex _sfxText = new Regex(@"^\w\|");
+    //Matches on special message attributes with a delimiter, Ex: f123|message goes here
+    private Regex _sfxText = new Regex(@"^\w(\d*)\|([\w|\W]+)"); 
 
     private AudioClip[] _fartClips;
     private AudioSource _fartSource;
@@ -20,11 +21,13 @@ public class NotificationTextDisplay : Singleton<NotificationTextDisplay>
 
     public void ShowNotification(string message)
     {
-        if (_sfxText.IsMatch(message))
-        {
-            PlaySound(message.Substring(0, 1));
-            message = message.Substring(2);
+        Match match = _sfxText.Match(message);
 
+        if (match.Success)
+        {
+            PeerTracker.Instance.AnimateGhost(GhostPlayer.GhostAnim.Fart, match.Groups[1].Value);
+            PlaySound(message.Substring(0, 1));
+            message = match.Groups[2].Value;
         }
 
         var notification = new Notification(message);

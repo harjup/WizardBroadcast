@@ -107,4 +107,11 @@ public class MusicManager : Singleton<MusicManager>
         }
         source.volume = target;
     }
+
+    public bool SoundEnabled
+    {
+        get { return GetComponent<AudioListener>().enabled;}
+        set {GetComponent<AudioListener>().enabled = value;}
+        
+    }
 }
