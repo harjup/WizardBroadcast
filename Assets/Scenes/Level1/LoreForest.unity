@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 02GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &3274429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -474,7 +473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 02MidGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &17367627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -588,7 +586,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 04Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &21624588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -675,7 +672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 09Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &24395614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1265,7 +1261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 07GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &59881339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3292,7 +3287,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 08Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &197106177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3477,7 +3471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 03GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &216199852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3839,7 +3832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 05Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &230848466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5518,7 +5510,7 @@ Transform:
   - {fileID: 1524955131}
   - {fileID: 401074462}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 6
+  m_RootOrder: 10
 --- !u!114 &361643677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6798,7 +6790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 04GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &431730350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7735,7 +7726,7 @@ Transform:
   - {fileID: 1006999414}
   - {fileID: 609834587}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!114 &485221413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9160,7 +9151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 04NEGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &559795319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9847,7 +9837,7 @@ Transform:
   - {fileID: 660927362}
   - {fileID: 164686826}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 10
+  m_RootOrder: 14
 --- !u!114 &618792775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10064,7 +10054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 03Item
-  _currentTextBag: {fileID: 0}
 --- !u!65 &630433072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10586,7 +10575,7 @@ Transform:
   - {fileID: 919071758}
   - {fileID: 1429759404}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 8
+  m_RootOrder: 12
 --- !u!114 &668043954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11794,7 +11783,7 @@ Transform:
   - {fileID: 1277991056}
   - {fileID: 1233812458}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!114 &723429968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12630,7 +12619,7 @@ Transform:
   - {fileID: 1865589884}
   - {fileID: 1656604978}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 4
+  m_RootOrder: 8
 --- !u!114 &799317354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13081,7 +13070,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: D1Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &827632996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14402,7 +14390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: D3Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &921042330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14697,7 +14684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: ExplainWizard
-  _currentTextBag: {fileID: 0}
 --- !u!65 &950338869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15451,7 +15437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 02Item
-  _currentTextBag: {fileID: 0}
 --- !u!1001 &1020150882
 Prefab:
   m_ObjectHideFlags: 0
@@ -15864,7 +15849,7 @@ Transform:
   - {fileID: 2020295316}
   - {fileID: 1917077780}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 14
+  m_RootOrder: 18
 --- !u!54 &1043155956
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16231,7 +16216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 07Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1056474433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17796,7 +17780,7 @@ Transform:
   - {fileID: 1867168489}
   - {fileID: 1236404760}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 18
+  m_RootOrder: 3
 --- !u!114 &1134767696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18629,7 +18613,7 @@ Transform:
   - {fileID: 1980494173}
   - {fileID: 828456227}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 7
+  m_RootOrder: 11
 --- !u!114 &1191824559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18911,7 +18895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 06Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1212230067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19029,7 +19012,7 @@ Transform:
   - {fileID: 1028598549}
   - {fileID: 1274729600}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 3
+  m_RootOrder: 7
 --- !u!114 &1223140497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19364,7 +19347,7 @@ Transform:
   - {fileID: 1419446301}
   - {fileID: 36189112}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 12
+  m_RootOrder: 16
 --- !u!114 &1236915304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19809,7 +19792,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 01GrottoGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1249488527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19860,7 +19842,7 @@ Transform:
   - {fileID: 1013212450}
   - {fileID: 684934732}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 15
+  m_RootOrder: 0
 --- !u!54 &1251966236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20160,7 +20142,7 @@ Transform:
   - {fileID: 490788990}
   - {fileID: 1810943938}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 1
+  m_RootOrder: 5
 --- !u!114 &1262098548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20661,7 +20643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 03Guy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1285203087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21285,7 +21266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 05GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1350364704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21342,7 +21322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: D2Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1360349815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21485,7 +21464,7 @@ Transform:
   - {fileID: 187534565}
   - {fileID: 1181642365}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 17
+  m_RootOrder: 2
 --- !u!114 &1365668663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21677,7 +21656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 01Item
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1369873945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23169,7 +23147,7 @@ Transform:
   - {fileID: 724813076}
   - {fileID: 2045214951}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 11
+  m_RootOrder: 15
 --- !u!114 &1480672446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23984,7 +23962,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 05NEGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1519675994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24128,7 +24105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 07NWGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1521326015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24438,7 +24414,7 @@ Transform:
   - {fileID: 927622696}
   - {fileID: 1866705024}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 13
+  m_RootOrder: 17
 --- !u!114 &1547473340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26064,7 +26040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 08MidSGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1654749006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26284,7 +26259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 08GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1660049795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26593,7 +26567,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 06SEGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1682530999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26697,7 +26670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 10GrottoGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1691092894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28207,7 +28179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 01Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1795828872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28817,7 +28788,7 @@ Transform:
   - {fileID: 1868584033}
   - {fileID: 672488676}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 5
+  m_RootOrder: 9
 --- !u!114 &1823321669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29052,6 +29023,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1251966235}
+  - {fileID: 2092386043}
+  - {fileID: 1365668662}
+  - {fileID: 1134767695}
   - {fileID: 723429967}
   - {fileID: 1262098547}
   - {fileID: 485221412}
@@ -29067,10 +29042,6 @@ Transform:
   - {fileID: 1236915303}
   - {fileID: 1547473339}
   - {fileID: 1043155955}
-  - {fileID: 1251966235}
-  - {fileID: 2092386043}
-  - {fileID: 1365668662}
-  - {fileID: 1134767695}
   m_Father: {fileID: 1065033602}
   m_RootOrder: 0
 --- !u!1 &1840971057
@@ -29516,7 +29487,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 01GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1871800628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29573,7 +29543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 10Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1873763471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29820,7 +29789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 06GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1893296174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30153,7 +30121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: D4Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1931929527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30487,7 +30454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 03Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &1962616114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31077,7 +31043,7 @@ Transform:
   - {fileID: 1374293150}
   - {fileID: 2020315105}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 9
+  m_RootOrder: 13
 --- !u!114 &2006127753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32423,7 +32389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 02Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &2080241122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32572,7 +32537,7 @@ Transform:
   - {fileID: 1094524873}
   - {fileID: 332042444}
   m_Father: {fileID: 1837352037}
-  m_RootOrder: 16
+  m_RootOrder: 1
 --- !u!54 &2092386044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32687,7 +32652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: D5Lore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &2100172989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33059,7 +33023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 09GrottoGuy
-  _currentTextBag: {fileID: 0}
 --- !u!65 &2129225907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33294,7 +33257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptId: 09GLore
-  _currentTextBag: {fileID: 0}
 --- !u!65 &2136137035
 BoxCollider:
   m_ObjectHideFlags: 0

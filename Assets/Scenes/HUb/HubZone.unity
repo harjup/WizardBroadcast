@@ -2017,10 +2017,10 @@ Transform:
   m_LocalPosition: {x: 1.79358578, y: 0, z: 9.19935989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1520127096}
-  - {fileID: 1393803459}
   - {fileID: 1556301986}
   - {fileID: 1727744213}
+  - {fileID: 1520127096}
+  - {fileID: 1393803459}
   m_Father: {fileID: 1087103811}
   m_RootOrder: 3
 --- !u!1 &194816144
@@ -3219,9 +3219,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2018285790}
   - {fileID: 953054002}
   - {fileID: 647857179}
+  - {fileID: 2018285790}
   m_Father: {fileID: 436802215}
   m_RootOrder: 3
 --- !u!1 &385400252
@@ -5265,7 +5265,7 @@ Transform:
   - {fileID: 1277816544}
   - {fileID: 683570050}
   m_Father: {fileID: 371476889}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1001 &653308652
 Prefab:
   m_ObjectHideFlags: 0
@@ -7766,7 +7766,7 @@ Transform:
   - {fileID: 1146787663}
   - {fileID: 624366758}
   m_Father: {fileID: 371476889}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &965113005
 GameObject:
   m_ObjectHideFlags: 0
@@ -10748,7 +10748,7 @@ Transform:
   m_Children:
   - {fileID: 1604452103}
   m_Father: {fileID: 187925387}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!95 &1393803460
 Animator:
   serializedVersion: 3
@@ -11954,7 +11954,7 @@ Transform:
   m_Children:
   - {fileID: 1961872202}
   m_Father: {fileID: 187925387}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!95 &1520127097
 Animator:
   serializedVersion: 3
@@ -12293,7 +12293,7 @@ Transform:
   m_Children:
   - {fileID: 2087015861}
   m_Father: {fileID: 187925387}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!95 &1556301987
 Animator:
   serializedVersion: 3
@@ -14041,7 +14041,7 @@ Transform:
   m_Children:
   - {fileID: 2071689010}
   m_Father: {fileID: 187925387}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!95 &1727744214
 Animator:
   serializedVersion: 3
@@ -15817,7 +15817,7 @@ Transform:
   - {fileID: 122077611}
   - {fileID: 73341941}
   m_Father: {fileID: 371476889}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1 &2019726607
 GameObject:
   m_ObjectHideFlags: 0
