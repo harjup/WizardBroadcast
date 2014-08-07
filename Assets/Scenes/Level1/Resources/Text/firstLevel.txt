@@ -1,19 +1,21 @@
 [
 	{
-		"id":  "TestSign",
-		"name" : "It is a sign",
+		"id":  "ExplainWizard",
+		"name" : "Fantasy Wizard",
 		"content": [
 			{
 				"id":  "01",
-				"text" : "fart toot. butt. so eloquent"
-			},
-			{
-				"id":  "02",
-				"text" : "This is dialog piece number two for good ole test sign."
-			},
-			{
-				"id":  "03",
-				"text" : "Just want to make sure I can get a list of these bad boys in without too much trouble :V"
+				"text" : "Hello, and welcome to the forest of mystery!
+				I have taken years of my wizardly life to write the rich and detailed history of this forest.
+				I hope you will enjoy going up to every single object and learning about their rich history.
+				You could also collect the gems scattered around, and some characters might even give you some.
+				But who needs that when there's a rich and detailed world in front of you? Go explore!
+				Oh wait, gotta... gotta get rid of these walls first.
+				Abra Kamagic!!!!!!
+				...
+				...
+				Give it a second, it'll go when it wants...
+				Ok! Here we go!"
 			}
 		]
 	},

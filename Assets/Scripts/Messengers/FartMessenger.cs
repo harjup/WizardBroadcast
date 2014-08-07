@@ -10,14 +10,14 @@ public class FartMessenger : MonoBehaviourBase
 
     void Start()
     {
-        StartCoroutine(FartCoolDown(30f));
+        StartCoroutine(FartCoolDown(10f));
     }
 
     void OnGUI()
     {
         if (_fartEnabled && GUI.Button(new Rect(16, (16 + 32 * 2 + 8), 96, 32), "Fart"))
         {
-            var message = "f|" + GuiManager.Instance.PlayerNameInput + " " + GenerateFartMessage();
+            var message = "f"+ SessionStateStore.PlayerId +"|" + GuiManager.Instance.PlayerNameInput + " " + GenerateFartMessage();
             SignalrEndpoint.Instance.Broadcast(message);
             NotificationTextDisplay.Instance.ShowNotification(message); // Show the player their own message
             StartCoroutine(FartCoolDown(60f));
