@@ -23,7 +23,7 @@ public class RoomActivator : MonoBehaviourBase, IActivatable
                 if (finishedCallbacks == _callbacks)
                 {
                     callback();
-                    Destroy(gameObject, .5f);
+                    Destroy(gameObject);
                 }
             });
         }

@@ -18,8 +18,17 @@ namespace Assets.Scripts.Interactables
         public string scriptId = "";
         private List<TextBag> _textBags;
         private TextBag _currentTextBag;
+        private UnreadDialogSignal _unreadDialogSignal;
+
+        public Dictionary<string, bool> ReadDialogMap = new Dictionary<string, bool>(); 
+
         void Start()
         {
+            if (Application.loadedLevelName == SceneMap.GetScene(Scene.Level1))
+            {
+                _unreadDialogSignal = gameObject.AddComponent<UnreadDialogSignal>();
+            }
+
             //TODO: Automatically create textbins if one doesn't exist for a given piece of dialog
             _textBags = GetComponentsInChildren<TextBag>().ToList();
 
@@ -43,7 +52,8 @@ namespace Assets.Scripts.Interactables
                 _textBags[i].text = dialog.Text;
                 _textBags[i].Name = dialog.Name;
                 _textBags[i].Mumble = dialog.Mumble;
-                
+
+                ReadDialogMap.Add(_textBags[i].id, false);
 
                 //Overwrite the given textbag's flag with the flag from the stored version if it exists
                 if (dialog.Flag != null){ _textBags[i].flag = dialog.Flag;}
@@ -84,12 +94,16 @@ namespace Assets.Scripts.Interactables
                 _currentTextBag = GetCurrentTextBag();
             }
             yield return StartCoroutine(TextboxDisplay.Instance.DisplayText(_currentTextBag.text, _currentTextBag.Name, () => {}, _currentTextBag.Mumble));
+            ReadDialogMap[_currentTextBag.id] = true;
             _currentTextBag.ExecuteAction();
+            if (_unreadDialogSignal != null) _unreadDialogSignal.UpdateStatuses();
             callback();
         }
 
-        private TextBag GetCurrentTextBag()
+        public TextBag GetCurrentTextBag()
         {
+            if (_sequentialTextbag) return _currentTextBag;
+
             var currentScene = SceneMap.GetSceneFromStringName(Application.loadedLevelName);
 
             //Set the current textbag to the first one

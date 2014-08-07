@@ -12,7 +12,7 @@ namespace Assets.Scripts.Interactables.DialogAction
         {
             //I could figure out how to integrate this with how hte user picks up interactables.
             //Or I could just move it, I guess :effort:
-            GetComponentInParent<Signpost>().transform.position = new Vector3(0f,-100f,0f);
+            iTween.MoveTo(GetComponentInParent<Signpost>().gameObject, new Vector3(0f,-50f,0f), .5f);
         }
     }
 }

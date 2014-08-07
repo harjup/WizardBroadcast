@@ -53,6 +53,7 @@ namespace Assets.Scripts.Player
         {
             if (waitingForCallback) return;
             if (_examinableObject == null) return;
+            if (_examineCoolingDown) return;
 
             if (interactives.Count > 1) GuiManager.Instance.DrawCycleInput();
             if (Input.GetKeyDown(KeyCode.R))
@@ -69,6 +70,14 @@ namespace Assets.Scripts.Player
             {
                 ExamineObject();
             }
+        }
+
+        private bool _examineCoolingDown;
+        IEnumerator ExamineCooldown()
+        {
+            _examineCoolingDown = true;
+            yield return new WaitForSeconds(1f);
+            _examineCoolingDown = false;
         }
 
         void PushBlockInput()
@@ -130,6 +139,7 @@ namespace Assets.Scripts.Player
                 waitingForCallback = false;
                 InputManager.Instance.PlayerMovementEnabled = true;
                 InputManager.Instance.CameraControlEnabled = true;
+                StartCoroutine(ExamineCooldown());
             }));
         }
 

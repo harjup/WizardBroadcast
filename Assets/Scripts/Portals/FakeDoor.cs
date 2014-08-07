@@ -58,6 +58,9 @@ class FakeDoor : ExaminableBase, IActivatable
             var parent = transform.parent.gameObject;
 
             iTween.MoveTo(parent, parent.transform.position.SetY(parent.transform.position.y - 5f), 1f);
+
+            //TODO: Decouple with other logic I'm tired ok
+            FindObjectOfType<UnreadDialogSignal>().UpdateStatuses();//Find a random one of these and update all our statuses
             Destroy(gameObject, 2f);
         }
         callback();
