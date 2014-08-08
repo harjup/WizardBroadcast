@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using Assets.Scripts.GameState;
+using Assets.Scripts.Managers;
 using Assets.Scripts.Player;
 using UnityEngine;
 
@@ -22,6 +24,8 @@ namespace Assets.Scripts.Interactables
 
         void Start () 
         {
+            
+
             //TODO: Swap this out with a constucting a proper type and use that to determine properties
             switch (Type)
             {
@@ -47,7 +51,9 @@ namespace Assets.Scripts.Interactables
             //Add a little rotation animation
             iTween.RotateAdd(gameObject, iTween.Hash("y", 360, "looptype" ,iTween.LoopType.pingPong, "easetype", iTween.EaseType.spring, "speed", 200f));
 
-            //renderer.material.color = _myColor;
+
+            UserProgressStore.Instance.LevelTotalScore[SceneMap.GetSceneFromStringName(Application.loadedLevelName)] +=
+                _pointCount;
         }
 
         void OnTriggerEnter(Collider other)

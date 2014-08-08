@@ -16,7 +16,8 @@ namespace Assets.Scripts.Managers
     class TimeTracker : Singleton<TimeTracker>
     {
         //Make this this is evenly divisible by an hour so it can loop on the hour ok????
-        private const int SessionLength = 30;
+        //private const int SessionLength = 30;
+        private const int SessionLength = 15;
 
         private ITimeRepository _timeRepository;
 

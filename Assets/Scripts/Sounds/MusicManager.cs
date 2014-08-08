@@ -110,8 +110,7 @@ public class MusicManager : Singleton<MusicManager>
 
     public bool SoundEnabled
     {
-        get { return GetComponent<AudioListener>().enabled;}
-        set {GetComponent<AudioListener>().enabled = value;}
-        
+        get { return Math.Abs(AudioListener.volume - 1f) < .05; }
+        set { AudioListener.volume = value ? 1 : 0; }
     }
 }

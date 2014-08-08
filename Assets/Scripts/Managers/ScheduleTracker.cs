@@ -26,6 +26,14 @@ namespace Assets.Scripts.Managers
                     + SessionStateStore.DescriptiveStateName[targetState] 
                     );
             }
+
+            if (Application.loadedLevelName != SceneMap.GetScene(Scene.Start) &&
+                (targetscene == Scene.Level1 || targetscene == Scene.Level2 || targetscene == Scene.Level3)
+                && targetState == State.InActive)
+            {
+                SignalrEndpoint.Instance.SubmitScore(UserProgressStore.Instance.TreasureTotal());
+            }
+
             
             SessionStateStore.SetSceneState(targetscene, targetState);
             ActivateLevel handler = levelActivated;
@@ -42,14 +50,23 @@ namespace Assets.Scripts.Managers
             new LevelEvent(0f, Scene.Level3, State.Active),
             new LevelEvent(0f, Scene.Level4, State.Active),*/
 
-            new LevelEvent(0f, Scene.Hub, State.Active),
+            /*new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),
-            /*new LevelEvent(9f, Scene.Level1, State.InActive),
+            new LevelEvent(9f, Scene.Level1, State.InActive),
             new LevelEvent(10f, Scene.Level2, State.Active),
             new LevelEvent(17f, Scene.Level2, State.InActive),
             new LevelEvent(18f, Scene.Level3, State.Active),
             new LevelEvent(25f, Scene.Level3, State.InActive),
-            new LevelEvent(26f, Scene.Hub, State.InActive),    */
+            new LevelEvent(26f, Scene.Hub, State.InActive),*/    
+
+            new LevelEvent(0f, Scene.Hub, State.Active),
+            new LevelEvent(1f, Scene.Level1, State.Active),
+            new LevelEvent(5f, Scene.Level1, State.InActive),
+            new LevelEvent(5f, Scene.Level2, State.Active),
+            new LevelEvent(9f, Scene.Level2, State.InActive),
+            new LevelEvent(9f, Scene.Level3, State.Active),
+            new LevelEvent(13f, Scene.Level3, State.InActive),
+            new LevelEvent(14f, Scene.Hub, State.InActive)
         };
 
         void Start()
