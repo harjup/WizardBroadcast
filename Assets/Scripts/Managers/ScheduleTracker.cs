@@ -50,23 +50,23 @@ namespace Assets.Scripts.Managers
             new LevelEvent(0f, Scene.Level3, State.Active),
             new LevelEvent(0f, Scene.Level4, State.Active),*/
 
-            /*new LevelEvent(0f, Scene.Hub, State.Active),
+            new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),
             new LevelEvent(9f, Scene.Level1, State.InActive),
             new LevelEvent(10f, Scene.Level2, State.Active),
-            new LevelEvent(17f, Scene.Level2, State.InActive),
-            new LevelEvent(18f, Scene.Level3, State.Active),
-            new LevelEvent(25f, Scene.Level3, State.InActive),
-            new LevelEvent(26f, Scene.Hub, State.InActive),*/    
+            new LevelEvent(18f, Scene.Level2, State.InActive),
+            new LevelEvent(19f, Scene.Level3, State.Active),
+            new LevelEvent(26f, Scene.Level3, State.InActive),
+            new LevelEvent(27f, Scene.Hub, State.InActive),    
 
-            new LevelEvent(0f, Scene.Hub, State.Active),
+            /*new LevelEvent(0f, Scene.Hub, State.Active),
             new LevelEvent(1f, Scene.Level1, State.Active),
             new LevelEvent(5f, Scene.Level1, State.InActive),
             new LevelEvent(5f, Scene.Level2, State.Active),
             new LevelEvent(9f, Scene.Level2, State.InActive),
             new LevelEvent(9f, Scene.Level3, State.Active),
             new LevelEvent(13f, Scene.Level3, State.InActive),
-            new LevelEvent(14f, Scene.Hub, State.InActive)
+            new LevelEvent(14f, Scene.Hub, State.InActive)*/
         };
 
         void Start()
@@ -123,7 +123,7 @@ namespace Assets.Scripts.Managers
                 if (scheduledEvent.Target == Scene.Hub && scheduledEvent.TargetState == State.Active)
                 {
                     var timeDifference = scheduledEvent.TargetTime - TimeTracker.Instance.GetSessionTime();
-                    return timeDifference <= 0 ? 30 + timeDifference : timeDifference;
+                    return timeDifference <= 0 ? TimeTracker.SessionLength + timeDifference : timeDifference;
                 }
             }
             return 0f;

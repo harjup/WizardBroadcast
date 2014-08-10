@@ -16,8 +16,7 @@ namespace Assets.Scripts.Managers
     class TimeTracker : Singleton<TimeTracker>
     {
         //Make this this is evenly divisible by an hour so it can loop on the hour ok????
-        //private const int SessionLength = 30;
-        private const int SessionLength = 15;
+        public const int SessionLength = 30;
 
         private ITimeRepository _timeRepository;
 
@@ -34,8 +33,8 @@ namespace Assets.Scripts.Managers
         {
             if (!_initialized)
             {
-                _timeRepository = new MockTimeRepository();
-                //_timeRepository = new TimeRepository();
+                _timeRepository = new TimeRepository();
+                //_timeRepository = new MockTimeRepository();
                 StartCoroutine(_timeRepository.GetCurrentTime(x =>
                 {
                     _currentTime = x;
