@@ -71,7 +71,8 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         var positionString = position.ToString().Trim('(').Trim(')');
         Application.ExternalCall("$.updatePosition", new[] { positionString });
     }
-    
+
+    /*
     void OnGUI()
     {
         if (GUI.Button(new Rect(16f, Screen.height - (16 + 32), 32, 32), "Score Mock"))
@@ -92,8 +93,8 @@ public class SignalrEndpoint : Singleton<SignalrEndpoint>
         if (GUI.Button(new Rect(16f+32, Screen.height - ((16 + 32) * 2), 32, 32), "Fartmock"))
         {
             OnRecieveNotification("f2|So and So farted >:U");
-        }*/
-    }
+        }#1#
+    }*/
 
     public void SubmitScore(int score)
     {

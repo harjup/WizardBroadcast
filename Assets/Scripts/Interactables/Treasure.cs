@@ -22,9 +22,10 @@ namespace Assets.Scripts.Interactables
         private int _pointCount;
         private Color _myColor;
 
-        void Start () 
+        private GameObject _collectedParticle;
+        void Start ()
         {
-            
+            _collectedParticle = Resources.Load("Particles/OrbCollect") as GameObject;
 
             //TODO: Swap this out with a constucting a proper type and use that to determine properties
             switch (Type)
@@ -75,7 +76,9 @@ namespace Assets.Scripts.Interactables
             //Make a particle effect
             //When it's done kill the object
             SoundManager.Instance.Play(SoundManager.SoundEffect.BeepMaybe);
-            Destroy(this.gameObject);
+            var particle = Instantiate(_collectedParticle, transform.position, transform.rotation) as GameObject;
+            Destroy(particle, 2f);
+            Destroy(gameObject);
             yield return null;
         }
 
